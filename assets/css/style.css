@@ -1,0 +1,28 @@
+
+
+/* Page styles - universal */
+.page-heading {
+    text-align: center;
+}
+
+
+/* footer */
+/* footer background color */
+.page-footer {
+    background-color: #58B4C4;
+}
+
+/* icons fb = Facebook, tw = Twitter, li = LinkedIn, ins = Instagram, pin = Pintrest */
+
+[class$="-icon"]:hover {
+    text-decoration: none;
+}
+ 
+.fb-icon,
+.tw-icon,
+.li-icon,
+.ins-icon,
+.pin-icon {
+    outline: none;  
+}
+
