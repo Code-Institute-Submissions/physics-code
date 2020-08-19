@@ -1,10 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap');
 
 /* Page styles - universal */
-.page-heading {
+h1 {
+    font-family: "Rubik", sans-serif;
     text-align: center;
 }
 
+.div1 {
+    background-color: cyan;
+}
+
+.div2 {
+    background-color: lightblue;
+}
+
+.div3 {
+    background-color: grey;
+}
 
 /* footer */
 /* footer background color */
