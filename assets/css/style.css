@@ -38,6 +38,10 @@ h1 {
   transform: scale(0.9);
 }
 
+.card-padding {
+    padding-bottom: 15px;
+}
+
 /* footer */
 /* footer background color */
 .page-footer {
