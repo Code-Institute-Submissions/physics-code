@@ -53,6 +53,10 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
+.form-padding {
+    padding-top: 57px;
+}
+
 /* footer */
 /* footer background color */
 .page-footer {

@@ -1,271 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-<!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
-<!--Hover.css CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />        
-<!--Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-<!--Link to custom style sheet-->
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    
-    <title>Physics Code</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+  <!--Hover.css CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+  <!--Favicon-->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!--Link to custom style sheet-->
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+  <title>Physics Code</title>
 </head>
+
 <body>
-<header>
-<!-- Logo and text in Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">
-    <img src="assets/images/logo-1.png" width="30" height="30" class="d-inline-block align-top" alt="Physics Code Logo" loading="lazy">
-    Physics Code
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="help.html">Help</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-      </ul>
-      <span class="navbar-text">
-      Don't let physics control you - take control of physics!
-    </span>
-  </div>
-</nav>
-</header>
-<section>
-<div class="container-xl div1">
-<h1>Delimma Zone Calculator</h1>
-<p>Add your variables to the calculator - you will need to supply all the variables before being able to calculate whether or not a dilemma zone exists.</p>
-<p>If a delimma zone exists, the output will show you the distance from the traffic light stop line and the size of the delimma zone.</p>
-<p>The other possibility is that an option zone exists, this will be displayed as a distance from the traffic light stop line and the size of the option zone will also be given.</p>
-</div>
-</section>
-<!--Cards for variable inputs-->
-<section class="container card-padding">
+  <header>
+    <!-- Logo and text in Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo-1.png" width="30" height="30" class="d-inline-block align-top" alt="Physics Code Logo" loading="lazy">
+        Physics Code
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Don't let physics control you - take control of physics!
+        </span>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="container-xl div1">
+      <h1>Delimma Zone Calculator</h1>
+      <p>Add your variables to the calculator - you will need to supply all the variables before being able to calculate whether or not a dilemma zone exists.</p>
+      <p>If a delimma zone exists, the output will show you the distance from the traffic light stop line and the size of the delimma zone.</p>
+      <p>The other possibility is that an option zone exists, this will be displayed as a distance from the traffic light stop line and the size of the option zone will also be given.</p>
+    </div>
+  </section>
+  <!--Cards for variable inputs-->
+  <section class="container card-padding">
 
 
-      <div class="row">
-        <div class="col-12 div2">
-          <h2>Maximum Travelling Distance</h2>
-          <p class="card-text">
-            Input the variables for velocity, yellow light phase and interphase.
-          </p>
-        </div>
-      </div>      
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt1">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font1">Velocity (choose units)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/velocity.png"
-              class="card-img-top"
-              alt="velocity image"
-              />
-              <div class="container width-box">
-              <form>
+    <div class="row">
+      <div class="col-12 div2">
+        <h2>Maximum Travelling Distance</h2>
+        <p class="card-text">
+          Input the variables for velocity, yellow light phase and interphase.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font1">Velocity (choose units)</h5>
+          </div>
+          <img src="assets/images/card-images/velocity.png" class="card-img-top" alt="velocity image" />
+          <div class="container width-box">
+            <form>
               <label for="initialVelocity">Velocity</label><br>
-              <input type="number" id="initialVelocity" onfocus="this.value=''"><br>
+              <input type="number" id="initialVelocity"><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
-              <option value="unit-kmh">km/h</option>
-              <option value="unit-ms">m/s</option>
-              <option value="mph">mph</option>
+                <option value="unit-kmh">km/h</option>
+                <option value="unit-ms" selected>m/s</option>
+                <option value="mph">mph</option>
               </select>
-              </form>
-              </div>
-           </div>
-        </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt2">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font2">Yellow Light Phase (s)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/yellow.png"
-              class="card-img-top"
-              alt="yellow traffic light image"
-              />
-              
-           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt3">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font3">Interphase (s)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/red.png"
-              class="card-img-top"
-              alt="red traffic light image"
-              />
-           </div>
+            </form>
+          </div>
         </div>
       </div>
-
-      <!-- Second Row of Cards-->  
-       <div class="row">
-        <div class="col-12 div2">
-<h2>Reaction Distance, coeffecient of friction and intersection distance</h2>
-          <p class="card-text">
-            Input the reaction time for the driver (s), the coefficient of friction (0 - 1) and the size of the intersection from stop line to opposite stop line.
-          </p>
-        </div>
-      </div>      
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt4">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font4">Reaction time (s)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/stopwatch.png"
-              class="card-img-top"
-              alt="stopwatch image"
-              />
-           </div>
-        </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt5">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font5">Coefficient of friction (μ)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/friction.png"
-              class="card-img-top"
-              alt="tyre image representing friction"
-              />
-           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt3">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font6">Intersection distance (m)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/intersection.png"
-              class="card-img-top"
-              alt="traffic intersection image"
-              />
-           </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font2">Yellow Light Phase (s)</h5>
+          </div>
+          <img src="assets/images/card-images/yellow.png" class="card-img-top" alt="yellow traffic light image" />
+            <div class="container width-box">
+            <form class="form-padding">
+              <label for="yellowPhase">Time of yellow phase in seconds</label><br>
+              <input type="number" id="yellowPhase" min="1" max="8"><br>
+            </form>
+            </div> 
         </div>
       </div>
-
-      <!-- Third Row of Cards (vehicle length only)-->  
-       <!-- Second Row of Cards-->  
-       <div class="row">
-        <div class="col-12 div2">
-<h2>Vehicle Length</h2>
-          <p class="card-text">
-            Input the size of the vehicle, default is 6 metres.
-          </p>
-        </div>
-      </div>      
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        </div>
-           <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          <div class="card shadow bg-white rounded" 
-                data-toggle="modal" 
-                data-target="#bt7">
-                <div class="card-body">
-              <h5 class="card-title text-center" id="bt-font7">Vehicle Length (m)</h5>
-                </div>
-            <img
-              src="assets/images/card-images/length.png"
-              class="card-img-top"
-              alt="image representing varioous vehicle langths"
-              />
-           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 div3">
-          
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font3">Interphase (s)</h5>
+          </div>
+          <img src="assets/images/card-images/red.png" class="card-img-top" alt="red traffic light image" />
+          <div class="container width-box">
+            <form class="form-padding">
+              <label for="interPhase">Time of interphase in seconds</label><br>
+              <input type="number" id="interPhase" min="1" max="4"><br>
+            </form>
+            </div> 
         </div>
       </div>
+    </div>
 
-</section>
-
- <!-- Footer -->
-<footer class="page-footer font-small darken-3">
-
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Grid row-->
+    <!-- Second Row of Cards-->
     <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-12 py-5">
-        <div class="mb-5 text-center">
-
-          <!-- Facebook -->
-          <a class="fb-icon" href="https://www.facebook.com" target="_blank">
-            <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x"></i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-icon" href="https://www.twitter.com" target="_blank">
-            <i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-icon" href="https://www.linkedin.com" target="_blank">
-            <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3 fa-2x"></i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-icon" href="https://www.instagram.com" target="_blank">
-            <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
-          </a>
-          <!--Pinterest-->
-          <a class="pin-icon" href="https://www.pintrest.com" target="_blank">
-            <i class="fab fa-pinterest fa-lg fa-2x"></i>
-          </a>
+      <div class="col-12 div2">
+        <h2>Reaction Distance, coeffecient of friction and intersection distance</h2>
+        <p class="card-text">
+          Input the reaction time for the driver (s), the coefficient of friction (0 - 1) and the size of the intersection from stop line to opposite stop line.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font4">Reaction time (s)</h5>
+          </div>
+          <img src="assets/images/card-images/stopwatch.png" class="card-img-top" alt="stopwatch image" />
+          <div class="container width-box">
+            <form class="form-padding">
+              <label for="reactionTime">Reaction time in seconds</label><br>
+              <input type="number" id="reactionTime" min="0" max="3"><br>
+            </form>
         </div>
       </div>
-      <!-- Grid column -->
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font5">Coefficient of friction (μ)</h5>
+          </div>
+          <img src="assets/images/card-images/friction.png" class="card-img-top" alt="tyre image representing friction" />
+          <div class="container width-box">
+            <form class="form-padding">
+              <label for="friction">Coefficient of friction</label><br>
+              <input type="number" id="friction" min="0" max="1"><br>
+            </form>
+        </div>
+      </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font6">Intersection distance (m)</h5>
+          </div>
+          <img src="assets/images/card-images/intersection.png" class="card-img-top" alt="traffic intersection image" />
+          <div class="container width-box">
+            <form class="form-padding">
+              <label for="intersection">Coefficient of friction</label><br>
+              <input type="number" id="intersection"><br>
+            </form>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Row of Cards (vehicle length only)-->
+    <!-- Second Row of Cards-->
+    <div class="row">
+      <div class="col-12 div2">
+        <h2>Vehicle Length</h2>
+        <p class="card-text">
+          Input the size of the vehicle, default is 6 metres.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center" id="bt-font7">Vehicle Length (m)</h5>
+          </div>
+          <img src="assets/images/card-images/length.png" class="card-img-top" alt="image representing varioous vehicle langths" />
+          <div class="container width-box">
+            <form class="form-padding">
+              <label for="length">Coefficient of friction</label><br>
+              <input type="number" id="length"><br>
+            </form>
+        </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 div3">
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 text-center">
+
+            <!-- Facebook -->
+            <a class="fb-icon" href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x"></i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-icon" href="https://www.twitter.com" target="_blank">
+              <i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-icon" href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin-in fa-lg mr-md-5 mr-3 fa-2x"></i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-icon" href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-icon" href="https://www.pintrest.com" target="_blank">
+              <i class="fab fa-pinterest fa-lg fa-2x"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
 
     </div>
-    <!-- Grid row-->
+    <!-- Footer Elements -->
 
-  </div>
-  <!-- Footer Elements -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://index.html">Physics Code</a>
+    </div>
+    <!-- Copyright -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://index.html">Physics Code</a>
-  </div>
-  <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
-</footer>
-<!-- Footer -->
-    
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
