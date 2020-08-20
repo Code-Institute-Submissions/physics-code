@@ -42,6 +42,17 @@ h1 {
     padding-bottom: 15px;
 }
 
+/* remove spinners from number inputs https://www.codexworld.com/how-to/remove-arrows-spinner-from-number-input-css/ */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 /* footer */
 /* footer background color */
 .page-footer {
