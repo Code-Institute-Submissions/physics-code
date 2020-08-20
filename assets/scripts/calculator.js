@@ -1,6 +1,7 @@
 function dilemmaZone()
 {
-        //Max distance vehicle travels without braking use maxDistance (md) to calculate distance from stop line
+        //Max distance vehicle travels without braking 
+        //use maxDistance (md) to calculate distance from stop line
         vi = parseFloat(document.getElementById("initialVelocity").value);
         yp = parseFloat(document.getElementById("yellowPhase").value);
         ip = parseFloat(document.getElementById("interPhase").value);
@@ -19,7 +20,8 @@ document.getElementById("reactionDistance").innerHTML = (rd) + " m";
         let sd = ((vsqr)/(2 * mu  * 9.81) + rd);
 document.getElementById("stoppingDistance").innerHTML = ((vsqr)/(2 * mu  * 9.81) + rd).toFixed(2) + " m";
         id = parseFloat(document.getElementById("intersectionDistance").value);
-        //maxDistance (md) is the distance from the stop-line a vehicle can safely travel through the intersection
+        //maxDistance (md) is the distance from the stop-line 
+        //a vehicle can safely travel through the intersection
         let md = (vi * phase) - length - id;
         document.getElementById("maxDistance").innerHTML = (md);
         //determine if a delimma zone exists (or option zone)
