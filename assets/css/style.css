@@ -26,9 +26,17 @@ h1 {
 
 /* Images displayed in cards on the home [calculator] page */
 .card-img-top {
-  max-height: 6vw;
+  max-height: 150px;
+  max-width: 150px;
   object-fit: contain;
   margin: auto;
+  padding-top: 10px;
+}
+
+.car-image {
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: -51px;
   padding-top: 10px;
 }
 
