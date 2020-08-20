@@ -165,8 +165,8 @@
           <img src="assets/images/card-images/intersection.png" class="card-img-top" alt="traffic intersection image" />
           <div class="container width-box">
             <form class="form-padding">
-              <label for="intersection">Coefficient of friction</label><br>
-              <input type="number" id="intersection"><br>
+              <label for="intersection">Length of intersection</label><br>
+              <input type="number" id="intersectionDistance"><br>
             </form>
         </div>
         </div>
@@ -174,7 +174,7 @@
     </div>
 
     <!-- Third Row of Cards (vehicle length only)-->
-    <!-- Second Row of Cards-->
+    
     <div class="row">
       <div class="col-12 div2">
         <h2>Vehicle Length</h2>
@@ -208,11 +208,20 @@
 
 <input type="button" onclick="dilemmaZone()" value="Calculate" />
 </form>
-<p>The Result is : <br>
+<p>The Phase Distance is : <br>
 <span id = "phaseDistance"></span>
 </p>
-<p>The Result is : <br>
+<p>The Reaction Distance is : <br>
 <span id = "reactionDistance"></span>
+</p>
+<p>The Stopping Distance is : <br>
+<span id = "stoppingDistance"></span>
+</p>
+<p>The Maximum Distance from stopline is : <br>
+<span id = "maxDistance"></span>
+</p>
+<p>If negative, DZ exists. If positive, OZ exists : <br>
+<span id = "total"></span>
 </p>
   </section>
 
