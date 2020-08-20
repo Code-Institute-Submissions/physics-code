@@ -14,6 +14,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!--Link to custom style sheet-->
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+ 
 
   <title>Physics Code</title>
 </head>
@@ -21,7 +22,7 @@
 <body>
   <header>
     <!-- Logo and text in Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo-1.png" width="30" height="30" class="d-inline-block align-top" alt="Physics Code Logo" loading="lazy">
         Physics Code
@@ -193,8 +194,8 @@
           <img src="assets/images/card-images/length.png" class="card-img-top" alt="image representing varioous vehicle langths" />
           <div class="container width-box">
             <form class="form-padding">
-              <label for="length">Coefficient of friction</label><br>
-              <input type="number" id="length"><br>
+              <label for="length">Length of vehicle (m)</label><br>
+              <input type="number" id="length" value="4.5"><br>
             </form>
         </div>
         </div>
@@ -203,7 +204,16 @@
 
       </div>
     </div>
+<form>
 
+<input type="button" onclick="dilemmaZone()" value="Calculate" />
+</form>
+<p>The Result is : <br>
+<span id = "phaseDistance"></span>
+</p>
+<p>The Result is : <br>
+<span id = "reactionDistance"></span>
+</p>
   </section>
 
   <!-- Footer -->
@@ -262,6 +272,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/scripts/calculator.js"></script>
+  
 </body>
 
 </html>

@@ -20,7 +20,7 @@ h1 {
 
 /* Images displayed in cards on the home [calculator] page */
 .card-img-top {
-  height: 10vw;
+  max-height: 6vw;
   object-fit: contain;
   margin: auto;
   padding-top: 10px;
@@ -32,11 +32,11 @@ h1 {
   width: 18rem;
 }
 
-.card:hover {
+/*.card:hover {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
-}
+}*/
 
 .card-padding {
     padding-bottom: 15px;
