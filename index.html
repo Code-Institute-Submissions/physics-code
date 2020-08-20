@@ -72,7 +72,17 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font1">Velocity (choose units)</h5>
+            <h5 class="card-title text-center">Velocity (choose units)</h5>
+          </div>
+          <div class="container text-center">
+          <a tabindex="0" class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Initial Velocity (m/s, km/h or mph)" 
+          data-content="Enter the initial velocity the vehicle is travelling. Don't forget to check the units!">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/velocity.png" class="car-image" alt="velocity image" />
           <div class="container width-box">
@@ -92,7 +102,18 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font2">Yellow Light Phase (s)</h5>
+            <h5 class="card-title text-center">Yellow Light Phase (s)</h5>
+          </div>
+            <div class="container text-center">
+          <a tabindex="0" 
+          class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Yellow Light Phase (s)" 
+          data-content="Enter the total time the traffic light remains yellow. The unit is seconds.">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/yellow.png" class="card-img-top" alt="yellow traffic light image" />
             <div class="container width-box">
@@ -106,7 +127,20 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font3">Interphase (s)</h5>
+            <h5 class="card-title text-center">Interphase (s)</h5>
+          </div>
+          <div class="container text-center">
+          <a tabindex="0" 
+          class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Interphase (s)" 
+          data-content="Enter the total time between end of the right of way phase and the start of the right of way for the next phase. 
+          The unit is seconds. 
+          Typically this will be 2 to 3 seconds.">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/red.png" class="card-img-top" alt="red traffic light image" />
           <div class="container width-box">
@@ -132,11 +166,24 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font4">Reaction time (s)</h5>
+            <h5 class="card-title text-center">Reaction time (s)</h5>
+          </div>
+          <div class="container text-center">
+          <a tabindex="0" 
+          class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Reaction Time (s)" 
+          data-content="Enter the time it takes for a driver to react. 
+          Reaction times vary with age, distractions, alcohol or drug usage etc. 
+          The unit is seconds.">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/stopwatch.png" class="card-img-top" alt="stopwatch image" />
           <div class="container width-box">
-            <form class="form-padding">
+            <form class="form-padding-2">
               <label for="reactionTime">Reaction time in seconds</label><br>
               <input type="number" id="reactionTime" value="1" min="0" max="3"><br>
             </form>
@@ -146,11 +193,22 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font5">Coefficient of friction (μ)</h5>
+            <h5 class="card-title text-center">Coefficient of friction (μ)</h5>
+          </div>
+          <div class="container text-center">
+          <a tabindex="0" 
+          class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Coefficient of Friction (μ)" 
+          data-content="Enter the coefficient of friction. This is a number between 0 (the lowest possible) and 1 (total friction).">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/friction.png" class="card-img-top" alt="tyre image representing friction" />
           <div class="container width-box">
-            <form class="form-padding">
+            <form class="form-padding-2">
               <label for="friction">Coefficient of friction</label><br>
               <input type="number" id="friction" value="0.8" min="0" max="1"><br>
             </form>
@@ -160,13 +218,30 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font6">Intersection distance (m)</h5>
+            <h5 class="card-title text-center">Intersection distance (m)</h5>
+          </div>
+          <div class="container text-center">
+          <a tabindex="0" 
+          class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Intersection Distance (m, yd)" 
+          data-content="Enter the total distance in metres or yards between the approaching stop line and the stop line on the opposite road. 
+          Don't forget to select the unit you're using.">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/intersection.png" class="card-img-top" alt="traffic intersection image" />
           <div class="container width-box">
             <form class="form-padding">
               <label for="intersection">Length of intersection</label><br>
               <input type="number" value="40" id="intersectionDistance"><br>
+              <label for="length-units">Units</label><br>
+              <select name="units" id="length-units" style="width:60px;">
+                <option value="yd">km/h</option>
+                <option value="m" selected>m/s</option>
+                </select>
             </form>
         </div>
         </div>
@@ -189,7 +264,18 @@
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
         <div class="card shadow bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title text-center" id="bt-font7">Vehicle Length (m)</h5>
+            <h5 class="card-title text-center">Vehicle Length (m)</h5>
+          </div>
+          <div class="container text-center">
+          <a tabindex="0" 
+          class="btn btn-link" 
+          role="button" 
+          data-toggle="popover" 
+          data-trigger="focus" 
+          title="Length (m)" 
+          data-content="Enter the total length of the vehicle in metres. The default is the average of 4.5 metres.">
+          <i class="far fa-question-circle fa-2x"></i>
+          </a>
           </div>
           <img src="assets/images/card-images/length.png" class="card-img-top" alt="image representing varioous vehicle langths" />
           <div class="container width-box">
@@ -282,6 +368,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="assets/scripts/calculator.js"></script>
+  <script src="assets/scripts/dependencies.js"></script>
   
 </body>
 
