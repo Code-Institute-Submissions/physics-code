@@ -6,12 +6,17 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: "Rubik", sans-serif;
+    
+}
+
 .div1 {
-    background-color: cyan;
+    background-color: #e6d8ad;
 }
 
 .div2 {
-    background-color: lightblue;
+    background-color: #add8e6;
 }
 
 .div3 {
@@ -22,6 +27,13 @@ h1 {
 .nav-text {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
+}
+
+/* sections */
+
+.btn--padding {
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 /* Images displayed in cards on the home [calculator] page */
@@ -67,6 +79,15 @@ input[type=number] {
 
 .form-padding-2 {
     padding-top: 75px;
+}
+
+/* modal for calculation */
+.icon-hide-dilemmazone {
+    display: none;
+}
+
+.icone-hide-optionzone {
+    display: none;
 }
 
 /* footer */

@@ -65,14 +65,19 @@ document.getElementById("stoppingDistance").innerHTML = ((vsqr)/(2 * mu  * 9.81)
         //any vehicle can safely travel through the intersection
         //idt is the intersection distance total
         let md = (vf * phase) - vehicleLength - idt;
-        document.getElementById("maxDistance").innerHTML = (md).toFixed(2);
+        document.getElementById("maxDistance").innerHTML = (md).toFixed(2) + " m";
         //determine if a delimma zone exists (or option zone)
         let total = md - sd; 
 document.getElementById("total").innerHTML = total.toFixed(2) + " m";            
 if (total > 0) {
     document.getElementById("zone").innerHTML = total.toFixed(2) + " m" + " option zone exists";
+    document.getElementById("zone_header").innerHTML = "Option Zone Found";
+    document.getElementById("zone_header").style.color = "blue";
 } else {
     document.getElementById("zone").innerHTML = total.toFixed(2) + " m" + " dilemma zone exists";
+    document.getElementById("zone_header").innerHTML = "Dilemma Zone Found";
+    document.getElementById("zone_header").style.color = "red";
+    
 }
 
 }

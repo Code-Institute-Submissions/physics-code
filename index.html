@@ -291,16 +291,35 @@
       </div>
     </div>
 <form>
-
-<input type="button" onclick="convert();convertDistance();dilemmaZone()" value="Calculate" />
+<div class="row">
+<div class="container text-center div2">
+<input type="button" 
+class="btn btn-success btn-lg btn--padding" 
+onclick="convert();convertDistance();dilemmaZone()" 
+data-toggle="modal" 
+data-target="#dilemma_zone_output" 
+value="Calculate" />
+</div>
+</div>
 </form>
-<p>The Phase Distance is : <br>
+<!-- Modal -->
+<div class="modal fade" id="dilemma_zone_output" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="zone_header"><i class="fas fa-exclamation-triangle icon-hide-dilemmazone"></i><i class="far fa-smile-beam icon-hide-optionzone"></i></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>The distance the vehicle travels during the yellow and interphase duration : <br>
 <span id = "phaseDistance"></span>
 </p>
-<p>The Reaction Distance is : <br>
+<p>The distance the vehicle travels through the duration of the reaction time : <br>
 <span id = "reactionDistance"></span>
 </p>
-<p>The Stopping Distance is : <br>
+<p>The total distance from the stop-line required for the vehicle coming to a halt : <br>
 <span id = "stoppingDistance"></span>
 </p>
 <p>The Maximum Distance from stopline is : <br>
@@ -318,6 +337,14 @@
 <p>Result of intersection distance conversion : <br>
 <span id = "conversion-dist"></span>
 </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
   </section>
 
   <!-- Footer -->
