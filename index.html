@@ -91,8 +91,8 @@
               <input type="number" id="initialVelocity" value="10"><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
-                <option value="unit-kmh">km/h</option>
-                <option value="unit-ms" selected>m/s</option>
+                <option value="kmh">km/h</option>
+                <option value="ms" selected>m/s</option>
                 <option value="mph">mph</option>
               </select>
             </form>
@@ -292,7 +292,7 @@
     </div>
 <form>
 
-<input type="button" onclick="dilemmaZone()" value="Calculate" />
+<input type="button" onclick="convert();dilemmaZone()" value="Calculate" />
 </form>
 <p>The Phase Distance is : <br>
 <span id = "phaseDistance"></span>
@@ -308,6 +308,12 @@
 </p>
 <p>If negative, DZ exists. If positive, OZ exists : <br>
 <span id = "total"></span>
+</p>
+<p>Zone : <br>
+<span id = "zone"></span>
+</p>
+<p>Result of conversion : <br>
+<span id = "conversion"></span>
 </p>
   </section>
 
