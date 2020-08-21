@@ -16,7 +16,24 @@ function convert()
     
     // passing the result outside the function, into the global variable for access later on
     finalVelocity = result;
-    document.getElementById("conversion").innerHTML = finalVelocity;
+    document.getElementById("conversion").innerHTML = finalVelocity.toFixed(2);
+}
+
+let fullDistance;
+function convertDistance()
+{
+    id = parseFloat(document.getElementById("intersectionDistance").value);
+    var lengthid = document.getElementById("length-units").value;
+    var result;
+    if (lengthid == "m") {
+        result = id;
+    }
+    if (lengthid == "yd") {
+        result = id * 0.9144;
+    }
+    // passing the result outside the function, into the global variable for access later on
+    id = result;
+    document.getElementById("conversion-dist").innerHTML = id.toFixed(2);
 }
 
 function dilemmaZone()
@@ -28,19 +45,19 @@ function dilemmaZone()
         ip = parseFloat(document.getElementById("interPhase").value);
         length = parseFloat(document.getElementById("length").value);
         let phase = yp + ip;
-document.getElementById("phaseDistance").innerHTML = (vf * phase) - length + " m";
+document.getElementById("phaseDistance").innerHTML = (vf * phase) - length.toFixed(2) + " m";
         //Stopping distance - constant braking
         rt = parseFloat(document.getElementById("reactionTime").value);
         //unbraked distance travelled with reaction time - reaction distance (rd)
         let rd = rt * vf;
-document.getElementById("reactionDistance").innerHTML = (rd) + " m";
+document.getElementById("reactionDistance").innerHTML = (rd).toFixed(2) + " m";
         //total stopping distance including reaction distance
         mu = parseFloat(document.getElementById("friction").value);
         //initial velocity squared for calculation
         let vsqr = Math.pow(vf,2);
         let sd = ((vsqr)/(2 * mu  * 9.81) + rd);
 document.getElementById("stoppingDistance").innerHTML = ((vsqr)/(2 * mu  * 9.81) + rd).toFixed(2) + " m";
-        id = parseFloat(document.getElementById("intersectionDistance").value);
+        
         //maxDistance (md) is the distance from the stop-line 
         //a vehicle can safely travel through the intersection
         let md = (vf * phase) - length - id;
