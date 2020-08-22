@@ -1,3 +1,19 @@
+// Limit input boxes to only numbers and decimal places
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
+        return false;
+    return true;
+    if (charCode === 46) {
+
+    // Allow only 1 decimal point
+    if ((element.value) && (element.value.indexOf('.') >= 0))
+      return false;
+    else
+      return true;
+  }
+}
+
 let finalVelocity;
 function convert() 
 {
@@ -96,6 +112,6 @@ $(function(){
 });
 
 // Restrict input into fields to just numbers and decimal places
-    $(".numbers").on('input',function(){
-        this.value = this.value.match(/^\d+\.?\d{0,2}/);
-});
+//   $(".numbers").on('input',function(){
+//   this.value = this.value.match(/^(\d+)?([.]?\d{0,2})?$/);
+// });
