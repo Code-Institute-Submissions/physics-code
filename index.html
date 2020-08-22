@@ -59,7 +59,7 @@
   <!--Cards for variable inputs-->
   <section class="container card-padding">
 
-
+<form name="dzCalculator" id="dzCalculator">
     <div class="row">
       <div class="col-12 div2">
         <h2>Maximum Travelling Distance</h2>
@@ -87,16 +87,16 @@
           </div>
           <img src="assets/images/card-images/velocity.png" class="car-image" alt="velocity image" />
           <div class="container width-box">
-            <form class="form_reset">
+            
               <label for="initialVelocity">Velocity</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="initialVelocity" class="reset_form numbers" value="10" required><br>
+              <input type="text" name="inputVelocity" onkeypress="return isNumberKey(event)" id="initialVelocity" class="reset_form" value="10" required><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
                 <option value="kmh">km/h</option>
                 <option value="ms" selected>m/s</option>
                 <option value="mph">mph</option>
               </select>
-            </form>
+            
           </div>
         </div>
       </div>
@@ -118,10 +118,10 @@
           </div>
           <img src="assets/images/card-images/yellow.png" class="card-img-top" alt="yellow traffic light image" />
             <div class="container width-box">
-            <form class="form-padding">
+            
               <label for="yellowPhase">Time of yellow phase in seconds</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="yellowPhase" class="reset_form numbers" value="4" min="1" max="8" required><br>
-            </form>
+              <input type="text" name="inputYellowPhase" onkeypress="return isNumberKey(event)" id="yellowPhase" class="reset_form" value="4" min="1" max="8" required><br>
+            
             </div> 
         </div>
       </div>
@@ -145,10 +145,10 @@
           </div>
           <img src="assets/images/card-images/red.png" class="card-img-top" alt="red traffic light image" />
           <div class="container width-box">
-            <form class="form-padding">
+            
               <label for="interPhase">Time of interphase in seconds</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="interPhase" class="reset_form numbers" value="2" min="1" max="4" required><br>
-            </form>
+              <input type="text" name="inputInterPhase" onkeypress="return isNumberKey(event)" id="interPhase" class="reset_form" value="2" min="1" max="4" required><br>
+            
             </div> 
         </div>
       </div>
@@ -184,10 +184,10 @@
           </div>
           <img src="assets/images/card-images/stopwatch.png" class="card-img-top" alt="stopwatch image" />
           <div class="container width-box">
-            <form class="form-padding-2">
+          
               <label for="reactionTime">Reaction time in seconds</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="reactionTime" class="reset_form numbers" value="1" min="0" max="3" required><br>
-            </form>
+              <input type="text" name="inputReactionTime" onkeypress="return isNumberKey(event)" id="reactionTime" class="reset_form" value="1" min="0" max="3" required><br>
+          
         </div>
       </div>
       </div>
@@ -209,10 +209,10 @@
           </div>
           <img src="assets/images/card-images/friction.png" class="card-img-top" alt="tyre image representing friction" />
           <div class="container width-box">
-            <form class="form-padding-2">
+         
               <label for="friction">Coefficient of friction</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="friction" class="reset_form numbers" value="0.8" min="0" max="1" required><br>
-            </form>
+              <input type="text" onkeypress="return isNumberKey(event)" id="friction" class="reset_form" value="0.8" min="0.001" max="1" required><br>
+          
         </div>
       </div>
       </div>
@@ -235,15 +235,15 @@
           </div>
           <img src="assets/images/card-images/intersection.png" class="card-img-top" alt="traffic intersection image" />
           <div class="container width-box">
-            <form class="form-padding">
+            
               <label for="intersection">Length of intersection</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="intersectionDistance" class="reset_form numbers" value="40" required><br>
+              <input type="text" onkeypress="return isNumberKey(event)" id="intersectionDistance" class="reset_form" value="40" required><br>
               <label for="length-units">Units</label><br>
               <select name="units" id="length-units" style="width:60px;">
                 <option value="yd">yd</option>
                 <option value="m" selected>m</option>
                 </select>
-            </form>
+           
         </div>
         </div>
       </div>
@@ -280,10 +280,10 @@
           </div>
           <img src="assets/images/card-images/length.png" class="card-img-top" alt="image representing varioous vehicle langths" />
           <div class="container width-box">
-            <form class="form-padding">
+          
               <label for="length">Length of vehicle (m)</label><br>
-              <input type="text" onkeypress="return isNumberKey(event)" id="length" class="reset_form numbers" value="4.5" required><br>
-            </form>
+              <input type="number" onkeypress="return isNumberKey(event)" id="length" class="reset_form" value="4.5" required><br>
+         
         </div>
         </div>
       </div>
@@ -291,12 +291,12 @@
 
       </div>
     </div>
-<form>
+
 <div class="row">
 <div class="container text-center div2">
 <input type="button" 
 class="btn btn-success btn-lg btn--padding" 
-onclick="convert();convertDistance();dilemmaZone()" 
+onclick="validateForm();convert();convertDistance();dilemmaZone()" 
 data-toggle="modal" 
 data-target="#dilemma_zone_output" 
 value="Calculate" />
@@ -307,6 +307,7 @@ value="Reset" />
 </div>
 </div>
 </form>
+
 <!-- Modal -->
 <div class="modal fade" id="dilemma_zone_output" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

@@ -4,16 +4,23 @@ function isNumberKey(evt){
     if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
         return false;
     return true;
-    if (charCode === 46) {
+}
 
-    // Allow only 1 decimal point
-    if ((element.value) && (element.value.indexOf('.') >= 0))
-      return false;
-    else
-      return true;
+// Limit coefficient of friction to a max of 1 and a minimum of zero
+
+// Blank inputs not allowed
+function validateForm() {
+  var inputVelocity = document.getElementById("dzCalculator").inputVelocity.value;
+  var inputYellowPhase = document.getElementById("dzCalculator").inputYellowPhase.value;
+  var inputRedPhase = document.getElementById("dzCalculator").inputInterPhase.value;
+  var inputReactionTime = document.getElementById("dzCalculator").inputReactionTime.value;
+  if(inputVelocity === "" && inputYellowPhase === "" && inputRedPhase === "" && inputReactionTime === ""){
+    alert("Input all fields to calculate.");
+    return false;
   }
 }
 
+// Convert velocities from km/h or mph to m/s
 let finalVelocity;
 function convert() 
 {
@@ -35,6 +42,7 @@ function convert()
     document.getElementById("conversion").innerHTML = finalVelocity.toFixed(2) + " m/s";
 }
 
+// Convert yards to metres
 let fullDistance;
 function convertDistance()
 {
@@ -69,20 +77,20 @@ document.getElementById("phaseDistance").innerHTML = pd.toFixed(2) + " m";
         //unbraked distance travelled with reaction time - reaction distance (rd)
         let rd = rt * vf;
         //call reaction distance
-document.getElementById("reactionDistance").innerHTML = (rd).toFixed(2) + " m";
+document.getElementById("reactionDistance").innerHTML = rd.toFixed(2) + " m";
         //total stopping distance including reaction distance
         mu = parseFloat(document.getElementById("friction").value);
-        //initial velocity squared for calculation
+        //initial velocity squared for calculation plus the reaction distance (v^2 / 2 mu g)
         let vsqr = Math.pow(vf,2);
         let sd = ((vsqr)/(2 * mu  * 9.81) + rd);
         //call stopping distance
-document.getElementById("stoppingDistance").innerHTML = ((vsqr)/(2 * mu  * 9.81) + rd).toFixed(2) + " m";
+document.getElementById("stoppingDistance").innerHTML = sd.toFixed(2) + " m";
         let idt = fullDistance;
         //maxDistance (md) is the distance from the stop-line 
         //any vehicle can safely travel through the intersection
         //idt is the intersection distance total
         let md = (vf * phase) - vehicleLength - idt;
-        document.getElementById("maxDistance").innerHTML = (md).toFixed(2) + " m";
+        document.getElementById("maxDistance").innerHTML = md.toFixed(2) + " m";
         //determine if a delimma zone exists (or option zone)
         let total = md - sd; 
 document.getElementById("total").innerHTML = total.toFixed(2) + " m";            
@@ -110,8 +118,3 @@ $(function(){
    });
 
 });
-
-// Restrict input into fields to just numbers and decimal places
-//   $(".numbers").on('input',function(){
-//   this.value = this.value.match(/^(\d+)?([.]?\d{0,2})?$/);
-// });
