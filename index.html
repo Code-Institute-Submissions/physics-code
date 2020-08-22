@@ -75,7 +75,8 @@
             <h5 class="card-title text-center">Velocity (choose units)</h5>
           </div>
           <div class="container text-center">
-          <a tabindex="0" class="btn btn-link" 
+          <a tabindex="0" 
+          class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
           data-trigger="focus" 
@@ -86,9 +87,9 @@
           </div>
           <img src="assets/images/card-images/velocity.png" class="car-image" alt="velocity image" />
           <div class="container width-box">
-            <form>
+            <form class="form_reset">
               <label for="initialVelocity">Velocity</label><br>
-              <input type="number" id="initialVelocity" value="10"><br>
+              <input type="number" id="initialVelocity" class="reset_form numbers" value="10"><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
                 <option value="kmh">km/h</option>
@@ -119,7 +120,7 @@
             <div class="container width-box">
             <form class="form-padding">
               <label for="yellowPhase">Time of yellow phase in seconds</label><br>
-              <input type="number" id="yellowPhase" value="4" min="1" max="8"><br>
+              <input type="number" id="yellowPhase" class="reset_form numbers" value="4" min="1" max="8"><br>
             </form>
             </div> 
         </div>
@@ -146,7 +147,7 @@
           <div class="container width-box">
             <form class="form-padding">
               <label for="interPhase">Time of interphase in seconds</label><br>
-              <input type="number" id="interPhase" value="2" min="1" max="4"><br>
+              <input type="number" id="interPhase" class="reset_form numbers" value="2" min="1" max="4"><br>
             </form>
             </div> 
         </div>
@@ -185,7 +186,7 @@
           <div class="container width-box">
             <form class="form-padding-2">
               <label for="reactionTime">Reaction time in seconds</label><br>
-              <input type="number" id="reactionTime" value="1" min="0" max="3"><br>
+              <input type="number" id="reactionTime" class="reset_form numbers" value="1" min="0" max="3"><br>
             </form>
         </div>
       </div>
@@ -210,7 +211,7 @@
           <div class="container width-box">
             <form class="form-padding-2">
               <label for="friction">Coefficient of friction</label><br>
-              <input type="number" id="friction" value="0.8" min="0" max="1"><br>
+              <input type="number" id="friction" class="reset_form numbers" value="0.8" min="0" max="1"><br>
             </form>
         </div>
       </div>
@@ -236,7 +237,7 @@
           <div class="container width-box">
             <form class="form-padding">
               <label for="intersection">Length of intersection</label><br>
-              <input type="number" value="40" id="intersectionDistance"><br>
+              <input type="number" id="intersectionDistance" class="reset_form numbers" value="40"><br>
               <label for="length-units">Units</label><br>
               <select name="units" id="length-units" style="width:60px;">
                 <option value="yd">yd</option>
@@ -281,7 +282,7 @@
           <div class="container width-box">
             <form class="form-padding">
               <label for="length">Length of vehicle (m)</label><br>
-              <input type="number" id="length" value="4.5"><br>
+              <input type="number" id="length" class="reset_form numbers" value="4.5"><br>
             </form>
         </div>
         </div>
@@ -299,6 +300,10 @@ onclick="convert();convertDistance();dilemmaZone()"
 data-toggle="modal" 
 data-target="#dilemma_zone_output" 
 value="Calculate" />
+<input type="reset" 
+class="btn btn-primary btn-lg btn--padding" 
+id="formReset" 
+value="Reset" />
 </div>
 </div>
 </form>
@@ -307,7 +312,7 @@ value="Calculate" />
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="zone_header"><i class="fas fa-exclamation-triangle icon-hide-dilemmazone"></i><i class="far fa-smile-beam icon-hide-optionzone"></i></h5>
+        <h5 class="modal-title" id="zone_header"></h5><i id="dilemmaZoneIcon" class="fas fa-exclamation-triangle icon-hide-dilemmazone"></i><i class="far fa-smile-beam icon-hide-optionzone"></i>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

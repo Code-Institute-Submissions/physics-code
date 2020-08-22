@@ -4,19 +4,19 @@ function convert()
     let vi = parseFloat(document.getElementById("initialVelocity").value);
     var unit = document.getElementById("units").value;
     var result;
-    if (unit == "ms") {
+    if (unit === "ms") {
         result = vi;
     }
-    if (unit == "kmh") {
+    if (unit === "kmh") {
         result = vi / 3.6;
     }
-    if (unit == "mph") {
+    if (unit === "mph") {
         result = vi * 0.44704;
     }
     
     // passing the result outside the function, into the global variable for access later on
     finalVelocity = result;
-    document.getElementById("conversion").innerHTML = finalVelocity.toFixed(2);
+    document.getElementById("conversion").innerHTML = finalVelocity.toFixed(2) + " m/s";
 }
 
 let fullDistance;
@@ -25,15 +25,15 @@ function convertDistance()
     let id = parseFloat(document.getElementById("intersectionDistance").value);
     var lengthid = document.getElementById("length-units").value;
     var result;
-    if (lengthid == "m") {
+    if (lengthid === "m") {
         result = id;
     }
-    if (lengthid == "yd") {
+    if (lengthid === "yd") {
         result = id * 0.9144;
     }
     // passing the result outside the function, into the global variable for access later on
     fullDistance = result;
-    document.getElementById("conversion-dist").innerHTML = fullDistance.toFixed(2);
+    document.getElementById("conversion-dist").innerHTML = fullDistance.toFixed(2) + " m";
 }
 
 function dilemmaZone()
@@ -45,8 +45,9 @@ function dilemmaZone()
         ip = parseFloat(document.getElementById("interPhase").value);
         vehicleLength = parseFloat(document.getElementById("length").value);
         let phase = yp + ip;
-        //call phase distance
-document.getElementById("phaseDistance").innerHTML = ((vf * phase) - vehicleLength).toFixed(2) + " m";
+        //calculate phase distance (pd)
+        let pd = (vf * phase) - vehicleLength;
+document.getElementById("phaseDistance").innerHTML = pd.toFixed(2) + " m";
         //Stopping distance - constant braking
         rt = parseFloat(document.getElementById("reactionTime").value);
         //unbraked distance travelled with reaction time - reaction distance (rd)
@@ -77,7 +78,24 @@ if (total > 0) {
     document.getElementById("zone").innerHTML = total.toFixed(2) + " m" + " dilemma zone exists";
     document.getElementById("zone_header").innerHTML = "Dilemma Zone Found";
     document.getElementById("zone_header").style.color = "red";
+    document.getElementById("dilemmaZoneIcon").el.classList.remove("icon-hide-dilemmazone");
     
 }
 
 }
+
+// Clear form on click of reset button
+$(function(){
+
+   $("#formReset").click(function(){
+       alert("Reset button activated");
+       //Set the input text fields to empty string
+       $("input.reset_form").val("");
+   });
+
+});
+
+// Restrict input into fields to just numbers and decimal places
+    $(".numbers").on('input',function(){
+        this.value = this.value.match(/^\d+\.?\d{0,2}/);
+});
