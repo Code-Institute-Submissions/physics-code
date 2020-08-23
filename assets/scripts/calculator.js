@@ -1,6 +1,6 @@
 // Limit input boxes to only numbers and decimal places
 function isNumberKey(evt){
-var charCode = (evt.which) ? evt.which : evt.keyCode
+let charCode = (evt.which) ? evt.which : evt.keyCode
 if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   return false;
   return true;
@@ -10,13 +10,13 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
 
   // Blank inputs not allowed
   function validateForm() {
-  var inputVelocity1 = document.getElementById("initialVelocity").value;
-  var inputYellowPhase1 = document.getElementById("yellowPhase").value;
-  var inputInterPhase1 = document.getElementById("interPhase").value;
-  var inputReactionTime1 = document.getElementById("reactionTime").value;
-  var inputCoefficient1 = document.getElementById("friction").value;
-  var inputIntersection1 = document.getElementById("intersectionDistance").value;
-  var inputLength1 = document.getElementById("length").value;
+  let inputVelocity1 = document.getElementById("initialVelocity").value;
+  let inputYellowPhase1 = document.getElementById("yellowPhase").value;
+  let inputInterPhase1 = document.getElementById("interPhase").value;
+  let inputReactionTime1 = document.getElementById("reactionTime").value;
+  let inputCoefficient1 = document.getElementById("friction").value;
+  let inputIntersection1 = document.getElementById("intersectionDistance").value;
+  let inputLength1 = document.getElementById("length").value;
 
   if(inputVelocity1 === "" ||
   inputYellowPhase1 === "" ||
@@ -30,14 +30,20 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   return false;
   }
   }
+  // Prevent the calculator from opening modal without appropriate form submission
+  // Source https://codepen.io/hanapiers/pen/EXNrGP
+  $('#dzCalculator').on('submit', function(e){
+  $('#dilemma_zone_output').modal('show');
+  e.preventDefault();
+});
 
   // Convert velocities from km/h or mph to m/s
   let finalVelocity;
   function convert()
   {
-  var vi = parseFloat(document.getElementById("initialVelocity").value);
-  var unit = document.getElementById("units").value;
-  var result;
+  let vi = parseFloat(document.getElementById("initialVelocity").value);
+  let unit = document.getElementById("units").value;
+  let result;
   if (unit === "ms") {
   result = vi;
   }
@@ -58,8 +64,8 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   function convertDistance()
   {
   let id = parseFloat(document.getElementById("intersectionDistance").value);
-  var lengthid = document.getElementById("length-units").value;
-  var result;
+  let lengthid = document.getElementById("length-units").value;
+  let result;
   if (lengthid === "m") {
   result = id;
   }
@@ -126,7 +132,7 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   }
 
   }
-
+ 
   // Clear form on click of reset button
   $(function(){
 
