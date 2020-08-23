@@ -7,7 +7,8 @@ trigger the "required" attribute in the input tags. Changing the button to type=
 added that allows the modal to operate, as normal, even with a type="submit" button in place. The form needed to have an ID and the modal's ID was parsed into the 
 function. 
 3. The min="0" and max="1" worked for the coefficient of friction, but required a step="0.01" to allow for decimal places.
+4. Adding and removing classes was needed for multiple form inputs. If someone was putting in an input that calculated a delimma zone, the delimma zone icon would 
+appear in the modal header. If the user then continued to do another output, and this returned an option zone, they'd see both option zone and delimma zone icons. 
+To fix this an add class to bring the icon to the header was used as well as a remove class if one had been added previously. 
 
 unsolved problems:
-1. When inputting a decimal place in other fields, the actual outcome is different. I tried 10.99 and it returned 10.97 and when I tried again it returned 10.94.
-This is a problem, especially when entering in m/s. 

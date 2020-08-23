@@ -69,13 +69,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Velocity (choose units)</h5>
-          </div>
-          <div class="container text-center">
-          <a tabindex="0" 
+    <!-- Velocity Card-->
+    <div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/velocity.png" alt="Input Velocity Image">
+  <div class="card-body">
+    <h5 class="card-title">Initial Velocity (m/s) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
@@ -83,12 +82,9 @@
           title="Initial Velocity (m/s, km/h or mph)" 
           data-content="Enter the initial velocity the vehicle is travelling. Don't forget to check the units!">
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/velocity.png" class="car-image" alt="velocity image" />
-          <div class="container width-box">
-            
-              <label for="initialVelocity">Velocity</label><br>
+          </a></h5>
+        <br>
+          <label for="initialVelocity">Velocity</label><br>
               <input type="number" name="inputVelocity" onkeypress="return isNumberKey(event)" id="initialVelocity" class="reset_form" value="10" step="0.01" required><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
@@ -96,17 +92,16 @@
                 <option value="ms" selected>m/s</option>
                 <option value="mph">mph</option>
               </select>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Yellow Light Phase (s)</h5>
-          </div>
-            <div class="container text-center">
-          <a tabindex="0" 
+  </div>
+</div>
+</div>
+
+<!-- Yellow light phase card-->
+<div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/yellow.png" alt="Input Yellow Light Phase Image">
+  <div class="card-body">
+    <h5 class="card-title">Yellow Phase (s) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
@@ -114,24 +109,20 @@
           title="Yellow Light Phase (s)" 
           data-content="Enter the total time the traffic light remains yellow. The unit is seconds.">
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/yellow.png" class="card-img-top" alt="yellow traffic light image" />
-            <div class="container width-box">
-            
-              <label for="yellowPhase">Time of yellow phase in seconds</label><br>
+          </a></h5>
+        <br>
+         <label for="yellowPhase">Time of yellow phase in seconds</label><br>
               <input type="number" name="inputYellowPhase" onkeypress="return isNumberKey(event)" id="yellowPhase" class="reset_form" value="4" step="0.01" min="1" max="8" required><br>
-            
-            </div> 
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Interphase (s)</h5>
-          </div>
-          <div class="container text-center">
-          <a tabindex="0" 
+  </div>
+</div>
+</div>
+
+<!-- Interphase card-->
+<div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/red.png" alt="Input Interphase Image">
+  <div class="card-body">
+    <h5 class="card-title">Interphase (s) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
@@ -141,19 +132,15 @@
           The unit is seconds. 
           Typically this will be 2 to 3 seconds.">
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/red.png" class="card-img-top" alt="red traffic light image" />
-          <div class="container width-box">
-            
-              <label for="interPhase">Time of interphase in seconds</label><br>
+          </a></h5>
+        <br>
+        <label for="interPhase">Time of interphase in seconds</label><br>
               <input type="number" name="inputInterPhase" onkeypress="return isNumberKey(event)" id="interPhase" class="reset_form" value="2" step="0.01" min="1" max="4" required><br>
-            
-            </div> 
-        </div>
-      </div>
+  </div>
+</div>
+</div>
     </div>
-
+      
     <!-- Second Row of Cards-->
     <div class="row">
       <div class="col-12 div2">
@@ -164,13 +151,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Reaction time (s)</h5>
-          </div>
-          <div class="container text-center">
-          <a tabindex="0" 
+    <!-- Reaction Time Card-->
+    <div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/stopwatch.png" alt="Input Reaction Time Image">
+  <div class="card-body">
+    <h5 class="card-title">Reaction Time (s) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
@@ -180,75 +166,65 @@
           Reaction times vary with age, distractions, alcohol or drug usage etc. 
           The unit is seconds.">
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/stopwatch.png" class="card-img-top" alt="stopwatch image" />
-          <div class="container width-box">
-          
-              <label for="reactionTime">Reaction time in seconds</label><br>
+          </a></h5>
+        <br>
+        <label for="reactionTime">Reaction time in seconds</label><br>
               <input type="number" name="inputReactionTime" onkeypress="return isNumberKey(event)" id="reactionTime" class="reset_form" value="1" step="0.01" min="0" max="3" required><br>
           
-        </div>
-      </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Coefficient of friction (μ)</h5>
-          </div>
-          <div class="container text-center">
-          <a tabindex="0" 
+  </div>
+</div>
+</div>
+<!-- Coefficient of friction Card-->
+    <div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/friction.png" alt="Input Coefficient of Friction">
+  <div class="card-body">
+    <h5 class="card-title">Coeff. of Friction (μ) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
           data-trigger="focus" 
-          title="Coefficient of Friction (μ)" 
+         title="Coefficient of Friction (μ)" 
           data-content="Enter the coefficient of friction. This is a number between 0 (the lowest possible) and 1 (total friction) with a maximum of 2 decimal places.">
+          
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/friction.png" class="card-img-top" alt="tyre image representing friction" />
-          <div class="container width-box">
-         
-              <label for="friction">Coefficient of friction</label><br>
+          </a></h5>
+        <br>
+        <label for="friction">Coefficient of friction</label><br>
               <input type="number" onkeypress="return isNumberKey(event)" id="friction" class="reset_form" value="0.8" step="0.01" min="0" max="1" required><br>
           
-        </div>
-      </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Intersection distance (units)</h5>
-          </div>
-          <div class="container text-center">
-          <a tabindex="0" 
+  </div>
+</div>
+</div>
+
+<!-- intersection Distance Card-->
+    <div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/intersection.png" alt="Input Intersection Distance">
+  <div class="card-body">
+    <h5 class="card-title">Intersection Dist. (m) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
           data-trigger="focus" 
-          title="Intersection Distance (m, yd)" 
+         title="Intersection Distance (m, yd)" 
           data-content="Enter the total distance in metres or yards between the approaching stop line and the stop line on the opposite road. 
           Don't forget to select the unit you're using.">
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/intersection.png" class="card-img-top" alt="traffic intersection image" />
-          <div class="container width-box">
-            
-              <label for="intersection">Length of intersection</label><br>
+          </a></h5>
+        <br>
+        <label for="intersection">Length of intersection</label><br>
               <input type="number" onkeypress="return isNumberKey(event)" id="intersectionDistance" class="reset_form" value="40" step="0.01" required><br>
               <label for="length-units">Units</label><br>
               <select name="units" id="length-units" style="width:60px;">
                 <option value="yd">yd</option>
                 <option value="m" selected>m</option>
                 </select>
-           
-        </div>
-        </div>
-      </div>
+  </div>
+</div>
+</div>
+      
     </div>
-
     <!-- Third Row of Cards (vehicle length only)-->
     
     <div class="row">
@@ -262,35 +238,32 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 div3">
-        <div class="card shadow bg-white rounded">
-          <div class="card-body">
-            <h5 class="card-title text-center">Vehicle Length (m)</h5>
-          </div>
-          <div class="container text-center">
-          <a tabindex="0" 
+     <!-- Vehicle Length Card-->
+    <div class="col-xs-12 col-sm-6 col-md-4 div3">
+    <div class="card">
+  <img class="card-img-top img-responsive" src="assets/images/card-images/length.png" alt="Input Vehicle Length">
+  <div class="card-body">
+    <h5 class="card-title">Vehicle Length (m) <a tabindex="0" 
           class="btn btn-link" 
           role="button" 
           data-toggle="popover" 
           data-trigger="focus" 
-          title="Length (m)" 
-          data-content="Enter the total length of the vehicle in metres. The default is the average of 4.5 metres.">
+         title="Vehicle Length (m)" 
+         data-content="Enter the total length of the vehicle in metres. The default is the average of 4.5 metres.">
           <i class="far fa-question-circle fa-2x"></i>
-          </a>
-          </div>
-          <img src="assets/images/card-images/length.png" class="card-img-top" alt="image representing various vehicle langths" />
-          <div class="container width-box">
-          
-              <label for="length">Length of vehicle (m)</label><br>
+          </a></h5>
+        <br>
+         <label for="length">Length of vehicle (m)</label><br>
               <input type="number" onkeypress="return isNumberKey(event)" id="length" class="reset_form" value="4.5" step="0.01" required><br>
          
-        </div>
-        </div>
-      </div>
+  </div>
+</div>
+    </div>
       <div class="col-xs-12 col-sm-6 col-md-4 div3">
 
       </div>
     </div>
+    
 
 <div class="row">
 <div class="container text-center div2">
