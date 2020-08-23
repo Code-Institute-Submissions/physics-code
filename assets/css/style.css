@@ -82,11 +82,11 @@ input[type=number] {
 }
 
 /* modal for calculation */
-.icon-hide-dilemmazone {
+.icon_hide_dilemmazone {
     display: none;
 }
 
-.icon-hide-optionzone {
+.icon_hide_optionzone {
     display: none;
 }
 

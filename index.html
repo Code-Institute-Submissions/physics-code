@@ -89,7 +89,7 @@
           <div class="container width-box">
             
               <label for="initialVelocity">Velocity</label><br>
-              <input type="number" name="inputVelocity" onkeypress="return isNumberKey(event)" id="initialVelocity" class="reset_form" value="10" required><br>
+              <input type="number" name="inputVelocity" onkeypress="return isNumberKey(event)" id="initialVelocity" class="reset_form" value="10" step="0.01" required><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
                 <option value="kmh">km/h</option>
@@ -120,7 +120,7 @@
             <div class="container width-box">
             
               <label for="yellowPhase">Time of yellow phase in seconds</label><br>
-              <input type="number" name="inputYellowPhase" onkeypress="return isNumberKey(event)" id="yellowPhase" class="reset_form" value="4" min="1" max="8" required><br>
+              <input type="number" name="inputYellowPhase" onkeypress="return isNumberKey(event)" id="yellowPhase" class="reset_form" value="4" step="0.01" min="1" max="8" required><br>
             
             </div> 
         </div>
@@ -147,7 +147,7 @@
           <div class="container width-box">
             
               <label for="interPhase">Time of interphase in seconds</label><br>
-              <input type="number" name="inputInterPhase" onkeypress="return isNumberKey(event)" id="interPhase" class="reset_form" value="2" min="1" max="4" required><br>
+              <input type="number" name="inputInterPhase" onkeypress="return isNumberKey(event)" id="interPhase" class="reset_form" value="2" step="0.01" min="1" max="4" required><br>
             
             </div> 
         </div>
@@ -186,7 +186,7 @@
           <div class="container width-box">
           
               <label for="reactionTime">Reaction time in seconds</label><br>
-              <input type="number" name="inputReactionTime" onkeypress="return isNumberKey(event)" id="reactionTime" class="reset_form" value="1" min="0" max="3" required><br>
+              <input type="number" name="inputReactionTime" onkeypress="return isNumberKey(event)" id="reactionTime" class="reset_form" value="1" step="0.01" min="0" max="3" required><br>
           
         </div>
       </div>
@@ -237,7 +237,7 @@
           <div class="container width-box">
             
               <label for="intersection">Length of intersection</label><br>
-              <input type="number" onkeypress="return isNumberKey(event)" id="intersectionDistance" class="reset_form" value="40" required><br>
+              <input type="number" onkeypress="return isNumberKey(event)" id="intersectionDistance" class="reset_form" value="40" step="0.01" required><br>
               <label for="length-units">Units</label><br>
               <select name="units" id="length-units" style="width:60px;">
                 <option value="yd">yd</option>
@@ -282,7 +282,7 @@
           <div class="container width-box">
           
               <label for="length">Length of vehicle (m)</label><br>
-              <input type="number" onkeypress="return isNumberKey(event)" id="length" class="reset_form" value="4.5" required><br>
+              <input type="number" onkeypress="return isNumberKey(event)" id="length" class="reset_form" value="4.5" step="0.01" required><br>
          
         </div>
         </div>
@@ -311,7 +311,8 @@ value="Reset" />
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="zone_header"></h5><i id="dilemmaZoneIcon" class="fas fa-exclamation-triangle icon-hide-dilemmazone"></i><i class="far fa-smile-beam icon-hide-optionzone"></i>
+        <h5 class="modal-title" id="zone_header"></h5><span id="dilemmaZoneIcon" class="icon_hide_dilemmazone"><i class="fas fa-exclamation-triangle"></i></span>
+        <span id="optionZoneIcon" class="icon_hide_optionzone"><i class="far fa-smile-beam"></i></span>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
