@@ -14,7 +14,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!--Link to custom style sheet-->
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
- 
 
   <title>Physics Code</title>
 </head>
@@ -22,12 +21,18 @@
 <body>
   <header>
     <!-- Logo and text in Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info no-gutters">
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo-main.png" width="30" height="30" class="d-inline-block align-top" alt="Physics Code Logo" loading="lazy">
         Physics Code
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button 
+      class="navbar-toggler" 
+      type="button" data-toggle="collapse" 
+      data-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,279 +54,355 @@
     </nav>
   </header>
   <section>
-    <div class="container-xl div1">
+    <div class="container div1">
       <h1>Delimma Zone Calculator</h1>
-      <p>Add your variables to the calculator - you will need to supply all the variables before being able to calculate whether or not a dilemma zone exists.</p>
-      <p>If a delimma zone exists, the output will show you the distance from the traffic light stop line and the size of the delimma zone.</p>
-      <p>The other possibility is that an option zone exists, this will be displayed as a distance from the traffic light stop line and the size of the option zone will also be given.</p>
+      <p class="lead">Add your variables to the calculator - you will need to supply all the variables before being able to
+        calculate whether or not a dilemma zone exists.</p>
+      <p class="lead">If a delimma zone exists, the output will show you the distance from the traffic light stop line and
+        the size of the delimma zone.</p>
+      <p class="lead my-0">The other possibility is that an option zone exists, this will be displayed as a distance from
+        the traffic light stop line and the size of the option zone will also be given.</p><br>
     </div>
   </section>
   <!--Cards for variable inputs-->
-  <section class="container card-padding">
+  <section class="container">
 
-<form name="dzCalculator" id="dzCalculator" onsubmit="openModal()">
-    <div class="row">
-      <div class="col-12 div2">
-        <h2>Maximum Travelling Distance</h2>
-        <p class="card-text">
-          Input the variables for velocity, yellow light phase and interphase.
-        </p>
+    <form name="dzCalculator" id="dzCalculator" onsubmit="openModal()">
+      <div class="row">
+        <div class="col-12 div2">
+          <h2>Maximum Travelling Distance</h2>
+          <p class="card-text">
+            Input the variables for velocity, yellow light phase and interphase.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-    <!-- Velocity Card-->
-    <div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/velocity.png" alt="Input Velocity Image">
-  <div class="card-body">
-    <h5 class="card-title">Initial Velocity (m/s) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-          title="Initial Velocity (m/s, km/h or mph)" 
-          data-content="Enter the initial velocity the vehicle is travelling. Don't forget to check the units!">
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-          <label for="initialVelocity">Velocity</label><br>
-              <input type="number" name="inputVelocity" onkeypress="return isNumberKey(event)" id="initialVelocity" class="reset_form" value="10" step="0.01" required><br>
+      <div class="row">
+        <!-- Velocity Card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/velocity.png" alt="Input Velocity Image">
+            <div class="card-body">
+              <h5 class="card-title">Initial Velocity (m/s) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Initial Velocity (m/s, km/h or mph)"
+              data-content="Enter the initial velocity the vehicle is travelling. Don't forget to check the units!">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="initialVelocity">Velocity</label><br>
+              <input 
+              type="number" 
+              name="inputVelocity" 
+              onkeypress="return isNumberKey(event)" 
+              id="initialVelocity" 
+              class="reset_form" 
+              value="10" 
+              step="0.01" 
+              required><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
                 <option value="kmh">km/h</option>
                 <option value="ms" selected>m/s</option>
                 <option value="mph">mph</option>
               </select>
-  </div>
-</div>
-</div>
+            </div>
+          </div>
+        </div>
 
-<!-- Yellow light phase card-->
-<div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/yellow.png" alt="Input Yellow Light Phase Image">
-  <div class="card-body">
-    <h5 class="card-title">Yellow Phase (s) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-          title="Yellow Light Phase (s)" 
-          data-content="Enter the total time the traffic light remains yellow. The unit is seconds.">
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-         <label for="yellowPhase">Time of yellow phase in seconds</label><br>
-              <input type="number" name="inputYellowPhase" onkeypress="return isNumberKey(event)" id="yellowPhase" class="reset_form" value="4" step="0.01" min="1" max="8" required><br>
-  </div>
-</div>
-</div>
+        <!-- Yellow light phase card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/yellow.png" alt="Input Yellow Light Phase Image">
+            <div class="card-body">
+              <h5 class="card-title">Yellow Phase (s) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Yellow Light Phase (s)"
+              data-content="Enter the total time the traffic light remains yellow. The unit is seconds.">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="yellowPhase">Time of yellow phase in seconds</label><br>
+              <input 
+              type="number" 
+              name="inputYellowPhase" 
+              onkeypress="return isNumberKey(event)" 
+              id="yellowPhase" 
+              class="reset_form" 
+              value="4" 
+              step="0.01" 
+              min="1" 
+              max="8" 
+              required><br>
+            </div>
+          </div>
+        </div>
 
-<!-- Interphase card-->
-<div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/red.png" alt="Input Interphase Image">
-  <div class="card-body">
-    <h5 class="card-title">Interphase (s) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-          title="Interphase (s)" 
-          data-content="Enter the total time between end of the right of way phase and the start of the right of way for the next phase. 
-          The unit is seconds. 
-          Typically this will be 2 to 3 seconds.">
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-        <label for="interPhase">Time of interphase in seconds</label><br>
-              <input type="number" name="inputInterPhase" onkeypress="return isNumberKey(event)" id="interPhase" class="reset_form" value="2" step="0.01" min="1" max="4" required><br>
-  </div>
-</div>
-</div>
-    </div>
-      
-    <!-- Second Row of Cards-->
-    <div class="row">
-      <div class="col-12 div2">
-        <h2>Reaction Distance, coeffecient of friction and intersection distance</h2>
-        <p class="card-text">
-          Input the reaction time for the driver (s), the coefficient of friction (0 - 1) and the size of the intersection from stop line to opposite stop line.
-        </p>
+        <!-- Interphase card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/red.png" alt="Input Interphase Image">
+            <div class="card-body">
+              <h5 class="card-title">Interphase (s) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Interphase (s)" 
+              data-content="Enter the total time between end of the right of way phase and the start of the right of way for the next phase.
+              The unit is seconds.
+              Typically this will be 2 to 3 seconds.">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="interPhase">Time of interphase in seconds</label><br>
+              <input 
+              type="number" 
+              name="inputInterPhase" 
+              onkeypress="return isNumberKey(event)" 
+              id="interPhase" 
+              class="reset_form" 
+              value="2" 
+              step="0.01" 
+              min="1" 
+              max="4" 
+              required><br>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-    <!-- Reaction Time Card-->
-    <div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/stopwatch.png" alt="Input Reaction Time Image">
-  <div class="card-body">
-    <h5 class="card-title">Reaction Time (s) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-          title="Reaction Time (s)" 
-          data-content="Enter the time it takes for a driver to react. 
-          Reaction times vary with age, distractions, alcohol or drug usage etc. 
-          The unit is seconds.">
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-        <label for="reactionTime">Reaction time in seconds</label><br>
-              <input type="number" name="inputReactionTime" onkeypress="return isNumberKey(event)" id="reactionTime" class="reset_form" value="1" step="0.01" min="0" max="3" required><br>
-          
-  </div>
-</div>
-</div>
-<!-- Coefficient of friction Card-->
-    <div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/friction.png" alt="Input Coefficient of Friction">
-  <div class="card-body">
-    <h5 class="card-title">Coeff. of Friction (μ) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-         title="Coefficient of Friction (μ)" 
-          data-content="Enter the coefficient of friction. This is a number between 0 (the lowest possible) and 1 (total friction) with a maximum of 2 decimal places.">
-          
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-        <label for="friction">Coefficient of friction</label><br>
-              <input type="number" onkeypress="return isNumberKey(event)" id="friction" class="reset_form" value="0.8" step="0.01" min="0" max="1" required><br>
-          
-  </div>
-</div>
-</div>
 
-<!-- intersection Distance Card-->
-    <div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/intersection.png" alt="Input Intersection Distance">
-  <div class="card-body">
-    <h5 class="card-title">Intersection Dist. (m) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-         title="Intersection Distance (m, yd)" 
-          data-content="Enter the total distance in metres or yards between the approaching stop line and the stop line on the opposite road. 
-          Don't forget to select the unit you're using.">
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-        <label for="intersection">Length of intersection</label><br>
-              <input type="number" onkeypress="return isNumberKey(event)" id="intersectionDistance" class="reset_form" value="40" step="0.01" required><br>
+      <!-- Second Row of Cards-->
+      <div class="row">
+        <div class="col-12 div2">
+          <h2>Reaction Distance, coeffecient of friction and intersection distance</h2>
+          <p class="card-text">
+            Input the reaction time for the driver (s), the coefficient of friction (0 - 1) and the size of the intersection from stop line to opposite stop line.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Reaction Time Card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/stopwatch.png" alt="Input Reaction Time Image">
+            <div class="card-body">
+              <h5 class="card-title">Reaction Time (s) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Reaction Time (s)" 
+              data-content="Enter the time it takes for a driver to react.
+              Reaction times vary with age, distractions, alcohol or drug usage etc.
+              The unit is seconds.">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="reactionTime">Reaction time in seconds</label><br>
+              <input 
+              type="number" 
+              name="inputReactionTime" 
+              onkeypress="return isNumberKey(event)" 
+              id="reactionTime" 
+              class="reset_form" 
+              value="1" 
+              step="0.01" 
+              min="0" 
+              max="3" 
+              required><br>
+
+            </div>
+          </div>
+        </div>
+        <!-- Coefficient of friction Card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/friction.png" alt="Input Coefficient of Friction">
+            <div class="card-body">
+              <h5 class="card-title">Coeff. of Friction (μ) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Coefficient of Friction (μ)"
+              data-content="Enter the coefficient of friction. This is a number between 0 (the lowest possible) and 1 (total friction) with a maximum of 2 decimal places.">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="friction">Coefficient of friction</label><br>
+              <input 
+              type="number" 
+              onkeypress="return isNumberKey(event)" 
+              id="friction" 
+              class="reset_form" 
+              value="0.8" 
+              step="0.01" 
+              min="0" 
+              max="1" 
+              required><br>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- intersection Distance Card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/intersection.png" alt="Input Intersection Distance">
+            <div class="card-body">
+              <h5 class="card-title">Intersection Dist. (m) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Intersection Distance (m, yd)" 
+              data-content="Enter the total distance in metres or yards between the approaching stop line and the stop line on the opposite road.
+              Don't forget to select the unit you're using.">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="intersection">Length of intersection</label><br>
+              <input 
+              type="number" 
+              onkeypress="return isNumberKey(event)" 
+              id="intersectionDistance" 
+              class="reset_form" 
+              value="40" 
+              step="0.01" 
+              required><br>
               <label for="length-units">Units</label><br>
               <select name="units" id="length-units" style="width:60px;">
                 <option value="yd">yd</option>
                 <option value="m" selected>m</option>
-                </select>
-  </div>
-</div>
-</div>
-      
-    </div>
-    <!-- Third Row of Cards (vehicle length only)-->
-    
-    <div class="row">
-      <div class="col-12 div2">
-        <h2>Vehicle Length</h2>
-        <p class="card-text">
-          Input the size of the vehicle, default is 6 metres.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 div3">
-      </div>
-     <!-- Vehicle Length Card-->
-    <div class="col-lg-4 div3">
-    <div class="card shadow">
-  <img class="card-img-top img-fluid" src="assets/images/card-images/length.png" alt="Input Vehicle Length">
-  <div class="card-body">
-    <h5 class="card-title">Vehicle Length (m) <a tabindex="0" 
-          class="btn btn-link" 
-          role="button" 
-          data-toggle="popover" 
-          data-trigger="focus" 
-         title="Vehicle Length (m)" 
-         data-content="Enter the total length of the vehicle in metres. The default is the average of 4.5 metres.">
-          <i class="far fa-question-circle fa-2x"></i>
-          </a></h5>
-        <br>
-         <label for="length">Length of vehicle (m)</label><br>
-              <input type="number" onkeypress="return isNumberKey(event)" id="length" class="reset_form" value="4.5" step="0.01" required><br>
-         
-  </div>
-</div>
-    </div>
-      <div class="col-lg-4 div3">
-
-      </div>
-    </div>
-    
-
-<div class="row">
-<div class="container text-center div2">
-<input type="submit" 
-class="btn btn-success btn-lg btn--padding" 
-onclick="validateForm();convert();convertDistance();dilemmaZone()" 
-value="Calculate" />
-<input type="reset" 
-class="btn btn-primary btn-lg btn--padding" 
-id="formReset" 
-value="Reset" />
-</div>
-</div>
-</form>
-
-<!-- Modal -->
-<div class="modal fade" id="dilemma_zone_output" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="zone_header"></h5><span id="dilemmaZoneIcon" class="icon_hide_dilemmazone"><i class="fas fa-exclamation-triangle"></i></span>
-        <span id="optionZoneIcon" class="icon_hide_optionzone"><i class="far fa-smile-beam"></i></span>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>The distance the vehicle travels during the yellow and interphase duration : <br>
-<span id = "phaseDistance"></span>
-</p>
-<p>The distance the vehicle travels through the duration of the reaction time : <br>
-<span id = "reactionDistance"></span>
-</p>
-<p>The total distance from the stop-line required for the vehicle coming to a halt : <br>
-<span id = "stoppingDistance"></span>
-</p>
-<p>The Maximum Distance from stopline is : <br>
-<span id = "maxDistance"></span>
-</p>
-<p>If negative, DZ exists. If positive, OZ exists : <br>
-<span id = "total"></span>
-</p>
-<p>Zone : <br>
-<span id = "zone"></span>
-</p>
-<p>Result of velocity conversion : <br>
-<span id = "conversion"></span>
-</p>
-<p>Result of intersection distance conversion : <br>
-<span id = "conversion-dist"></span>
-</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </select>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- Third Row of Cards (vehicle length only)-->
+
+      <div class="row">
+        <div class="col-12 div2">
+          <h2>Vehicle Length</h2>
+          <p class="card-text">
+            Input the size of the vehicle, default is 6 metres.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 div3">
+        </div>
+        <!-- Vehicle Length Card-->
+        <div class="col-lg-4 div3">
+          <div class="card shadow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/length.png" alt="Input Vehicle Length">
+            <div class="card-body">
+              <h5 class="card-title">Vehicle Length (m) 
+              <a 
+              tabindex="0" 
+              class="btn btn-link" 
+              role="button" 
+              data-toggle="popover" 
+              data-trigger="focus" 
+              title="Vehicle Length (m)"
+              data-content="Enter the total length of the vehicle in metres. The default is the average of 4.5 metres.">
+                  <i class="far fa-question-circle fa-2x"></i>
+                </a></h5>
+              <br>
+              <label for="length">Length of vehicle (m)</label><br>
+              <input 
+              type="number" 
+              onkeypress="return isNumberKey(event)" 
+              id="length" 
+              class="reset_form" 
+              value="4.5" 
+              step="0.01" 
+              required><br>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 div3">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="container text-center div2">
+          <input 
+          type="submit" 
+          class="btn btn-success btn-lg btn--padding" 
+          onclick="validateForm();convert();convertDistance();dilemmaZone()" 
+          value="Calculate" />
+          <input 
+          type="reset" 
+          class="btn btn-primary btn-lg btn--padding" 
+          id="formReset" 
+          value="Reset" />
+        </div>
+      </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="dilemma_zone_output" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="zone_header"></h5><span id="dilemmaZoneIcon" class="icon_hide_dilemmazone dz-icon"><i class="fas fa-exclamation-triangle"></i></span>
+            <span id="optionZoneIcon" class="icon_hide_optionzone oz-icon"><i class="far fa-check-square"></i></span>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>The distance the vehicle travels throughout the yellow and interphase duration : <br>
+              <span id="phaseDistance"></span>
+            </p>
+            <p>The distance the vehicle travels throughout the duration of the reaction time : <br>
+              <span id="reactionDistance"></span>
+            </p>
+            <p>The total distance from the stop-line required for the vehicle coming to a complete halt : <br>
+              <span id="stoppingDistance"></span>
+            </p>
+            <p>The Maximum Distance the vehicle is from stopline : <br>
+              <span id="maxDistance"></span>
+            </p>
+            <p>Numbers that are negative indicate a delimma zone. Positive numbers indicate an option zone : <br>
+              <span id="total"></span>
+            </p>
+            <p>Zone : <br>
+              <span>A </span><span id="zone"></span>
+            </p>
+            <p>Velocity (m/s) : <br>
+              <span id="conversion"></span>
+            </p>
+            <p>Intersection distance (m) : <br>
+              <span id="conversion-dist"></span>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
   </section>
 
@@ -383,7 +464,7 @@ value="Reset" />
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="assets/scripts/calculator.js"></script>
   <script src="assets/scripts/dependencies.js"></script>
-  
+
 </body>
 
 </html>

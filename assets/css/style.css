@@ -51,7 +51,7 @@ h2 {
   margin-top: 5px; 
   margin-bottom: 5px; 
   width: 18rem;
-  height: 26rem;
+  height: 23.7rem;
 }
 
 /* separates the bottom of the card section from the button section */
@@ -77,6 +77,19 @@ input[type=number] {
 
 .icon_hide_optionzone {
     display: none;
+}
+
+/* when icons are displayed in the modal */
+.dz-icon {
+    color: red;
+    font-size: 22px;
+    margin-left: auto;
+}
+
+.oz-icon {
+    color: blue;
+    font-size: 22px;
+    margin-left: auto;
 }
 
 /* footer */
