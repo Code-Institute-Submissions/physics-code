@@ -97,6 +97,22 @@ input[type=number] {
     margin-left: auto;
 }
 
+/* Reaction Time Game */
+.icon_hide_greenLight {
+    display: none;
+}
+
+.icon_hide_redLight {
+    display: none;
+}
+
+.red_light_icon {
+    color: #ee2400;
+}
+
+.green_light_icon {
+    color: #32CD32;
+}
 /* footer */
 /* footer background color */
 .page-footer {
