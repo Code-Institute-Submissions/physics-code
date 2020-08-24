@@ -126,7 +126,7 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   document.getElementById("optionZoneIcon").classList.remove("icon_hide_optionzone");
   document.getElementById("dilemmaZoneIcon").classList.add("icon_hide_dilemmazone");
   } else {
-  document.getElementById("zone").innerHTML = total.toFixed(2) + " m" + " dilemma zone exists";
+  document.getElementById("zone").innerHTML = Math.abs(total).toFixed(2) + " m" + " dilemma zone exists";
   document.getElementById("zone_header").innerHTML = "Dilemma Zone Found";
   document.getElementById("zone_header").style.color = "red";
   document.getElementById("dilemmaZoneIcon").classList.remove("icon_hide_dilemmazone");

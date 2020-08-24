@@ -10,5 +10,7 @@ function.
 4. Adding and removing classes was needed for multiple form inputs. If someone was putting in an input that calculated a delimma zone, the delimma zone icon would 
 appear in the modal header. If the user then continued to do another output, and this returned an option zone, they'd see both option zone and delimma zone icons. 
 To fix this an add class to bring the icon to the header was used as well as a remove class if one had been added previously. 
+5. The dilemma zone calculator works out a dilemma zone as a negative number. But the actual dilemma zone is a positive number as a "size". To remove the negative symbol, 
+the Math.abs(total) syntax was tagged onto the function printing out the dilemma zone calculations. 
 
 unsolved problems:
