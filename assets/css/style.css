@@ -113,6 +113,14 @@ input[type=number] {
 .green_light_icon {
     color: #32CD32;
 }
+
+.btn_hide_start {
+    display: none;
+}
+
+.btn_hide_brakes {
+    display: none;
+}
 /* footer */
 /* footer background color */
 .page-footer {
