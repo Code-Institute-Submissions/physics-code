@@ -8,7 +8,7 @@ function makeGreen(){
 // Set timer for how long light remains green
 
 function setTimerAmount(){
-    let timeInSeconds = Math.random() * (15 - 5) + 5;
+    let timeInSeconds = Math.random() * (8 - 5) + 5;
     setTimeout(function(){
             $(brake_button).removeClass("btn_hide_brakes");
             $(redLightStart).removeClass("icon_hide_redLight");
@@ -22,9 +22,11 @@ function setTimerAmount(){
     var timeDiff = ((timeEnd - timeStart) / 1000) - timeInSeconds;
     console.log(timeInSeconds);
 
-    $("#time").html('Time Difference: ' + timeDiff.toFixed(3) + ' s');
+    $("#time").html('Your reaction time is ' + timeDiff.toFixed(3) + ' s');
+    $("#brake_button").attr("disabled", true);
   });
 });
+
 }
 
 
