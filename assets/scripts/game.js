@@ -13,8 +13,18 @@ function setTimerAmount(){
             $(brake_button).removeClass("btn_hide_brakes");
             $(redLightStart).removeClass("icon_hide_redLight");
             $(greenLightStop).addClass("icon_hide_greenLight");
-            //....and whatever else you need to do
-    }, timeInSeconds * 1000);
+            }, timeInSeconds * 1000);
+            $(function() {
+	var timeStart = new Date();
+
+  $("#brake_button").on('click', function() {
+    var timeEnd = new Date();
+    var timeDiff = ((timeEnd - timeStart) / 1000) - timeInSeconds;
+    console.log(timeInSeconds);
+
+    $("#time").html('Time Difference: ' + timeDiff.toFixed(3) + ' s');
+  });
+});
 }
 
 
