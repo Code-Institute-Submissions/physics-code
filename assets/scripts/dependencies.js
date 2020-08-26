@@ -4,8 +4,8 @@ $(function() {
 })
 
 $(function() {
-  $('[data-toggle="popover"]').popover()
-})
+  $('[data-toggle="popover"]').popover({html:true})
+ })
 
 // disable mousewheel on an input number field when in focus
 // (Prevents an accidental change in input values when scrolling on the page)

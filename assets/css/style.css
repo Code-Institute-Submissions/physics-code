@@ -102,11 +102,22 @@ input[type=number] {
 }
 
 /* Help Page */
-#card-help-velocity, #card-help-yellow {
-   height: 96.5%;
+/* Set card heights */
+#card-help-velocity, 
+#card-help-yellow,
+#card-help-red,
+#card-help-reaction-time,
+#card-help-friction,
+#card-help-intersection {
+   height: 96.9%;
 }
 
-#card-help-text-velocity, #card-help-text-yellow {
+#card-help-text-velocity, 
+#card-help-text-yellow,
+#card-help-text-red,
+#card-help-text-reaction-time,
+#card-help-text-friction,
+#card-help-text-intersection {
     height: auto;
     width: auto;
 }
