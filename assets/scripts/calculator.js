@@ -32,8 +32,8 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   }
   // Prevent the calculator from opening modal without appropriate form submission
   // Source https://codepen.io/hanapiers/pen/EXNrGP
-  $('#dzCalculator').on('submit', function(e){
-  $('#dilemma_zone_output').modal('show');
+  $("#dzCalculator").on("submit", function(e){
+  $("#dilemma_zone_output").modal("show");
   e.preventDefault();
   });
 

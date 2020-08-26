@@ -36,16 +36,15 @@ function setTimerAmount() {
 
 // Open modal from the brakes button on click
 // Source https://codepen.io/hanapiers/pen/EXNrGP
-$("#brake_button").on("click", function(e){
-  $("#reaction_time_output").modal("show");
-  e.preventDefault();
-  });
+$("#brake_button").on("click", function(e) {
+  $("#reaction_time_output").modal("show")
+  
+});
 
-  function reset_timer(){
-    $(redLightStart).removeClass("icon_hide_redLight");
-    $(greenLightStop).addClass("icon_hide_greenLight");
-    $(start_button).removeClass("btn_hide_start");
-    $(brake_button).addClass("btn_hide_brakes");
-    $("#brake_button").attr("disabled", false);
-  }
-
+function reset_timer() {
+  $(redLightStart).removeClass("icon_hide_redLight");
+  $(greenLightStop).addClass("icon_hide_greenLight");
+  $(start_button).removeClass("btn_hide_start");
+  $(brake_button).addClass("btn_hide_brakes");
+  $("#brake_button").attr("disabled", false);
+}
