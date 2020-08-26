@@ -57,8 +57,69 @@
     </nav>
   </header>
 <section>
-<h1>This is a heading - Help</h1>
-</section>
+    <div class="container div1">
+      <h1>Help with understanding the Dilemma Zone variables</h1>
+      <p class="head-text">When approaching a controlled intersection and the traffic signal changes to yellow, a driver of a vehicle has one of two choices;
+      firstly, they can continue through the traffic signals and intersection or, brake in order to stop before the light changes red at the stop line.</p>
+      <p class="head-text">A dilemma zone exists where a vehicle would not be able to safely pass through the 
+      intersection nor stop before the stop line if a signal light were to turn yellow on approach.</p>
+      <p class="head-text">The risk involved to other drivers as well as the driver of the vehicle is significant in a dilemma zone situation. to date, no effective
+      calcuator is available online to estimate if a dilemma zone exists at a particular intersection. This help file will give an understanding of the variables 
+      required and how the results can be evaluated.</p>
+      <p class="head-text my-0"></p><br>
+    </div>
+  </section>
+   <section class="container">
+   <div class="row">
+        <div class="col-12 div2">
+          <h2>Velocity and signal phases</h2>
+          <p class="card-text">
+            The best methods to determine initial velocities and traffic light phases. 
+          </p>
+        </div>
+      </div>
+      <div class="row">
+       <div class="col-lg-4 div3">
+          <div class="card shadow" id="card-help-velocity">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/velocity.png" alt="Velocity Image">
+            <div class="card-body">
+              <h5 class="card-title">Velocity</h5>
+             </div>
+          </div>
+        </div>
+<div class="col-lg-8 div3">
+          <div class="card shadow" id="card-help-text-velocity">
+            <div class="card-body">
+              <p>Velocity is a measure of the amount of distance an object travels over an amount of time in a relative direction. 
+              It is common to use the SI units of ms<sup>-1</sup>, however, our calculator will also accept kilometres per hour (kmh<sup>-1</sup>) or miles per hour (mph).
+              The conversion into ms<sup>-1</sup> is done for you.</p>
+              <p>The equation to use: \[velocity = { distance \over time}\]</p>
+              <p>It is common in this case to begin by using the speed limit at the intersection before trying alternatives such as driving too slow or too fast.<p>
+             </div>
+          </div>
+      </div>
+      </div>
+      <div class="row">
+       <div class="col-lg-4 div3">
+          <div class="card shadow" id="card-help-yellow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/yellow.png" alt="Yellow Light Image">
+            <div class="card-body">
+              <h5 class="card-title">Yellow Light Phase</h5>
+             </div>
+          </div>
+        </div>
+<div class="col-lg-8 div3">
+          <div class="card shadow" id="card-help-text-yellow">
+            <div class="card-body">
+              <p>The yellow light phase is a predetermined length of time controlled at the intersection.</p>
+              <p>A usual time a light remains yellow can range from 3 to 5 seconds. For best results, it is ideal to know the length of time the traffic signal remains yellow.</p>
+              <p>This value, in seconds, gives the variable <em>time</em> in our velocity equation. This is rearranged to solve for distance.</p>
+              <p>The equation to use: \[distance = { velocity \cdot time}\]</p> 
+             </div>
+          </div>
+      </div>
+   </section>
+
  <!-- Footer -->
   <footer class="page-footer font-small darken-3">
 
@@ -102,7 +163,8 @@
     </div>
     <!-- Footer Elements -->
 
-    <!-- Copyright -->
+    <!-- Copyright and Facebook share-->
+    <div class="container text-center">
     <div 
         class="fb-share-button" 
         data-href="https://pauld0051.github.io/physcis-code/game.html" 
@@ -113,6 +175,7 @@
         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphyscis-code%2Fgame.html&amp;src=sdkpreparse" 
         class="fb-xfbml-parse-ignore">
         Share</a></div>
+    </div>
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
       <a href="https://index.html">Physics Code</a>
     </div>
@@ -129,7 +192,8 @@
   <div id="fb-root"></div>
   <script src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=335490644461179&autoLogAppEvents=1" nonce="6zMt4Xa9"></script>
   <script src="assets/scripts/dependencies.js"></script>
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>

@@ -101,6 +101,16 @@ input[type=number] {
     margin-left: auto;
 }
 
+/* Help Page */
+#card-help-velocity, #card-help-yellow {
+   height: 96.5%;
+}
+
+#card-help-text-velocity, #card-help-text-yellow {
+    height: auto;
+    width: auto;
+}
+
 /* Reaction Time Game */
 .icon_hide_greenLight {
     display: none;
@@ -165,7 +175,5 @@ input[type=number] {
     outline: none;  
 }
 
-.fb-share-button{
-    margin-left: 48%;
-}
+
 
