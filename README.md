@@ -14,5 +14,9 @@ appear in the modal header. If the user then continued to do another output, and
 To fix this an add class to bring the icon to the header was used as well as a remove class if one had been added previously. 
 5. The dilemma zone calculator works out a dilemma zone as a negative number. But the actual dilemma zone is a positive number as a "size". To remove the negative symbol, 
 the Math.abs(total) syntax was tagged onto the function printing out the dilemma zone calculations. 
+6. The reaction time game prototype showed that the counter was able to stop and work out the number of seconds the user took to press the "brakes" button. However, the brakes
+button remained active and was able to be pushed again. An initial attempt to remove the ID that allows the "click" event to be listened to failed to work. Finally, a jQuery
+button disabled function was able to complete the job. 
+
 
 unsolved problems:

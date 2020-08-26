@@ -140,8 +140,7 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   $(function(){
 
   $("#formReset").click(function(){
-  alert("Reset button activated");
-
+  
   //Set the input text fields to empty string
   $("input.reset_form").val("");
   });
