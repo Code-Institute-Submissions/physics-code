@@ -3,6 +3,9 @@ function makeGreen() {
   $(redLightStart).addClass("icon_hide_redLight");
   $(greenLightStop).removeClass("icon_hide_greenLight");
   $(start_button).addClass("btn_hide_start");
+  $(ready_to_brake).removeClass("remove_start");
+  $(remove_start).addClass("remove_start");
+
 }
 
 // Set timer for how long light remains green,
@@ -47,4 +50,13 @@ function reset_timer() {
   $(start_button).removeClass("btn_hide_start");
   $(brake_button).addClass("btn_hide_brakes");
   $("#brake_button").attr("disabled", false);
+  $("h5#ready_to_brake").addClass("remove_start");
+  $("h5#remove_start").removeClass("remove_start");
 }
+
+// prevents users from right clicking on a button which could prevent the timer from working
+$(document).ready(function() {
+    $("button").on("contextmenu",function(){
+       return false;
+    }); 
+}); 

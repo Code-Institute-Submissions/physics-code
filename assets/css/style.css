@@ -135,6 +135,16 @@ input[type=number] {
     color: blue;
     text-align: center;
 }
+
+/* Hide heading text "start" or "brake" */
+.ready_to_brake {
+    display: none;
+}
+
+.remove_start {
+    display: none;
+}
+
 /* footer */
 /* footer background color */
 .page-footer {
@@ -153,5 +163,9 @@ input[type=number] {
 .ins-icon,
 .pin-icon {
     outline: none;  
+}
+
+.fb-share-button{
+    margin-left: 48%;
 }
 

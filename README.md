@@ -20,4 +20,6 @@ button disabled function was able to complete the job.
 
 
 unsolved problems:
+1. Can not add a link within a popover (Bootstrap). A link to the Reaction Timer game was meant to go into the popover, however, a more suitable location under the input
+tag works as well. 
 
