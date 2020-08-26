@@ -93,7 +93,7 @@
               <p>Velocity is a measure of the amount of distance an object travels over an amount of time in a relative direction. 
               It is common to use the SI units of ms<sup>-1</sup>, however, our calculator will also accept kilometres per hour (kmh<sup>-1</sup>) or miles per hour (mph).
               The conversion into ms<sup>-1</sup> is done for you.</p>
-              <p>The equation to use: \[velocity = { distance \over time}\]</p>
+              <p>The equation to use: \[velocity = { dist_{total} \over time}\]</p>
               <p>It is common in this case to begin by using the speed limit at the intersection before trying alternatives such as driving too slow or too fast.<p>
              </div>
           </div>
@@ -111,10 +111,30 @@
 <div class="col-lg-8 div3">
           <div class="card shadow" id="card-help-text-yellow">
             <div class="card-body">
-              <p>The yellow light phase is a predetermined length of time controlled at the intersection.</p>
+              <p>The yellow light phase (<sub>yp</sub>) is a predetermined length of time controlled at the intersection.</p>
               <p>A usual time a light remains yellow can range from 3 to 5 seconds. For best results, it is ideal to know the length of time the traffic signal remains yellow.</p>
               <p>This value, in seconds, gives the variable <em>time</em> in our velocity equation. This is rearranged to solve for distance.</p>
-              <p>The equation to use: \[distance = { velocity \cdot time}\]</p> 
+              <p>The equation to use: \[dist_{yp} = { velocity \cdot time_{yp}}\]</p> 
+             </div>
+          </div>
+      </div>
+      </div>
+      <div class="row">
+       <div class="col-lg-4 div3">
+          <div class="card shadow" id="card-help-yellow">
+            <img class="card-img-top img-fluid" src="assets/images/card-images/red.png" alt="Red Light Image">
+            <div class="card-body">
+              <h5 class="card-title">Interhase</h5>
+             </div>
+          </div>
+        </div>
+      <div class="col-lg-8 div3">
+          <div class="card shadow" id="card-help-text-yellow">
+            <div class="card-body">
+              <p>During the interphase all traffic signals at an intersection are red. This time is predetermined but usually is around 1 to 2 seconds.</p>
+              <p>The distance a vehicle travels through the duration of the interphase is added onto the yellow phase time.</p>
+              <p>The equation to use: \[dist_{ip} = { velocity \cdot time_{ip}}\]</p>
+              <p>The total distance a car travels through the yellow and interphase is: \[dist_{total} = { dist_{yp} + dist_{ip} }\]</p> 
              </div>
           </div>
       </div>
