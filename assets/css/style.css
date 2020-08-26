@@ -125,6 +125,16 @@ input[type=number] {
 .btn_hide_brakes {
     display: none;
 }
+
+.fa-stopwatch {
+    color: pink;
+}
+
+.reaction_time_text {
+    font-size: 1.8rem;
+    color: blue;
+    text-align: center;
+}
 /* footer */
 /* footer background color */
 .page-footer {

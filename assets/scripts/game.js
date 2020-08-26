@@ -28,7 +28,7 @@ function setTimerAmount() {
       var timeDiff = ((timeEnd - timeStart) / 1000) - timeInSeconds;
       console.log(timeInSeconds);
       // Display the time for reaction time and prevent the brakes button from being pushed a second time
-      $("#time").html("Your reaction time is " + timeDiff.toFixed(3) + " s");
+      $("#time").html(timeDiff.toFixed(3) + " s");
       $("#brake_button").attr("disabled", true);
     });
   });
