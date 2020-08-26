@@ -108,7 +108,9 @@ input[type=number] {
 #card-help-red,
 #card-help-reaction-time,
 #card-help-friction,
-#card-help-intersection {
+#card-help-intersection,
+#card-help-length,
+#card-help-final {
    height: 96.9%;
 }
 
@@ -117,7 +119,9 @@ input[type=number] {
 #card-help-text-red,
 #card-help-text-reaction-time,
 #card-help-text-friction,
-#card-help-text-intersection {
+#card-help-text-intersection,
+#card-help-text-length,
+#card-help-text-final {
     height: auto;
     width: auto;
 }
