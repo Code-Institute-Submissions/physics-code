@@ -67,17 +67,17 @@ $(document).ready(function() {
 }); 
 
 // Sharing the result of the Reaction Time game to Facebook
-
 function share_result() {
-    let bestTime = document.getElementById("time").value;
-FB.ui({
+   FB.ui({
+  app_id: 335490644461179,     
   method: 'feed',
   link: 'https://pauld0051.github.io/physcis-code/',
-  quote: 'I scored ' + window.time.toFixed(3) + ' s in the Reaction Time game at Physics Code!'
+  quote: 'I scored ' + window.time.toFixed(3) + ' s in the Reaction Time game at Physics Code! Can you beat that?'
 }, function(response){if (response && !response.error_message) {
       alert('Posting completed.');
     } else {
       alert('Error while posting.');
     }});
 }
+
 

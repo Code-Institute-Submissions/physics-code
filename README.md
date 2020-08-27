@@ -20,8 +20,9 @@ button disabled function was able to complete the job.
 
 
 unsolved problems:
-1. Can not add a link within a popover (Bootstrap). A link to the Reaction Timer game was meant to go into the popover, however, a more suitable location under the input
-tag works as well. 
+1. After the share to Facebook button is pressed in the Reaction Time game, a link appears on the user account which would go to an approved app. However, for the purposes of
+this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
+Facebook goes beyond the requirement for this site. 
 
 Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
 Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard 
