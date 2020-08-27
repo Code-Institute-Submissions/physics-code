@@ -14,7 +14,7 @@ function makeGreen() {
 // Then set up the timer for a random amount of time the light remains green for
 // timeInSeconds will be (25 - 5) + 3, but for the purposes of examination, the time has been set much shorter. 
 
-
+   
 function setTimerAmount() {
     let timeInSeconds = Math.random() * (8 - 3) + 3;
     setTimeout(function() {
@@ -32,6 +32,7 @@ function setTimerAmount() {
     $("#brake_button").on("click", function() {
       let timeEnd = new Date();
       let timeDiff = ((timeEnd - timeStart) / 1000) - timeInSeconds;
+      window.time = timeDiff;
       // Leaving this in here for examiners to see the random effect for the timer
       console.log(timeInSeconds);
       // Display the time for reaction time and prevent the brakes button from being pushed a second time
@@ -65,12 +66,18 @@ $(document).ready(function() {
     }); 
 }); 
 
+// Sharing the result of the Reaction Time game to Facebook
+
 function share_result() {
     let bestTime = document.getElementById("time").value;
 FB.ui({
   method: 'feed',
   link: 'https://pauld0051.github.io/physcis-code/',
-  quote: 'I scored ' + bestTime
-}, function(response){});
+  quote: 'I scored ' + window.time.toFixed(3) + ' s in the Reaction Time game at Physics Code!'
+}, function(response){if (response && !response.error_message) {
+      alert('Posting completed.');
+    } else {
+      alert('Error while posting.');
+    }});
 }
 
