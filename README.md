@@ -23,3 +23,6 @@ unsolved problems:
 1. Can not add a link within a popover (Bootstrap). A link to the Reaction Timer game was meant to go into the popover, however, a more suitable location under the input
 tag works as well. 
 
+Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
+Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard 
+
