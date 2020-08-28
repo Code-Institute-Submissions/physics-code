@@ -43,8 +43,24 @@ function setTimerAmount() {
       // Display the time for reaction time and prevent the brakes button from being pushed a second time
       $("#time").html(timeDiff.toFixed(3) + " s");
       $("#brake_button").attr("disabled", true);
-      localStorage.setItem('score', timeDiff.toFixed(3));
-      
+      // Get the previous high score if any, or `NaN` if none
+      // `localStorage.score` will be `undefined` if you've never stored a high score
+      // at all (or a string otherwise). `parseFloat` will return `NaN` if you pass it
+      // `undefined`, so we check that later.
+      const lastHighScore = parseFloat(localStorage.score);
+      // Get the string version of this score
+      const scoreString = timeDiff.toFixed(3);
+      let message;
+      if (isNaN(lastHighScore) || timeDiff < lastHighScore) { 
+      // New high score
+      message = "Your new best time is " + scoreString;
+      // Store the new score
+      localStorage.score = scoreString;
+    } else {
+    // Not a new high score
+    message = "Your best time is " + localStorage.score + " s";
+}
+document.getElementById("best_score").textContent = message;
       });
   });
 }
@@ -79,7 +95,7 @@ function share_result() {
     app_id: 335490644461179,
     method: 'feed',
     link: 'https://pauld0051.github.io/physcis-code/',
-    quote: "I scored " + localStorage.getItem('score') + "s in this game." 
+    quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code." 
   }, function(response) {
     if (response && !response.error_message) {
       alert('Posting completed.');
@@ -88,6 +104,7 @@ function share_result() {
     }
   });
 }
+
 
  
 
