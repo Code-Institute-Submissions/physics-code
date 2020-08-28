@@ -1,23 +1,29 @@
 // Turn the traffic light green when "start" button clicked and remove the start button
 function makeGreen() {
+  // Choose a random number for the top and left margins to locate the brake button
+  let margin_top = Math.floor(Math.random() * 46) + 20;
+  let margin_left = Math.floor(Math.random() * 90) + 20;
+  // Choose whether that number is either positive or negative for the margins
+  margin_top *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
+  margin_left *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
+  // Add and remove the buttons and add the random location of the brake button
   $(redLightStart).addClass("icon_hide_redLight");
   $(greenLightStop).removeClass("icon_hide_greenLight");
   $(start_button).addClass("btn_hide_start");
   $(ready_to_brake).removeClass("remove_start");
   $(remove_start).addClass("remove_start");
-
+  $(brake_button).css("margin-top", margin_top + "%");
+  $(brake_button).css("margin-left", margin_left + "%");
 }
 
 // Set timer for how long light remains green,
 // remove the "start" button and then return the light to red
 // and add the brake button to be pushed
 // Then set up the timer for a random amount of time the light remains green for
-// timeInSeconds will be (25 - 5) + 3, but for the purposes of examination, the time has been set much shorter. 
-
-   
+// timeInSeconds will be (25 - 5) + 3, but for the purposes of examination, the time has been set much shorter.
 function setTimerAmount() {
-    let timeInSeconds = Math.random() * (8 - 3) + 3;
-    setTimeout(function() {
+  let timeInSeconds = Math.random() * (8 - 3) + 3;
+  setTimeout(function() {
     $(brake_button).removeClass("btn_hide_brakes");
     $(redLightStart).removeClass("icon_hide_redLight");
     $(greenLightStop).addClass("icon_hide_greenLight");
@@ -46,7 +52,7 @@ function setTimerAmount() {
 // Source https://codepen.io/hanapiers/pen/EXNrGP
 $("#brake_button").on("click", function(e) {
   $("#reaction_time_output").modal("show")
-  
+
 });
 
 function reset_timer() {
@@ -61,23 +67,23 @@ function reset_timer() {
 
 // prevents users from right clicking on a button which could prevent the timer from working
 $(document).ready(function() {
-    $("button").on("contextmenu",function(){
-       return false;
-    }); 
-}); 
+  $("button").on("contextmenu", function() {
+    return false;
+  });
+});
 
 // Sharing the result of the Reaction Time game to Facebook
 function share_result() {
-   FB.ui({
-  app_id: 335490644461179,     
-  method: 'feed',
-  link: 'https://pauld0051.github.io/physcis-code/',
-  quote: 'I scored ' + window.time.toFixed(3) + ' s in the Reaction Time game at Physics Code! Can you beat that?'
-}, function(response){if (response && !response.error_message) {
+  FB.ui({
+    app_id: 335490644461179,
+    method: 'feed',
+    link: 'https://pauld0051.github.io/physcis-code/',
+    quote: 'I scored ' + window.time.toFixed(3) + ' s in the Reaction Time game at Physics Code! Can you beat that?'
+  }, function(response) {
+    if (response && !response.error_message) {
       alert('Posting completed.');
     } else {
       alert('Error while posting.');
-    }});
+    }
+  });
 }
-
-
