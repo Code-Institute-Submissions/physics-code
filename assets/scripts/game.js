@@ -1,8 +1,8 @@
 // Turn the traffic light green when "start" button clicked and remove the start button
 function makeGreen() {
   // Choose a random number for the top and left margins to locate the brake button
-  let margin_top = Math.floor(Math.random() * 46) + 20;
-  let margin_left = Math.floor(Math.random() * 90) + 20;
+  let margin_top = Math.floor(Math.random() * 31) + 10;
+  let margin_left = Math.floor(Math.random() * 81) + 20;
   // Choose whether that number is either positive or negative for the margins
   margin_top *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
   margin_left *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
@@ -51,24 +51,24 @@ function setTimerAmount() {
       // Get the string version of this score
       const scoreString = timeDiff.toFixed(3);
       let message;
-      if (isNaN(lastHighScore) || timeDiff < lastHighScore) { 
-      // New high score
-      message = "Your new best time is " + scoreString;
-      // Store the new score
-      localStorage.score = scoreString;
-    } else {
-    // Not a new high score
-    message = "Your best time is " + localStorage.score + " s";
-}
-document.getElementById("best_score").textContent = message;
-      });
+      if (isNaN(lastHighScore) || timeDiff < lastHighScore) {
+        // New high score
+        message = "Your new best time is " + scoreString + " s";
+        // Store the new score
+        localStorage.score = scoreString;
+      } else {
+        // Not a new high score
+        message = "Your best time is " + localStorage.score + " s";
+      }
+      document.getElementById("best_score").textContent = message;
+    });
   });
 }
 
 // Open modal from the brakes button on click
 // Source https://codepen.io/hanapiers/pen/EXNrGP
 $("#brake_button").on("click", function(e) {
-  $("#reaction_time_output").modal("show")
+  $("#reaction_time_output").modal("show");
 
 });
 
@@ -95,7 +95,7 @@ function share_result() {
     app_id: 335490644461179,
     method: 'feed',
     link: 'https://pauld0051.github.io/physcis-code/',
-    quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code." 
+    quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
   }, function(response) {
     if (response && !response.error_message) {
       alert('Posting completed.');
@@ -104,12 +104,3 @@ function share_result() {
     }
   });
 }
-
-
- 
-
-
- 
-
-
- 

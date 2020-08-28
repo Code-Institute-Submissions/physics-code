@@ -159,6 +159,13 @@ input[type=number] {
     font-size: 1.8rem;
     color: blue;
     text-align: center;
+    border: 5px solid yellow;
+}
+
+.best_score_text {
+    font-size: 1.4rem;
+    color: #36454f;
+    text-align: center;
 }
 
 /* Hide heading text "start" or "brake" */
