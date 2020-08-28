@@ -64,8 +64,8 @@
 <section>
     <div class="container div1">
       <h1>Reaction Time Game</h1>
-      <p class="head-text">If you're wanting to test your reaction time for the calculator, you can do so here by playing this game. The rules are very straight forward,
-      but for the most accurate results, try and follow the rules as closely as possible.</p>
+      <p class="head-text">If you're wanting to test your reaction time for the calculator, you can do so here by playing this game. Just try to hit the 
+      brakes when the light turns red.</p>
       <p class="head-text">Because we're dealing with reaction times between the pedals in a car, this test done by hand and mouse or touch screen may not give an 
       accurate representation of reaction time. This game tests your reaction time as an estimate only.</p>
       <p class="head-text my-0">Reaction times will vary with age, tiredness, distractions, impairment with alcohol or drugs and many other reasons.</p><br>
@@ -76,8 +76,7 @@
         <div class="col-12 div2">
           <h2>Test your reaction time!</h2>
           <p class="card-text">
-            Click the "start" button and then move your hand at least 20 cm from the mouse or your device. When you press start, the lamp will turn green. When the lamp turns red, 
-            click the "Brake" button. The light stays green for a random amount of time, less than 30 seconds. 
+            Click the "start" button to turn the lamp green. Wait until the lamp turns red and the brake button appears and try and click the brakes as fast as you can. 
           </p>
         </div>
       </div>
@@ -128,10 +127,11 @@
         <h5 class="modal-title" id="reaction_time_header">Your Reaction Time...</h5><i class="fas fa-stopwatch fa-2x"></i>
         </div>
       <div class="modal-body">
-       <p class="reaction_time_text" id="time"></p>
+       <p class="reaction_time_text" id="time"></p><br><br>
+       <p class="reaction_time_text" id="score"></p>
       </div>
         <div class="modal-footer">
-        <button type="button" id="share_button" onclick="share_result()" class="btn fb--button">Share<i class="fab fa-facebook-f fa-lg mx-1"></i></button>
+        <button type="button" id="share_button" onclick="share_result()" class="btn fb--button"><i class="fab fa-facebook-f fa-lg mr-2"></i>Share</button>
         <button type="button" id="restart_test" onclick="reset_timer()" class="btn btn-secondary" data-dismiss="modal">Reset</button>
         </div>
      </div>
