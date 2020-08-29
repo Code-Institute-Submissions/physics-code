@@ -2,9 +2,10 @@
 $(function() {
   $('[data-toggle="tooltip"]').tooltip()
 })
-
+// Allow popover entries to accept HTML mark-up. 
 $(function() {
   $('[data-toggle="popover"]').popover({html:true})
+  $('[title="popover"]').popover({html:true})
  })
 
 // disable mousewheel on an input number field when in focus
