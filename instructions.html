@@ -63,7 +63,9 @@
       <p class="head-text">In the <a href="test_yourself.html" target="_blank"> test yourself</a> questions you will be given a Google Map location of an intersection.
       You will need to be able to measure the distance of the intersection to complete the calculation. </p>
       <p class="head-text my-0">Google Maps includes tools already to allow you to do this
-      and here we will show you how.</p><br>
+      and here we will show you how.</p>
+      <p>Note, although this function can be performed on a mobile phone, desktop users will have a definite advantage when using Google Maps. Mobile phone instructions
+      are located below on this page.</p><br>
     </div>
   </section>
 
@@ -73,7 +75,7 @@
       <div class="col-12 div2">
         <h2>Open the map</h2>
         <p class="card-text">
-          The map locations and coordinates have been given already, all you need to do is click on the map to open it in a new window. 
+         Use the map location provided by clicking on the map. 
         </p>
       </div>
     </div>
@@ -119,7 +121,7 @@
       <div class="col-lg-8 div3">
         <div class="card shadow" id="card-help-map-large-2">
           <div class="card-body">
-            <p>When you are zoomed in enough to see both stop lines at the intersction, left click on one of the intersection stop lines.</p>
+            <p>When you are zoomed in enough to see the stop line at the intersction, left click on the intersection stop line to drop a pin.</p>
             <img src="assets/images/help-images/help-image-3.png" alt="Map help image" class="img-fluid help-images">
           </div>
         </div>
@@ -175,14 +177,32 @@
           <div class="card-body">
             <p>Move your mouse pointer so you are in-line with the opposite stop line and left click on the map. This will trace a distance for you in feet or metres.
             You can also click on the second pointer now and move it so it lines up more accurately with the opposite stop line. Use this as your intersection distance for 
-            your calculations.</p>
-            <img src="assets/images/help-images/help-image-5.png" alt="Map help image" class="img-fluid help-images">
+            your calculations. Click the image to enlarge.</p>
+           <img src="assets/images/help-images/help-image-5.png" alt="Map help image" class="img-fluid help-images" data-toggle="modal" data-target="#help_map_pic"> 
           </div>
         </div>
       </div>
     </div>
 
-    
+    <!-- Modal to enlarge help map -->
+    <div class="modal fade bd-example-modal-xl" id="help_map_pic" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Intersection measurement</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-auto">
+          <img class="img-fluid" src="assets/images/help-images/help-image-5.png" alt="Map help image">
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </section>
 
  <!-- Footer -->

@@ -183,6 +183,13 @@ input[type=number] {
     color: #fff !important;
 }
 
+/* Test Yourself Page */
+#map_one {
+        height: 400px;  
+        width: 100%;  
+       }
+
+
 /* Instructions Page */
 .icon-center {
     text-align: center;
