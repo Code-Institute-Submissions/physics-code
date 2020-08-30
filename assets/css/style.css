@@ -184,7 +184,8 @@ input[type=number] {
 }
 
 /* Test Yourself Page */
-#map_one {
+#map_one,
+#map_two {
         height: 400px;  
         width: 100%;  
        }
