@@ -14,10 +14,14 @@ function initMap() {
       map.panTo(marker.getPosition());
     }, 3000);
   });
+  // Allow users to click on the map to open in a new window
   google.maps.event.addListener(map, "click", function(){
      window.open("https://goo.gl/maps/vMGeYw9N58a7vjYm8")
 });
- 
+// Allow users to click on the marker to open in a new window
+  google.maps.event.addListener(marker, "click", function(){
+     window.open("https://goo.gl/maps/vMGeYw9N58a7vjYm8")
+});
 }
 
 
