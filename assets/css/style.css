@@ -185,12 +185,33 @@ input[type=number] {
 
 /* Test Yourself Page */
 #map_one,
-#map_two {
-        height: 400px;  
-        width: 100%;  
-       }
+#map_two,
+#map_three,
+#map_four, 
+#map_five {
+     height: 400px;  
+     width: 100%;  
+}
 
+#card-map-1,
+#card-map-2,
+#card-map-3,
+#card-map-4,
+#card-map-5 {
+    height: 90px;
+    width: auto;
+}
 
+#card-map-large-1,
+#card-map-large-2,
+#card-map-large-3,
+#card-map-large-4,
+#card-map-large-5 {
+    height: auto;
+    width: auto;
+}
+
+/* -- REMOVE THIS CODE --*/
 /* Instructions Page */
 .icon-center {
     text-align: center;
@@ -204,22 +225,8 @@ input[type=number] {
     display: block;
     border: 5px solid #17a2b8;
 }
+/* -- REMOVE FROM ABOVE THIS LINE -- */
 
-#card-help-map-1,
-#card-help-map-2,
-#card-help-map-3,
-#card-help-map-4 {
-    height: 90px;
-    width: auto;
-}
-
-#card-help-map-large-1,
-#card-help-map-large-2,
-#card-help-map-large-3,
-#card-help-map-large-4 {
-    height: auto;
-    width: auto;
-}
 
 /* footer */
 /* footer background color */
