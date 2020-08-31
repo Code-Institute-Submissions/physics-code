@@ -192,14 +192,14 @@ input[type=number] {
      height: 400px;  
      width: 100%;  
 }
-
+ 
 #card-map-1,
 #card-map-2,
 #card-map-3,
 #card-map-4,
 #card-map-5 {
-    height: 90px;
-    width: auto;
+    height: 618px;
+    width: 100%;
 }
 
 #card-map-large-1,
@@ -248,5 +248,10 @@ input[type=number] {
     outline: none;  
 }
 
+/* 404 page */
+
+.align-center {
+ text-align: center;
+}
 
 

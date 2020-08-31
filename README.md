@@ -23,7 +23,11 @@ unsolved problems:
 1. After the share to Facebook button is pressed in the Reaction Time game, a link appears on the user account which would go to an approved app. However, for the purposes of
 this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
 Facebook goes beyond the requirement for this site. 
+2. Advert blocking apps will cause unnoticed errors with the Facebook share button. No user experience is changed as a result. However, the Console will show an ERR_BLOCKED_BY_CLIENT alert. 
 
 Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
-Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard 
+Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard
+Converting from png to ico for favicons and map marker icon https://icoconvert.com/
+MathJax for the equations on the help page
+
 
