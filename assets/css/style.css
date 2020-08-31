@@ -249,9 +249,15 @@ input[type=number] {
 }
 
 /* 404 page */
+.hazard-sign {
+    height: 240px;
+    width: auto;
+}
 
 .align-center {
  text-align: center;
 }
 
-
+.mt-7 {
+  margin-top: 7rem !important;
+}
