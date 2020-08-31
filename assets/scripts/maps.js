@@ -8,15 +8,15 @@ function initMap() {
   var image = 'assets/images/map_icon_marker.ico';
   // The map, centered at Intersection One
    var map = new google.maps.Map(
-      document.getElementById('map_one'), {zoom: 18, center: intersection_one, mapTypeId: 'satellite'});
+      document.getElementById('map_one'), {zoom: 18, center: intersection_one, mapTypeId: 'satellite', zoomControl: false});
    var map2 = new google.maps.Map(
-      document.getElementById('map_two'), {zoom: 19, center: intersection_two, mapTypeId: 'satellite'});
+      document.getElementById('map_two'), {zoom: 19, center: intersection_two, mapTypeId: 'satellite', zoomControl: false});
    var map3 = new google.maps.Map(
-      document.getElementById('map_three'), {zoom: 19, center: intersection_three, mapTypeId: 'satellite'});
+      document.getElementById('map_three'), {zoom: 19, center: intersection_three, mapTypeId: 'satellite', zoomControl: false});
    var map4 = new google.maps.Map(
-      document.getElementById('map_four'), {zoom: 19, center: intersection_four, mapTypeId: 'satellite'});
+      document.getElementById('map_four'), {zoom: 19, center: intersection_four, mapTypeId: 'satellite', zoomControl: false});
    var map5 = new google.maps.Map(
-      document.getElementById('map_five'), {zoom: 19, center: intersection_five, mapTypeId: 'satellite'});            
+      document.getElementById('map_five'), {zoom: 19, center: intersection_five, mapTypeId: 'satellite', zoomControl: false});            
   // The marker, positioned
   var marker = new google.maps.Marker({position: intersection_one, map: map,  icon: image});
   map.addListener("center_changed", () => {
