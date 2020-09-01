@@ -65,15 +65,18 @@
     </nav>
   </header>
   <section>
-      <div class="container div1">
-      <h1>Dilemma Zone Calculator</h1>
+      <div class="container div2">
+      <div class="container heading-background">
+      <h1>Dilemma Zone Calculator <i class="fas fa-calculator"></i></h1>
       <p class="head-text">Add your variables to the calculator - you will need to supply all the variables before being able to
         calculate whether or not a dilemma zone exists. If you need some hints or want to try to calculate yourself, check our <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a> info button to the help page at any time.</p>
       <p class="head-text">If a dilemma zone exists, the output will show you the distance from the traffic light stop line and
         the size of the dilemma zone.</p>
       <p class="head-text my-0">The other possibility is that an option zone exists, this will be displayed as a distance from
         the traffic light stop line and the size of the option zone will also be given.</p><br>
-    </div>
+      </div>
+      </div>
+    
   </section>
   <!--Cards for variable inputs-->
   <section class="container">
@@ -81,12 +84,14 @@
     <form name="dzCalculator" id="dzCalculator" onsubmit="openModal()">
       <div class="row">
         <div class="col-12 div2">
-          <h2>Maximum Travelling Distance</h2>
+         <div class="container heading-background heading-padding heading-margin">
+         <h2>Maximum Travelling Distance</h2>
           <p class="card-text">
             Input the variables for velocity, yellow light phase and interphase. <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a>
           </p>
+         </div>
+          </div>
         </div>
-      </div>
       <div class="row">
         <!-- Velocity Card-->
         <div class="col-lg-4 div3">
@@ -197,10 +202,12 @@
       <!-- Second Row of Cards-->
       <div class="row">
         <div class="col-12 div2">
+        <div class="container heading-background heading-padding heading-margin">
           <h2>Reaction Distance, coeffecient of friction and intersection distance</h2>
           <p class="card-text">
             Input the reaction time for the driver (s), the coefficient of friction (0 - 1) and the size of the intersection from stop line to opposite stop line. <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a>
           </p>
+        </div>
         </div>
       </div>
       <div class="row">
@@ -311,10 +318,12 @@
 
       <div class="row">
         <div class="col-12 div2">
+        <div class="container heading-background heading-padding heading-margin">
           <h2>Vehicle Length</h2>
           <p class="card-text">
             Input the size of the vehicle, default is 4.5 metres. <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a>
           </p>
+        </div>
         </div>
       </div>
       <div class="row">
