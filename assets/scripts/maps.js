@@ -20,8 +20,8 @@ function initMap() {
   // The marker, positioned
   var marker = new google.maps.Marker({position: intersection_one, map: map,  icon: image});
   map.addListener("center_changed", () => {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
+  // 3 seconds after the center of the map has changed, pan back to the
+  // marker.
     window.setTimeout(() => {
       map.panTo(marker.getPosition());
     }, 3000);
@@ -54,7 +54,7 @@ function initMap() {
       map5.panTo(marker5.getPosition());
     }, 3000);
     });  
-   // Allow users to click on the map to open in a new window
+ // Allow users to click on the map to open in a new window
 google.maps.event.addListener(map, "click", function(){
      window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3")
 });
@@ -70,7 +70,7 @@ google.maps.event.addListener(map4, "click", function(){
 google.maps.event.addListener(map5, "click", function(){
      window.open("https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3")
 });
-// Allow users to click on the marker to open in a new window
+ // Allow users to click on the marker to open in a new window
 google.maps.event.addListener(marker, "click", function(){
      window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3")
 });

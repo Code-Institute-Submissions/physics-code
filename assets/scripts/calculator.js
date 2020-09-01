@@ -1,13 +1,12 @@
-// Limit input boxes to only numbers and decimal places
-function isNumberKey(evt){
-let charCode = (evt.which) ? evt.which : evt.keyCode
-if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
+  // Limit input boxes to only numbers and decimal places
+  function isNumberKey(evt){
+  let charCode = (evt.which) ? evt.which : evt.keyCode
+  if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   return false;
   return true;
   }
 
   // Limit coefficient of friction to a max of 1 and a minimum of zero
-
   // Blank inputs not allowed
   function validateForm() {
   let inputVelocity1 = document.getElementById("initialVelocity").value;
@@ -30,6 +29,7 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   return false;
   }
   }
+
   // Prevent the calculator from opening modal without appropriate form submission
   // Source https://codepen.io/hanapiers/pen/EXNrGP
   $("#dzCalculator").on("submit", function(e){
@@ -72,6 +72,7 @@ if (charCode > 31 && (charCode < 48 || charCode> 57) && charCode != 46)
   if (lengthid === "yd") {
   result = id * 0.9144;
   }
+
   // passing the result outside the function, into the global variable for access later on
   fullDistance = result;
   document.getElementById("conversion-dist").innerHTML = fullDistance.toFixed(2) + " m";

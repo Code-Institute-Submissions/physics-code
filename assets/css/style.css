@@ -5,21 +5,27 @@ h1 {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
     font-family: "Rubik", sans-serif;
     color: #85144b;
-  }
+}
 
 .heading-background {
-   background-color: #f8f8ff;
-   opacity: 0.95;
-   border-radius: 8px;
+    background-color: #f8f8ff;
+    opacity: 0.95;
+    border-radius: 8px;
 }
 
 .heading-padding {
     padding-top: 12px;
     padding-bottom: 12px;
 }
+
 .heading-margin { 
     margin-top: 6px;
     margin-bottom: 6px;
@@ -40,7 +46,21 @@ p {
 
 .content-div {
     background-color: #6699cc;
-    }
+}
+
+/* rounded button edges and colors */
+.btn-rounded {
+    border-radius: 25px;
+}
+
+.btn-green {
+    background-color: #3D9970;
+}
+
+.form--button {
+    width: 125px;
+    height: auto;
+}
 
 /* navbar */
 .nav-text {
@@ -64,20 +84,20 @@ p {
 
 /* Images displayed in cards on the home [calculator] page */
 .card-img-top {
-  max-height: 150px;
-  max-width: 100%;
-  object-fit: contain;
-  margin: auto;
-  padding-top: 10px;
+    max-height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: auto;
+    padding-top: 10px;
 }
 
 .card {
-  margin: 0 auto;
-  float: none;
-  margin-top: 5px; 
-  margin-bottom: 5px; 
-  width: 18rem;
-  height: 23.7rem;
+    margin: 0 auto;
+    float: none;
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    width: 18rem;
+    height: 23.7rem;
 }
 
 .card--extra-wide {
@@ -114,7 +134,7 @@ input[type=number] {
     display: none;
 }
 
-/* when icons are displayed in the modal */
+/* when icons are displayed in the modal dz = dilemma zone and oz = option zone */
 .dz-icon {
     color: #FF0000;
     font-size: 22px;
@@ -214,8 +234,8 @@ input[type=number] {
 #map_three,
 #map_four, 
 #map_five {
-     height: 400px;  
-     width: 100%;  
+    height: 400px;  
+    width: 100%;  
 }
  
 #card-map-1,
@@ -241,6 +261,7 @@ input[type=number] {
     padding-top: 3rem;
 }
 
+/* location of the desktop, android and apple help buttons */
 .background-ul {
     background-color: #f8f8ff;
     border: none;    
@@ -287,6 +308,7 @@ input[type=number] {
  text-align: center;
 }
 
+/* $spacer amount */
 .mt-7 {
   margin-top: 7rem !important;
 }
