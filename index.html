@@ -64,18 +64,21 @@
       </div>
     </nav>
   </header>
-  <section>
-      <div class="container div2">
-      <div class="container heading-background">
+  <section class="container">
+      <div class="row">
+      <div class="col-12  title-div">
+      <div class="container heading-background heading-padding heading-margin-top">
       <h1>Dilemma Zone Calculator <i class="fas fa-calculator"></i></h1>
       <p class="head-text">Add your variables to the calculator - you will need to supply all the variables before being able to
         calculate whether or not a dilemma zone exists. If you need some hints or want to try to calculate yourself, check our <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a> info button to the help page at any time.</p>
       <p class="head-text">If a dilemma zone exists, the output will show you the distance from the traffic light stop line and
         the size of the dilemma zone.</p>
       <p class="head-text my-0">The other possibility is that an option zone exists, this will be displayed as a distance from
-        the traffic light stop line and the size of the option zone will also be given.</p><br>
+        the traffic light stop line and the size of the option zone will also be given.</p>
       </div>
       </div>
+      </div>
+      
     
   </section>
   <!--Cards for variable inputs-->
@@ -83,7 +86,7 @@
 
     <form name="dzCalculator" id="dzCalculator" onsubmit="openModal()">
       <div class="row">
-        <div class="col-12 div2">
+        <div class="col-12 title-div">
          <div class="container heading-background heading-padding heading-margin">
          <h2>Maximum Travelling Distance</h2>
           <p class="card-text">
@@ -94,7 +97,7 @@
         </div>
       <div class="row">
         <!-- Velocity Card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/velocity.png" alt="Input Velocity Image">
             <div class="card-body">
@@ -131,7 +134,7 @@
         </div>
 
         <!-- Yellow light phase card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/yellow.png" alt="Input Yellow Light Phase Image">
             <div class="card-body">
@@ -164,7 +167,7 @@
         </div>
 
         <!-- Interphase card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/red.png" alt="Input Interphase Image">
             <div class="card-body">
@@ -201,7 +204,7 @@
 
       <!-- Second Row of Cards-->
       <div class="row">
-        <div class="col-12 div2">
+        <div class="col-12 title-div">
         <div class="container heading-background heading-padding heading-margin">
           <h2>Reaction Distance, coeffecient of friction and intersection distance</h2>
           <p class="card-text">
@@ -212,7 +215,7 @@
       </div>
       <div class="row">
         <!-- Reaction Time Card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/stopwatch.png" alt="Input Reaction Time Image">
             <div class="card-body">
@@ -246,7 +249,7 @@
           </div>
         </div>
         <!-- Coefficient of friction Card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/friction.png" alt="Input Coefficient of Friction">
             <div class="card-body">
@@ -279,7 +282,7 @@
         </div>
 
         <!-- intersection Distance Card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/intersection.png" alt="Input Intersection Distance">
             <div class="card-body">
@@ -317,7 +320,7 @@
       <!-- Third Row of Cards (vehicle length only)-->
 
       <div class="row">
-        <div class="col-12 div2">
+        <div class="col-12 title-div">
         <div class="container heading-background heading-padding heading-margin">
           <h2>Vehicle Length</h2>
           <p class="card-text">
@@ -327,10 +330,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
         </div>
         <!-- Vehicle Length Card-->
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
           <div class="card shadow">
             <img class="card-img-top img-fluid" src="assets/images/card-images/length.png" alt="Input Vehicle Length">
             <div class="card-body">
@@ -359,12 +362,12 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 div3">
+        <div class="col-lg-4 content-div">
         </div>
       </div>
 
       <div class="row">
-        <div class="container text-center div2">
+        <div class="container text-center title-div">
           <input 
           type="submit" 
           class="btn btn-success btn-lg btn--padding" 

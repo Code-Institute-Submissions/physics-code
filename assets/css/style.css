@@ -7,21 +7,38 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Rubik", sans-serif;
+    color: #85144b;
   }
+
+.heading-background {
+   background-color: #f8f8ff;
+   opacity: 0.95;
+   border-radius: 8px;
+}
+
+.heading-padding {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.heading-margin { 
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.heading-margin-top {
+    margin-top: 6px;
+}
 
 p {
     font-family: "Ubuntu", sans-serif;
+    color: #111111;
 }
 
-.div1 {
-    background-color: #e6d8ad;
-}
-
-.div2 {
+.title-div {
     background-color: #add8e6;
 }
 
-.div3 {
+.content-div {
     background-color: #6699cc;
     }
 
@@ -41,6 +58,10 @@ p {
     margin-bottom: 12px;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 /* Images displayed in cards on the home [calculator] page */
 .card-img-top {
   max-height: 150px;
@@ -57,21 +78,6 @@ p {
   margin-bottom: 5px; 
   width: 18rem;
   height: 23.7rem;
-}
-
-.heading-background {
-   background-color: #f8f8ff;
-   opacity: 0.95;
-   border-radius: 8px;
-}
-
-.heading-padding {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-.heading-margin { 
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 
 .card--extra-wide {
@@ -243,6 +249,10 @@ input[type=number] {
 .help--button {
     width: 150px;
     height: auto;
+}
+
+.btn-blue {
+    background-color: #0074D9;
 }
 
 /* footer */
