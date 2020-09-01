@@ -56,7 +56,7 @@
 
   // passing the result outside the function, into the global variable for access later on
   finalVelocity = result;
-  document.getElementById("conversion").innerHTML = finalVelocity.toFixed(2) + " m/s";
+  document.getElementById("conversion").innerHTML = finalVelocity.toFixed(2) + " ms<sup>-1</sup>";
   }
 
   // Convert yards to metres
