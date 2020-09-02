@@ -99,8 +99,6 @@ function calculateScenario() {
     mapOneYellowPhase = window[ypUrban[randomYpUrban]];
     mapOneInterphase = window[ipUrban[randomIpUrban]];
     mapOneReactionTime = window[driverReaction[randomRt]];
-    mapOneFrictionTire = tires[tireCondition];
-    mapOneFrictionWeather = coldClimates[randomTireCold];
     mapOneIntersection = 52;
     mapOneLength = carLength;
 
@@ -108,6 +106,37 @@ function calculateScenario() {
     let distancePhase = ((+mapOneInitialVelocity * (+mapOneYellowPhase + +mapOneInterphase)) - carLength).toFixed(2);
     console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLength);
     console.log(distancePhase);
+
+    // Calculate the stopping distance
+    var coefficientTires;
+    if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "dry") { 
+    coefficientTires = dryTiresGood;}
+    else if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "wet") {
+    coefficientTires = wetTiresGood;}
+    else if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "icy") {
+    coefficientTires = ice;}
+    else if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "snowy") {
+    coefficientTires = snow;}
+    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "dry") {
+    coefficientTires = dryTiresAvg;}
+    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "wet") {
+    coefficientTires = wetTiresAvg;}
+    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "icy") {
+    coefficientTires = ice;}
+    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "snowy") {
+    coefficientTires = snow;}
+    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "dry") {
+    coefficientTires = dryTiresBad;}
+    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "wet") {
+    coefficientTires = wetTiresBad;}
+    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "icy") {
+    coefficientTires = ice;}
+    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "snowy") {
+    coefficientTires = snow;}
+    else coefficientTires = false;
+console.log(coefficientTires);
+
+// the end of the calculation function
 }
 
 
