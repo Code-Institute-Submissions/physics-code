@@ -18,10 +18,7 @@ var ipNorm = Math.random() * (1.5 - 1.2) + 1.2;
 var ipHigh = Math.random() * (2.4 - 1.5) + 1.5; 
 
 // Reaction time
-var rtLow = Math.random() * (2.5 - 1.5) + 1.5;
-var rtMed = Math.random() * (1.5 - 1.0) + 1.0;
-var rtGood = Math.random() * (1.0 - 0.8) + 0.8;
-var rtexcel = Math.random() * (0.8 - 0.4) + 0.4;
+var rtRandom = Math.random() * (2.5 - 0.4) + 0.4;
 
 // Friction
 var dryTiresGood = 0.9;
@@ -64,11 +61,6 @@ const ipHwy = ["ipNorm", "ipHigh"];
 const randomIpHwy = Math.floor(Math.random() * ipHwy.length);
 console.log(randomIpHwy, ipHwy[randomIpHwy]);
 
-// Randomly Choose a variable from the list for reaction time
-const driverReaction = ["rtLow", "rtMed", "rtGood", "rtExcel"];
-const randomRt = Math.floor(Math.random() * driverReaction.length);
-console.log(randomRt, driverReaction[randomRt]);
-
 // Randomly choose friction for cold or hot climates
 const tires = ["good", "average", "bad"];
 const tireCondition = Math.floor(Math.random() * tires.length);
@@ -87,7 +79,7 @@ function fullscenario() {
     document.getElementById("map-1-initialVelocity").innerHTML = window[velocities[randomUrban]].toFixed(2) + " kmh<sup>-1</sup>";
     document.getElementById("map-1-ylPhase").innerHTML = window[ypUrban[randomYpUrban]].toFixed(1) + " s";
     document.getElementById("map-1-rlPhase").innerHTML = window[ipUrban[randomIpUrban]].toFixed(1) + " s"; 
-    document.getElementById("map-1-rtRandom").innerHTML = window[driverReaction[randomRt]].toFixed(2) + " s";
+    document.getElementById("map-1-rtRandom").innerHTML = rtRandom.toFixed(3) + " s";
     document.getElementById("map-1-tireCondition").innerHTML = tires[tireCondition]; 
     document.getElementById("map-1-weatherCondition").innerHTML = coldClimates[randomTireCold];
     document.getElementById("map-1-carLength").innerHTML = carLength.toFixed(1);  
@@ -98,7 +90,7 @@ function calculateScenario() {
     mapOneInitialVelocity = window[velocities[randomUrban]] / 3.6;
     mapOneYellowPhase = window[ypUrban[randomYpUrban]];
     mapOneInterphase = window[ipUrban[randomIpUrban]];
-    mapOneReactionTime = window[driverReaction[randomRt]];
+    mapOneReactionTime = rtRandom;
     mapOneIntersection = 52;
     mapOneLength = carLength;
 
@@ -136,7 +128,7 @@ function calculateScenario() {
     else coefficientTires = false;
 console.log(coefficientTires);
 
-    let reactionTimeDistance = (window[driverReaction[randomRt]] * +mapOneInitialVelocity);
+    let reactionTimeDistance = (rtRandom * +mapOneInitialVelocity);
 console.log(reactionTimeDistance);
     let velocitySquared = Math.pow(+mapOneInitialVelocity,2);
     let stoppingDistMapOne = ((+velocitySquared / (2 * +coefficientTires * 9.81)) + +reactionTimeDistance);
