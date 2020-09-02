@@ -21,14 +21,20 @@ var ipHigh = Math.random() * (2.4 - 1.5) + 1.5;
 var rtRandom = Math.random() * (2.5 - 0.4) + 0.4;
 
 // Friction
-var dryTiresGood = 0.9;
-var dryTiresAvg = 0.8;
-var dryTiresBad = 0.7;
-var wetTiresGood = 0.7;
-var wetTiresAvg = 0.6;
-var wetTiresBad = 0.5;
-var snow = 0.3;
-var ice = 0.1;
+var conditions = {
+  drygood: 0.9,
+  dryaverage: 0.8,
+  drybad: 0.7,
+  wetgood: 0.7,
+  wetaverage: 0.6,
+  wetbad: 0.5,
+  snowygood: 0.3,
+  snowyaverage: 0.3,
+  snowybad: 0.3,
+  icygood: 0.1,
+  icyaverage: 0.1,
+  icybad: 0.1
+};
 
 // Car length
 var carLength = Math.random() * (6.2 - 3.8) + 3.8;
@@ -64,14 +70,16 @@ console.log(randomIpHwy, ipHwy[randomIpHwy]);
 // Randomly choose friction for cold or hot climates
 const tires = ["good", "average", "bad"];
 const tireCondition = Math.floor(Math.random() * tires.length);
+const keyCond = tires[tireCondition];
 console.log(tireCondition, tires[tireCondition]);
 
-const hotClimates = ["dryTiresGood", "dryTiresAvg", "dryTiresbad", "wetTiresGood", "wetTiresAvg", "wetTiresbad"];
+const hotClimates = ["dry", "wet"];
 const randomTireHot = Math.floor(Math.random() * hotClimates.length);
 console.log(randomTireHot, hotClimates[randomTireHot]);
 
 const coldClimates = ["dry", "wet", "icy", "snowy"];
 const randomTireCold = Math.floor(Math.random() * coldClimates.length);
+const keyClim = coldClimates[randomTireCold];
 console.log(randomTireCold, coldClimates[randomTireCold]);
 
 document.getElementById("randomScenario").addEventListener("click", fullscenario); 
@@ -96,47 +104,19 @@ function calculateScenario() {
 
     // Calculate the going distance
     let distancePhase = ((+mapOneInitialVelocity * (+mapOneYellowPhase + +mapOneInterphase)) - carLength).toFixed(2);
-    console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLength);
-    console.log(distancePhase);
+console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLength);
+console.log(distancePhase);
 
     // Calculate the stopping distance
-    var coefficientTires;
-    if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "dry") { 
-    coefficientTires = dryTiresGood;}
-    else if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "wet") {
-    coefficientTires = wetTiresGood;}
-    else if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "icy") {
-    coefficientTires = ice;}
-    else if (tires[tireCondition] === "good" && coldClimates[randomTireCold] === "snowy") {
-    coefficientTires = snow;}
-    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "dry") {
-    coefficientTires = dryTiresAvg;}
-    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "wet") {
-    coefficientTires = wetTiresAvg;}
-    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "icy") {
-    coefficientTires = ice;}
-    else if (tires[tireCondition] === "average" && coldClimates[randomTireCold] === "snowy") {
-    coefficientTires = snow;}
-    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "dry") {
-    coefficientTires = dryTiresBad;}
-    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "wet") {
-    coefficientTires = wetTiresBad;}
-    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "icy") {
-    coefficientTires = ice;}
-    else if (tires[tireCondition] === "bad" && coldClimates[randomTireCold] === "snowy") {
-    coefficientTires = snow;}
-    else coefficientTires = false;
-console.log(coefficientTires);
-
-    let reactionTimeDistance = (rtRandom * +mapOneInitialVelocity);
+     let reactionTimeDistance = (rtRandom * +mapOneInitialVelocity);
 console.log(reactionTimeDistance);
     let velocitySquared = Math.pow(+mapOneInitialVelocity,2);
-    let stoppingDistMapOne = ((+velocitySquared / (2 * +coefficientTires * 9.81)) + +reactionTimeDistance);
+    let stoppingDistMapOne = ((+velocitySquared / (2 * (conditions[keyClim + keyCond]) * 9.81)) + +reactionTimeDistance);
 console.log(stoppingDistMapOne);
 
 // Is there a dilemma zone? 
     let totalDistanceMapOne = +distancePhase - 52;
-    let zoneCalc = +totalDistanceMapOne - +stoppingDistMapOne;
+    let zoneCalc = totalDistanceMapOne - stoppingDistMapOne;
 console.log(zoneCalc);
 // the end of the calculation function
     var zoneOutcomeMapOne;
