@@ -62,7 +62,6 @@ p {
     background-color: #ffb347;
     color: #000;
     margin-bottom: -10px;
-    text-align: center;
 }
 
 .form--button {
@@ -320,3 +319,13 @@ input[type=number] {
 .mt-7 {
   margin-top: 7rem !important;
 }
+
+/* Facebook Share Button on Firefox */
+/*.fb_iframe_widget span {
+display: contents !important;
+}
+
+.fb-share-button.fb_iframe_widget iframe {
+  width:100px !important;
+  height: 25px !important;
+}*/
