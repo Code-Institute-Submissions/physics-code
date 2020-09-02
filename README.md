@@ -1,4 +1,4 @@
-https://pauld0051.github.io/physcis-code/
+https://pauld0051.github.io/physics-code/
 
 Solved issues:
 1. Make sure no inputs other than numbers and decimal points can be inserted into any field. Using the "number" attribute didn't work as anyone can manually override this
@@ -24,6 +24,9 @@ unsolved problems:
 this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
 Facebook goes beyond the requirement for this site. 
 2. Advert blocking apps will cause unnoticed errors with the Facebook share button. No user experience is changed as a result. However, the Console will show an ERR_BLOCKED_BY_CLIENT alert. 
+3. Some unicode characters would not display on Android mobile devices. A calculator icon was to be used from Fontawesome for the "Calculate" button on the calculator. Due to the nature 
+of the code the value could not include a Fontawesome icon. A unicode icon was substituted, however, this was failing to replicate in all devices. Several other unicode variants 
+were trialed until a "check mark" x2713 was able to be displayed. 
 
 Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
 Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard
