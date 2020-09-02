@@ -13,6 +13,7 @@ h5,
 h6 {
     font-family: "Rubik", sans-serif;
     color: #85144b;
+    text-align: center;
 }
 
 .heading-background {
@@ -54,7 +55,14 @@ p {
 }
 
 .btn-green {
-    background-color: #3D9970;
+    background-color: #3d9970;
+}
+
+.btn-yellow {
+    background-color: #ffb347;
+    color: #000;
+    margin-bottom: -10px;
+    text-align: center;
 }
 
 .form--button {
@@ -136,7 +144,7 @@ input[type=number] {
 
 /* when icons are displayed in the modal dz = dilemma zone and oz = option zone */
 .dz-icon {
-    color: #FF0000;
+    color: #ff0000;
     font-size: 22px;
     margin-left: auto;
 }
@@ -186,7 +194,7 @@ input[type=number] {
 }
 
 .green_light_icon {
-    color: #32CD32;
+    color: #32cd32;
 }
 
 .btn_hide_start {
@@ -205,7 +213,7 @@ input[type=number] {
     font-size: 1.8rem;
     color: #0000ff;
     text-align: center;
-    border: 5px solid #FFFF00;
+    border: 5px solid #ffff00;
 }
 
 .best_score_text {
@@ -243,7 +251,7 @@ input[type=number] {
 #card-map-3,
 #card-map-4,
 #card-map-5 {
-    height: 618px;
+    height: 616px;
     width: 100%;
 }
 
@@ -273,13 +281,13 @@ input[type=number] {
 }
 
 .btn-blue {
-    background-color: #0074D9;
+    background-color: #0074d9;
 }
 
 /* footer */
 /* footer background color */
 .page-footer {
-    background-color: #58B4C4;
+    background-color: #58b4c4;
 }
 
 /* icons fb = Facebook, tw = Twitter, li = LinkedIn, ins = Instagram, pin = Pintrest */
