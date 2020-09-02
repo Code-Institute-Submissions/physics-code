@@ -95,17 +95,18 @@ function fullscenario() {
 
 document.getElementById("map-1-submit").addEventListener("click", calculateScenario);
 function calculateScenario() {
-    let mapOneInitialVelocity = parseFloat(document.getElementById("map-1-initialVelocity").value);
-    let mapOneYellowPhase = parseFloat(document.getElementById("map-1-ylPhase").value);
-    let mapOneInterphase = parseFloat(document.getElementById("map-1-rlPhase").value);
-    let mapOneReactionTime = parseFloat(document.getElementById("map-1-rtrandom").value);
-    let mapOneFrictionTire = parseFloat(document.getElementById("map-1-tireCondition").value);
-    let mapOneFrictionWeather = parseFloat(document.getElementById("map-1-weatherCondition").value);
-    let mapOneIntersection = 52;
-    let mapOneLength = parseFloat(document.getElementById("map-1-carLength").value);
+    mapOneInitialVelocity = window[velocities[randomUrban]] / 3.6;
+    mapOneYellowPhase = window[ypUrban[randomYpUrban]];
+    mapOneInterphase = window[ipUrban[randomIpUrban]];
+    mapOneReactionTime = window[driverReaction[randomRt]];
+    mapOneFrictionTire = tires[tireCondition];
+    mapOneFrictionWeather = coldClimates[randomTireCold];
+    mapOneIntersection = 52;
+    mapOneLength = carLength;
 
     // Calculate the going distance
-    let distancePhase = 555;
+    let distancePhase = ((+mapOneInitialVelocity * (+mapOneYellowPhase + +mapOneInterphase)) - carLength).toFixed(2);
+    console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLength);
     console.log(distancePhase);
 }
 
