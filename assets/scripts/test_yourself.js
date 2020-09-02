@@ -147,6 +147,13 @@ console.log(stoppingDistMapOne);
     let zoneCalc = +totalDistanceMapOne - +stoppingDistMapOne;
 console.log(zoneCalc);
 // the end of the calculation function
+    var zoneOutcomeMapOne;
+    if (zoneCalc > 0) {
+        zoneOutcomeMapOne = "Option Zone";}
+    else if (zoneCalc <= 0) {
+        zoneOutcomeMapOne = "Dilemma Zone";}
+    else zoneOutcomeMapOne = false;       
+console.log(zoneOutcomeMapOne);
 }
 
 
