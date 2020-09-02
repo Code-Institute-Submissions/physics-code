@@ -136,6 +136,16 @@ function calculateScenario() {
     else coefficientTires = false;
 console.log(coefficientTires);
 
+    let reactionTimeDistance = (window[driverReaction[randomRt]] * +mapOneInitialVelocity);
+console.log(reactionTimeDistance);
+    let velocitySquared = Math.pow(+mapOneInitialVelocity,2);
+    let stoppingDistMapOne = ((+velocitySquared / (2 * +coefficientTires * 9.81)) + +reactionTimeDistance);
+console.log(stoppingDistMapOne);
+
+// Is there a dilemma zone? 
+    let totalDistanceMapOne = +distancePhase - 52;
+    let zoneCalc = +totalDistanceMapOne - +stoppingDistMapOne;
+console.log(zoneCalc);
 // the end of the calculation function
 }
 
