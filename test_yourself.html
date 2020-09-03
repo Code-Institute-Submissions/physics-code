@@ -67,7 +67,7 @@
        <a href="index.html" target="_blank"><i class="fas fa-calculator"></i> <span class="underline">calculator</span></a> for best results.</p>
       <p class="head-text">For instructions on how to measure distances across the intersection using Google Maps choose one of the following:</p>
       <div class="d-flex">
-      <ul class="list-group list-group-horizontal mx-auto justify-content-center flex-column flex-sm-row background-ul">
+      <ul class="list-group list-group-horizontal mx-auto justify-content-center flex-column flex-md-row background-ul">
       <li class="list-group-item background-ul">
       <a href="https://support.google.com/maps/answer/1628031?co=GENIE.Platform%3DDesktop&hl=en" target="_blank">
       <button class="btn btn-primary btn-blue btn-rounded btn-block help--button"><i class="fas fa-desktop"></i> Desktop</button></a></li>
@@ -100,8 +100,9 @@
         <div class="card shadow" id="card-map-1">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body">
-            <h5 class="card-title">Question One <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
-            <p>Determine the size of the intersection using the Google Map link provided before clicking on one of the three scenarios to determine if a dilemma zone exists or not.</p>
+            <h5 class="card-title">Scenario One <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <p>Determine the size of the intersection using the Google Map link provided before clicking on the <em>Random Scenario</em> button. Then use the data provided to 
+            establish if a dilemma zone exists under these conditions.</p>
             </div>
         </div>
       </div>
@@ -113,15 +114,18 @@
             <p>Measure the intersection length from the south east and continuing north west on Leningradsky Ave over Tverskaya Zastava Square.</p>
             <div class="container" id="map_one"></div>
             <div class="text-center">
-            <button class="btn btn-warning btn-yellow form--button mt-2 btn-rounded" 
+            <button class="btn btn-primary btn-lgt-blue form--button mt-2 btn-rounded" 
             id="randomScenario" 
             data-toggle="modal" 
             data-target="#map-1-scene-1">Random Scenario</button>
-            </div>
+            <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
+            id="refresh_page">New Scenario</button>
+           </div>
           </div>
         </div>
       </div>
     </div>
+    
 <!-- Map Two-->
 <div class="row">
       <div class="col-12 title-div">
@@ -254,7 +258,7 @@
   </section>
 
   <!-- Modals for Scenarios -->
-  <!-- Map One - Scenario One-->
+  <!-- Map One - Scenario-->
   <div class="modal fade" id="map-1-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -290,8 +294,8 @@
 </div>
       </div>
       <div class="modal-footer">
-        <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="Submit Me 3">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
       </div>
     </div>
   </div>

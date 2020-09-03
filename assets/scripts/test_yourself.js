@@ -9,13 +9,13 @@ var hwyVelcoity = Math.random() * (100 - 80) + 80;
 var ypLow = Math.random() * (3.9 - 3.7) + 3.7;
 // Use Norm or High for Highways
 var ypNorm = Math.random() * (4.1 - 3.9) + 3.9;
-var ypHigh = Math.random() * (4.8 - 4.1) + 4.1;
+var ypHigh = Math.random() * (5.0 - 4.1) + 4.1;
 
 // Interhase - Limited choices
-var ipLow = Math.random() * (1.2 - 0.9) + 0.9;
+var ipLow = Math.random() * (1.9 - 1.8) + 1.8;
 // Use Norm or High for Highways
-var ipNorm = Math.random() * (1.5 - 1.2) + 1.2;
-var ipHigh = Math.random() * (2.4 - 1.5) + 1.5; 
+var ipNorm = Math.random() * (2.2 - 1.9) + 1.9;
+var ipHigh = Math.random() * (2.5 - 2.2) + 2.2; 
 
 // Reaction time
 var rtRandom = Math.random() * (2.5 - 0.4) + 0.4;
@@ -92,7 +92,7 @@ function fullscenario() {
     document.getElementById("map-1-weatherCondition").innerHTML = coldClimates[randomTireCold];
     document.getElementById("map-1-carLength").innerHTML = carLength.toFixed(1);  
 }
-
+// Map one - Russia, allow cold conditions
 document.getElementById("map-1-submit").addEventListener("click", calculateScenario);
 function calculateScenario() {
     mapOneInitialVelocity = window[velocities[randomUrban]] / 3.6;
@@ -128,9 +128,8 @@ console.log(zoneCalc);
 console.log(zoneOutcomeMapOne);
 }
 
-
-
-
-
-
-
+// Refrsh browser for new variables
+document.getElementById("refresh_page").addEventListener("click", refreshPage);
+function refreshPage() {
+    location.reload();
+}

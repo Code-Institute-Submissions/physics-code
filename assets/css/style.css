@@ -58,9 +58,15 @@ p {
     background-color: #3d9970;
 }
 
-.btn-yellow {
-    background-color: #ffb347;
-    color: #000;
+.btn-lgt-blue {
+    background-color: #6495ed;
+    color: #fff;
+    margin-bottom: -10px;
+}
+
+.btn-lgt-red {
+    background-color: #ff6347;
+    color: #fff;
     margin-bottom: -10px;
 }
 
