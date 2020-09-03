@@ -128,7 +128,52 @@ console.log(zoneCalc);
 console.log(zoneOutcomeMapOne);
 }
 
+document.getElementById("randomScenario2").addEventListener("click", fullscenario2); 
+function fullscenario2() {
+    document.getElementById("map-2-initialVelocity").innerHTML = window[velocities[randomUrban]].toFixed(2) + " kmh<sup>-1</sup>";
+    document.getElementById("map-2-ylPhase").innerHTML = window[ypUrban[randomYpUrban]].toFixed(1) + " s";
+    document.getElementById("map-2-rlPhase").innerHTML = window[ipUrban[randomIpUrban]].toFixed(1) + " s"; 
+    document.getElementById("map-2-rtRandom").innerHTML = rtRandom.toFixed(3) + " s";
+    document.getElementById("map-2-tireCondition").innerHTML = tires[tireCondition]; 
+    document.getElementById("map-2-weatherCondition").innerHTML = coldClimates[randomTireCold];
+    document.getElementById("map-2-carLength").innerHTML = carLength.toFixed(1);  
+}
 
+// Map two - Australia, allow warm conditions
+document.getElementById("map-2-submit").addEventListener("click", calculateScenario2);
+function calculateScenario2() {
+    mapOneInitialVelocity = window[velocities[randomUrban]] / 3.6;
+    mapOneYellowPhase = window[ypUrban[randomYpUrban]];
+    mapOneInterphase = window[ipUrban[randomIpUrban]];
+    mapOneReactionTime = rtRandom;
+    mapOneIntersection = 52;
+    mapOneLength = carLength;
+
+    // Calculate the going distance
+    let distancePhase = ((+mapOneInitialVelocity * (+mapOneYellowPhase + +mapOneInterphase)) - carLength).toFixed(2);
+console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLength);
+console.log(distancePhase);
+
+    // Calculate the stopping distance
+     let reactionTimeDistance = (rtRandom * +mapOneInitialVelocity);
+console.log(reactionTimeDistance);
+    let velocitySquared = Math.pow(+mapOneInitialVelocity,2);
+    let stoppingDistMapOne = ((+velocitySquared / (2 * (conditions[keyClim + keyCond]) * 9.81)) + +reactionTimeDistance);
+console.log(stoppingDistMapOne);
+
+// Is there a dilemma zone? 
+    let totalDistanceMapOne = +distancePhase - 52;
+    let zoneCalc = totalDistanceMapOne - stoppingDistMapOne;
+console.log(zoneCalc);
+// the end of the calculation function
+    var zoneOutcomeMapOne;
+    if (zoneCalc > 0) {
+        zoneOutcomeMapOne = "Option Zone";}
+    else if (zoneCalc <= 0) {
+        zoneOutcomeMapOne = "Dilemma Zone";}
+    else zoneOutcomeMapOne = false;       
+console.log(zoneOutcomeMapOne);
+}
 
 // Refrsh browser for new variables
 document.getElementById("refresh_page").addEventListener("click", refreshPage);
