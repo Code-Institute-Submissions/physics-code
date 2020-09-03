@@ -257,7 +257,7 @@ input[type=number] {
 #card-map-4,
 #card-map-5 {
     height: 616px;
-    width: 100%;
+    width: auto;
 }
 
 #card-map-large-1,

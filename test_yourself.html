@@ -97,9 +97,9 @@
     </div>
     <div class="row">
       <div class="col-lg-4 content-div">
-        <div class="card shadow" id="card-map-1">
+        <div class="card shadow">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
-          <div class="card-body">
+          <div class="card-body" id="card-map-1">
             <h5 class="card-title">Scenario One <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
             <p>Determine the size of the intersection using the Google Map link provided before clicking on the <em>Random Scenario</em> button. Then use the data provided to 
             establish if a dilemma zone exists under these conditions.</p>
@@ -142,7 +142,9 @@
         <div class="card shadow">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-2">
-            <h5 class="card-title">Question Two <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+             <h5 class="card-title">Scenario Two <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <p>Determine the size of the intersection using the Google Map link provided before clicking on the <em>Random Scenario</em> button. Then use the data provided to 
+            establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
       </div>
@@ -153,7 +155,14 @@
             and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the south west continuing north east on Sunnyholt Road over the M7.</p>
             <div class="container" id="map_two"></div>
-            <button class="btn btn-primary btn-lg">Ready to answer</button>           
+           <div class="text-center">
+            <button class="btn btn-primary btn-lgt-blue form--button mt-2 btn-rounded" 
+            id="randomScenario2" 
+            data-toggle="modal" 
+            data-target="#map-2-scene-1">Random Scenario</button>
+            <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
+            id="refresh_page2">New Scenario</button>
+           </div>   
           </div>
         </div>
       </div>
@@ -174,7 +183,9 @@
         <div class="card shadow">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-3">
-            <h5 class="card-title">Question Three <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+           <h5 class="card-title">Scenario Three <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <p>Determine the size of the intersection using the Google Map link provided before clicking on the <em>Random Scenario</em> button. Then use the data provided to 
+            establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
       </div>
@@ -185,7 +196,14 @@
             and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the south west continuing north east on Lexington Drive over the Harry Byrd Highway.</p>
             <div class="container" id="map_three"></div>
-            <button class="btn btn-primary btn-lg">Ready to answer</button>           
+            <div class="text-center">
+            <button class="btn btn-primary btn-lgt-blue form--button mt-2 btn-rounded" 
+            id="randomScenario3" 
+            data-toggle="modal" 
+            data-target="#map-3-scene-1">Random Scenario</button>
+            <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
+            id="refresh_page3">New Scenario</button>
+           </div>       
           </div>
         </div>
       </div>
@@ -206,7 +224,9 @@
         <div class="card shadow">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-4">
-            <h5 class="card-title">Question Four <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <h5 class="card-title">Scenario Four <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <p>Determine the size of the intersection using the Google Map link provided before clicking on the <em>Random Scenario</em> button. Then use the data provided to 
+            establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
       </div>
@@ -217,7 +237,14 @@
             and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the east continuing west on Sigmundstraße over Leyher Street.</p>
             <div class="container" id="map_four"></div>
-            <button class="btn btn-primary btn-lg">Ready to answer</button>           
+            <div class="text-center">
+            <button class="btn btn-primary btn-lgt-blue form--button mt-2 btn-rounded" 
+            id="randomScenario4" 
+            data-toggle="modal" 
+            data-target="#map-4-scene-1">Random Scenario</button>
+            <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
+            id="refresh_page4">New Scenario</button>
+           </div>       
           </div>
         </div>
       </div>
@@ -238,7 +265,9 @@
         <div class="card shadow">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-5">
-            <h5 class="card-title">Question Five <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <h5 class="card-title">Scenario Five <a href="help.html" target="_blank"  class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
+            <p>Determine the size of the intersection using the Google Map link provided before clicking on the <em>Random Scenario</em> button. Then use the data provided to 
+            establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
       </div>
@@ -249,7 +278,14 @@
             and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the south continuing north on Constitutio Hill.</p>
             <div class="container" id="map_five"></div>
-            <button class="btn btn-primary btn-lg">Ready to answer</button>           
+            <div class="text-center">
+            <button class="btn btn-primary btn-lgt-blue form--button mt-2 btn-rounded" 
+            id="randomScenario5" 
+            data-toggle="modal" 
+            data-target="#map-5-scene-1">Random Scenario</button>
+            <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
+            id="refresh_page5">New Scenario</button>
+           </div>   
           </div>
         </div>
       </div>

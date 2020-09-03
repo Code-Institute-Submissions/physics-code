@@ -128,8 +128,14 @@ console.log(zoneCalc);
 console.log(zoneOutcomeMapOne);
 }
 
+
+
 // Refrsh browser for new variables
 document.getElementById("refresh_page").addEventListener("click", refreshPage);
+document.getElementById("refresh_page2").addEventListener("click", refreshPage);
+document.getElementById("refresh_page3").addEventListener("click", refreshPage);
+document.getElementById("refresh_page4").addEventListener("click", refreshPage);
+document.getElementById("refresh_page5").addEventListener("click", refreshPage);
 function refreshPage() {
     location.reload();
 }
