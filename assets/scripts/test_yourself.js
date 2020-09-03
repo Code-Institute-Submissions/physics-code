@@ -128,51 +128,52 @@ console.log(zoneCalc);
 console.log(zoneOutcomeMapOne);
 }
 
+// map two Australia
 document.getElementById("randomScenario2").addEventListener("click", fullscenario2); 
 function fullscenario2() {
-    document.getElementById("map-2-initialVelocity").innerHTML = window[velocities[randomUrban]].toFixed(2) + " kmh<sup>-1</sup>";
-    document.getElementById("map-2-ylPhase").innerHTML = window[ypUrban[randomYpUrban]].toFixed(1) + " s";
-    document.getElementById("map-2-rlPhase").innerHTML = window[ipUrban[randomIpUrban]].toFixed(1) + " s"; 
+    document.getElementById("map-2-initialVelocity").innerHTML = window[velocitiesHwy[randomHwy]].toFixed(2) + " kmh<sup>-1</sup>";
+    document.getElementById("map-2-ylPhase").innerHTML = window[ypHwy[randomYpHwy]].toFixed(1) + " s";
+    document.getElementById("map-2-rlPhase").innerHTML = window[ipHwy[randomIpHwy]].toFixed(1) + " s"; 
     document.getElementById("map-2-rtRandom").innerHTML = rtRandom.toFixed(3) + " s";
     document.getElementById("map-2-tireCondition").innerHTML = tires[tireCondition]; 
-    document.getElementById("map-2-weatherCondition").innerHTML = coldClimates[randomTireCold];
+    document.getElementById("map-2-weatherCondition").innerHTML = hotClimates[randomTireHot];
     document.getElementById("map-2-carLength").innerHTML = carLength.toFixed(1);  
 }
 
 // Map two - Australia, allow warm conditions
 document.getElementById("map-2-submit").addEventListener("click", calculateScenario2);
 function calculateScenario2() {
-    mapOneInitialVelocity = window[velocities[randomUrban]] / 3.6;
-    mapOneYellowPhase = window[ypUrban[randomYpUrban]];
-    mapOneInterphase = window[ipUrban[randomIpUrban]];
-    mapOneReactionTime = rtRandom;
-    mapOneIntersection = 52;
-    mapOneLength = carLength;
+    mapTwoInitialVelocity = window[velocitiesHwy[randomHwy]] / 3.6;
+    mapTwoYellowPhase = window[ypHwy[randomYpHwy]];
+    mapTwoInterphase = window[ipHwy[randomIpHwy]];
+    mapTwoReactionTime = rtRandom;
+    mapTwoIntersection = 80;
+    mapTwoLength = carLength;
 
     // Calculate the going distance
-    let distancePhase = ((+mapOneInitialVelocity * (+mapOneYellowPhase + +mapOneInterphase)) - carLength).toFixed(2);
-console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLength);
-console.log(distancePhase);
+    let distancePhase2 = ((+mapTwoInitialVelocity * (+mapTwoYellowPhase + +mapTwoInterphase)) - carLength).toFixed(2);
+console.log(mapTwoInitialVelocity, mapTwoYellowPhase, mapTwoInterphase, carLength);
+console.log(distancePhase2);
 
     // Calculate the stopping distance
-     let reactionTimeDistance = (rtRandom * +mapOneInitialVelocity);
-console.log(reactionTimeDistance);
-    let velocitySquared = Math.pow(+mapOneInitialVelocity,2);
-    let stoppingDistMapOne = ((+velocitySquared / (2 * (conditions[keyClim + keyCond]) * 9.81)) + +reactionTimeDistance);
-console.log(stoppingDistMapOne);
+     let reactionTimeDistance2 = (rtRandom * +mapTwoInitialVelocity);
+console.log(reactionTimeDistance2);
+    let velocitySquared = Math.pow(+mapTwoInitialVelocity,2);
+    let stoppingDistMapTwo = ((+velocitySquared / (2 * (conditions[keyClim + keyCond]) * 9.81)) + +reactionTimeDistance);
+console.log(stoppingDistMapTwo);
 
 // Is there a dilemma zone? 
-    let totalDistanceMapOne = +distancePhase - 52;
-    let zoneCalc = totalDistanceMapOne - stoppingDistMapOne;
-console.log(zoneCalc);
+    let totalDistanceMapTwo = +distancePhase2 - 80;
+    let zoneCalc2 = totalDistanceMapTwo - stoppingDistMapTwo;
+console.log(zoneCalc2);
 // the end of the calculation function
-    var zoneOutcomeMapOne;
-    if (zoneCalc > 0) {
-        zoneOutcomeMapOne = "Option Zone";}
-    else if (zoneCalc <= 0) {
-        zoneOutcomeMapOne = "Dilemma Zone";}
-    else zoneOutcomeMapOne = false;       
-console.log(zoneOutcomeMapOne);
+    var zoneOutcomeMapTwo;
+    if (zoneCalc2 > 0) {
+        zoneOutcomeMapTwo = "Option Zone";}
+    else if (zoneCalc2 <= 0) {
+        zoneOutcomeMapTwo = "Dilemma Zone";}
+    else zoneOutcomeMapTwo = false;       
+console.log(zoneOutcomeMapTwo);
 }
 
 // Refrsh browser for new variables
