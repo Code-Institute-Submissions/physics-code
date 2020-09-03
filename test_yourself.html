@@ -120,7 +120,8 @@
             data-target="#map-1-scene-1">Random Scenario
             </button>
             <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
-            id="refresh_page">New Scenario</button>
+            data-toggle="modal" 
+            data-target="#map-1-scene-1">Current Scenario</button>
            </div>
           </div>
         </div>
@@ -162,7 +163,8 @@
             data-toggle="modal" 
             data-target="#map-2-scene-1">Random Scenario</button>
             <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
-            id="refresh_page2">New Scenario</button>
+            data-toggle="modal" 
+            data-target="#map-2-scene-1">Current Scenario</button>
            </div>   
           </div>
         </div>
@@ -203,7 +205,8 @@
             data-toggle="modal" 
             data-target="#map-3-scene-1">Random Scenario</button>
             <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
-            id="refresh_page3">New Scenario</button>
+            data-toggle="modal" 
+            data-target="#map-3-scene-1">Current Scenario</button>
            </div>       
           </div>
         </div>
@@ -243,8 +246,9 @@
             id="randomScenario4" 
             data-toggle="modal" 
             data-target="#map-4-scene-1">Random Scenario</button>
-            <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
-            id="refresh_page4">New Scenario</button>
+           <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
+            data-toggle="modal" 
+            data-target="#map-4-scene-1">Current Scenario</button>
            </div>       
           </div>
         </div>
@@ -285,7 +289,8 @@
             data-toggle="modal" 
             data-target="#map-5-scene-1">Random Scenario</button>
             <button class="btn btn-danger btn-lgt-red form--button mt-2 btn-rounded" 
-            id="refresh_page5">New Scenario</button>
+            data-toggle="modal" 
+            data-target="#map-5-scene-1">Current Scenario</button>
            </div>   
           </div>
         </div>
@@ -313,22 +318,10 @@
        <p>The vehicle's tire conditions are described as <strong><span id="map-1-tireCondition"></span></strong></p>
        <p>The weather conditions are described as <strong><span id="map-1-weatherCondition"></span></strong></p>
        <p>The vehicle is <strong><span id="map-1-carLength"></span></strong> m long</p>
-       <p>So long you do not refresh the page, this scenario will remain active and you can close and re-open this pop-up with the same scenario loaded. Alternatively 
-       hit the refresh button for a new random scenario.</p>
+       <p>You can close this pop-up at any time, if you want to get this data back, click the <em>Current Scenario</em> button. Or, if 
+       you would like a new scenario, close this pop-up and click <em>Random Scenario</em>.</p>
        <p>A dilemma zone exists that is... (length)</p>
-       <div class="form-check form-check-inline">
-       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  
-  <label class="form-check-label" for="inlineRadio1">&#x3C; 10 m</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">Between 10 and 20 m</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-  <label class="form-check-label" for="inlineRadio3">&#x3E; 20 m</label>
-</div>
+       
       </div>
       <div class="modal-footer">
         <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
@@ -339,7 +332,7 @@
 </div>
 
 <!-- Map two-->
- <div class="modal fade" id="map-2-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="map-2-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -356,22 +349,10 @@
        <p>The vehicle's tire conditions are described as <strong><span id="map-2-tireCondition"></span></strong></p>
        <p>The weather conditions are described as <strong><span id="map-2-weatherCondition"></span></strong></p>
        <p>The vehicle is <strong><span id="map-2-carLength"></span></strong> m long</p>
-       <p>So long you do not refresh the page, this scenario will remain active and you can close and re-open this pop-up with the same scenario loaded. Alternatively 
-       hit the refresh button for a new random scenario.</p>
+       <p>You can close this pop-up at any time, if you want to get this data back, click the <em>Current Scenario</em> button. Or, if 
+       you would like a new scenario, close this pop-up and click <em>Random Scenario</em>.</p>
        <p>A dilemma zone exists that is... (length)</p>
-       <div class="form-check form-check-inline">
-       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option1">
-  
-  <label class="form-check-label" for="inlineRadio1">&#x3C; 10 m</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option2">
-  <label class="form-check-label" for="inlineRadio2">Between 10 and 20 m</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option3">
-  <label class="form-check-label" for="inlineRadio3">&#x3E; 20 m</label>
-</div>
+       
       </div>
       <div class="modal-footer">
         <input type="submit" id="map-2-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
@@ -379,70 +360,101 @@
       </div>
     </div>
   </div>
-</div>  
+</div> 
 
 <!-- Map three -->
-  <div class="modal fade" id="map-3-scene-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="map-3-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Scenario 3</h5>
+        <h5 class="modal-title">Random Scenario for Map Three</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+       <p>The initial velocity is <strong><span id="map-3-initialVelocity"></span></strong></p>
+       <p>Yellow light phase is <strong><span id="map-3-ylPhase"></span></strong></p>
+       <p>The interphase is <strong><span id="map-3-rlPhase"></span></strong></p>
+       <p>The driver's reaction time is <strong><span id="map-3-rtRandom"></span></strong></p>
+       <p>The vehicle's tire conditions are described as <strong><span id="map-3-tireCondition"></span></strong></p>
+       <p>The weather conditions are described as <strong><span id="map-3-weatherCondition"></span></strong></p>
+       <p>The vehicle is <strong><span id="map-3-carLength"></span></strong> m long</p>
+       <p>You can close this pop-up at any time, if you want to get this data back, click the <em>Current Scenario</em> button. Or, if 
+       you would like a new scenario, close this pop-up and click <em>Random Scenario</em>.</p>
+       <p>A dilemma zone exists that is... (length)</p>
+       
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <input type="submit" id="map-3-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
       </div>
     </div>
   </div>
-</div>
+</div>  
 
 <!-- Map four -->
-  <div class="modal fade" id="map-4-scene-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="map-4-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Scenario 3</h5>
+        <h5 class="modal-title">Random Scenario for Map Four</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+       <p>The initial velocity is <strong><span id="map-4-initialVelocity"></span></strong></p>
+       <p>Yellow light phase is <strong><span id="map-4-ylPhase"></span></strong></p>
+       <p>The interphase is <strong><span id="map-4-rlPhase"></span></strong></p>
+       <p>The driver's reaction time is <strong><span id="map-4-rtRandom"></span></strong></p>
+       <p>The vehicle's tire conditions are described as <strong><span id="map-4-tireCondition"></span></strong></p>
+       <p>The weather conditions are described as <strong><span id="map-4-weatherCondition"></span></strong></p>
+       <p>The vehicle is <strong><span id="map-4-carLength"></span></strong> m long</p>
+       <p>You can close this pop-up at any time, if you want to get this data back, click the <em>Current Scenario</em> button. Or, if 
+       you would like a new scenario, close this pop-up and click <em>Random Scenario</em>.</p>
+       <p>A dilemma zone exists that is... (length)</p>
+       
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <input type="submit" id="map-4-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Map five -->
-  <div class="modal fade" id="map-5-scene-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="map-5-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Scenario 3</h5>
+        <h5 class="modal-title">Random Scenario for Map Five</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+       <p>The initial velocity is <strong><span id="map-5-initialVelocity"></span></strong></p>
+       <p>Yellow light phase is <strong><span id="map-5-ylPhase"></span></strong></p>
+       <p>The interphase is <strong><span id="map-5-rlPhase"></span></strong></p>
+       <p>The driver's reaction time is <strong><span id="map-5-rtRandom"></span></strong></p>
+       <p>The vehicle's tire conditions are described as <strong><span id="map-5-tireCondition"></span></strong></p>
+       <p>The weather conditions are described as <strong><span id="map-5-weatherCondition"></span></strong></p>
+       <p>The vehicle is <strong><span id="map-5-carLength"></span></strong> m long</p>
+       <p>You can close this pop-up at any time, if you want to get this data back, click the <em>Current Scenario</em> button. Or, if 
+       you would like a new scenario, close this pop-up and click <em>Random Scenario</em>.</p>
+       <p>A dilemma zone exists that is... (length)</p>
+       
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <input type="submit" id="map-5-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
       </div>
     </div>
   </div>
-</div>
+</div> 
+
  <!-- Footer -->
   <footer class="page-footer font-small darken-3">
 
