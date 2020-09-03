@@ -1,168 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap&family=Raleway:wght@500&display=swap&family=Ubuntu&display=swap');
 
 /* Page styles - universal */
-h1 {
-    text-align: center;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-    font-family: "Rubik", sans-serif;
-    color: #85144b;
-    text-align: center;
+  font-family: "Rubik", sans-serif;
+  color: #85144b;
+  text-align: center;
 }
 
 .heading-background {
-    background-color: #f8f8ff;
-    opacity: 0.95;
-    border-radius: 8px;
+  background-color: #f8f8ff;
+  opacity: 0.95;
+  border-radius: 8px;
 }
 
 .heading-padding {
-    padding-top: 12px;
-    padding-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-.heading-margin { 
-    margin-top: 6px;
-    margin-bottom: 6px;
+.heading-margin {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .heading-margin-top {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 p {
-    font-family: "Ubuntu", sans-serif;
-    color: #111111;
+  font-family: "Ubuntu", sans-serif;
+  color: #111111;
 }
 
 .title-div {
-    background-color: #add8e6;
+  background-color: #add8e6;
 }
 
 .content-div {
-    background-color: #6699cc;
+  background-color: #6699cc;
 }
 
 /* rounded button edges and colors */
 .btn-rounded {
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 .btn-green {
-    background-color: #3d9970;
+  background-color: #3d9970;
 }
 
 .btn-lgt-blue {
-    background-color: #6495ed;
-    color: #fff;
-    margin-bottom: -10px;
+  background-color: #6495ed;
+  color: #fff;
+  margin-bottom: -10px;
 }
 
 .btn-lgt-red {
-    background-color: #ff6347;
-    color: #fff;
-    margin-bottom: -10px;
+  background-color: #ff6347;
+  color: #fff;
+  margin-bottom: -10px;
 }
 
 .form--button {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 /* navbar */
 .nav-text {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
 }
 
 /* sections */
 .head-text {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .btn--padding {
-    margin-top: 12px;
-    margin-bottom: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Images displayed in cards on the home [calculator] page */
 .card-img-top {
-    max-height: 150px;
-    max-width: 100%;
-    object-fit: contain;
-    margin: auto;
-    padding-top: 10px;
+  max-height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: auto;
+  padding-top: 10px;
 }
 
 .card {
-    margin: 0 auto;
-    float: none;
-    margin-top: 5px; 
-    margin-bottom: 5px; 
-    width: 18rem;
-    height: 23.7rem;
+  margin: 0 auto;
+  float: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 18rem;
+  height: 23.7rem;
 }
 
 .card--extra-wide {
-    width: 90%;
-    height: 90%;
+  width: 90%;
+  height: 90%;
 }
 
 /* separates the bottom of the card section from the button section */
 .card-padding {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .heading-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* remove spinners from number inputs https://www.codexworld.com/how-to/remove-arrows-spinner-from-number-input-css/ */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type=number] {
-    -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 /* modal for calculation */
 .icon_hide_dilemmazone {
-    display: none;
+  display: none;
 }
 
 .icon_hide_optionzone {
-    display: none;
+  display: none;
 }
 
 /* when icons are displayed in the modal dz = dilemma zone and oz = option zone */
 .dz-icon {
-    color: #ff0000;
-    font-size: 22px;
-    margin-left: auto;
+  color: #ff0000;
+  font-size: 22px;
+  margin-left: auto;
 }
 
 .oz-icon {
-    color: #0000ff;
-    font-size: 22px;
-    margin-left: auto;
+  color: #0000ff;
+  font-size: 22px;
+  margin-left: auto;
 }
 
 /* Help Page */
 /* Set card heights */
-#card-help-velocity, 
+#card-help-velocity,
 #card-help-yellow,
 #card-help-red,
 #card-help-reaction-time,
@@ -170,10 +166,10 @@ input[type=number] {
 #card-help-intersection,
 #card-help-length,
 #card-help-final {
-   height: 96.3%;
+  height: 96.3%;
 }
 
-#card-help-text-velocity, 
+#card-help-text-velocity,
 #card-help-text-yellow,
 #card-help-text-red,
 #card-help-text-reaction-time,
@@ -181,83 +177,83 @@ input[type=number] {
 #card-help-text-intersection,
 #card-help-text-length,
 #card-help-text-final {
-    height: auto;
-    width: auto;
+  height: auto;
+  width: auto;
 }
 
 /* Reaction Time Game */
 .icon_hide_greenLight {
-    display: none;
+  display: none;
 }
 
 .icon_hide_redLight {
-    display: none;
+  display: none;
 }
 
 .red_light_icon {
-    color: #ee2400;
+  color: #ee2400;
 }
 
 .green_light_icon {
-    color: #32cd32;
+  color: #32cd32;
 }
 
 .btn_hide_start {
-    display: none;
+  display: none;
 }
 
 .btn_hide_brakes {
-    display: none;
+  display: none;
 }
 
 .fa-stopwatch {
-    color: pink;
+  color: pink;
 }
 
 .reaction_time_text {
-    font-size: 1.8rem;
-    color: #0000ff;
-    text-align: center;
-    border: 5px solid #ffff00;
+  font-size: 1.8rem;
+  color: #0000ff;
+  text-align: center;
+  border: 5px solid #ffff00;
 }
 
 .best_score_text {
-    font-size: 1.4rem;
-    color: #36454f;
-    text-align: center;
+  font-size: 1.4rem;
+  color: #36454f;
+  text-align: center;
 }
 
 /* Hide heading text "start" or "brake" */
 .ready_to_brake {
-    display: none;
+  display: none;
 }
 
 .remove_start {
-    display: none;
+  display: none;
 }
 
 .fb--button {
-    background-color: #3b5998 !important;
-    color: #fff !important;
+  background-color: #3b5998 !important;
+  color: #fff !important;
 }
 
 /* Test Yourself Page */
 #map_one,
 #map_two,
 #map_three,
-#map_four, 
+#map_four,
 #map_five {
-    height: 400px;  
-    width: 100%;  
+  height: 400px;
+  width: 100%;
 }
- 
+
 #card-map-1,
 #card-map-2,
 #card-map-3,
 #card-map-4,
 #card-map-5 {
-    height: 616px;
-    width: auto;
+  height: 616px;
+  width: auto;
 }
 
 #card-map-large-1,
@@ -265,42 +261,41 @@ input[type=number] {
 #card-map-large-3,
 #card-map-large-4,
 #card-map-large-5 {
-    height: auto;
-    width: auto;
+  height: auto;
+  width: auto;
 }
 
 .icon-center {
-    text-align: center;
-    padding-top: 3rem;
+  text-align: center;
+  padding-top: 3rem;
 }
 
 /* location of the desktop, android and apple help buttons */
 .background-ul {
-    background-color: #f8f8ff;
-    border: none;    
+  background-color: #f8f8ff;
+  border: none;
 }
 
 .help--button {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 .btn-blue {
-    background-color: #0074d9;
+  background-color: #0074d9;
 }
 
 /* footer */
 /* footer background color */
 .page-footer {
-    background-color: #58b4c4;
+  background-color: #58b4c4;
 }
 
 /* icons fb = Facebook, tw = Twitter, li = LinkedIn, ins = Instagram, pin = Pintrest */
-
 [class$="-icon"]:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
- 
+
 .fb-icon,
 .tw-icon,
 .li-icon,
@@ -308,30 +303,20 @@ input[type=number] {
 .pin-icon,
 .info-icon,
 .map-icon {
-    outline: none;  
+  outline: none;
 }
 
 /* 404 page */
 .hazard-sign {
-    height: 240px;
-    width: auto;
+  height: 240px;
+  width: auto;
 }
 
 .align-center {
- text-align: center;
+  text-align: center;
 }
 
 /* $spacer amount */
 .mt-7 {
   margin-top: 7rem !important;
 }
-
-/* Facebook Share Button on Firefox */
-/*.fb_iframe_widget span {
-display: contents !important;
-}
-
-.fb-share-button.fb_iframe_widget iframe {
-  width:100px !important;
-  height: 25px !important;
-}*/
