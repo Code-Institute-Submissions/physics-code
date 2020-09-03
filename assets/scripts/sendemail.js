@@ -1,9 +1,9 @@
-var myform = $("form#user_request");
+let myform = $("form#user_request");
 myform.submit(function(event){
 	event.preventDefault();
 
-  var service_id = "default_service";
-  var template_id = "physics_code_message";
+  let service_id = "default_service";
+  let template_id = "physics_code_message";
 
   myform.find("button").text("Sending...");
   emailjs.sendForm(service_id,template_id,myform[0])
