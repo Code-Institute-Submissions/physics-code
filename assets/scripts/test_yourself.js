@@ -8,7 +8,6 @@ function isNumberKey(evt) {
 
 // Map One, Russia
 document.getElementById("randomScenarioMapOne").addEventListener("click", mapOneVariables);
-
 function mapOneVariables() {
   // Remove the "disabled" attribute on the Current Scenario button
   let currentScenario = document.getElementById("current-map-1");
@@ -40,12 +39,12 @@ function mapOneVariables() {
   const tiresMapOne = ["good", "average", "bad"];
   const tireConditionMapOne = Math.floor(Math.random() * tiresMapOne.length);
   const keyCond = tiresMapOne[tireConditionMapOne];
-  console.log(tireConditionMapOne, tiresMapOne[tireConditionMapOne]);
+  console.log("Tire conditions", tireConditionMapOne, tiresMapOne[tireConditionMapOne]);
 
   const climateMapOne = ["dry", "wet", "icy", "snowy"];
   const ClimateConditionMapOne = Math.floor(Math.random() * climateMapOne.length);
   const keyClim = climateMapOne[ClimateConditionMapOne];
-  console.log(ClimateConditionMapOne, climateMapOne[ClimateConditionMapOne]);
+  console.log("Climate Conditions", ClimateConditionMapOne, climateMapOne[ClimateConditionMapOne]);
 
   document.getElementById("map-1-initialVelocity").innerHTML = velocityMapOne.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById("map-1-ylPhase").innerHTML = yellowPhaseMapOne.toFixed(1) + " s";
@@ -57,8 +56,7 @@ function mapOneVariables() {
 
   // The calculation checker:
   document.getElementById("map-1-submit").addEventListener("click", calculateScenario);
-
-  function calculateScenario() {
+    function calculateScenario() {
     mapOneInitialVelocity = velocityMapOne / 3.6;
     mapOneYellowPhase = yellowPhaseMapOne;
     mapOneInterphase = interPhaseMapOne;
@@ -66,23 +64,23 @@ function mapOneVariables() {
     mapOneIntersection = 52;
     mapOneLength = carLengthMapOne;
     mapOneCoefficient = conditionsMapOne[keyClim + keyCond];
-
+    console.log("Lenght of intersection = ", mapOneIntersection);
     // Calculate the going distance
     let distancePhaseMapOne = ((mapOneInitialVelocity * (mapOneYellowPhase + mapOneInterphase)) - mapOneLength).toFixed(2);
-    console.log(mapOneInitialVelocity, mapOneYellowPhase, mapOneInterphase, carLengthMapOne);
-    console.log(distancePhaseMapOne);
+    console.log("Initial Velocity", mapOneInitialVelocity, "Yellow phase", mapOneYellowPhase, "Interphase", mapOneInterphase, "Car length", carLengthMapOne);
+    console.log("Distance during yellow and interphase", distancePhaseMapOne);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapOne = (mapOneReactionTime * mapOneInitialVelocity);
-    console.log(reactionTimeDistanceMapOne);
+    console.log("Distance travelled during reaction time", reactionTimeDistanceMapOne);
     let velocitySquaredMapOne = Math.pow(mapOneInitialVelocity, 2);
     let stoppingDistMapOne = ((velocitySquaredMapOne / (2 * mapOneCoefficient * 9.81)) + reactionTimeDistanceMapOne);
-    console.log(stoppingDistMapOne);
+    console.log("Stopping distance", stoppingDistMapOne);
 
     // Is there a dilemma zone?
     let totalDistanceMapOne = distancePhaseMapOne - mapOneIntersection;
     let zoneCalcMapOne = totalDistanceMapOne - stoppingDistMapOne;
-    console.log(zoneCalcMapOne);
+    console.log("Dilemma Zone Calc output", zoneCalcMapOne);
     // the end of the calculation function
     let zoneOutcomeMapOne;
     if (zoneCalcMapOne > 0) {
@@ -90,7 +88,7 @@ function mapOneVariables() {
     } else if (zoneCalcMapOne <= 0) {
       zoneOutcomeMapOne = "Dilemma Zone";
     } else zoneOutcomeMapOne = false;
-    console.log(zoneOutcomeMapOne);
+    console.log("Type of zone", zoneOutcomeMapOne);
 
     // Check the type of zone the user has input
     let mapOneZone = document.querySelector('input[name="MapOneZone"]:checked').value;
@@ -100,19 +98,18 @@ function mapOneVariables() {
     } else if (mapOneZone === "dzCheckedMapOne") {
       answerMapOne = "Dilemma Zone";
     } else answerMapOne = false;
-    console.log(mapOneZone);
-    console.log(answerMapOne);
+    console.log("User answer", answerMapOne);
 
     let resultsMapOne;
     if (answerMapOne === zoneOutcomeMapOne) {
       resultsMapOne = "Well done! " + answerMapOne + " was the correct answer.";
     } else resultsMapOne = "Sorry " + answerMapOne + " was not the correct answer.";
-    console.log(resultsMapOne);
+    console.log("Comparison of results", resultsMapOne);
     let percentageMapOne = zoneCalcMapOne * 0.2;
     let valueHighCheckedMapOne = zoneCalcMapOne + percentageMapOne;
     let valueLowCheckedMapOne = zoneCalcMapOne - percentageMapOne;
-    console.log(valueHighCheckedMapOne);
-    console.log(valueLowCheckedMapOne);
+    console.log("+20%", valueHighCheckedMapOne);
+    console.log("-20%", valueLowCheckedMapOne);
 
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentageMapOne variable
@@ -128,8 +125,8 @@ function mapOneVariables() {
       userResultMapOne = "Sorry, this was higher than the value we got."
     } else if (userInputMapOne < absoluteValueMapOne2) {
       userResultMapOne = "Sorry, this was lower than the value we got."
-    } else userResultMapOne = "Well done, the value you got was within the expected value!"
-    console.log(userResultMapOne);
+    } else userResultMapOne = "Excellent! The value you got was within the expected value!"
+    console.log("User result", userResultMapOne);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapOneResultOne").innerHTML = resultsMapOne;
@@ -165,12 +162,12 @@ function mapTwoVariables() {
   const tiresMapTwo = ["good", "average", "bad"];
   const tireConditionMapTwo = Math.floor(Math.random() * tiresMapTwo.length);
   const keyCondMapTwo = tiresMapTwo[tireConditionMapTwo];
-  console.log(tireConditionMapTwo, tiresMapTwo[tireConditionMapTwo]);
+  console.log("Tire conditions", tireConditionMapTwo, tiresMapTwo[tireConditionMapTwo]);
 
   const climateMapTwo = ["dry", "wet"];
   const ClimateConditionMapTwo = Math.floor(Math.random() * climateMapTwo.length);
   const keyClimMapTwo = climateMapTwo[ClimateConditionMapTwo];
-  console.log(ClimateConditionMapTwo, climateMapTwo[ClimateConditionMapTwo]);
+  console.log("Climate Conditions", ClimateConditionMapTwo, climateMapTwo[ClimateConditionMapTwo]);
 
   document.getElementById("map-2-initialVelocity").innerHTML = velocityMapTwo.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById("map-2-ylPhase").innerHTML = yellowPhaseMapTwo.toFixed(1) + " s";
@@ -191,11 +188,12 @@ function mapTwoVariables() {
     mapTwoIntersection = 79.75;
     mapTwoLength = carLengthMapTwo;
     mapTwoCoefficient = conditionsMapTwo[keyClimMapTwo + keyCondMapTwo];
-
+    console.log("Lenght of intersection = ", mapTwoIntersection);
     // Calculate the going distance
     let distancePhaseMapTwo = ((mapTwoInitialVelocity * (mapTwoYellowPhase + mapTwoInterphase)) - mapTwoLength).toFixed(2);
-    console.log(mapTwoInitialVelocity, mapTwoYellowPhase, mapTwoInterphase, carLengthMapTwo);
-    console.log(distancePhaseMapTwo);
+    console.log("Initial Velocity", mapTwoInitialVelocity, "Yellow phase", mapTwoYellowPhase, "Interphase", mapTwoInterphase, "Car length", carLengthMapTwo);
+    console.log("Distance during yellow and interphase", distancePhaseMapTwo);
+
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapTwo = (mapTwoReactionTime * mapTwoInitialVelocity);
@@ -253,7 +251,7 @@ function mapTwoVariables() {
       userResultMapTwo = "Sorry, this was higher than the value we got."
     } else if (userInputMapTwo < absoluteValueMapTwo2) {
       userResultMapTwo = "Sorry, this was lower than the value we got."
-    } else userResultMapTwo = "Well done, the value you got was within the expected value!"
+    } else userResultMapTwo = "Excellent! The value you got was within the expected value!"
     console.log(userResultMapTwo);
 
     //Outputs generated for the user to check their work
@@ -297,12 +295,12 @@ function MapThreeVariables() {
   const tiresMapThree = ["good", "average", "bad"];
   const tireConditionMapThree = Math.floor(Math.random() * tiresMapThree.length);
   const keyCondMapThree = tiresMapThree[tireConditionMapThree];
-  console.log(tireConditionMapThree, tiresMapThree[tireConditionMapThree]);
+  console.log("Tire conditions", tireConditionMapThree, tiresMapThree[tireConditionMapThree]);
 
   const climateMapThree = ["dry", "wet", "icy", "snowy"];
   const ClimateConditionMapThree = Math.floor(Math.random() * climateMapThree.length);
   const keyClimMapThree = climateMapThree[ClimateConditionMapThree];
-  console.log(ClimateConditionMapThree, climateMapThree[ClimateConditionMapThree]);
+  console.log("Climate Conditions", ClimateConditionMapThree, climateMapThree[ClimateConditionMapThree]);
 
   document.getElementById("map-3-initialVelocity").innerHTML = velocityMapThree.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById("map-3-ylPhase").innerHTML = yellowPhaseMapThree.toFixed(1) + " s";
@@ -323,11 +321,11 @@ function MapThreeVariables() {
     MapThreeIntersection = 66.18;
     MapThreeLength = carLengthMapThree;
     MapThreeCoefficient = conditionsMapThree[keyClimMapThree + keyCondMapThree];
-
+    console.log("Lenght of intersection = ", MapThreeIntersection);
     // Calculate the going distance
     let distancePhaseMapThree = ((MapThreeInitialVelocity * (MapThreeYellowPhase + MapThreeInterphase)) - MapThreeLength).toFixed(2);
-    console.log(MapThreeInitialVelocity, MapThreeYellowPhase, MapThreeInterphase, carLengthMapThree);
-    console.log(distancePhaseMapThree);
+    console.log("Initial Velocity", MapThreeInitialVelocity, "Yellow phase", MapThreeYellowPhase, "Interphase", MapThreeInterphase, "Car length", carLengthMapThree);
+    console.log("Distance during yellow and interphase", distancePhaseMapThree);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapThree = (MapThreeReactionTime * MapThreeInitialVelocity);
@@ -385,7 +383,7 @@ function MapThreeVariables() {
       userResultMapThree = "Sorry, this was higher than the value we got."
     } else if (userInputMapThree < absoluteValueMapThree2) {
       userResultMapThree = "Sorry, this was lower than the value we got."
-    } else userResultMapThree = "Well done, the value you got was within the expected value!"
+    } else userResultMapThree = "Excellent! The value you got was within the expected value!"
     console.log(userResultMapThree);
 
     //Outputs generated for the user to check their work
@@ -429,12 +427,12 @@ function MapFourVariables() {
   const tiresMapFour = ["good", "average", "bad"];
   const tireConditionMapFour = Math.floor(Math.random() * tiresMapFour.length);
   const keyCondMapFour = tiresMapFour[tireConditionMapFour];
-  console.log(tireConditionMapFour, tiresMapFour[tireConditionMapFour]);
+  console.log("Tire conditions", tireConditionMapFour, tiresMapFour[tireConditionMapFour]);
 
   const climateMapFour = ["dry", "wet", "icy", "snowy"];
   const ClimateConditionMapFour = Math.floor(Math.random() * climateMapFour.length);
   const keyClimMapFour = climateMapFour[ClimateConditionMapFour];
-  console.log(ClimateConditionMapFour, climateMapFour[ClimateConditionMapFour]);
+  console.log("Climate Conditions", ClimateConditionMapFour, climateMapFour[ClimateConditionMapFour]);
 
   document.getElementById("map-4-initialVelocity").innerHTML = velocityMapFour.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById("map-4-ylPhase").innerHTML = yellowPhaseMapFour.toFixed(1) + " s";
@@ -455,11 +453,12 @@ function MapFourVariables() {
     MapFourIntersection = 43.80;
     MapFourLength = carLengthMapFour;
     MapFourCoefficient = conditionsMapFour[keyClimMapFour + keyCondMapFour];
-
+    console.log("Lenght of intersection = ", MapFourIntersection);
     // Calculate the going distance
     let distancePhaseMapFour = ((MapFourInitialVelocity * (MapFourYellowPhase + MapFourInterphase)) - MapFourLength).toFixed(2);
-    console.log(MapFourInitialVelocity, MapFourYellowPhase, MapFourInterphase, carLengthMapFour);
-    console.log(distancePhaseMapFour);
+    console.log("Initial Velocity", MapFourInitialVelocity, "Yellow phase", MapFourYellowPhase, "Interphase", MapFourInterphase, "Car length", carLengthMapFour);
+    console.log("Distance during yellow and interphase", distancePhaseMapFour);
+
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapFour = (MapFourReactionTime * MapFourInitialVelocity);
@@ -517,7 +516,7 @@ function MapFourVariables() {
       userResultMapFour = "Sorry, this was higher than the value we got."
     } else if (userInputMapFour < absoluteValueMapFour2) {
       userResultMapFour = "Sorry, this was lower than the value we got."
-    } else userResultMapFour = "Well done, the value you got was within the expected value!"
+    } else userResultMapFour = "Excellent! The value you got was within the expected value!"
     console.log(userResultMapFour);
 
     //Outputs generated for the user to check their work
@@ -561,12 +560,12 @@ function MapFiveVariables() {
   const tiresMapFive = ["good", "average", "bad"];
   const tireConditionMapFive = Math.floor(Math.random() * tiresMapFive.length);
   const keyCondMapFive = tiresMapFive[tireConditionMapFive];
-  console.log(tireConditionMapFive, tiresMapFive[tireConditionMapFive]);
+  console.log("Tire conditions", tireConditionMapFive, tiresMapFive[tireConditionMapFive]);
 
   const climateMapFive = ["dry", "wet"];
   const ClimateConditionMapFive = Math.floor(Math.random() * climateMapFive.length);
   const keyClimMapFive = climateMapFive[ClimateConditionMapFive];
-  console.log(ClimateConditionMapFive, climateMapFive[ClimateConditionMapFive]);
+  console.log("Climate Conditions", ClimateConditionMapFive, climateMapFive[ClimateConditionMapFive]);
 
   document.getElementById("map-5-initialVelocity").innerHTML = velocityMapFive.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById("map-5-ylPhase").innerHTML = yellowPhaseMapFive.toFixed(1) + " s";
@@ -587,11 +586,11 @@ function MapFiveVariables() {
     MapFiveIntersection = 51.50;
     MapFiveLength = carLengthMapFive;
     MapFiveCoefficient = conditionsMapFive[keyClimMapFive + keyCondMapFive];
-
+    console.log("Lenght of intersection = ", MapFiveIntersection);
     // Calculate the going distance
     let distancePhaseMapFive = ((MapFiveInitialVelocity * (MapFiveYellowPhase + MapFiveInterphase)) - MapFiveLength).toFixed(2);
-    console.log(MapFiveInitialVelocity, MapFiveYellowPhase, MapFiveInterphase, carLengthMapFive);
-    console.log(distancePhaseMapFive);
+    console.log("Initial Velocity", MapFiveInitialVelocity, "Yellow phase", MapFiveYellowPhase, "Interphase", MapFiveInterphase, "Car length", carLengthMapFive);
+    console.log("Distance during yellow and interphase", distancePhaseMapFive);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapFive = (MapFiveReactionTime * MapFiveInitialVelocity);
@@ -649,7 +648,7 @@ function MapFiveVariables() {
       userResultMapFive = "Sorry, this was higher than the value we got."
     } else if (userInputMapFive < absoluteValueMapFive2) {
       userResultMapFive = "Sorry, this was lower than the value we got."
-    } else userResultMapFive = "Well done, the value you got was within the expected value!"
+    } else userResultMapFive = "Excellent! The value you got was within the expected value!"
     console.log(userResultMapFive);
 
     //Outputs generated for the user to check their work
@@ -659,3 +658,4 @@ function MapFiveVariables() {
 
   } // End of calculations
 }
+
