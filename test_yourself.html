@@ -12,7 +12,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <!--Link to custom style sheet-->
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
   <title>Physics Code - Test Yourself</title>
 </head>
 
@@ -97,7 +96,7 @@
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-1">
             <h5 class="card-title">Scenario One <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
-            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> scene
+            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
             button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
@@ -142,7 +141,7 @@
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-2">
             <h5 class="card-title">Scenario Two <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
-            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <em>Random Scenario</em> 
+           <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
             button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
@@ -187,7 +186,7 @@
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-3">
             <h5 class="card-title">Scenario Three <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
-            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <em>Random Scenario</em> 
+            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
             button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
@@ -232,7 +231,7 @@
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-4">
             <h5 class="card-title">Scenario Four <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
-            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <em>Random Scenario</em> 
+           <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
             button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
@@ -277,7 +276,7 @@
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
           <div class="card-body" id="card-map-5">
             <h5 class="card-title">Scenario Five <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
-            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <em>Random Scenario</em> 
+            <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
             button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
           </div>
         </div>
@@ -327,10 +326,42 @@
           <p>The weather conditions are described as <strong><span id="map-1-weatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="map-1-carLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i> 
-          <em>Current </em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
-          <p>A dilemma zone exists that is... (length)</p>
-
+          <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+          <h4>Your answers</h4>
+        <div class="form-check">
+          <p>Choose one option</p>
+          <input class="form-check-input" 
+          type="radio" 
+          name="optradio" 
+          id="dzCheckedMapOne" 
+          value="dzCheckedMapOne">
+          <label class="form-check-label" for="dzCheckedMapOne">
+            Dilemma Zone present
+          </label>
         </div>
+        <div class="form-check">
+          <input class="form-check-input"
+          type="radio" 
+          name="optradio" 
+          id="ozCheckedMapOne" 
+          value="ozCheckedMapOne">
+          <label class="form-check-label" for="ozCheckedMapOne">
+            Option Zone present
+          </label>
+        </div><br>
+        <p>Input your value for the <span class="zoneTypeMapOne"></span> zone (remove any negative sign)</p>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="zoneTypeMapOne">Add from JS</span>
+          </div>
+          <input type="number"
+          onkeypress="return isNumberKey(event)"  
+          class="form-control" 
+          aria-label="input value for your zone">
+          <small>Then click on the <em>submit</em> button below to check your answers.</small>
+        </div>
+
+        </div> <!-- End of the first modal-->
         <div class="modal-footer">
           <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
@@ -358,7 +389,7 @@
           <p>The weather conditions are described as <strong><span id="map-2-weatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="map-2-carLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i> 
-          <em>Current </em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+          <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <p>A dilemma zone exists that is... (length)</p>
 
         </div>
@@ -389,7 +420,7 @@
           <p>The weather conditions are described as <strong><span id="map-3-weatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="map-3-carLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i> 
-          <em>Current </em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+          <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <p>A dilemma zone exists that is... (length)</p>
 
         </div>
@@ -420,7 +451,7 @@
           <p>The weather conditions are described as <strong><span id="map-4-weatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="map-4-carLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i> 
-          <em>Current </em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+          <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <p>A dilemma zone exists that is... (length)</p>
 
         </div>
@@ -451,7 +482,7 @@
           <p>The weather conditions are described as <strong><span id="map-5-weatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="map-5-carLength"></span></strong> m long</p>
          <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i> 
-          <em>Current </em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+          <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <p>A dilemma zone exists that is... (length)</p>
 
         </div>
