@@ -55,7 +55,7 @@ p {
 }
 
 .btn-lgt-blue {
-  background-color: #6495ed;
+  background-color: #0074d9;
   color: #fff;
   margin-bottom: -10px;
 }
@@ -263,6 +263,10 @@ input[type=number] {
 #card-map-large-5 {
   height: auto;
   width: auto;
+}
+
+.fa2x {
+    font-size: 1.1rem;
 }
 
 .icon-center {

@@ -27,7 +27,7 @@ function mapOneVariables() {
     icybad: 0.1
   };
 
-  let carLengthMapOne = Math.random() * (6.2 - 3.8) + 3.8;
+  let carLengthMapOne = Math.random() * (5.89 - 3.8) + 3.8;
 
   const tiresMapOne = ["good", "average", "bad"];
   const tireConditionMapOne = Math.floor(Math.random() * tiresMapOne.length);
@@ -108,7 +108,7 @@ function mapTwoVariables() {
     wetbad: 0.5,
   };
 
-  let carLengthMapTwo = Math.random() * (6.2 - 3.8) + 3.8;
+  let carLengthMapTwo = Math.random() * (5.89 - 3.8) + 3.8;
 
   const tiresMapTwo = ["good", "average", "bad"];
   const tireConditionMapTwo = Math.floor(Math.random() * tiresMapTwo.length);
@@ -196,7 +196,7 @@ function MapThreeVariables() {
     icybad: 0.1
   };
 
-  let carLengthMapThree = Math.random() * (6.2 - 3.8) + 3.8;
+  let carLengthMapThree = Math.random() * (5.89 - 3.8) + 3.8;
 
   const tiresMapThree = ["good", "average", "bad"];
   const tireConditionMapThree = Math.floor(Math.random() * tiresMapThree.length);
@@ -284,7 +284,7 @@ function MapFourVariables() {
     icybad: 0.1
   };
 
-  let carLengthMapFour = Math.random() * (6.2 - 3.8) + 3.8;
+  let carLengthMapFour = Math.random() * (5.89 - 3.8) + 3.8;
 
   const tiresMapFour = ["good", "average", "bad"];
   const tireConditionMapFour = Math.floor(Math.random() * tiresMapFour.length);
@@ -341,8 +341,8 @@ function MapFourVariables() {
     } else zoneOutcomeMapFour = false;
     console.log(zoneOutcomeMapFour);
 
-  } // Calculation Checker MapFour
-} // Main function randomScenario MapFour
+  } // Calculation Checker MapFour ends
+} // Main function randomScenario MapFour ends
 
 //Map Five, Ireland
 document.getElementById("randomScenarioMapFive").addEventListener("click", MapFiveVariables);
@@ -372,7 +372,7 @@ function MapFiveVariables() {
     icybad: 0.1
   };
 
-  let carLengthMapFive = Math.random() * (6.2 - 3.8) + 3.8;
+  let carLengthMapFive = Math.random() * (5.89 - 3.8) + 3.8;
 
   const tiresMapFive = ["good", "average", "bad"];
   const tireConditionMapFive = Math.floor(Math.random() * tiresMapFive.length);
@@ -429,19 +429,8 @@ function MapFiveVariables() {
     } else zoneOutcomeMapFive = false;
     console.log(zoneOutcomeMapFive);
 
-  } 
+  } // End of calculations 
 } 
 
-// Prevent the modal from opening 
-// if user clicks "current scenario"
-// before a current scenario is loaded
-document.getElementById("current-map-1").addEventListener("click", openModalMapOne);
-function openModalMapOne() {
-let openMapOneData = parseFloat(document.getElementById("map-1-initialVelocity").value); 
-    if (openMapOneData < 1) {
-        getElementById("current-map-1").element.setAttribute(disabled, true);
-        alert("You need to click on the button to select a random scenario first");
-    }
-}
 
 
