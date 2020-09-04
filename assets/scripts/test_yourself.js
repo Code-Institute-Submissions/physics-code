@@ -92,7 +92,51 @@ function mapOneVariables() {
     } else zoneOutcomeMapOne = false;
     console.log(zoneOutcomeMapOne);
 
-  } // Calculation Checker
+    // Check the type of zone the user has input
+    let mapOneZone = document.querySelector('input[name="MapOneZone"]:checked').value;
+    let answerMapOne;
+    if (mapOneZone === "ozCheckedMapOne") {
+        answerMapOne = "Option Zone";
+    } else if (mapOneZone === "dzCheckedMapOne") {
+        answerMapOne = "Dilemma Zone";
+    } else answerMapOne = false;
+    console.log(mapOneZone);
+    console.log(answerMapOne);
+      
+    let resultsMapOne;
+    if (answerMapOne === zoneOutcomeMapOne) {
+        resultsMapOne = "Well done! " + answerMapOne + " was the correct answer.";
+    } else resultsMapOne = "Sorry " + answerMapOne + " was not the correct answer.";
+    console.log(resultsMapOne);
+    let percentageMapOne = zoneCalcMapOne * 0.2;
+    let valueHighCheckedMapOne = zoneCalcMapOne + percentageMapOne;
+    let valueLowCheckedMapOne = zoneCalcMapOne - percentageMapOne;
+    console.log(valueHighCheckedMapOne);
+    console.log(valueLowCheckedMapOne);
+
+    // Convert all numbers to absolute for checking
+    // Allow up to 20% difference on student answers - this can be changed in the percentageMapOne variable
+    let absoluteValueMapOne = Math.abs(valueHighCheckedMapOne);
+    let absoluteValueMapOne2 = Math.abs(valueLowCheckedMapOne);
+    let userInputMapOne = document.getElementById("userInputMapOne").value;
+    if (userInputMapOne === "") {
+    alert("You need to add the value you got for the calculation before submitting.");
+    return false;
+    }
+    let userResultMapOne;
+    if (userInputMapOne > absoluteValueMapOne) { 
+        userResultMapOne = "Sorry, this was higher than the value we got."
+    } else if (userInputMapOne < absoluteValueMapOne2) {
+        userResultMapOne = "Sorry, this was lower than the value we got."   
+    } else userResultMapOne = "Well done, the value you got was within the expected value!"
+    console.log(userResultMapOne);
+
+    //Outputs generated for the user to check their work
+    document.getElementById("MapOneResultOne").innerHTML = resultsMapOne;
+    document.getElementById("MapOneResultTwo").innerHTML = userResultMapOne;
+    document.getElementById("MapOneResultThree").innerHTML = "We got " + Math.abs(zoneCalcMapOne).toFixed(2) + " m";
+
+    } // Calculation Checker
 } // Main function randomScenario
 
 // Map Two, Australia
@@ -172,6 +216,50 @@ function mapTwoVariables() {
       zoneOutcomeMapTwo = "Dilemma Zone";
     } else zoneOutcomeMapTwo = false;
     console.log(zoneOutcomeMapTwo);
+
+    // Check the type of zone the user has input
+    let MapTwoZone = document.querySelector('input[name="MapTwoZone"]:checked').value;
+    let answerMapTwo;
+    if (MapTwoZone === "ozCheckedMapTwo") {
+        answerMapTwo = "Option Zone";
+    } else if (MapTwoZone === "dzCheckedMapTwo") {
+        answerMapTwo = "Dilemma Zone";
+    } else answerMapTwo = false;
+    console.log(MapTwoZone);
+    console.log(answerMapTwo);
+      
+    let resultsMapTwo;
+    if (answerMapTwo === zoneOutcomeMapTwo) {
+        resultsMapTwo = "Well done! " + answerMapTwo + " was the correct answer.";
+    } else resultsMapTwo = "Sorry " + answerMapTwo + " was not the correct answer.";
+    console.log(resultsMapTwo);
+    let percentageMapTwo = zoneCalcMapTwo * 0.2;
+    let valueHighCheckedMapTwo = zoneCalcMapTwo + percentageMapTwo;
+    let valueLowCheckedMapTwo = zoneCalcMapTwo - percentageMapTwo;
+    console.log(valueHighCheckedMapTwo);
+    console.log(valueLowCheckedMapTwo);
+
+    // Convert all numbers to absolute for checking
+    // Allow up to 20% difference on student answers - this can be changed in the percentageMapTwo variable
+    let absoluteValueMapTwo = Math.abs(valueHighCheckedMapTwo);
+    let absoluteValueMapTwo2 = Math.abs(valueLowCheckedMapTwo);
+    let userInputMapTwo = document.getElementById("userInputMapTwo").value;
+    if (userInputMapTwo === "") {
+    alert("You need to add the value you got for the calculation before submitting.");
+    return false;
+    }
+    let userResultMapTwo;
+    if (userInputMapTwo > absoluteValueMapTwo) { 
+        userResultMapTwo = "Sorry, this was higher than the value we got."
+    } else if (userInputMapTwo < absoluteValueMapTwo2) {
+        userResultMapTwo = "Sorry, this was lower than the value we got."   
+    } else userResultMapTwo = "Well done, the value you got was within the expected value!"
+    console.log(userResultMapTwo);
+
+    //Outputs generated for the user to check their work
+    document.getElementById("MapTwoResultOne").innerHTML = resultsMapTwo;
+    document.getElementById("MapTwoResultTwo").innerHTML = userResultMapTwo;
+    document.getElementById("MapTwoResultThree").innerHTML = "We got " + Math.abs(zoneCalcMapTwo).toFixed(2) + " m";
 
   } // Calculation Checker MapTwo
 } // Main function randomScenario MapTwo
@@ -261,6 +349,50 @@ function MapThreeVariables() {
     } else zoneOutcomeMapThree = false;
     console.log(zoneOutcomeMapThree);
 
+    // Check the type of zone the user has input
+    let MapThreeZone = document.querySelector('input[name="MapThreeZone"]:checked').value;
+    let answerMapThree;
+    if (MapThreeZone === "ozCheckedMapThree") {
+        answerMapThree = "Option Zone";
+    } else if (MapThreeZone === "dzCheckedMapThree") {
+        answerMapThree = "Dilemma Zone";
+    } else answerMapThree = false;
+    console.log(MapThreeZone);
+    console.log(answerMapThree);
+      
+    let resultsMapThree;
+    if (answerMapThree === zoneOutcomeMapThree) {
+        resultsMapThree = "Well done! " + answerMapThree + " was the correct answer.";
+    } else resultsMapThree = "Sorry " + answerMapThree + " was not the correct answer.";
+    console.log(resultsMapThree);
+    let percentageMapThree = zoneCalcMapThree * 0.2;
+    let valueHighCheckedMapThree = zoneCalcMapThree + percentageMapThree;
+    let valueLowCheckedMapThree = zoneCalcMapThree - percentageMapThree;
+    console.log(valueHighCheckedMapThree);
+    console.log(valueLowCheckedMapThree);
+
+    // Convert all numbers to absolute for checking
+    // Allow up to 20% difference on student answers - this can be changed in the percentageMapThree variable
+    let absoluteValueMapThree = Math.abs(valueHighCheckedMapThree);
+    let absoluteValueMapThree2 = Math.abs(valueLowCheckedMapThree);
+    let userInputMapThree = document.getElementById("userInputMapThree").value;
+    if (userInputMapThree === "") {
+    alert("You need to add the value you got for the calculation before submitting.");
+    return false;
+    }
+    let userResultMapThree;
+    if (userInputMapThree > absoluteValueMapThree) { 
+        userResultMapThree = "Sorry, this was higher than the value we got."
+    } else if (userInputMapThree < absoluteValueMapThree2) {
+        userResultMapThree = "Sorry, this was lower than the value we got."   
+    } else userResultMapThree = "Well done, the value you got was within the expected value!"
+    console.log(userResultMapThree);
+
+    //Outputs generated for the user to check their work
+    document.getElementById("MapThreeResultOne").innerHTML = resultsMapThree;
+    document.getElementById("MapThreeResultTwo").innerHTML = userResultMapThree;
+    document.getElementById("MapThreeResultThree").innerHTML = "We got " + Math.abs(zoneCalcMapThree).toFixed(2) + " m";
+
   } // Calculation Checker MapThree
 } // Main function randomScenario MapThree
 
@@ -349,6 +481,50 @@ function MapFourVariables() {
     } else zoneOutcomeMapFour = false;
     console.log(zoneOutcomeMapFour);
 
+    // Check the type of zone the user has input
+    let MapFourZone = document.querySelector('input[name="MapFourZone"]:checked').value;
+    let answerMapFour;
+    if (MapFourZone === "ozCheckedMapFour") {
+        answerMapFour = "Option Zone";
+    } else if (MapFourZone === "dzCheckedMapFour") {
+        answerMapFour = "Dilemma Zone";
+    } else answerMapFour = false;
+    console.log(MapFourZone);
+    console.log(answerMapFour);
+      
+    let resultsMapFour;
+    if (answerMapFour === zoneOutcomeMapFour) {
+        resultsMapFour = "Well done! " + answerMapFour + " was the correct answer.";
+    } else resultsMapFour = "Sorry " + answerMapFour + " was not the correct answer.";
+    console.log(resultsMapFour);
+    let percentageMapFour = zoneCalcMapFour * 0.2;
+    let valueHighCheckedMapFour = zoneCalcMapFour + percentageMapFour;
+    let valueLowCheckedMapFour = zoneCalcMapFour - percentageMapFour;
+    console.log(valueHighCheckedMapFour);
+    console.log(valueLowCheckedMapFour);
+
+    // Convert all numbers to absolute for checking
+    // Allow up to 20% difference on student answers - this can be changed in the percentageMapFour variable
+    let absoluteValueMapFour = Math.abs(valueHighCheckedMapFour);
+    let absoluteValueMapFour2 = Math.abs(valueLowCheckedMapFour);
+    let userInputMapFour = document.getElementById("userInputMapFour").value;
+    if (userInputMapFour === "") {
+    alert("You need to add the value you got for the calculation before submitting.");
+    return false;
+    }
+    let userResultMapFour;
+    if (userInputMapFour > absoluteValueMapFour) { 
+        userResultMapFour = "Sorry, this was higher than the value we got."
+    } else if (userInputMapFour < absoluteValueMapFour2) {
+        userResultMapFour = "Sorry, this was lower than the value we got."   
+    } else userResultMapFour = "Well done, the value you got was within the expected value!"
+    console.log(userResultMapFour);
+
+    //Outputs generated for the user to check their work
+    document.getElementById("MapFourResultOne").innerHTML = resultsMapFour;
+    document.getElementById("MapFourResultTwo").innerHTML = userResultMapFour;
+    document.getElementById("MapFourResultThree").innerHTML = "We got " + Math.abs(zoneCalcMapFour).toFixed(2) + " m";
+
   } // Calculation Checker MapFour ends
 } // Main function randomScenario MapFour ends
 
@@ -401,7 +577,7 @@ function MapFiveVariables() {
   document.getElementById("map-5-carLength").innerHTML = carLengthMapFive.toFixed(1);
 
   // The calculation checker:
-  document.getElementById("map-4-submit").addEventListener("click", calculateScenarioMapFive);
+  document.getElementById("map-5-submit").addEventListener("click", calculateScenarioMapFive);
 
   function calculateScenarioMapFive() {
     MapFiveInitialVelocity = velocityMapFive / 3.6;
@@ -437,8 +613,53 @@ function MapFiveVariables() {
     } else zoneOutcomeMapFive = false;
     console.log(zoneOutcomeMapFive);
 
+    // Check the type of zone the user has input
+    let MapFiveZone = document.querySelector('input[name="MapFiveZone"]:checked').value;
+    let answerMapFive;
+    if (MapFiveZone === "ozCheckedMapFive") {
+        answerMapFive = "Option Zone";
+    } else if (MapFiveZone === "dzCheckedMapFive") {
+        answerMapFive = "Dilemma Zone";
+    } else answerMapFive = false;
+    console.log(MapFiveZone);
+    console.log(answerMapFive);
+      
+    let resultsMapFive;
+    if (answerMapFive === zoneOutcomeMapFive) {
+        resultsMapFive = "Well done! " + answerMapFive + " was the correct answer.";
+    } else resultsMapFive = "Sorry " + answerMapFive + " was not the correct answer.";
+    console.log(resultsMapFive);
+    let percentageMapFive = zoneCalcMapFive * 0.2;
+    let valueHighCheckedMapFive = zoneCalcMapFive + percentageMapFive;
+    let valueLowCheckedMapFive = zoneCalcMapFive - percentageMapFive;
+    console.log(valueHighCheckedMapFive);
+    console.log(valueLowCheckedMapFive);
+
+    // Convert all numbers to absolute for checking
+    // Allow up to 20% difference on student answers - this can be changed in the percentageMapFive variable
+    let absoluteValueMapFive = Math.abs(valueHighCheckedMapFive);
+    let absoluteValueMapFive2 = Math.abs(valueLowCheckedMapFive);
+    let userInputMapFive = document.getElementById("userInputMapFive").value;
+    if (userInputMapFive === "") {
+    alert("You need to add the value you got for the calculation before submitting.");
+    return false;
+    }
+    let userResultMapFive;
+    if (userInputMapFive > absoluteValueMapFive) { 
+        userResultMapFive = "Sorry, this was higher than the value we got."
+    } else if (userInputMapFive < absoluteValueMapFive2) {
+        userResultMapFive = "Sorry, this was lower than the value we got."   
+    } else userResultMapFive = "Well done, the value you got was within the expected value!"
+    console.log(userResultMapFive);
+
+    //Outputs generated for the user to check their work
+    document.getElementById("MapFiveResultOne").innerHTML = resultsMapFive;
+    document.getElementById("MapFiveResultTwo").innerHTML = userResultMapFive;
+    document.getElementById("MapFiveResultThree").innerHTML = "We got " + Math.abs(zoneCalcMapFive).toFixed(2) + " m";
+
   } // End of calculations 
 } 
+
 
 
 
