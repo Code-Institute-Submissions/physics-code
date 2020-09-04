@@ -94,7 +94,7 @@ function share_result() {
   FB.ui({
     app_id: 335490644461179,
     method: 'feed',
-    link: 'https://pauld0051.github.io/physcis-code/',
+    link: 'https://pauld0051.github.io/physics-code/',
     quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
   }, function(response) {
     if (response && !response.error_message) {
