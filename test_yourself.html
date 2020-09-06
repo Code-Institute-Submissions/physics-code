@@ -311,7 +311,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" id="userInputMapOne" class="form-control" min="0" step="0.01" aria-label="input value for your zone">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return isNumberKey(this, 2)" id="userInputMapOne" class="form-control" min="0" step="0.01" aria-label="input value for your zone">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
           </div>
           <div><span id="MapOneResultOne"></span></div>

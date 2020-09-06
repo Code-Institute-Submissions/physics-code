@@ -6,6 +6,16 @@ function isNumberKey(evt) {
   return true;
 }
 
+// Limit to two decimal places in the input
+function isNumberKey(obj, decimals) {
+    if (obj.value % Math.round(obj.value)) {
+        var divisor = Math.pow(10, decimals);
+        obj.value = Math.round(obj.value * divisor)/divisor;
+    }
+
+    console.log(obj.value);
+ }
+
 // Map One, Russia
 document.getElementById("randomScenarioMapOne").addEventListener("click", mapOneVariables);
 function mapOneVariables() {
