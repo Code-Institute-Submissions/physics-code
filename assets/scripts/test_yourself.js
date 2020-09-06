@@ -1,19 +1,22 @@
 // Limit input boxes to only numbers and decimal places
 function isNumberKey(evt) {
-  let charCode = (evt.which) ? evt.which : evt.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
-    return false;
-  return true;
-}
+    let charCode = (evt.which) ? evt.which : evt.keyCode; 
+    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
+      evt.preventDefault();
+      return false;
+    }
+    return true;
+ }
 
-// Limit to two decimal places in the input
-function isNumberKey(obj, decimals) {
+ function truncateDecimals(obj, decimals) {
     if (obj.value % Math.round(obj.value)) {
+      
         var divisor = Math.pow(10, decimals);
-        obj.value = Math.round(obj.value * divisor)/divisor;
+        obj.value = Math.floor(obj.value * divisor)/divisor;
     }
 
     console.log(obj.value);
+    return true;
  }
 
 // Map One, Russia
