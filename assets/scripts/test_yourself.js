@@ -228,14 +228,14 @@ function mapTwoVariables() {
 
     let resultsMapTwo;
     if (answerMapTwo === zoneOutcomeMapTwo) {
-      resultsMapTwo = "Well done! " + answerMapTwo + " was the correct answer.";
-    } else resultsMapTwo = "Sorry " + answerMapTwo + " was not the correct answer.";
+      resultsMapTwo = "You said: " + answerMapTwo + " &#x2713;";
+    } else resultsMapTwo = "You said: " + answerMapTwo + " &#x2a2f;";
     console.log(resultsMapTwo);
     let percentageMapTwo = zoneCalcMapTwo * 0.2;
     let valueHighCheckedMapTwo = zoneCalcMapTwo + percentageMapTwo;
     let valueLowCheckedMapTwo = zoneCalcMapTwo - percentageMapTwo;
-    console.log(valueHighCheckedMapTwo);
-    console.log(valueLowCheckedMapTwo);
+    console.log("Absolute value high", valueHighCheckedMapTwo);
+    console.log("Absolute value low", valueLowCheckedMapTwo);
 
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentageMapTwo variable
@@ -247,17 +247,23 @@ function mapTwoVariables() {
       return false;
     }
     let userResultMapTwo;
-    if (userInputMapTwo > absoluteValueMapTwo) {
-      userResultMapTwo = "Sorry, this was higher than the value we got."
-    } else if (userInputMapTwo < absoluteValueMapTwo2) {
-      userResultMapTwo = "Sorry, this was lower than the value we got."
-    } else userResultMapTwo = "Excellent! The value you got was within the expected value!"
+    if ((userInputMapTwo > absoluteValueMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
+      userResultMapTwo = "But your value of " + userInputMapTwo + " is too high for this scenario."
+    } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo === zoneOutcomeMapTwo)) {
+      userResultMapTwo = "But your value of " + userInputMapTwo + " is too low for this scenario."
+    } else if ((userInputMapTwo > absoluteValueMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
+      userResultMapTwo = "And your value of " + userInputMapTwo + " is too high for this scenario."
+    } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo !== zoneOutcomeMapTwo)) {
+      userResultMapTwo = "And your value of " + userInputMapTwo + " is too low for this scenario."
+    } else if (answerMapTwo !== zoneOutcomeMapTwo) {
+      userResultMapTwo ="Although your value of " + userInputMapTwo + " fits well if the zone is correct."      
+    } else userResultMapTwo = "Your value of " + userInputMapTwo + " fits well in this scenario."
     console.log(userResultMapTwo);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapTwoResultOne").innerHTML = resultsMapTwo;
     document.getElementById("MapTwoResultTwo").innerHTML = userResultMapTwo;
-    document.getElementById("MapTwoResultThree").innerHTML = "We got " + Math.abs(zoneCalcMapTwo).toFixed(2) + " m";
+    document.getElementById("MapTwoResultThree").innerHTML = "Our calculations: " + Math.abs(zoneCalcMapTwo).toFixed(2) + " m " + zoneOutcomeMapTwo;
 
   } // Calculation Checker MapTwo
 } // Main function randomScenario MapTwo
