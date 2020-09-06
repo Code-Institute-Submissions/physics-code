@@ -122,22 +122,22 @@ function mapOneVariables() {
     }
     let userResultMapOne;
     if ((userInputMapOne > absoluteValueMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
-      userResultMapOne = "But your value of <b>" + userInputMapOne + "</b> is too high.";
+      userResultMapOne = "But your value of <b>" + userInputMapOne + " m</b> is too high.";
     } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne === zoneOutcomeMapOne)) {
-      userResultMapOne = "But your value of <b>" + userInputMapOne + "</b> is too low.";
+      userResultMapOne = "But your value of <b>" + userInputMapOne + " m</b> is too low.";
     } else if ((userInputMapOne > absoluteValueMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
-      userResultMapOne = "And your value of <b>" + userInputMapOne + "</b> is too high.";
+      userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too high.";
     } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne !== zoneOutcomeMapOne)) {
-      userResultMapOne = "And your value of <b>" + userInputMapOne + "</b> is too low.";
+      userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too low.";
     } else if (answerMapOne !== zoneOutcomeMapOne) {
-      userResultMapOne ="Although your value of <b>" + userInputMapOne + "</b> fits well, \nthe type of zone needs correction.";      
-    } else userResultMapOne = "Your value of <b>" + userInputMapOne + "</b> fits well in this scenario.";
+      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapOne);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapOneResultOne").innerHTML = resultsMapOne;
     document.getElementById("MapOneResultTwo").innerHTML = userResultMapOne;
-    document.getElementById("MapOneResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapOne).toFixed(2) + "</b> m " + zoneOutcomeMapOne  + ".";
+    document.getElementById("MapOneResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapOne).toFixed(2) + " m</b> " + zoneOutcomeMapOne  + ".";
 
   } // Calculation Checker
 } // Main function randomScenario
@@ -254,22 +254,22 @@ function mapTwoVariables() {
     }
     let userResultMapTwo;
     if ((userInputMapTwo > absoluteValueMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
-      userResultMapTwo = "But your value of <b>" + userInputMapTwo + "</b> is too high.";
+      userResultMapTwo = "But your value of <b>" + userInputMapTwo + " m</b> is too high.";
     } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo === zoneOutcomeMapTwo)) {
-      userResultMapTwo = "But your value of <b>" + userInputMapTwo + "</b> is too low.";
+      userResultMapTwo = "But your value of <b>" + userInputMapTwo + " m</b> is too low.";
     } else if ((userInputMapTwo > absoluteValueMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
-      userResultMapTwo = "And your value of <b>" + userInputMapTwo + "</b> is too high.";
+      userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too high.";
     } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo !== zoneOutcomeMapTwo)) {
-      userResultMapTwo = "And your value of <b>" + userInputMapTwo + "</b> is too low.";
+      userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too low.";
     } else if (answerMapTwo !== zoneOutcomeMapTwo) {
-      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + "</b> fits well, \nthe type of zone needs correction.";      
-    } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + "</b> fits well in this scenario.";
+      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapTwo);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapTwoResultOne").innerHTML = resultsMapTwo;
     document.getElementById("MapTwoResultTwo").innerHTML = userResultMapTwo;
-    document.getElementById("MapTwoResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapTwo).toFixed(2) + "</b> m " + zoneOutcomeMapTwo  + ".";
+    document.getElementById("MapTwoResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapTwo).toFixed(2) + " m</b> " + zoneOutcomeMapTwo  + ".";
 
   } // Calculation Checker MapTwo
 } // Main function randomScenario MapTwo
@@ -392,22 +392,22 @@ function MapThreeVariables() {
     }
    let userResultMapThree;
     if ((userInputMapThree > absoluteValueMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
-      userResultMapThree = "But your value of <b>" + userInputMapThree + "</b> is too high.";
+      userResultMapThree = "But your value of <b>" + userInputMapThree + " m</b> is too high.";
     } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree === zoneOutcomeMapThree)) {
-      userResultMapThree = "But your value of <b>" + userInputMapThree + "</b> is too low.";
+      userResultMapThree = "But your value of <b>" + userInputMapThree + " m</b> is too low.";
     } else if ((userInputMapThree > absoluteValueMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
-      userResultMapThree = "And your value of <b>" + userInputMapThree + "</b> is too high.";
+      userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too high.";
     } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree !== zoneOutcomeMapThree)) {
-      userResultMapThree = "And your value of <b>" + userInputMapThree + "</b> is too low.";
+      userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too low.";
     } else if (answerMapThree !== zoneOutcomeMapThree) {
-      userResultMapThree ="Although your value of <b>" + userInputMapThree + "</b> fits well, \nthe type of zone needs correction.";      
-    } else userResultMapThree = "Your value of <b>" + userInputMapThree + "</b> fits well in this scenario.";
+      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this scenario.";
     console.log(userResultMapThree);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapThreeResultOne").innerHTML = resultsMapThree;
     document.getElementById("MapThreeResultTwo").innerHTML = userResultMapThree;
-    document.getElementById("MapThreeResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapThree).toFixed(2) + "</b> m " + zoneOutcomeMapThree  + ".";
+    document.getElementById("MapThreeResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapThree).toFixed(2) + " m</b> " + zoneOutcomeMapThree  + ".";
 
   } // Calculation Checker MapThree
 } // Main function randomScenario MapThree
@@ -531,22 +531,22 @@ function MapFourVariables() {
     }
     let userResultMapFour;
     if ((userInputMapFour > absoluteValueMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
-      userResultMapFour = "But your value of <b>" + userInputMapFour + "</b> is too high.";
+      userResultMapFour = "But your value of <b>" + userInputMapFour + " m</b> is too high.";
     } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour === zoneOutcomeMapFour)) {
-      userResultMapFour = "But your value of <b>" + userInputMapFour + "</b> is too low.";
+      userResultMapFour = "But your value of <b>" + userInputMapFour + " m</b> is too low.";
     } else if ((userInputMapFour > absoluteValueMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
-      userResultMapFour = "And your value of <b>" + userInputMapFour + "</b> is too high.";
+      userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too high.";
     } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour !== zoneOutcomeMapFour)) {
-      userResultMapFour = "And your value of <b>" + userInputMapFour + "</b> is too low.";
+      userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too low.";
     } else if (answerMapFour !== zoneOutcomeMapFour) {
-      userResultMapFour ="Although your value of <b>" + userInputMapFour + "</b> fits well, \nthe type of zone needs correction.";      
-    } else userResultMapFour = "Your value of <b>" + userInputMapFour + "</b> fits well in this scenario.";
+      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this scenario.";
     console.log(userResultMapFour);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapFourResultOne").innerHTML = resultsMapFour;
     document.getElementById("MapFourResultTwo").innerHTML = userResultMapFour;
-    document.getElementById("MapFourResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFour).toFixed(2) + "</b> m " + zoneOutcomeMapFour + ".";
+    document.getElementById("MapFourResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFour).toFixed(2) + " m</b> " + zoneOutcomeMapFour + ".";
 
   } // Calculation Checker MapFour ends
 } // Main function randomScenario MapFour ends
@@ -669,22 +669,22 @@ function MapFiveVariables() {
     }
     let userResultMapFive;
     if ((userInputMapFive > absoluteValueMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
-      userResultMapFive = "But your value of <b>" + userInputMapFive + "</b> is too high.";
+      userResultMapFive = "But your value of <b>" + userInputMapFive + " m</b> is too high.";
     } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive === zoneOutcomeMapFive)) {
-      userResultMapFive = "But your value of <b>" + userInputMapFive + "</b> is too low.";
+      userResultMapFive = "But your value of <b>" + userInputMapFive + " m</b> is too low.";
     } else if ((userInputMapFive > absoluteValueMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
-      userResultMapFive = "And your value of <b>" + userInputMapFive + "</b> is too high.";
+      userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too high.";
     } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive !== zoneOutcomeMapFive)) {
-      userResultMapFive = "And your value of <b>" + userInputMapFive + "</b> is too low.";
+      userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too low.";
     } else if (answerMapFive !== zoneOutcomeMapFive) {
-      userResultMapFive ="Although your value of <b>" + userInputMapFive + "</b> fits well, \nthe type of zone needs correction.";      
-    } else userResultMapFive = "Your value of <b>" + userInputMapFive + "</b> fits well in this scenario.";
+      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this scenario.";
     console.log(userResultMapFive);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapFiveResultOne").innerHTML = resultsMapFive;
     document.getElementById("MapFiveResultTwo").innerHTML = userResultMapFive;
-    document.getElementById("MapFiveResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFive).toFixed(2) + "</b> m " + zoneOutcomeMapFive  + ".";
+    document.getElementById("MapFiveResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFive).toFixed(2) + " m</b> " + zoneOutcomeMapFive  + ".";
 
   } // End of calculations
 }
