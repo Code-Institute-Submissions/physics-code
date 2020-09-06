@@ -90,6 +90,8 @@ function mapOneVariables() {
     } else zoneOutcomeMapOne = false;
     console.log("Type of zone", zoneOutcomeMapOne);
 
+    let perfMapOne = Math.abs(zoneCalcMapOne).toFixed(2);
+    console.log("Zone outcome absolute and 2dp", perfMapOne);
     // Check the type of zone the user has input
     let mapOneZone = document.querySelector('input[name="MapOneZone"]:checked').value;
     let answerMapOne;
@@ -129,8 +131,10 @@ function mapOneVariables() {
       userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too high.";
     } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne !== zoneOutcomeMapOne)) {
       userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too low.";
-    } else if (answerMapOne !== zoneOutcomeMapOne) {
-      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else if ((userInputMapOne === perfMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
+      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is perfect, \nthe type of zone needs correction.";
+    } else if ((userInputMapOne === perfMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
+      userResultMapOne ="Your value of <b>" + userInputMapOne + " m</b> is perfect.";     
     } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapOne);
 
@@ -221,6 +225,9 @@ function mapTwoVariables() {
     } else zoneOutcomeMapTwo = false;
     console.log(zoneOutcomeMapTwo);
 
+    let perfMapTwo = Math.abs(zoneCalcMapTwo).toFixed(2);
+    console.log("Zone outcome absolute and 2dp", perfMapTwo);
+
     // Check the type of zone the user has input
     let MapTwoZone = document.querySelector('input[name="MapTwoZone"]:checked').value;
     let answerMapTwo;
@@ -261,8 +268,10 @@ function mapTwoVariables() {
       userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too high.";
     } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo !== zoneOutcomeMapTwo)) {
       userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too low.";
-    } else if (answerMapTwo !== zoneOutcomeMapTwo) {
-      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
+      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is perfect, \nthe type of zone needs correction.";
+    } else if ((userInputMapTwo === perfCalcMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
+      userResultMapTwo ="Your value of <b>" + userInputMapTwo + " m</b> is perfect.";          
     } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapTwo);
 
@@ -359,6 +368,8 @@ function MapThreeVariables() {
     } else zoneOutcomeMapThree = false;
     console.log(zoneOutcomeMapThree);
 
+    let perfMapThree = Math.abs(zoneCalcMapThree).toFixed(2);
+    console.log("Zone outcome absolute and 2dp", perfMapThree);
     // Check the type of zone the user has input
     let MapThreeZone = document.querySelector('input[name="MapThreeZone"]:checked').value;
     let answerMapThree;
@@ -399,8 +410,10 @@ function MapThreeVariables() {
       userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too high.";
     } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree !== zoneOutcomeMapThree)) {
       userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too low.";
-    } else if (answerMapThree !== zoneOutcomeMapThree) {
-      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else if ((userInputMapThree === perfMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
+      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is perfect, \nthe type of zone needs correction.";
+    } else if ((userInputMapThree === perfMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
+      userResultMapThree ="Your value of <b>" + userInputMapThree + " m</b> is perfect.";        
     } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this scenario.";
     console.log(userResultMapThree);
 
@@ -498,6 +511,9 @@ function MapFourVariables() {
     } else zoneOutcomeMapFour = false;
     console.log(zoneOutcomeMapFour);
 
+    let perfMapFour = Math.abs(zoneCalcMapFour).toFixed(2);
+    console.log("Zone outcome absolute and 2dp", perfMapFour);
+
     // Check the type of zone the user has input
     let MapFourZone = document.querySelector('input[name="MapFourZone"]:checked').value;
     let answerMapFour;
@@ -538,8 +554,10 @@ function MapFourVariables() {
       userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too high.";
     } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour !== zoneOutcomeMapFour)) {
       userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too low.";
-    } else if (answerMapFour !== zoneOutcomeMapFour) {
-      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else if ((userInputMapFour === perfMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
+      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is perfect, \nthe type of zone needs correction.";
+    } else if ((userInputMapFour === perfMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
+      userResultMapFour ="Your value of <b>" + userInputMapFour + " m</b> is perfect.";  
     } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this scenario.";
     console.log(userResultMapFour);
 
@@ -636,6 +654,9 @@ function MapFiveVariables() {
     } else zoneOutcomeMapFive = false;
     console.log(zoneOutcomeMapFive);
 
+    let perfMapFive = Math.abs(zoneCalcMapFive).toFixed(2);
+    console.log("Zone outcome absolute and 2dp", perfMapFive);
+
     // Check the type of zone the user has input
     let MapFiveZone = document.querySelector('input[name="MapFiveZone"]:checked').value;
     let answerMapFive;
@@ -676,8 +697,10 @@ function MapFiveVariables() {
       userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too high.";
     } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive !== zoneOutcomeMapFive)) {
       userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too low.";
-    } else if (answerMapFive !== zoneOutcomeMapFive) {
-      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> fits well, \nthe type of zone needs correction.";      
+    } else if ((userInputMapFive === perfMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
+      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is perfect, \nthe type of zone needs correction.";
+    } else if ((userInputMapFive === perfMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
+      userResultMapFive ="Your value of <b>" + userInputMapFive + " m</b> is perfect.";  
     } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this scenario.";
     console.log(userResultMapFive);
 
