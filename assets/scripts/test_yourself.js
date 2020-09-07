@@ -33,9 +33,9 @@ function mapOneVariables() {
 
   // Friction for Map One
   let conditionsMapOne = {
-    drygood: 0.9,
-    dryaverage: 0.8,
-    drybad: 0.7,
+    drygood: Math.random() * (0.9 - 0.8) + 0.8,
+    dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
+    drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
     mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
@@ -196,9 +196,9 @@ function mapTwoVariables() {
 
   // Friction for Map Two
   let conditionsMapTwo = {
-    drygood: 0.9,
-    dryaverage: 0.8,
-    drybad: 0.7,
+   drygood: Math.random() * (0.9 - 0.8) + 0.8,
+    dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
+    drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
     mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
@@ -342,9 +342,9 @@ function MapThreeVariables() {
 
   // Friction for Map Three
   let conditionsMapThree = {
-   drygood: 0.9,
-    dryaverage: 0.8,
-    drybad: 0.7,
+    drygood: Math.random() * (0.9 - 0.8) + 0.8,
+    dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
+    drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
     mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
@@ -504,9 +504,9 @@ function MapFourVariables() {
 
   // Friction for Map Four
   let conditionsMapFour = {
-    drygood: 0.9,
-    dryaverage: 0.8,
-    drybad: 0.7,
+    drygood: Math.random() * (0.9 - 0.8) + 0.8,
+    dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
+    drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
     mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
@@ -668,9 +668,9 @@ function MapFiveVariables() {
 
   // Friction for Map Five
   let conditionsMapFive = {
-    drygood: 0.9,
-    dryaverage: 0.8,
-    drybad: 0.7,
+    drygood: Math.random() * (0.9 - 0.8) + 0.8,
+    dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
+    drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
     mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
