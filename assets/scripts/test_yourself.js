@@ -45,13 +45,28 @@ function mapOneVariables() {
     lightrainbad: Math.random() * (0.5 - 0.45) + 0.45,
     mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
     heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
-    snowygood: 0.3,
-    snowyaverage: 0.3,
-    snowybad: 0.3,
-    icygood: 0.1,
-    icyaverage: 0.1,
-    icybad: 0.1
+    lightsnowgood: Math.random() * (0.5 - 0.46) + 0.46,
+    mediumsnowgood:Math.random() * (0.46 - 0.42) + 0.42,
+    heavysnowgood: Math.random() * (0.42 - 0.4) + 0.4,
+    lightsnowaverage: Math.random() * (0.4 - 0.36) + 0.36,
+    mediumsnowaverage: Math.random() * (0.36 - 0.32) + 0.32,
+    heavysnowaverage: Math.random() * (0.32 - 0.3) + 0.3,
+    lightsnowbad: Math.random() * (0.3 - 0.26) + 0.26,
+    mediumsnowbad: Math.random() * (0.26 - 0.22) + 0.22,
+    heavysnowbad: Math.random() * (0.22 - 0.2) + 0.2,
+    lighticegood: Math.random() * (0.3 - 0.26) + 0.26,
+    veryicygood: Math.random() * (0.26 - 0.18) + 0.22,
+    severeicegood: Math.random() * (0.18 - 0.12) + 0.12,
+    lighticeaverage: Math.random() * (0.2 - 0.16) + 0.16,
+    veryicyaverage: Math.random() * (0.16 - 0.12) + 0.12,
+    severeiceaverage: Math.random() * (0.12 - 0.1) + 0.1,
+    lighticebad: Math.random() * (0.12 - 0.11) + 0.11,
+    veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
+    severeicebad: Math.random() * (0.105 - 0.1) + 0.1,    
   };
+    
+    
+   
 
   let carLengthMapOne = Math.random() * (5.89 - 3.8) + 3.8;
 
@@ -60,7 +75,7 @@ function mapOneVariables() {
   const keyCond = tiresMapOne[tireConditionMapOne];
   console.log("Tire conditions", tireConditionMapOne, tiresMapOne[tireConditionMapOne]);
 
-  const climateMapOne = ["dry", "light rain", "medium rain", "heavy rain", "icy", "snowy"];
+  const climateMapOne = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
   const ClimateConditionMapOne = Math.floor(Math.random() * climateMapOne.length);
   const keyClim = climateMapOne[ClimateConditionMapOne];
   console.log("Climate Conditions", ClimateConditionMapOne, climateMapOne[ClimateConditionMapOne]);
@@ -184,9 +199,15 @@ function mapTwoVariables() {
     drygood: 0.9,
     dryaverage: 0.8,
     drybad: 0.7,
-    wetgood: 0.7,
-    wetaverage: 0.6,
-    wetbad: 0.5,
+    lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
+    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
+    lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
+    mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
+    heavyrainaverage: Math.random() * (0.52 - 0.5) + 0.5,
+    lightrainbad: Math.random() * (0.5 - 0.45) + 0.45,
+    mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
+    heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
   };
 
   let carLengthMapTwo = Math.random() * (5.89 - 3.8) + 3.8;
@@ -196,7 +217,7 @@ function mapTwoVariables() {
   const keyCondMapTwo = tiresMapTwo[tireConditionMapTwo];
   console.log("Tire conditions", tireConditionMapTwo, tiresMapTwo[tireConditionMapTwo]);
 
-  const climateMapTwo = ["dry", "wet"];
+  const climateMapTwo = ["dry", "light rain", "medium rain", "heavy rain"];
   const ClimateConditionMapTwo = Math.floor(Math.random() * climateMapTwo.length);
   const keyClimMapTwo = climateMapTwo[ClimateConditionMapTwo];
   console.log("Climate Conditions", ClimateConditionMapTwo, climateMapTwo[ClimateConditionMapTwo]);
@@ -219,7 +240,7 @@ function mapTwoVariables() {
     mapTwoReactionTime = reactionTimeMapTwo;
     mapTwoIntersection = 79.75;
     mapTwoLength = carLengthMapTwo;
-    mapTwoCoefficient = conditionsMapTwo[keyClimMapTwo + keyCondMapTwo];
+    mapTwoCoefficient = conditionsMapTwo[keyClimMapTwo.replace(/\s+/g, "") + keyCondMapTwo];
     console.log("Lenght of intersection = ", mapTwoIntersection);
     // Calculate the going distance
     let distancePhaseMapTwo = ((mapTwoInitialVelocity * (mapTwoYellowPhase + mapTwoInterphase)) - mapTwoLength).toFixed(2);
@@ -321,18 +342,36 @@ function MapThreeVariables() {
 
   // Friction for Map Three
   let conditionsMapThree = {
-    drygood: 0.9,
+   drygood: 0.9,
     dryaverage: 0.8,
     drybad: 0.7,
-    wetgood: 0.7,
-    wetaverage: 0.6,
-    wetbad: 0.5,
-    snowygood: 0.3,
-    snowyaverage: 0.3,
-    snowybad: 0.3,
-    icygood: 0.1,
-    icyaverage: 0.1,
-    icybad: 0.1
+    lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
+    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
+    lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
+    mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
+    heavyrainaverage: Math.random() * (0.52 - 0.5) + 0.5,
+    lightrainbad: Math.random() * (0.5 - 0.45) + 0.45,
+    mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
+    heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
+    lightsnowgood: Math.random() * (0.5 - 0.46) + 0.46,
+    mediumsnowgood:Math.random() * (0.46 - 0.42) + 0.42,
+    heavysnowgood: Math.random() * (0.42 - 0.4) + 0.4,
+    lightsnowaverage: Math.random() * (0.4 - 0.36) + 0.36,
+    mediumsnowaverage: Math.random() * (0.36 - 0.32) + 0.32,
+    heavysnowaverage: Math.random() * (0.32 - 0.3) + 0.3,
+    lightsnowbad: Math.random() * (0.3 - 0.26) + 0.26,
+    mediumsnowbad: Math.random() * (0.26 - 0.22) + 0.22,
+    heavysnowbad: Math.random() * (0.22 - 0.2) + 0.2,
+    lighticegood: Math.random() * (0.3 - 0.26) + 0.26,
+    veryicygood: Math.random() * (0.26 - 0.18) + 0.22,
+    severeicegood: Math.random() * (0.18 - 0.12) + 0.12,
+    lighticeaverage: Math.random() * (0.2 - 0.16) + 0.16,
+    veryicyaverage: Math.random() * (0.16 - 0.12) + 0.12,
+    severeiceaverage: Math.random() * (0.12 - 0.1) + 0.1,
+    lighticebad: Math.random() * (0.12 - 0.11) + 0.11,
+    veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
+    severeicebad: Math.random() * (0.105 - 0.1) + 0.1, 
   };
 
   let carLengthMapThree = Math.random() * (5.89 - 3.8) + 3.8;
@@ -342,7 +381,7 @@ function MapThreeVariables() {
   const keyCondMapThree = tiresMapThree[tireConditionMapThree];
   console.log("Tire conditions", tireConditionMapThree, tiresMapThree[tireConditionMapThree]);
 
-  const climateMapThree = ["dry", "wet", "icy", "snowy"];
+  const climateMapThree = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
   const ClimateConditionMapThree = Math.floor(Math.random() * climateMapThree.length);
   const keyClimMapThree = climateMapThree[ClimateConditionMapThree];
   console.log("Climate Conditions", ClimateConditionMapThree, climateMapThree[ClimateConditionMapThree]);
@@ -365,7 +404,7 @@ function MapThreeVariables() {
     MapThreeReactionTime = reactionTimeMapThree;
     MapThreeIntersection = 66.18;
     MapThreeLength = carLengthMapThree;
-    MapThreeCoefficient = conditionsMapThree[keyClimMapThree + keyCondMapThree];
+    MapThreeCoefficient = conditionsMapThree[keyClimMapThree.replace(/\s+/g, "") + keyCondMapThree];
     console.log("Lenght of intersection = ", MapThreeIntersection);
     // Calculate the going distance
     let distancePhaseMapThree = ((MapThreeInitialVelocity * (MapThreeYellowPhase + MapThreeInterphase)) - MapThreeLength).toFixed(2);
@@ -468,15 +507,33 @@ function MapFourVariables() {
     drygood: 0.9,
     dryaverage: 0.8,
     drybad: 0.7,
-    wetgood: 0.7,
-    wetaverage: 0.6,
-    wetbad: 0.5,
-    snowygood: 0.3,
-    snowyaverage: 0.3,
-    snowybad: 0.3,
-    icygood: 0.1,
-    icyaverage: 0.1,
-    icybad: 0.1
+    lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
+    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
+    lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
+    mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
+    heavyrainaverage: Math.random() * (0.52 - 0.5) + 0.5,
+    lightrainbad: Math.random() * (0.5 - 0.45) + 0.45,
+    mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
+    heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
+    lightsnowgood: Math.random() * (0.5 - 0.46) + 0.46,
+    mediumsnowgood:Math.random() * (0.46 - 0.42) + 0.42,
+    heavysnowgood: Math.random() * (0.42 - 0.4) + 0.4,
+    lightsnowaverage: Math.random() * (0.4 - 0.36) + 0.36,
+    mediumsnowaverage: Math.random() * (0.36 - 0.32) + 0.32,
+    heavysnowaverage: Math.random() * (0.32 - 0.3) + 0.3,
+    lightsnowbad: Math.random() * (0.3 - 0.26) + 0.26,
+    mediumsnowbad: Math.random() * (0.26 - 0.22) + 0.22,
+    heavysnowbad: Math.random() * (0.22 - 0.2) + 0.2,
+    lighticegood: Math.random() * (0.3 - 0.26) + 0.26,
+    veryicygood: Math.random() * (0.26 - 0.18) + 0.22,
+    severeicegood: Math.random() * (0.18 - 0.12) + 0.12,
+    lighticeaverage: Math.random() * (0.2 - 0.16) + 0.16,
+    veryicyaverage: Math.random() * (0.16 - 0.12) + 0.12,
+    severeiceaverage: Math.random() * (0.12 - 0.1) + 0.1,
+    lighticebad: Math.random() * (0.12 - 0.11) + 0.11,
+    veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
+    severeicebad: Math.random() * (0.105 - 0.1) + 0.1, 
   };
 
   let carLengthMapFour = Math.random() * (5.89 - 3.8) + 3.8;
@@ -486,7 +543,7 @@ function MapFourVariables() {
   const keyCondMapFour = tiresMapFour[tireConditionMapFour];
   console.log("Tire conditions", tireConditionMapFour, tiresMapFour[tireConditionMapFour]);
 
-  const climateMapFour = ["dry", "wet", "icy", "snowy"];
+  const climateMapFour = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
   const ClimateConditionMapFour = Math.floor(Math.random() * climateMapFour.length);
   const keyClimMapFour = climateMapFour[ClimateConditionMapFour];
   console.log("Climate Conditions", ClimateConditionMapFour, climateMapFour[ClimateConditionMapFour]);
@@ -509,7 +566,7 @@ function MapFourVariables() {
     MapFourReactionTime = reactionTimeMapFour;
     MapFourIntersection = 43.80;
     MapFourLength = carLengthMapFour;
-    MapFourCoefficient = conditionsMapFour[keyClimMapFour + keyCondMapFour];
+    MapFourCoefficient = conditionsMapFour[keyClimMapFour.replace(/\s+/g, "") + keyCondMapFour];
     console.log("Lenght of intersection = ", MapFourIntersection);
     // Calculate the going distance
     let distancePhaseMapFour = ((MapFourInitialVelocity * (MapFourYellowPhase + MapFourInterphase)) - MapFourLength).toFixed(2);
@@ -614,15 +671,15 @@ function MapFiveVariables() {
     drygood: 0.9,
     dryaverage: 0.8,
     drybad: 0.7,
-    wetgood: 0.7,
-    wetaverage: 0.6,
-    wetbad: 0.5,
-    snowygood: 0.3,
-    snowyaverage: 0.3,
-    snowybad: 0.3,
-    icygood: 0.1,
-    icyaverage: 0.1,
-    icybad: 0.1
+    lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
+    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
+    lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
+    mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
+    heavyrainaverage: Math.random() * (0.52 - 0.5) + 0.5,
+    lightrainbad: Math.random() * (0.5 - 0.45) + 0.45,
+    mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
+    heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
   };
 
   let carLengthMapFive = Math.random() * (5.89 - 3.8) + 3.8;
@@ -632,7 +689,7 @@ function MapFiveVariables() {
   const keyCondMapFive = tiresMapFive[tireConditionMapFive];
   console.log("Tire conditions", tireConditionMapFive, tiresMapFive[tireConditionMapFive]);
 
-  const climateMapFive = ["dry", "wet"];
+  const climateMapFive = ["dry", "light rain", "medium rain", "heavy rain"];
   const ClimateConditionMapFive = Math.floor(Math.random() * climateMapFive.length);
   const keyClimMapFive = climateMapFive[ClimateConditionMapFive];
   console.log("Climate Conditions", ClimateConditionMapFive, climateMapFive[ClimateConditionMapFive]);
@@ -655,7 +712,7 @@ function MapFiveVariables() {
     MapFiveReactionTime = reactionTimeMapFive;
     MapFiveIntersection = 51.50;
     MapFiveLength = carLengthMapFive;
-    MapFiveCoefficient = conditionsMapFive[keyClimMapFive + keyCondMapFive];
+    MapFiveCoefficient = conditionsMapFive[keyClimMapFive.replace(/\s+/g, "") + keyCondMapFive];
     console.log("Lenght of intersection = ", MapFiveIntersection);
     // Calculate the going distance
     let distancePhaseMapFive = ((MapFiveInitialVelocity * (MapFiveYellowPhase + MapFiveInterphase)) - MapFiveLength).toFixed(2);
