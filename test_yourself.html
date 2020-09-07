@@ -311,7 +311,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" value="e.g 12.34">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
           </div>
           <div><span id="MapOneResultOne"></span></div>
@@ -322,7 +322,7 @@
         <div class="modal-footer">
           <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
-        </div>
+         </div>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-// Limit input boxes to only numbers and decimal places
+// Limit input boxes to only numbers and 2 decimal places
 function isNumberKey(evt) {
     let charCode = (evt.which) ? evt.which : evt.keyCode; 
     if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
@@ -11,7 +11,7 @@ function isNumberKey(evt) {
  function truncateDecimals(obj, decimals) {
     if (obj.value % Math.round(obj.value)) {
       
-        var divisor = Math.pow(10, decimals);
+        let divisor = Math.pow(10, decimals);
         obj.value = Math.floor(obj.value * divisor)/divisor;
     }
 
@@ -147,8 +147,10 @@ function mapOneVariables() {
     } else if ((userInputMapOne === perfMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
       userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is perfect, \nthe type of zone needs correction.";
     } else if ((userInputMapOne === perfMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
-      userResultMapOne ="Your value of <b>" + userInputMapOne + " m</b> is perfect.";     
-    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this scenario.";
+      userResultMapOne ="Your value of <b>" + userInputMapOne + " m</b> is perfect.";
+    } else if (answerMapOne !== zoneOutcomeMapOne) {
+      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is close, \nthe type of zone needs correction.";  
+    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this \nscenario.";
     console.log("User result", userResultMapOne);
 
     //Outputs generated for the user to check their work
@@ -283,9 +285,11 @@ function mapTwoVariables() {
       userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too low.";
     } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
       userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is perfect, \nthe type of zone needs correction.";
-    } else if ((userInputMapTwo === perfCalcMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
-      userResultMapTwo ="Your value of <b>" + userInputMapTwo + " m</b> is perfect.";          
-    } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this scenario.";
+    } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
+      userResultMapTwo ="Your value of <b>" + userInputMapTwo + " m</b> is perfect.";
+    } else if (answerMapTwo !== zoneOutcomeMapTwo) {
+      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is close, \nthe type of zone needs correction.";            
+    } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this \nscenario.";
     console.log("User result", userResultMapTwo);
 
     //Outputs generated for the user to check their work
@@ -426,8 +430,10 @@ function MapThreeVariables() {
     } else if ((userInputMapThree === perfMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
       userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is perfect, \nthe type of zone needs correction.";
     } else if ((userInputMapThree === perfMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
-      userResultMapThree ="Your value of <b>" + userInputMapThree + " m</b> is perfect.";        
-    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this scenario.";
+      userResultMapThree ="Your value of <b>" + userInputMapThree + " m</b> is perfect.";
+    } else if (answerMapThree !== zoneOutcomeMapThree) {
+      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is close, \nthe type of zone needs correction.";  
+    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this \nscenario.";
     console.log(userResultMapThree);
 
     //Outputs generated for the user to check their work
@@ -570,8 +576,10 @@ function MapFourVariables() {
     } else if ((userInputMapFour === perfMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
       userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is perfect, \nthe type of zone needs correction.";
     } else if ((userInputMapFour === perfMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
-      userResultMapFour ="Your value of <b>" + userInputMapFour + " m</b> is perfect.";  
-    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this scenario.";
+      userResultMapFour ="Your value of <b>" + userInputMapFour + " m</b> is perfect.";
+    } else if (answerMapFour !== zoneOutcomeMapFour) {
+      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is close, \nthe type of zone needs correction.";  
+    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this \nscenario.";
     console.log(userResultMapFour);
 
     //Outputs generated for the user to check their work
@@ -713,8 +721,10 @@ function MapFiveVariables() {
     } else if ((userInputMapFive === perfMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
       userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is perfect, \nthe type of zone needs correction.";
     } else if ((userInputMapFive === perfMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
-      userResultMapFive ="Your value of <b>" + userInputMapFive + " m</b> is perfect.";  
-    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this scenario.";
+      userResultMapFive ="Your value of <b>" + userInputMapFive + " m</b> is perfect.";
+    } else if (answerMapFive !== zoneOutcomeMapFive) {
+      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is close, \nthe type of zone needs correction.";  
+    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this \nscenario.";
     console.log(userResultMapFive);
 
     //Outputs generated for the user to check their work
@@ -723,5 +733,6 @@ function MapFiveVariables() {
     document.getElementById("MapFiveResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFive).toFixed(2) + " m</b> " + zoneOutcomeMapFive  + ".";
 
   } // End of calculations
-}
+
+ }
 
