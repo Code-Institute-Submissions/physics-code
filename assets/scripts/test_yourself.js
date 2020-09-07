@@ -36,9 +36,15 @@ function mapOneVariables() {
     drygood: 0.9,
     dryaverage: 0.8,
     drybad: 0.7,
-    wetgood: 0.7,
-    wetaverage: 0.6,
-    wetbad: 0.5,
+    lightraingood: 0.7,
+    mediumraingood: 0.65,
+    heavyraingood: 0.6,
+    lightrainaverage: 0.6,
+    mediumrainaverage: 0.55,
+    heavyrainaverage: 0.5,
+    lightrainbad: 0.5,
+    mediumrainbad: 0.45,
+    heavyrainbad: 0.4,
     snowygood: 0.3,
     snowyaverage: 0.3,
     snowybad: 0.3,
@@ -54,7 +60,7 @@ function mapOneVariables() {
   const keyCond = tiresMapOne[tireConditionMapOne];
   console.log("Tire conditions", tireConditionMapOne, tiresMapOne[tireConditionMapOne]);
 
-  const climateMapOne = ["dry", "wet", "icy", "snowy"];
+  const climateMapOne = ["dry", "light rain", "medium rain", "heavy rain", "icy", "snowy"];
   const ClimateConditionMapOne = Math.floor(Math.random() * climateMapOne.length);
   const keyClim = climateMapOne[ClimateConditionMapOne];
   console.log("Climate Conditions", ClimateConditionMapOne, climateMapOne[ClimateConditionMapOne]);
@@ -76,12 +82,13 @@ function mapOneVariables() {
     mapOneReactionTime = reactionTimeMapOne;
     mapOneIntersection = 52;
     mapOneLength = carLengthMapOne;
-    mapOneCoefficient = conditionsMapOne[keyClim + keyCond];
+    mapOneCoefficient = conditionsMapOne[keyClim.replace(/\s+/g, "") + keyCond];
     console.log("Lenght of intersection = ", mapOneIntersection);
     // Calculate the going distance
     let distancePhaseMapOne = ((mapOneInitialVelocity * (mapOneYellowPhase + mapOneInterphase)) - mapOneLength).toFixed(2);
     console.log("Initial Velocity", mapOneInitialVelocity, "Yellow phase", mapOneYellowPhase, "Interphase", mapOneInterphase, "Car length", carLengthMapOne);
     console.log("Distance during yellow and interphase", distancePhaseMapOne);
+    console.log("Map one coefficient", mapOneCoefficient);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapOne = (mapOneReactionTime * mapOneInitialVelocity);
