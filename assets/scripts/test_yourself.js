@@ -335,8 +335,8 @@ function MapThreeVariables() {
   // Remove the "disabled" attribute on the Current Scenario button
   let currentScenario3 = document.getElementById("current-map-3");
   currentScenario3.removeAttribute("disabled");
-  let velocityMapThree = Math.random() * (75 - 55) + 55;
-  let yellowPhaseMapThree = Math.random() * (4.6 - 3.8) + 3.7;
+  let velocityMapThree = Math.random() * (85 - 55) + 55;
+  let yellowPhaseMapThree = Math.random() * (5.5 - 4.6) + 4.6;
   let interPhaseMapThree = Math.random() * (2.4 - 1.8) + 1.8;
   let reactionTimeMapThree = Math.random() * (2.5 - 0.4) + 0.4;
 
