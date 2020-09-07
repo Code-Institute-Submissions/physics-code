@@ -238,6 +238,12 @@ input[type=number] {
 }
 
 /* Test Yourself Page */
+/* table header */
+.thead--blue {
+    background-color: #6699cc;
+    color: #000;
+}
+
 #map_one,
 #map_two,
 #map_three,

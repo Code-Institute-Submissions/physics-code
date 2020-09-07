@@ -98,8 +98,8 @@
       </div>
       <div class="modal-body">
        Table 1: A list of common coeffecient of friction numbers
-       <table class="table">
-  <thead>
+       <table class="table table-hover">
+  <thead class="thead--blue">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Tire Conditions</th>
@@ -114,7 +114,7 @@
       <td>Dry</td>
       <td>0.8 - 0.9</td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">2</th>
       <td>Good</td>
       <td>Wet</td>
@@ -126,7 +126,7 @@
       <td>Snowy</td>
       <td>0.4 - 0.5</td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">4</th>
       <td>Good</td>
       <td>Icy</td>
@@ -138,7 +138,7 @@
       <td>Dry</td>
       <td>0.75 - 0.8</td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">6</th>
       <td>Average</td>
       <td>Wet</td>
@@ -150,7 +150,7 @@
       <td>Snowy</td>
       <td>0.3 - 0.4</td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">8</th>
       <td>Average</td>
       <td>Icy</td>
@@ -162,7 +162,7 @@
       <td>Dry</td>
       <td>0.7 - 0.75</td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">10</th>
       <td>Bad</td>
       <td>Wet</td>
@@ -174,7 +174,7 @@
       <td>Snowy</td>
       <td>0.2 - 0.3</td>
     </tr>
-    <tr>
+    <tr class="table-info">
       <th scope="row">12</th>
       <td>Bad</td>
       <td>Icy</td>
@@ -424,9 +424,9 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" value="e.g 12.34">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
-          </div>
+            </div>
           <div><span id="MapOneResultOne"></span></div>
           <div><span id="MapOneResultTwo"></span></div>
           <div><span id="MapOneResultThree"></span></div>
@@ -478,7 +478,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapTwo" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapTwo" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
           </div>
           <div><span id="MapTwoResultOne"></span></div>
@@ -532,7 +532,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapThree" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapThree" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
           </div>
           <div><span id="MapThreeResultOne"></span></div>
@@ -586,7 +586,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFour" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFour" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
           </div>
           <div><span id="MapFourResultOne"></span></div>
@@ -640,7 +640,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">Your Calculation</span>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFive" class="form-control" min="0" step="0.01" aria-label="input value for your zone">
+            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFive" class="form-control" min="0" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
             <small>Then click on the <em>submit</em> button below to check your answers.</small>
           </div>
           <div><span id="MapFiveResultOne"></span></div>
