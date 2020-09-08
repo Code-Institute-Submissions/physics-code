@@ -167,12 +167,12 @@ function mapOneVariables() {
     } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne !== zoneOutcomeMapOne)) {
       userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too low.";
     } else if ((userInputMapOne === perfMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
-      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is perfect, \nthe type of zone needs correction.";
+      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is perfect, the type of zone needs correction.";
     } else if ((userInputMapOne === perfMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
       userResultMapOne ="Your value of <b>" + userInputMapOne + " m</b> is perfect.";
     } else if (answerMapOne !== zoneOutcomeMapOne) {
-      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is close, \nthe type of zone needs correction.";  
-    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this \nscenario.";
+      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is close, the type of zone needs correction.";  
+    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapOne);
 
     //Outputs generated for the user to check their work
@@ -312,12 +312,12 @@ function mapTwoVariables() {
     } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo !== zoneOutcomeMapTwo)) {
       userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too low.";
     } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
-      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is perfect, \nthe type of zone needs correction.";
+      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is perfect, the type of zone needs correction.";
     } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
       userResultMapTwo ="Your value of <b>" + userInputMapTwo + " m</b> is perfect.";
     } else if (answerMapTwo !== zoneOutcomeMapTwo) {
-      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is close, \nthe type of zone needs correction.";            
-    } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this \nscenario.";
+      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is close, the type of zone needs correction.";            
+    } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapTwo);
 
     //Outputs generated for the user to check their work
@@ -474,12 +474,12 @@ function MapThreeVariables() {
     } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree !== zoneOutcomeMapThree)) {
       userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too low.";
     } else if ((userInputMapThree === perfMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
-      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is perfect, \nthe type of zone needs correction.";
+      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is perfect, the type of zone needs correction.";
     } else if ((userInputMapThree === perfMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
       userResultMapThree ="Your value of <b>" + userInputMapThree + " m</b> is perfect.";
     } else if (answerMapThree !== zoneOutcomeMapThree) {
-      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is close, \nthe type of zone needs correction.";  
-    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this \nscenario.";
+      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is close, the type of zone needs correction.";  
+    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this scenario.";
     console.log(userResultMapThree);
 
     //Outputs generated for the user to check their work
@@ -638,12 +638,12 @@ function MapFourVariables() {
     } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour !== zoneOutcomeMapFour)) {
       userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too low.";
     } else if ((userInputMapFour === perfMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
-      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is perfect, \nthe type of zone needs correction.";
+      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is perfect, the type of zone needs correction.";
     } else if ((userInputMapFour === perfMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
       userResultMapFour ="Your value of <b>" + userInputMapFour + " m</b> is perfect.";
     } else if (answerMapFour !== zoneOutcomeMapFour) {
-      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is close, \nthe type of zone needs correction.";  
-    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this \nscenario.";
+      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is close, the type of zone needs correction.";  
+    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this scenario.";
     console.log(userResultMapFour);
 
     //Outputs generated for the user to check their work
@@ -783,12 +783,12 @@ function MapFiveVariables() {
     } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive !== zoneOutcomeMapFive)) {
       userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too low.";
     } else if ((userInputMapFive === perfMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
-      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is perfect, \nthe type of zone needs correction.";
+      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is perfect, the type of zone needs correction.";
     } else if ((userInputMapFive === perfMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
       userResultMapFive ="Your value of <b>" + userInputMapFive + " m</b> is perfect.";
     } else if (answerMapFive !== zoneOutcomeMapFive) {
-      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is close, \nthe type of zone needs correction.";  
-    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this \nscenario.";
+      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is close, the type of zone needs correction.";  
+    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this scenario.";
     console.log(userResultMapFive);
 
     //Outputs generated for the user to check their work
