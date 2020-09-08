@@ -1,26 +1,27 @@
 // Limit input boxes to only numbers and 2 decimal places
 function isNumberKey(evt) {
-    let charCode = (evt.which) ? evt.which : evt.keyCode; 
-    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
-      evt.preventDefault();
-      return false;
-    }
-    return true;
- }
+  let charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
+    evt.preventDefault();
+    return false;
+  }
+  return true;
+}
 
- function truncateDecimals(obj, decimals) {
-    if (obj.value % Math.round(obj.value)) {
-      
-        let divisor = Math.pow(10, decimals);
-        obj.value = Math.floor(obj.value * divisor)/divisor;
-    }
+function truncateDecimals(obj, decimals) {
+  if (obj.value % Math.round(obj.value)) {
 
-    console.log(obj.value);
-    return true;
- }
+    let divisor = Math.pow(10, decimals);
+    obj.value = Math.floor(obj.value * divisor) / divisor;
+  }
+
+  console.log(obj.value);
+  return true;
+}
 
 // Map One, Russia
 document.getElementById("randomScenarioMapOne").addEventListener("click", mapOneVariables);
+
 function mapOneVariables() {
   // Remove the "disabled" attribute on the Current Scenario button
   let currentScenario = document.getElementById("current-map-1");
@@ -37,7 +38,7 @@ function mapOneVariables() {
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
     drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
-    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    mediumraingood: Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
     lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
     mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
@@ -46,7 +47,7 @@ function mapOneVariables() {
     mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
     heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
     lightsnowgood: Math.random() * (0.5 - 0.46) + 0.46,
-    mediumsnowgood:Math.random() * (0.46 - 0.42) + 0.42,
+    mediumsnowgood: Math.random() * (0.46 - 0.42) + 0.42,
     heavysnowgood: Math.random() * (0.42 - 0.4) + 0.4,
     lightsnowaverage: Math.random() * (0.4 - 0.36) + 0.36,
     mediumsnowaverage: Math.random() * (0.36 - 0.32) + 0.32,
@@ -62,11 +63,8 @@ function mapOneVariables() {
     severeiceaverage: Math.random() * (0.12 - 0.1) + 0.1,
     lighticebad: Math.random() * (0.12 - 0.11) + 0.11,
     veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
-    severeicebad: Math.random() * (0.105 - 0.1) + 0.1,    
+    severeicebad: Math.random() * (0.105 - 0.1) + 0.1,
   };
-    
-    
-   
 
   let carLengthMapOne = Math.random() * (5.89 - 3.8) + 3.8;
 
@@ -90,7 +88,8 @@ function mapOneVariables() {
 
   // The calculation checker:
   document.getElementById("map-1-submit").addEventListener("click", calculateScenario);
-    function calculateScenario() {
+
+  function calculateScenario() {
     mapOneInitialVelocity = velocityMapOne / 3.6;
     mapOneYellowPhase = yellowPhaseMapOne;
     mapOneInterphase = interPhaseMapOne;
@@ -127,6 +126,7 @@ function mapOneVariables() {
 
     let perfMapOne = Math.abs(zoneCalcMapOne).toFixed(2);
     console.log("Zone outcome absolute and 2dp", perfMapOne);
+
     // Check the type of zone the user has input
     let mapOneZone = document.querySelector('input[name="MapOneZone"]:checked').value;
     let answerMapOne;
@@ -138,9 +138,9 @@ function mapOneVariables() {
     console.log("User answer", answerMapOne);
 
     let resultsMapOne;
-    if (answerMapOne === zoneOutcomeMapOne) {
-      resultsMapOne = "You said: <b>" + answerMapOne + "</b> &#x2713;";
-    } else resultsMapOne = "You said: <b>" + answerMapOne + "</b> &#x2a2f;";
+    if (answerMapOne === zoneOutcomeMapOne) {
+      resultsMapOne = "You said: <b>" + answerMapOne + "</b> &#x2713;";
+    } else resultsMapOne = "You said: <b>" + answerMapOne + "</b> &#x2a2f;";
     console.log("Comparison of results", resultsMapOne);
     let percentageMapOne = zoneCalcMapOne * 0.2;
     let valueHighCheckedMapOne = zoneCalcMapOne + percentageMapOne;
@@ -157,28 +157,28 @@ function mapOneVariables() {
       alert("You need to add the value you got for the calculation before submitting.");
       return false;
     }
-    let userResultMapOne;
-    if ((userInputMapOne > absoluteValueMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
-      userResultMapOne = "But your value of <b>" + userInputMapOne + " m</b> is too high.";
-    } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne === zoneOutcomeMapOne)) {
-      userResultMapOne = "But your value of <b>" + userInputMapOne + " m</b> is too low.";
-    } else if ((userInputMapOne > absoluteValueMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
-      userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too high.";
-    } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne !== zoneOutcomeMapOne)) {
-      userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too low.";
-    } else if ((userInputMapOne === perfMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
-      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is perfect, the type of zone needs correction.";
-    } else if ((userInputMapOne === perfMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
-      userResultMapOne ="Your value of <b>" + userInputMapOne + " m</b> is perfect.";
-    } else if (answerMapOne !== zoneOutcomeMapOne) {
-      userResultMapOne ="Although your value of <b>" + userInputMapOne + " m</b> is close, the type of zone needs correction.";  
-    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this scenario.";
-    console.log("User result", userResultMapOne);
+    let userResultMapOne;
+    if ((userInputMapOne > absoluteValueMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
+      userResultMapOne = "But your value of <b>" + userInputMapOne + " m</b> is too high.";
+    } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne === zoneOutcomeMapOne)) {
+      userResultMapOne = "But your value of <b>" + userInputMapOne + " m</b> is too low.";
+    } else if ((userInputMapOne > absoluteValueMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
+      userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too high.";
+    } else if ((userInputMapOne < absoluteValueMapOne2) && (answerMapOne !== zoneOutcomeMapOne)) {
+      userResultMapOne = "And your value of <b>" + userInputMapOne + " m</b> is too low.";
+    } else if ((userInputMapOne === perfMapOne) && (answerMapOne !== zoneOutcomeMapOne)) {
+      userResultMapOne = "Although your value of <b>" + userInputMapOne + " m</b> is perfect, the type of zone needs correction.";
+    } else if ((userInputMapOne === perfMapOne) && (answerMapOne === zoneOutcomeMapOne)) {
+      userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> is perfect.";
+    } else if (answerMapOne !== zoneOutcomeMapOne) {
+      userResultMapOne = "Although your value of <b>" + userInputMapOne + " m</b> is close, the type of zone needs correction.";
+    } else userResultMapOne = "Your value of <b>" + userInputMapOne + " m</b> fits well in this scenario.";
+    console.log("User result", userResultMapOne);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapOneResultOne").innerHTML = resultsMapOne;
     document.getElementById("MapOneResultTwo").innerHTML = userResultMapOne;
-    document.getElementById("MapOneResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapOne).toFixed(2) + " m</b> " + zoneOutcomeMapOne  + ".";
+    document.getElementById("MapOneResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapOne).toFixed(2) + " m</b> " + zoneOutcomeMapOne + ".";
 
   } // Calculation Checker
 } // Main function randomScenario
@@ -196,11 +196,11 @@ function mapTwoVariables() {
 
   // Friction for Map Two
   let conditionsMapTwo = {
-   drygood: Math.random() * (0.9 - 0.8) + 0.8,
+    drygood: Math.random() * (0.9 - 0.8) + 0.8,
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
     drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
-    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    mediumraingood: Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
     lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
     mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
@@ -244,21 +244,21 @@ function mapTwoVariables() {
     console.log("Lenght of intersection = ", mapTwoIntersection);
     // Calculate the going distance
     let distancePhaseMapTwo = ((mapTwoInitialVelocity * (mapTwoYellowPhase + mapTwoInterphase)) - mapTwoLength).toFixed(2);
-    console.log("Initial Velocity", mapTwoInitialVelocity, "Yellow phase", mapTwoYellowPhase, "Interphase", mapTwoInterphase, "Car length", carLengthMapTwo);
-    console.log("Distance during yellow and interphase", distancePhaseMapTwo);
-
+    console.log("Initial Velocity", mapTwoInitialVelocity, "Yellow phase", mapTwoYellowPhase, "Interphase", mapTwoInterphase, "Car length", carLengthMapTwo);
+    console.log("Distance during yellow and interphase", distancePhaseMapTwo);
+    console.log("Map two coefficient", mapTwoCoefficient);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapTwo = (mapTwoReactionTime * mapTwoInitialVelocity);
     console.log(reactionTimeDistanceMapTwo);
     let velocitySquaredMapTwo = Math.pow(mapTwoInitialVelocity, 2);
     let stoppingDistMapTwo = ((velocitySquaredMapTwo / (2 * mapTwoCoefficient * 9.81)) + reactionTimeDistanceMapTwo);
-    console.log(stoppingDistMapTwo);
+    console.log("Stopping distance", stoppingDistMapTwo);
 
     // Is there a dilemma zone? 
     let totalDistanceMapTwo = distancePhaseMapTwo - mapTwoIntersection;
     let zoneCalcMapTwo = totalDistanceMapTwo - stoppingDistMapTwo;
-    console.log(zoneCalcMapTwo);
+    console.log("Dilemma Zone Calc output", zoneCalcMapTwo);
     // the end of the calculation function
     let zoneOutcomeMapTwo;
     if (zoneCalcMapTwo > 0) {
@@ -266,7 +266,7 @@ function mapTwoVariables() {
     } else if (zoneCalcMapTwo <= 0) {
       zoneOutcomeMapTwo = "Dilemma Zone";
     } else zoneOutcomeMapTwo = false;
-    console.log(zoneOutcomeMapTwo);
+    console.log("Type of zone", zoneOutcomeMapTwo);
 
     let perfMapTwo = Math.abs(zoneCalcMapTwo).toFixed(2);
     console.log("Zone outcome absolute and 2dp", perfMapTwo);
@@ -279,8 +279,8 @@ function mapTwoVariables() {
     } else if (MapTwoZone === "dzCheckedMapTwo") {
       answerMapTwo = "Dilemma Zone";
     } else answerMapTwo = false;
-    console.log(MapTwoZone);
-    console.log(answerMapTwo);
+    console.log("Calculated Zone", MapTwoZone);
+    console.log("User answer", answerMapTwo);
 
     let resultsMapTwo;
     if (answerMapTwo === zoneOutcomeMapTwo) {
@@ -290,8 +290,8 @@ function mapTwoVariables() {
     let percentageMapTwo = zoneCalcMapTwo * 0.2;
     let valueHighCheckedMapTwo = zoneCalcMapTwo + percentageMapTwo;
     let valueLowCheckedMapTwo = zoneCalcMapTwo - percentageMapTwo;
-    console.log("Absolute value high", valueHighCheckedMapTwo);
-    console.log("Absolute value low", valueLowCheckedMapTwo);
+    console.log("+20%", valueHighCheckedMapTwo);
+    console.log("-20%", valueLowCheckedMapTwo);
 
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentageMapTwo variable
@@ -311,19 +311,19 @@ function mapTwoVariables() {
       userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too high.";
     } else if ((userInputMapTwo < absoluteValueMapTwo2) && (answerMapTwo !== zoneOutcomeMapTwo)) {
       userResultMapTwo = "And your value of <b>" + userInputMapTwo + " m</b> is too low.";
-    } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
-      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is perfect, the type of zone needs correction.";
-    } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
-      userResultMapTwo ="Your value of <b>" + userInputMapTwo + " m</b> is perfect.";
-    } else if (answerMapTwo !== zoneOutcomeMapTwo) {
-      userResultMapTwo ="Although your value of <b>" + userInputMapTwo + " m</b> is close, the type of zone needs correction.";            
+    } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo !== zoneOutcomeMapTwo)) {
+      userResultMapTwo = "Although your value of <b>" + userInputMapTwo + " m</b> is perfect, the type of zone needs correction.";
+    } else if ((userInputMapTwo === perfMapTwo) && (answerMapTwo === zoneOutcomeMapTwo)) {
+      userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> is perfect.";
+    } else if (answerMapTwo !== zoneOutcomeMapTwo) {
+      userResultMapTwo = "Although your value of <b>" + userInputMapTwo + " m</b> is close, the type of zone needs correction.";
     } else userResultMapTwo = "Your value of <b>" + userInputMapTwo + " m</b> fits well in this scenario.";
     console.log("User result", userResultMapTwo);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapTwoResultOne").innerHTML = resultsMapTwo;
     document.getElementById("MapTwoResultTwo").innerHTML = userResultMapTwo;
-    document.getElementById("MapTwoResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapTwo).toFixed(2) + " m</b> " + zoneOutcomeMapTwo  + ".";
+    document.getElementById("MapTwoResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapTwo).toFixed(2) + " m</b> " + zoneOutcomeMapTwo + ".";
 
   } // Calculation Checker MapTwo
 } // Main function randomScenario MapTwo
@@ -346,7 +346,7 @@ function MapThreeVariables() {
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
     drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
-    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    mediumraingood: Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
     lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
     mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
@@ -355,7 +355,7 @@ function MapThreeVariables() {
     mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
     heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
     lightsnowgood: Math.random() * (0.5 - 0.46) + 0.46,
-    mediumsnowgood:Math.random() * (0.46 - 0.42) + 0.42,
+    mediumsnowgood: Math.random() * (0.46 - 0.42) + 0.42,
     heavysnowgood: Math.random() * (0.42 - 0.4) + 0.4,
     lightsnowaverage: Math.random() * (0.4 - 0.36) + 0.36,
     mediumsnowaverage: Math.random() * (0.36 - 0.32) + 0.32,
@@ -371,7 +371,7 @@ function MapThreeVariables() {
     severeiceaverage: Math.random() * (0.12 - 0.1) + 0.1,
     lighticebad: Math.random() * (0.12 - 0.11) + 0.11,
     veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
-    severeicebad: Math.random() * (0.105 - 0.1) + 0.1, 
+    severeicebad: Math.random() * (0.105 - 0.1) + 0.1,
   };
 
   let carLengthMapThree = Math.random() * (5.89 - 3.8) + 3.8;
@@ -408,20 +408,21 @@ function MapThreeVariables() {
     console.log("Lenght of intersection = ", MapThreeIntersection);
     // Calculate the going distance
     let distancePhaseMapThree = ((MapThreeInitialVelocity * (MapThreeYellowPhase + MapThreeInterphase)) - MapThreeLength).toFixed(2);
-    console.log("Initial Velocity", MapThreeInitialVelocity, "Yellow phase", MapThreeYellowPhase, "Interphase", MapThreeInterphase, "Car length", carLengthMapThree);
-    console.log("Distance during yellow and interphase", distancePhaseMapThree);
+    console.log("Initial Velocity", MapThreeInitialVelocity, "Yellow phase", MapThreeYellowPhase, "Interphase", MapThreeInterphase, "Car length", carLengthMapThree);
+    console.log("Distance during yellow and interphase", distancePhaseMapThree);
+    console.log("Map three coefficient", MapThreeCoefficient);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapThree = (MapThreeReactionTime * MapThreeInitialVelocity);
     console.log(reactionTimeDistanceMapThree);
     let velocitySquaredMapThree = Math.pow(MapThreeInitialVelocity, 2);
     let stoppingDistMapThree = ((velocitySquaredMapThree / (2 * MapThreeCoefficient * 9.81)) + reactionTimeDistanceMapThree);
-    console.log(stoppingDistMapThree);
+    console.log("Stopping distance", stoppingDistMapThree);
 
     // Is there a dilemma zone? 
     let totalDistanceMapThree = distancePhaseMapThree - MapThreeIntersection;
     let zoneCalcMapThree = totalDistanceMapThree - stoppingDistMapThree;
-    console.log(zoneCalcMapThree);
+    console.log("Dilemma Zone Calc output", zoneCalcMapThree);
     // the end of the calculation function
     let zoneOutcomeMapThree;
     if (zoneCalcMapThree > 0) {
@@ -429,7 +430,7 @@ function MapThreeVariables() {
     } else if (zoneCalcMapThree <= 0) {
       zoneOutcomeMapThree = "Dilemma Zone";
     } else zoneOutcomeMapThree = false;
-    console.log(zoneOutcomeMapThree);
+    console.log("Type of zone", zoneOutcomeMapThree);
 
     let perfMapThree = Math.abs(zoneCalcMapThree).toFixed(2);
     console.log("Zone outcome absolute and 2dp", perfMapThree);
@@ -441,19 +442,19 @@ function MapThreeVariables() {
     } else if (MapThreeZone === "dzCheckedMapThree") {
       answerMapThree = "Dilemma Zone";
     } else answerMapThree = false;
-    console.log(MapThreeZone);
-    console.log(answerMapThree);
+    console.log("Calculated Zone", MapThreeZone);
+    console.log("User answer", answerMapThree);
 
     let resultsMapThree;
-    if (answerMapThree === zoneOutcomeMapThree) {
-      resultsMapThree = "You said: <b>" + answerMapThree + "</b> &#x2713;";
-    } else resultsMapThree = "You said: <b>" + answerMapThree + "</b> &#x2a2f;";
- console.log("Comparison of results", resultsMapThree);
+    if (answerMapThree === zoneOutcomeMapThree) {
+      resultsMapThree = "You said: <b>" + answerMapThree + "</b> &#x2713;";
+    } else resultsMapThree = "You said: <b>" + answerMapThree + "</b> &#x2a2f;";
+    console.log("Comparison of results", resultsMapThree);
     let percentageMapThree = zoneCalcMapThree * 0.2;
     let valueHighCheckedMapThree = zoneCalcMapThree + percentageMapThree;
     let valueLowCheckedMapThree = zoneCalcMapThree - percentageMapThree;
-    console.log(valueHighCheckedMapThree);
-    console.log(valueLowCheckedMapThree);
+    console.log("+20%", valueHighCheckedMapThree);
+    console.log("-20%", valueLowCheckedMapThree);
 
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentageMapThree variable
@@ -464,28 +465,28 @@ function MapThreeVariables() {
       alert("You need to add the value you got for the calculation before submitting.");
       return false;
     }
-   let userResultMapThree;
-    if ((userInputMapThree > absoluteValueMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
-      userResultMapThree = "But your value of <b>" + userInputMapThree + " m</b> is too high.";
-    } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree === zoneOutcomeMapThree)) {
-      userResultMapThree = "But your value of <b>" + userInputMapThree + " m</b> is too low.";
-    } else if ((userInputMapThree > absoluteValueMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
-      userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too high.";
-    } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree !== zoneOutcomeMapThree)) {
-      userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too low.";
-    } else if ((userInputMapThree === perfMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
-      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is perfect, the type of zone needs correction.";
-    } else if ((userInputMapThree === perfMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
-      userResultMapThree ="Your value of <b>" + userInputMapThree + " m</b> is perfect.";
-    } else if (answerMapThree !== zoneOutcomeMapThree) {
-      userResultMapThree ="Although your value of <b>" + userInputMapThree + " m</b> is close, the type of zone needs correction.";  
-    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this scenario.";
-    console.log(userResultMapThree);
+    let userResultMapThree;
+    if ((userInputMapThree > absoluteValueMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
+      userResultMapThree = "But your value of <b>" + userInputMapThree + " m</b> is too high.";
+    } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree === zoneOutcomeMapThree)) {
+      userResultMapThree = "But your value of <b>" + userInputMapThree + " m</b> is too low.";
+    } else if ((userInputMapThree > absoluteValueMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
+      userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too high.";
+    } else if ((userInputMapThree < absoluteValueMapThree2) && (answerMapThree !== zoneOutcomeMapThree)) {
+      userResultMapThree = "And your value of <b>" + userInputMapThree + " m</b> is too low.";
+    } else if ((userInputMapThree === perfMapThree) && (answerMapThree !== zoneOutcomeMapThree)) {
+      userResultMapThree = "Although your value of <b>" + userInputMapThree + " m</b> is perfect, the type of zone needs correction.";
+    } else if ((userInputMapThree === perfMapThree) && (answerMapThree === zoneOutcomeMapThree)) {
+      userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> is perfect.";
+    } else if (answerMapThree !== zoneOutcomeMapThree) {
+      userResultMapThree = "Although your value of <b>" + userInputMapThree + " m</b> is close, the type of zone needs correction.";
+    } else userResultMapThree = "Your value of <b>" + userInputMapThree + " m</b> fits well in this scenario.";
+    console.log("User result", userResultMapThree);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapThreeResultOne").innerHTML = resultsMapThree;
     document.getElementById("MapThreeResultTwo").innerHTML = userResultMapThree;
-    document.getElementById("MapThreeResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapThree).toFixed(2) + " m</b> " + zoneOutcomeMapThree  + ".";
+    document.getElementById("MapThreeResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapThree).toFixed(2) + " m</b> " + zoneOutcomeMapThree + ".";
 
   } // Calculation Checker MapThree
 } // Main function randomScenario MapThree
@@ -508,7 +509,7 @@ function MapFourVariables() {
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
     drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
-    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    mediumraingood: Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
     lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
     mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
@@ -517,7 +518,7 @@ function MapFourVariables() {
     mediumrainbad: Math.random() * (0.45 - 0.42) + 0.42,
     heavyrainbad: Math.random() * (0.42 - 0.4) + 0.4,
     lightsnowgood: Math.random() * (0.5 - 0.46) + 0.46,
-    mediumsnowgood:Math.random() * (0.46 - 0.42) + 0.42,
+    mediumsnowgood: Math.random() * (0.46 - 0.42) + 0.42,
     heavysnowgood: Math.random() * (0.42 - 0.4) + 0.4,
     lightsnowaverage: Math.random() * (0.4 - 0.36) + 0.36,
     mediumsnowaverage: Math.random() * (0.36 - 0.32) + 0.32,
@@ -533,7 +534,7 @@ function MapFourVariables() {
     severeiceaverage: Math.random() * (0.12 - 0.1) + 0.1,
     lighticebad: Math.random() * (0.12 - 0.11) + 0.11,
     veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
-    severeicebad: Math.random() * (0.105 - 0.1) + 0.1, 
+    severeicebad: Math.random() * (0.105 - 0.1) + 0.1,
   };
 
   let carLengthMapFour = Math.random() * (5.89 - 3.8) + 3.8;
@@ -570,21 +571,21 @@ function MapFourVariables() {
     console.log("Lenght of intersection = ", MapFourIntersection);
     // Calculate the going distance
     let distancePhaseMapFour = ((MapFourInitialVelocity * (MapFourYellowPhase + MapFourInterphase)) - MapFourLength).toFixed(2);
-    console.log("Initial Velocity", MapFourInitialVelocity, "Yellow phase", MapFourYellowPhase, "Interphase", MapFourInterphase, "Car length", carLengthMapFour);
-    console.log("Distance during yellow and interphase", distancePhaseMapFour);
-
+    console.log("Initial Velocity", MapFourInitialVelocity, "Yellow phase", MapFourYellowPhase, "Interphase", MapFourInterphase, "Car length", carLengthMapFour);
+    console.log("Distance during yellow and interphase", distancePhaseMapFour);
+    console.log("Map four coefficient", MapFourCoefficient);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapFour = (MapFourReactionTime * MapFourInitialVelocity);
     console.log(reactionTimeDistanceMapFour);
     let velocitySquaredMapFour = Math.pow(MapFourInitialVelocity, 2);
     let stoppingDistMapFour = ((velocitySquaredMapFour / (2 * MapFourCoefficient * 9.81)) + reactionTimeDistanceMapFour);
-    console.log(stoppingDistMapFour);
+    console.log("Stopping distance", stoppingDistMapFour);
 
     // Is there a dilemma zone? 
     let totalDistanceMapFour = distancePhaseMapFour - MapFourIntersection;
     let zoneCalcMapFour = totalDistanceMapFour - stoppingDistMapFour;
-    console.log(zoneCalcMapFour);
+    console.log("Dilemma Zone Calc output", zoneCalcMapFour);
     // the end of the calculation function
     let zoneOutcomeMapFour;
     if (zoneCalcMapFour > 0) {
@@ -592,7 +593,7 @@ function MapFourVariables() {
     } else if (zoneCalcMapFour <= 0) {
       zoneOutcomeMapFour = "Dilemma Zone";
     } else zoneOutcomeMapFour = false;
-    console.log(zoneOutcomeMapFour);
+    console.log("Type of zone", zoneOutcomeMapFour);
 
     let perfMapFour = Math.abs(zoneCalcMapFour).toFixed(2);
     console.log("Zone outcome absolute and 2dp", perfMapFour);
@@ -605,19 +606,19 @@ function MapFourVariables() {
     } else if (MapFourZone === "dzCheckedMapFour") {
       answerMapFour = "Dilemma Zone";
     } else answerMapFour = false;
-    console.log(MapFourZone);
-    console.log(answerMapFour);
+    console.log("Calculated Zone", MapFourZone);
+    console.log("User Zone", answerMapFour);
 
     let resultsMapFour;
     if (answerMapFour === zoneOutcomeMapFour) {
-      resultsMapFour = "You said: <b>" + answerMapFour + "</b> &#x2713;";
-    } else resultsMapFour = "You said: <b>" + answerMapFour + "</b> &#x2a2f;";
+      resultsMapFour = "You said: <b>" + answerMapFour + "</b> &#x2713;";
+    } else resultsMapFour = "You said: <b>" + answerMapFour + "</b> &#x2a2f;";
     console.log("Comparison of results", resultsMapFour);
     let percentageMapFour = zoneCalcMapFour * 0.2;
     let valueHighCheckedMapFour = zoneCalcMapFour + percentageMapFour;
     let valueLowCheckedMapFour = zoneCalcMapFour - percentageMapFour;
-    console.log(valueHighCheckedMapFour);
-    console.log(valueLowCheckedMapFour);
+    console.log("+20%", valueHighCheckedMapFour);
+    console.log("-20%", valueLowCheckedMapFour);
 
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentageMapFour variable
@@ -628,23 +629,23 @@ function MapFourVariables() {
       alert("You need to add the value you got for the calculation before submitting.");
       return false;
     }
-    let userResultMapFour;
-    if ((userInputMapFour > absoluteValueMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
-      userResultMapFour = "But your value of <b>" + userInputMapFour + " m</b> is too high.";
-    } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour === zoneOutcomeMapFour)) {
-      userResultMapFour = "But your value of <b>" + userInputMapFour + " m</b> is too low.";
-    } else if ((userInputMapFour > absoluteValueMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
-      userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too high.";
-    } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour !== zoneOutcomeMapFour)) {
-      userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too low.";
-    } else if ((userInputMapFour === perfMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
-      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is perfect, the type of zone needs correction.";
-    } else if ((userInputMapFour === perfMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
-      userResultMapFour ="Your value of <b>" + userInputMapFour + " m</b> is perfect.";
-    } else if (answerMapFour !== zoneOutcomeMapFour) {
-      userResultMapFour ="Although your value of <b>" + userInputMapFour + " m</b> is close, the type of zone needs correction.";  
-    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this scenario.";
-    console.log(userResultMapFour);
+    let userResultMapFour;
+    if ((userInputMapFour > absoluteValueMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
+      userResultMapFour = "But your value of <b>" + userInputMapFour + " m</b> is too high.";
+    } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour === zoneOutcomeMapFour)) {
+      userResultMapFour = "But your value of <b>" + userInputMapFour + " m</b> is too low.";
+    } else if ((userInputMapFour > absoluteValueMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
+      userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too high.";
+    } else if ((userInputMapFour < absoluteValueMapFour2) && (answerMapFour !== zoneOutcomeMapFour)) {
+      userResultMapFour = "And your value of <b>" + userInputMapFour + " m</b> is too low.";
+    } else if ((userInputMapFour === perfMapFour) && (answerMapFour !== zoneOutcomeMapFour)) {
+      userResultMapFour = "Although your value of <b>" + userInputMapFour + " m</b> is perfect, the type of zone needs correction.";
+    } else if ((userInputMapFour === perfMapFour) && (answerMapFour === zoneOutcomeMapFour)) {
+      userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> is perfect.";
+    } else if (answerMapFour !== zoneOutcomeMapFour) {
+      userResultMapFour = "Although your value of <b>" + userInputMapFour + " m</b> is close, the type of zone needs correction.";
+    } else userResultMapFour = "Your value of <b>" + userInputMapFour + " m</b> fits well in this scenario.";
+    console.log("User result", userResultMapFour);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapFourResultOne").innerHTML = resultsMapFour;
@@ -672,7 +673,7 @@ function MapFiveVariables() {
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
     drybad: Math.random() * (0.75 - 0.7) + 0.7,
     lightraingood: Math.random() * (0.7 - 0.65) + 0.65,
-    mediumraingood:Math.random() * (0.65 - 0.62) + 0.62,
+    mediumraingood: Math.random() * (0.65 - 0.62) + 0.62,
     heavyraingood: Math.random() * (0.62 - 0.6) + 0.6,
     lightrainaverage: Math.random() * (0.6 - 0.55) + 0.55,
     mediumrainaverage: Math.random() * (0.55 - 0.52) + 0.52,
@@ -716,20 +717,21 @@ function MapFiveVariables() {
     console.log("Lenght of intersection = ", MapFiveIntersection);
     // Calculate the going distance
     let distancePhaseMapFive = ((MapFiveInitialVelocity * (MapFiveYellowPhase + MapFiveInterphase)) - MapFiveLength).toFixed(2);
-    console.log("Initial Velocity", MapFiveInitialVelocity, "Yellow phase", MapFiveYellowPhase, "Interphase", MapFiveInterphase, "Car length", carLengthMapFive);
-    console.log("Distance during yellow and interphase", distancePhaseMapFive);
+    console.log("Initial Velocity", MapFiveInitialVelocity, "Yellow phase", MapFiveYellowPhase, "Interphase", MapFiveInterphase, "Car length", carLengthMapFive);
+    console.log("Distance during yellow and interphase", distancePhaseMapFive);
+    console.log("Map five coefficient", MapFiveCoefficient);
 
     // Calculate the stopping distance
     let reactionTimeDistanceMapFive = (MapFiveReactionTime * MapFiveInitialVelocity);
     console.log(reactionTimeDistanceMapFive);
     let velocitySquaredMapFive = Math.pow(MapFiveInitialVelocity, 2);
     let stoppingDistMapFive = ((velocitySquaredMapFive / (2 * MapFiveCoefficient * 9.81)) + reactionTimeDistanceMapFive);
-    console.log(stoppingDistMapFive);
+    console.log("Stopping distance", stoppingDistMapFive);
 
     // Is there a dilemma zone? 
     let totalDistanceMapFive = distancePhaseMapFive - MapFiveIntersection;
     let zoneCalcMapFive = totalDistanceMapFive - stoppingDistMapFive;
-    console.log(zoneCalcMapFive);
+    console.log("Dilemma Zone Calc output", zoneCalcMapFive);
     // the end of the calculation function
     let zoneOutcomeMapFive;
     if (zoneCalcMapFive > 0) {
@@ -737,7 +739,7 @@ function MapFiveVariables() {
     } else if (zoneCalcMapFive <= 0) {
       zoneOutcomeMapFive = "Dilemma Zone";
     } else zoneOutcomeMapFive = false;
-    console.log(zoneOutcomeMapFive);
+    console.log("Type of zone", zoneOutcomeMapFive);
 
     let perfMapFive = Math.abs(zoneCalcMapFive).toFixed(2);
     console.log("Zone outcome absolute and 2dp", perfMapFive);
@@ -750,19 +752,19 @@ function MapFiveVariables() {
     } else if (MapFiveZone === "dzCheckedMapFive") {
       answerMapFive = "Dilemma Zone";
     } else answerMapFive = false;
-    console.log(MapFiveZone);
-    console.log(answerMapFive);
+    console.log("Calculated Zone", MapFiveZone);
+    console.log("User zone", answerMapFive);
 
     let resultsMapFive;
     if (answerMapFive === zoneOutcomeMapFive) {
       resultsMapFive = "You said: <b>" + answerMapFive + "</b> &#x2713;";
-    } else resultsMapFive = "You said: <b>" + answerMapFive + "</b> &#x2a2f;";
-    console.log(resultsMapFive);
+    } else resultsMapFive = "You said: <b>" + answerMapFive + "</b> &#x2a2f;";
+    console.log("Comparison of results", resultsMapFive);
     let percentageMapFive = zoneCalcMapFive * 0.2;
     let valueHighCheckedMapFive = zoneCalcMapFive + percentageMapFive;
     let valueLowCheckedMapFive = zoneCalcMapFive - percentageMapFive;
-    console.log(valueHighCheckedMapFive);
-    console.log(valueLowCheckedMapFive);
+    console.log("+20%", valueHighCheckedMapFive);
+    console.log("-20%", valueLowCheckedMapFive);
 
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentageMapFive variable
@@ -773,30 +775,29 @@ function MapFiveVariables() {
       alert("You need to add the value you got for the calculation before submitting.");
       return false;
     }
-    let userResultMapFive;
-    if ((userInputMapFive > absoluteValueMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
-      userResultMapFive = "But your value of <b>" + userInputMapFive + " m</b> is too high.";
-    } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive === zoneOutcomeMapFive)) {
-      userResultMapFive = "But your value of <b>" + userInputMapFive + " m</b> is too low.";
-    } else if ((userInputMapFive > absoluteValueMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
-      userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too high.";
-    } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive !== zoneOutcomeMapFive)) {
-      userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too low.";
-    } else if ((userInputMapFive === perfMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
-      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is perfect, the type of zone needs correction.";
-    } else if ((userInputMapFive === perfMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
-      userResultMapFive ="Your value of <b>" + userInputMapFive + " m</b> is perfect.";
-    } else if (answerMapFive !== zoneOutcomeMapFive) {
-      userResultMapFive ="Although your value of <b>" + userInputMapFive + " m</b> is close, the type of zone needs correction.";  
-    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this scenario.";
-    console.log(userResultMapFive);
+    let userResultMapFive;
+    if ((userInputMapFive > absoluteValueMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
+      userResultMapFive = "But your value of <b>" + userInputMapFive + " m</b> is too high.";
+    } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive === zoneOutcomeMapFive)) {
+      userResultMapFive = "But your value of <b>" + userInputMapFive + " m</b> is too low.";
+    } else if ((userInputMapFive > absoluteValueMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
+      userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too high.";
+    } else if ((userInputMapFive < absoluteValueMapFive2) && (answerMapFive !== zoneOutcomeMapFive)) {
+      userResultMapFive = "And your value of <b>" + userInputMapFive + " m</b> is too low.";
+    } else if ((userInputMapFive === perfMapFive) && (answerMapFive !== zoneOutcomeMapFive)) {
+      userResultMapFive = "Although your value of <b>" + userInputMapFive + " m</b> is perfect, the type of zone needs correction.";
+    } else if ((userInputMapFive === perfMapFive) && (answerMapFive === zoneOutcomeMapFive)) {
+      userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> is perfect.";
+    } else if (answerMapFive !== zoneOutcomeMapFive) {
+      userResultMapFive = "Although your value of <b>" + userInputMapFive + " m</b> is close, the type of zone needs correction.";
+    } else userResultMapFive = "Your value of <b>" + userInputMapFive + " m</b> fits well in this scenario.";
+    console.log("User result", userResultMapFive);
 
     //Outputs generated for the user to check their work
     document.getElementById("MapFiveResultOne").innerHTML = resultsMapFive;
     document.getElementById("MapFiveResultTwo").innerHTML = userResultMapFive;
-    document.getElementById("MapFiveResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFive).toFixed(2) + " m</b> " + zoneOutcomeMapFive  + ".";
+    document.getElementById("MapFiveResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalcMapFive).toFixed(2) + " m</b> " + zoneOutcomeMapFive + ".";
 
   } // End of calculations
 
- }
-
+}

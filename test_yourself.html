@@ -67,7 +67,7 @@
             scenario to calculate if a dilemma or option zone exists. You can refer to our help by clicking on the info button
             <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a> at any time. Or consider using
             our <a href="calculator.html" target="_blank"><i class="fas fa-calculator"></i> <span class="underline">calculator</span></a> for best results.</p>
-            <p class="head-text">For help on the coefficient of friction click here: <button type="button" class="btn btn-link" data-toggle="modal" data-target="#frictionHelp"><i class="far fa-question-circle"></i></button></p>
+          <p class="head-text">For help on the coefficient of friction click here: <button type="button" class="btn btn-link" data-toggle="modal" data-target="#frictionHelp"><i class="far fa-question-circle"></i></button></p>
           <p class="head-text">For instructions on how to measure distances across the intersection using Google Maps choose one of the following:</p>
           <div class="d-flex">
             <ul class="list-group list-group-horizontal mx-auto justify-content-center flex-column flex-md-row background-ul">
@@ -86,110 +86,110 @@
       </div>
     </div>
   </section>
-<!-- Friction help modal -->
-<div class="modal fade" id="frictionHelp" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">coefficient of friction list</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <!-- Friction help modal -->
+  <div class="modal fade" id="frictionHelp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">coefficient of friction list</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Table 1: A list of common coefficient of friction numbers
+          <table class="table table-hover">
+            <thead class="thead--blue">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tire Conditions</th>
+                <th scope="col">Weather Conditions</th>
+                <th scope="col">μ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Good</td>
+                <td>Dry</td>
+                <td>0.8 - 0.9</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">2</th>
+                <td>Good</td>
+                <td>Wet</td>
+                <td>0.6 - 0.7</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Good</td>
+                <td>Snowy</td>
+                <td>0.4 - 0.5</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">4</th>
+                <td>Good</td>
+                <td>Icy</td>
+                <td>0.1 - 0.3</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Average</td>
+                <td>Dry</td>
+                <td>0.75 - 0.8</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">6</th>
+                <td>Average</td>
+                <td>Wet</td>
+                <td>0.5 - 0.6</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Average</td>
+                <td>Snowy</td>
+                <td>0.3 - 0.4</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">8</th>
+                <td>Average</td>
+                <td>Icy</td>
+                <td>0.1 - 0.2</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Bad</td>
+                <td>Dry</td>
+                <td>0.7 - 0.75</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">10</th>
+                <td>Bad</td>
+                <td>Wet</td>
+                <td>0.4 - 0.5</td>
+              </tr>
+              <tr>
+                <th scope="row">11</th>
+                <td>Bad</td>
+                <td>Snowy</td>
+                <td>0.2 - 0.3</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">12</th>
+                <td>Bad</td>
+                <td>Icy</td>
+                <td>0.1</td>
+              </tr>
+            </tbody>
+          </table>
+          <small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator. This is because the calculation includes some randomness to account for realistic scenarios.</small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
+        </div>
       </div>
-      <div class="modal-body">
-       Table 1: A list of common coefficient of friction numbers
-       <table class="table table-hover">
-  <thead class="thead--blue">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Tire Conditions</th>
-      <th scope="col">Weather Conditions</th>
-      <th scope="col">μ</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Good</td>
-      <td>Dry</td>
-      <td>0.8 - 0.9</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">2</th>
-      <td>Good</td>
-      <td>Wet</td>
-      <td>0.6 - 0.7</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Good</td>
-      <td>Snowy</td>
-      <td>0.4 - 0.5</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">4</th>
-      <td>Good</td>
-      <td>Icy</td>
-      <td>0.1 - 0.3</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Average</td>
-      <td>Dry</td>
-      <td>0.75 - 0.8</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">6</th>
-      <td>Average</td>
-      <td>Wet</td>
-      <td>0.5 - 0.6</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Average</td>
-      <td>Snowy</td>
-      <td>0.3 - 0.4</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">8</th>
-      <td>Average</td>
-      <td>Icy</td>
-      <td>0.1 - 0.2</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>Bad</td>
-      <td>Dry</td>
-      <td>0.7 - 0.75</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">10</th>
-      <td>Bad</td>
-      <td>Wet</td>
-      <td>0.4 - 0.5</td>
-    </tr>
-    <tr>
-      <th scope="row">11</th>
-      <td>Bad</td>
-      <td>Snowy</td>
-      <td>0.2 - 0.3</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">12</th>
-      <td>Bad</td>
-      <td>Icy</td>
-      <td>0.1</td>
-    </tr>
-  </tbody>
-</table>
-<small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator. This is because the calculation includes some randomness to account for realistic scenarios.</small>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
-    </div>
     </div>
   </div>
-</div>
   <!-- Map One-->
   <section class="container">
     <div class="row">
@@ -244,7 +244,7 @@
       <div class="col-lg-4 content-div">
         <div class="card shadow" id="card-map-2">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
-          <div class="card-body" >
+          <div class="card-body">
             <h5 class="card-title">Scenario Two <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
             <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
               button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
@@ -358,7 +358,7 @@
       <div class="col-lg-4 content-div">
         <div class="card shadow" id="card-map-5">
           <i class="fas fa-map-marker-alt fa-5x icon-center"></i>
-          <div class="card-body" >
+          <div class="card-body">
             <h5 class="card-title">Scenario Five <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a></h5>
             <p>Determine the size of the intersection using the Google Map link provided. Then click on the <i class="fas fa-car-battery"></i> <em>scene</em>
               button and use the data provided to establish if a dilemma zone exists under these conditions.</p>
@@ -385,7 +385,7 @@
 
   <!-- Modals for Scenarios -->
   <!-- Map One-->
-  
+
   <div class="modal fade" id="map-1-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -407,29 +407,30 @@
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
-          <div class="form-check">
-            <p>Choose one option</p>
-            <input class="form-check-input" type="radio" name="MapOneZone" id="dzCheckedMapOne" value="dzCheckedMapOne" checked>
-            <label class="form-check-label" for="dzCheckedMapOne">
-              Dilemma Zone present
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="MapOneZone" id="ozCheckedMapOne" value="ozCheckedMapOne">
-            <label class="form-check-label" for="ozCheckedMapOne">
-              Option Zone present
-            </label>
-          </div><br>
-          <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
-           <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Your calculation</span>
+            <div class="form-check">
+              <p>Choose one option</p>
+              <input class="form-check-input" type="radio" name="MapOneZone" id="dzCheckedMapOne" value="dzCheckedMapOne" checked>
+              <label class="form-check-label" for="dzCheckedMapOne">
+                Dilemma Zone present
+              </label>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
-            <div class="input-group-append">
-            <input type="reset" class="btn btn-danger" aria-label="reset your value">
-            </div>
-            <small>Then click on the <em>submit</em> button below to check your answers.</small>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="MapOneZone" id="ozCheckedMapOne" value="ozCheckedMapOne">
+              <label class="form-check-label" for="ozCheckedMapOne">
+                Option Zone present
+              </label>
+            </div><br>
+            <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your calculation</span>
+              </div>
+              <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone"
+                placeholder="e.g 12.34">
+              <div class="input-group-append">
+                <input type="reset" class="btn btn-danger" aria-label="reset your value">
+              </div>
+              <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
           </form>
           <div><span id="MapOneResultOne"></span></div>
@@ -437,9 +438,9 @@
           <div><span id="MapOneResultThree"></span></div>
         </div> <!-- End of the first modal-->
         <div class="modal-footer">
-           <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+          <input type="submit" id="map-1-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -466,30 +467,31 @@
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
-          <div class="form-check">
-            <p>Choose one option</p>
-            <input class="form-check-input" type="radio" name="MapTwoZone" id="dzCheckedMapTwo" value="dzCheckedMapTwo" checked>
-            <label class="form-check-label" for="dzCheckedMapTwo">
-              Dilemma Zone present
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="MapTwoZone" id="ozCheckedMapTwo" value="ozCheckedMapTwo">
-            <label class="form-check-label" for="ozCheckedMapTwo">
-              Option Zone present
-            </label>
-          </div><br>
-          <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Your calculation</span>
+            <div class="form-check">
+              <p>Choose one option</p>
+              <input class="form-check-input" type="radio" name="MapTwoZone" id="dzCheckedMapTwo" value="dzCheckedMapTwo" checked>
+              <label class="form-check-label" for="dzCheckedMapTwo">
+                Dilemma Zone present
+              </label>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapTwo" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
-             <div class="input-group-append">
-            <input type="reset" class="btn btn-danger" aria-label="reset your value">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="MapTwoZone" id="ozCheckedMapTwo" value="ozCheckedMapTwo">
+              <label class="form-check-label" for="ozCheckedMapTwo">
+                Option Zone present
+              </label>
+            </div><br>
+            <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your calculation</span>
+              </div>
+              <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapTwo" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone"
+                placeholder="e.g 12.34">
+              <div class="input-group-append">
+                <input type="reset" class="btn btn-danger" aria-label="reset your value">
+              </div>
+              <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-            <small>Then click on the <em>submit</em> button below to check your answers.</small>
-          </div>
           </form>
           <div><span id="MapTwoResultOne"></span></div>
           <div><span id="MapTwoResultTwo"></span></div>
@@ -525,30 +527,31 @@
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
-          <div class="form-check">
-            <p>Choose one option</p>
-            <input class="form-check-input" type="radio" name="MapThreeZone" id="dzCheckedMapThree" value="dzCheckedMapThree" checked>
-            <label class="form-check-label" for="dzCheckedMapThree">
-              Dilemma Zone present
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="MapThreeZone" id="ozCheckedMapThree" value="ozCheckedMapThree">
-            <label class="form-check-label" for="ozCheckedMapThree">
-              Option Zone present
-            </label>
-          </div><br>
-          <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Your calculation</span>
+            <div class="form-check">
+              <p>Choose one option</p>
+              <input class="form-check-input" type="radio" name="MapThreeZone" id="dzCheckedMapThree" value="dzCheckedMapThree" checked>
+              <label class="form-check-label" for="dzCheckedMapThree">
+                Dilemma Zone present
+              </label>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapThree" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
-             <div class="input-group-append">
-            <input type="reset" class="btn btn-danger" aria-label="reset your value">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="MapThreeZone" id="ozCheckedMapThree" value="ozCheckedMapThree">
+              <label class="form-check-label" for="ozCheckedMapThree">
+                Option Zone present
+              </label>
+            </div><br>
+            <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your calculation</span>
+              </div>
+              <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapThree" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone"
+                placeholder="e.g 12.34">
+              <div class="input-group-append">
+                <input type="reset" class="btn btn-danger" aria-label="reset your value">
+              </div>
+              <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-            <small>Then click on the <em>submit</em> button below to check your answers.</small>
-          </div>
           </form>
           <div><span id="MapThreeResultOne"></span></div>
           <div><span id="MapThreeResultTwo"></span></div>
@@ -584,30 +587,31 @@
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
-          <div class="form-check">
-            <p>Choose one option</p>
-            <input class="form-check-input" type="radio" name="MapFourZone" id="dzCheckedMapFour" value="dzCheckedMapFour" checked>
-            <label class="form-check-label" for="dzCheckedMapFour">
-              Dilemma Zone present
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="MapFourZone" id="ozCheckedMapFour" value="ozCheckedMapFour">
-            <label class="form-check-label" for="ozCheckedMapFour">
-              Option Zone present
-            </label>
-          </div><br>
-          <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Your calculation</span>
+            <div class="form-check">
+              <p>Choose one option</p>
+              <input class="form-check-input" type="radio" name="MapFourZone" id="dzCheckedMapFour" value="dzCheckedMapFour" checked>
+              <label class="form-check-label" for="dzCheckedMapFour">
+                Dilemma Zone present
+              </label>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFour" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
-             <div class="input-group-append">
-            <input type="reset" class="btn btn-danger" aria-label="reset your value">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="MapFourZone" id="ozCheckedMapFour" value="ozCheckedMapFour">
+              <label class="form-check-label" for="ozCheckedMapFour">
+                Option Zone present
+              </label>
+            </div><br>
+            <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your calculation</span>
+              </div>
+              <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFour" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone"
+                placeholder="e.g 12.34">
+              <div class="input-group-append">
+                <input type="reset" class="btn btn-danger" aria-label="reset your value">
+              </div>
+              <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-            <small>Then click on the <em>submit</em> button below to check your answers.</small>
-          </div>
           </form>
           <div><span id="MapFourResultOne"></span></div>
           <div><span id="MapFourResultTwo"></span></div>
@@ -643,30 +647,30 @@
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
-          <div class="form-check">
-            <p>Choose one option</p>
-            <input class="form-check-input" type="radio" name="MapFiveZone" id="dzCheckedMapFive" value="dzCheckedMapFive" checked>
-            <label class="form-check-label" for="dzCheckedMapFive">
-              Dilemma Zone present
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="MapFiveZone" id="ozCheckedMapFive" value="ozCheckedMapFive">
-            <label class="form-check-label" for="ozCheckedMapFive">
-              Option Zone present
-            </label>
-          </div><br>
-          <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Your Calculation</span>
+            <div class="form-check">
+              <p>Choose one option</p>
+              <input class="form-check-input" type="radio" name="MapFiveZone" id="dzCheckedMapFive" value="dzCheckedMapFive" checked>
+              <label class="form-check-label" for="dzCheckedMapFive">
+                Dilemma Zone present
+              </label>
             </div>
-            <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFive" class="form-control" min="0" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
-             <div class="input-group-append">
-            <input type="reset" class="btn btn-danger" aria-label="reset your value">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="MapFiveZone" id="ozCheckedMapFive" value="ozCheckedMapFive">
+              <label class="form-check-label" for="ozCheckedMapFive">
+                Option Zone present
+              </label>
+            </div><br>
+            <p>Input your value for the zone (remove any negative sign and max 2 decimal places)</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your Calculation</span>
+              </div>
+              <input type="number" onkeypress="return isNumberKey(event)" onkeyup="return truncateDecimals(this, 2)" id="userInputMapFive" class="form-control" min="0" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
+              <div class="input-group-append">
+                <input type="reset" class="btn btn-danger" aria-label="reset your value">
+              </div>
+              <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-            <small>Then click on the <em>submit</em> button below to check your answers.</small>
-          </div>
           </form>
           <div><span id="MapFiveResultOne"></span></div>
           <div><span id="MapFiveResultTwo"></span></div>
@@ -679,7 +683,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Footer -->
   <footer class="page-footer font-small darken-3">
 
