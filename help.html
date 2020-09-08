@@ -197,8 +197,7 @@
               logical or plausible in a real world context as this would suggest a complete frictionless system. Conversely, the highest possible friction
               would be one. Again, this would not be plausible as movement would then become impossible. You can estimate μ by using real world data.
               Good road conditions and good tires on the vehicle could see a range for μ between 0.67 and 0.75. Icy conditions could see μ as low as 0.3. For
-              more data you can check <a href="https://www.semanticscholar.org/paper/On-the-road-friction-recognition-based-on-the-Hui-Min/d164c2387684690754164580fa9eb16d0ec0eb9f/figure/0" class="underline" target="_blank">
-                here</a>.
+              more data you can check our accepted values here:<button type="button" class="btn btn-link" data-toggle="modal" data-target="#frictionHelp"><i class="far fa-question-circle"></i></button>
               \[μ\]</p>
           </div>
         </div>
@@ -292,6 +291,111 @@
       </div>
     </div>
   </section>
+<!-- Friction help modal -->
+<div class="modal fade" id="frictionHelp" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Coeffecient of friction list</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Table 1: A list of common coeffecient of friction numbers
+       <table class="table table-hover">
+  <thead class="thead--blue">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tire Conditions</th>
+      <th scope="col">Weather Conditions</th>
+      <th scope="col">μ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Good</td>
+      <td>Dry</td>
+      <td>0.8 - 0.9</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">2</th>
+      <td>Good</td>
+      <td>Wet</td>
+      <td>0.6 - 0.7</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Good</td>
+      <td>Snowy</td>
+      <td>0.4 - 0.5</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">4</th>
+      <td>Good</td>
+      <td>Icy</td>
+      <td>0.1 - 0.3</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Average</td>
+      <td>Dry</td>
+      <td>0.75 - 0.8</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">6</th>
+      <td>Average</td>
+      <td>Wet</td>
+      <td>0.5 - 0.6</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>Average</td>
+      <td>Snowy</td>
+      <td>0.3 - 0.4</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">8</th>
+      <td>Average</td>
+      <td>Icy</td>
+      <td>0.1 - 0.2</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>Bad</td>
+      <td>Dry</td>
+      <td>0.7 - 0.75</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">10</th>
+      <td>Bad</td>
+      <td>Wet</td>
+      <td>0.4 - 0.5</td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>Bad</td>
+      <td>Snowy</td>
+      <td>0.2 - 0.3</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">12</th>
+      <td>Bad</td>
+      <td>Icy</td>
+      <td>0.1</td>
+    </tr>
+  </tbody>
+</table>
+<small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator. This is because the calculation includes some randomness to account for realistic scenarios.</small>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
+    </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Footer -->
   <footer class="page-footer font-small darken-3">
