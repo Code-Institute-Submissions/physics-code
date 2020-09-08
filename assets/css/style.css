@@ -38,11 +38,11 @@ p {
 }
 
 .title-div {
-  background-color: #add8e6;
+  background-color: #54a5d5;
 }
 
 .content-div {
-  background-color: #6699cc;
+  background-color: #b6d5eb;
 }
 
 /* rounded button edges and colors */
@@ -75,6 +75,15 @@ p {
 .nav-text {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+}
+
+.navbar-custom {
+    background-color: #d7e9f5 !important;
+}
+
+.rightside-navigation-text {
+    color: #333 !important;
+    
 }
 
 /* sections */
@@ -298,7 +307,7 @@ input[type=number] {
 /* footer */
 /* footer background color */
 .page-footer {
-  background-color: #58b4c4;
+  background-color: #d7e9f5;
 }
 
 /* icons fb = Facebook, tw = Twitter, li = LinkedIn, ins = Instagram, pin = Pintrest */
