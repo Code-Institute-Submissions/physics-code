@@ -27,6 +27,8 @@ Facebook goes beyond the requirement for this site.
 3. Some unicode characters would not display on Android mobile devices. A calculator icon was to be used from Fontawesome for the "Calculate" button on the calculator. Due to the nature 
 of the code the value could not include a Fontawesome icon. A unicode icon was substituted, however, this was failing to replicate in all devices. Several other unicode variants 
 were trialed until a "check mark" x2713 was able to be displayed. 
+4. :invalid input on Firefox is not anchored to the input field where users have supplied an incorrect value (more than 2 decimal places). The only way around it is to force the user
+into using 2 decimal places by javascript. 
 
 Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
 Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard

@@ -216,7 +216,7 @@ input[type=number] {
 }
 
 .fa-stopwatch {
-  color: pink;
+  color: #DB7093;
 }
 
 .reaction_time_text {
@@ -232,7 +232,7 @@ input[type=number] {
   text-align: center;
 }
 
-/* Hide heading text "start" or "brake" */
+/* Hide heading text "start" or "brake" for game.html */
 .ready_to_brake {
   display: none;
 }

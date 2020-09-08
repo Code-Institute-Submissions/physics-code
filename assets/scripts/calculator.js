@@ -1,10 +1,23 @@
 // Limit input boxes to only numbers and decimal places
  function isNumberKey(evt) {
-  let charCode = (evt.which) ? evt.which : evt.keyCode
-   if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
+  let charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
+    evt.preventDefault();
     return false;
+  }
   return true;
- }
+}
+
+function truncateDecimals(obj, decimals) {
+  if (obj.value % Math.round(obj.value)) {
+
+    let divisor = Math.pow(10, decimals);
+    obj.value = Math.floor(obj.value * divisor) / divisor;
+  }
+
+  console.log(obj.value);
+  return true;
+}
 
 // Limit coefficient of friction to a max of 1 and a minimum of zero
 // Blank inputs not allowed
