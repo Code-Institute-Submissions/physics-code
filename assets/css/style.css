@@ -210,9 +210,16 @@ input[type=number] {
 #card-help-text-friction,
 #card-help-text-intersection,
 #card-help-text-length,
-#card-help-text-final {
+#card-help-text-final,
+#card-help-text-final-small {
   height: auto;
   width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    p .visibilitySmall {
+      visibility: hidden;
+    }
 }
 
 /* Reaction Time Game */

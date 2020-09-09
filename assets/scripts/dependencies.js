@@ -32,3 +32,17 @@ $('form').on('blur', 'input[type=number]', function(e) {
   js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+function isNumberKey(evt) {
+  let charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
+    evt.preventDefault();
+    return false;
+  }
+  return true;
+}
+
+let validate = function(e) {
+  let t = e.value;
+  e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
+}

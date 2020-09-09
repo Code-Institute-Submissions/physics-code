@@ -278,7 +278,7 @@
           <h2>Putting it all together</h2>
           <p class="card-text">
             When you have all your variables you can put them into our 
-            <a href="index.html" class="underline" target="_blank"> calculator</a> or work it out yourself with this equation.
+            <a href="calculator.html" class="underline" target="_blank"> calculator</a> or work it out yourself with this equation.
           </p>
         </div>
       </div>
@@ -294,23 +294,18 @@
       </div>
       <div class="col-lg-8 content-div">
         <div class="card shadow" id="card-help-text-final">
-        <!-- Equation appears on two lines for small devices -->
-          <div class="card-body d-none d-sm-block d-md-none">
-            <p>The final equation requires all the inputs for each variable.
-              \[dist_{final} =\] \[{ dist_{total} - dist_{intersection} - length}\]
-              \[dist_{stopping} = { velocity^2 \over 2 \; μ \; g}\]
-              \[zone =\] \[{dist_{final} - (dist_{stopping} + dist_{reaction})}\]
-              Where g = 9.81 ms<sup>-2</sup></p>
-            <p>If <em>zone</em> is negative, then a dilemma zone exists. If <em>zone</em> is positive, then an option zone exists.</p>
-          </div>
-          <div class="card-body d-sm-none d-md-block">
-          <!-- Equation appears on one line for medium and large devices -->
-            <p>The final equation requires all the inputs for each variable.
+          <div class="card-body">
+            <p class="visibilityMedium">The final equation requires all the inputs for each variable.
               \[dist_{final} = { dist_{total} - dist_{intersection} - length}\]
               \[dist_{stopping} = { velocity^2 \over 2 \; μ \; g}\]
               \[zone = {dist_{final} - (dist_{stopping} + dist_{reaction})}\]
               Where g = 9.81 ms<sup>-2</sup></p>
             <p>If <em>zone</em> is negative, then a dilemma zone exists. If <em>zone</em> is positive, then an option zone exists.</p>
+            <p id="visibilitySmall">The final equation requires all the inputs for each variable. THIS IS ON A SMALL SCREEN ONLY
+              \[dist_{final} =\] \[{ dist_{total} - dist_{intersection} - length}\]
+              \[dist_{stopping} = { velocity^2 \over 2 \; μ \; g}\]
+              \[zone =\] \[{dist_{final} - (dist_{stopping} + dist_{reaction})}\]
+              Where g = 9.81 ms<sup>-2</sup></p>
           </div>
         </div>
       </div>
@@ -491,6 +486,7 @@ This is because the calculation includes some randomness to account for realisti
   <script src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=335490644461179&autoLogAppEvents=1" nonce="HYRkFRRQ"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="assets/scripts/dependencies.js"></script>
 </body>
 
 </html>
