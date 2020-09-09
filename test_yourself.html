@@ -494,9 +494,9 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="number" 
+              type="text" 
               onkeypress="return isNumberKey(event)" 
-              onkeyup="return truncateDecimals(this, 2)" 
+              oninput="validate(this)" 
               id="userInputMapOne" 
               class="form-control" 
               min="0" max="1000" 

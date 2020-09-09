@@ -181,7 +181,7 @@ input[type=number] {
 .dz-icon {
   color: #ff0000;
   font-size: 22px;
-  margin-left: auto;
+  
 }
 
 .oz-icon {
@@ -241,7 +241,7 @@ input[type=number] {
 }
 
 .fa-stopwatch {
-  color: #DB7093;
+  color: #85144b;
 }
 
 .reaction_time_text {

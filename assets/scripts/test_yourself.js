@@ -8,15 +8,9 @@ function isNumberKey(evt) {
   return true;
 }
 
-function truncateDecimals(obj, decimals) {
-  if (obj.value % Math.round(obj.value)) {
-
-    let divisor = Math.pow(10, decimals);
-    obj.value = Math.floor(obj.value * divisor) / divisor;
-  }
-
-  console.log(obj.value);
-  return true;
+let validate = function(e) {
+  let t = e.value;
+  e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
 }
 
 // Map One, Russia
