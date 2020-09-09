@@ -110,6 +110,21 @@ p {
     border-width: 4px;
 }
 
+.dropdown--color {
+    background-color: #ff5733;
+    color: #fffdd9;
+}
+
+.dropdown--color:hover, 
+.dropdown--color:focus, 
+.dropdown--color:active, 
+.dropdown--color.active, 
+.open>.dropdown-toggle.dropdown--color {
+    color: #fff;
+    background-color: #ee2400;
+    border-color: #85144b; 
+}
+
 /* Images displayed in cards on the calculator page */
 .card-img-top {
   max-height: 150px;
