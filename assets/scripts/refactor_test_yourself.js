@@ -1,19 +1,16 @@
-/* refactored */
+ /* refactored */
 // Allow up to two decimal places only in all inputs
 let validate = function(e) {
   let t = e.value;
   e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
 }
 
-document.getElementById("randomScenarioMapOne").addEventListener("click", mapVariables);
+document.getElementById("One").addEventListener("click", mapVariables);
 document.getElementById("randomScenarioMapTwo").addEventListener("click", mapVariables);
 document.getElementById("randomScenarioMapThree").addEventListener("click", mapVariables);
 document.getElementById("randomScenarioMapFour").addEventListener("click", mapVariables);
 document.getElementById("randomScenarioMapFive").addEventListener("click", mapVariables);
 
-
-    
-    let mapNumber = "One";
 // Objects and constants identical for each map
   const conditions = {
     drygood: Math.random() * (0.9 - 0.8) + 0.8,
@@ -75,7 +72,8 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
          yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;   
          interPhase = Math.random() * (3 - 2) + 2;
   
-  function mapVariables() {      
+  function mapVariables() {
+      
   // Onclick this will allow the current attribute to be enabled
   let currentScenario = document.getElementById(mapNumber + "current");
   currentScenario.removeAttribute("disabled");
@@ -97,7 +95,7 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
   else if (mapNumber = "Four") { intersection = 43.8;}
   else intersection = 51.5;
 
-  document.getElementById("Onesubmit").addEventListener("click", calculateScenario);
+  document.getElementById(mapNumber + "submit").addEventListener("click", calculateScenario);
   function calculateScenario () {
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
     let initialVelocity = velocity / 3.6;
@@ -197,3 +195,4 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
 }
 }
+
