@@ -1,12 +1,12 @@
 // Limit input boxes to only numbers and 2 decimal places
-function isNumberKey(evt) {
-  let charCode = (evt.which) ? evt.which : evt.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
-    evt.preventDefault();
-    return false;
-  }
-  return true;
-}
+// function isNumberKey(evt) {
+//  let charCode = (evt.which) ? evt.which : evt.keyCode;
+//  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
+//    evt.preventDefault();
+//    return false;
+//  }
+//  return true;
+// }
 
 let validate = function(e) {
   let t = e.value;

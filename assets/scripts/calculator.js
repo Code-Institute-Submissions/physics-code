@@ -1,13 +1,4 @@
-// Limit input boxes to only numbers and decimal places
- function isNumberKey(evt) {
-  let charCode = (evt.which) ? evt.which : evt.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
-    evt.preventDefault();
-    return false;
-  }
-  return true;
-}
-
+// Allow up to three decimal places only in all inputs
 let validate = function(e) {
   let t = e.value;
   e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 4)) : t;

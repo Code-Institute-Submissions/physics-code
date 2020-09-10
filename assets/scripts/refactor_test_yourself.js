@@ -1,4 +1,10 @@
 /* refactored */
+// Allow up to two decimal places only in all inputs
+let validate = function(e) {
+  let t = e.value;
+  e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
+}
+
 
 // Objects and constants identical for each map
   const conditions = {
