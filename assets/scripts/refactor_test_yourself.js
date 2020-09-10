@@ -11,7 +11,7 @@ document.getElementById("randomScenarioMapThree").addEventListener("click", mapV
 document.getElementById("randomScenarioMapFour").addEventListener("click", mapVariables);
 document.getElementById("randomScenarioMapFive").addEventListener("click", mapVariables);
 
-function mapVariables() {
+
     
     let mapNumber = "One";
 // Objects and constants identical for each map
@@ -74,7 +74,8 @@ function mapVariables() {
   } else velocity = Math.random() * (105 - 65) + 65;
          yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;   
          interPhase = Math.random() * (3 - 2) + 2;
-    
+  
+  function mapVariables() {      
   // Onclick this will allow the current attribute to be enabled
   let currentScenario = document.getElementById(mapNumber + "current");
   currentScenario.removeAttribute("disabled");
@@ -96,6 +97,8 @@ function mapVariables() {
   else if (mapNumber = "Four") { intersection = 43.8;}
   else intersection = 51.5;
 
+  document.getElementById("Onesubmit").addEventListener("click", calculateScenario);
+  function calculateScenario () {
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
     let initialVelocity = velocity / 3.6;
     let coefficient = conditions[keyClim.replace(/\s+/g, "") + keyCond];
@@ -139,9 +142,9 @@ function mapVariables() {
     else zone = document.querySelector('input[name="MapTwoZone"]:checked').value;
 
     let answer;
-    if (zone === "ozChecked") {
+    if (zone === "ozChecked" + mapNumber) {
       answer = "Option Zone";
-    } else if (zone === "dzCheckedMapOne") {
+    } else if (zone === "dzChecked" + mapNumber) {
       answer = "Dilemma Zone";
     } else answer = false;
     console.log("User answer", answer);
@@ -158,7 +161,7 @@ function mapVariables() {
     console.log("lower limit for correct answer -20%", valueLowChecked);
 
     // Convert all numbers to absolute for checking
-    // Allow up to 20% difference on student answers - this can be changed in the percentageMapOne variable
+    // Allow up to 20% difference on student answers - this can be changed in the percentage variable
     let absoluteValue = Math.abs(valueHighChecked);
     let absoluteValue2 = Math.abs(valueLowChecked);
     
@@ -192,4 +195,5 @@ function mapVariables() {
     document.getElementById(mapNumber + "ResultOne").innerHTML = results;
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
+}
 }
