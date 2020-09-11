@@ -39,5 +39,6 @@ Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
 Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard
 Converting from png to ico for favicons and map marker icon https://icoconvert.com/
 MathJax for the equations on the help page
+https://www.internetmarketingninjas.com/online-spell-checker.php 
 
 
