@@ -17,19 +17,23 @@ the Math.abs(total) syntax was tagged onto the function printing out the dilemma
 6. The reaction time game prototype showed that the counter was able to stop and work out the number of seconds the user took to press the "brakes" button. However, the brakes
 button remained active and was able to be pushed again. An initial attempt to remove the ID that allows the "click" event to be listened to failed to work. Finally, a jQuery
 button disabled function was able to complete the job. 
-7. :invalid input alerts on Firefox are not anchored to the input field where users have supplied an incorrect value (for example more than 2 decimal places on calculator.html). 
-The only way around it is to force the user into using 2 decimal places by javascript. 
+7. :invalid input alerts on Firefox browsers are not anchored to the input field where users have supplied an incorrect value (for example more than 2 decimal places on calculator.html).
+The result is a floating alert box (PICTURED) that detracts from the value of the page. The fix to this is to force the user into using 2 decimal places by javascript.
+8. Buttons on the test_yourself.html page are monitored to set the value of the mapNumber in the JS file. However, in doing so, this meant that other buttons on the page 
+also affected the mapNumber variable. The fix was to remove the button tag and replace with a span. The span now acts identically to a button but is controlled by CSS. 
+There is no user experience difference and users will not be able to notice the difference. 
+9. Refactoring 
 
 
 unsolved problems:
 1. After the share to Facebook button is pressed in the Reaction Time game, a link appears on the user account which would go to an approved app. However, for the purposes of
 this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
-Facebook goes beyond the requirement for this site. 
+Facebook goes beyond the requirement for this site. The issue will only occur externally on Facebook. 
 2. Advert blocking apps will cause unnoticed errors with the Facebook share button. No user experience is changed as a result. However, the Console will show an ERR_BLOCKED_BY_CLIENT alert. 
 3. Some unicode characters would not display on Android mobile devices. A calculator icon was to be used from Fontawesome for the "Calculate" button on the calculator. Due to the nature 
 of the code the value could not include a Fontawesome icon. A unicode icon was substituted, however, this was failing to replicate in all devices. Several other unicode variants 
 were trialed until a "check mark" x2713 was able to be displayed. 
-4. 
+
 
 Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
 Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard

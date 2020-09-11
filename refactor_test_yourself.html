@@ -23,19 +23,12 @@
 <body>
   <header>
     <!-- Logo and text in Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom bg-info no-gutters">
+    <nav class="navbar navbar-expand-custom navbar-light navbar-custom bg-info no-gutters">
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo-main.png" width="30" height="30" class="d-inline-block align-top" alt="Physics Code Logo" loading="lazy">
         Physics Code
       </a>
-      <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#navbarNav" 
-      aria-controls="navbarNav" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -75,12 +68,9 @@
             scenario to calculate if a dilemma or option zone exists. You can refer to our help by clicking on the info button
             <a href="help.html" target="_blank" class="info-icon"> <i class="fas fa-info-circle"></i></a> at any time. Or consider using
             our <a href="calculator.html" target="_blank"><i class="fas fa-calculator"></i> <span class="underline">calculator</span></a> for best results.</p>
-          <p class="head-text">For help on the coefficient of friction click here: 
-          <button type="button" 
-          class="btn btn-link" 
-          data-toggle="modal" 
-          data-target="#frictionHelp">
-          <i class="far fa-question-circle"></i></button></p>
+          <p class="head-text">For help on the coefficient of friction click here:
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#frictionHelp">
+              <i class="far fa-question-circle"></i></button></p>
           <p class="head-text">For instructions on how to measure distances across the intersection using Google Maps choose one of the following:</p>
           <div class="d-flex">
             <ul class="list-group list-group-horizontal mx-auto justify-content-center flex-column flex-md-row background-ul">
@@ -195,15 +185,12 @@
               </tr>
             </tbody>
           </table>
-          <small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator. 
-          This is because the calculation includes some randomness to account for realistic scenarios.</small>
+          <small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator.
+            This is because the calculation includes some randomness to account for realistic scenarios.</small>
         </div>
         <div class="modal-footer">
-          <button 
-          type="button" 
-          class="btn btn-danger" 
-          data-dismiss="modal">
-          <i class="far fa-times-circle"></i> Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
     </div>
@@ -239,19 +226,9 @@
             <p>Measure the intersection length from the south east and continuing north west on Leningradsky Ave over Tverskaya Zastava Square.</p>
             <div class="container" id="map_one"></div>
             <div class="text-center mybuttons">
-              <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
-              id="One"
-               
-              data-toggle="modal" 
-              data-target="#map-1-scene-1">
-              <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <span 
-              class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" 
-              id="OneCurrent" 
-              data-toggle="modal" 
-              data-target="#map-1-scene-1" 
-              disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="One" data-toggle="modal" data-target="#map-1-scene-1">
+                <i class="fas fa-car-battery fa2x"></i> Scene</button>
+              <span class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="OneCurrent" data-toggle="modal" data-target="#map-1-scene-1" disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
             </div>
           </div>
         </div>
@@ -288,18 +265,9 @@
             <p>Measure the intersection length heading from the south west continuing north east on Sunnyholt Road over the M7.</p>
             <div class="container" id="map_two"></div>
             <div class="text-center mybuttons">
-              <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
-              id="Two" 
-              data-toggle="modal" 
-              data-target="#map-2-scene-1">
-              <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <span 
-              class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" 
-              id="TwoCurrent" 
-              data-toggle="modal" 
-              data-target="#map-2-scene-1" 
-              disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="Two" data-toggle="modal" data-target="#map-2-scene-1">
+                <i class="fas fa-car-battery fa2x"></i> Scene</button>
+              <span class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="TwoCurrent" data-toggle="modal" data-target="#map-2-scene-1" disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
             </div>
           </div>
         </div>
@@ -336,18 +304,9 @@
             <p>Measure the intersection length heading from the south west continuing north east on Lexington Drive over the Harry Byrd Highway.</p>
             <div class="container" id="map_three"></div>
             <div class="text-center mybuttons">
-              <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
-              id="Three" 
-              data-toggle="modal" 
-              data-target="#map-3-scene-1">
-              <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <span 
-              class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" 
-              id="ThreeCurrent" 
-              data-toggle="modal" 
-              data-target="#map-3-scene-1" 
-              disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="Three" data-toggle="modal" data-target="#map-3-scene-1">
+                <i class="fas fa-car-battery fa2x"></i> Scene</button>
+              <span class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="ThreeCurrent" data-toggle="modal" data-target="#map-3-scene-1" disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
             </div>
           </div>
         </div>
@@ -384,18 +343,9 @@
             <p>Measure the intersection length heading from the east continuing west on Sigmundstraße over Leyher Street.</p>
             <div class="container" id="map_four"></div>
             <div class="text-center mybuttons">
-              <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
-              id="Four" 
-              data-toggle="modal" 
-              data-target="#map-4-scene-1">
-              <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <span 
-              class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" 
-              id="FourCurrent" 
-              data-toggle="modal" 
-              data-target="#map-4-scene-1" 
-              disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="Four" data-toggle="modal" data-target="#map-4-scene-1">
+                <i class="fas fa-car-battery fa2x"></i> Scene</button>
+              <span class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="FourCurrent" data-toggle="modal" data-target="#map-4-scene-1" disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
             </div>
           </div>
         </div>
@@ -432,18 +382,9 @@
             <p>Measure the intersection length heading from the south continuing north on Constitutio Hill.</p>
             <div class="container" id="map_five"></div>
             <div class="text-center mybuttons">
-              <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
-              id="Five" 
-              data-toggle="modal" 
-              data-target="#map-5-scene-1">
-              <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <span 
-              class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" 
-              id="FiveCurrent" 
-              data-toggle="modal" 
-              data-target="#map-5-scene-1" 
-              disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="Five" data-toggle="modal" data-target="#map-5-scene-1">
+                <i class="fas fa-car-battery fa2x"></i> Scene</button>
+              <span class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="FiveCurrent" data-toggle="modal" data-target="#map-5-scene-1" disabled><i class="fas fa-charging-station fa2x"></i> Current</span>
             </div>
           </div>
         </div>
@@ -494,16 +435,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Your calculation</span>
               </div>
-              <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)" 
-              id="userInputMapOne" 
-              class="form-control" 
-              min="0" max="1000" 
-              step="0.01" 
-              aria-label="input value for your zone"
-              placeholder="e.g 12.34">
+              <input type="text" onkeypress="return isNumberKey(event)" oninput="validate(this)" id="userInputMapOne" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
               <div class="input-group-append">
                 <input type="reset" class="btn btn-danger" aria-label="reset your value">
               </div>
@@ -562,16 +494,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Your calculation</span>
               </div>
-              <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              id="userInputMapTwo" class="form-control" 
-              min="0" 
-              max="1000" 
-              step="0.01" 
-              aria-label="input value for your zone"
-              placeholder="e.g 12.34">
+              <input type="text" onkeypress="return isNumberKey(event)" oninput="validate(this)" id="userInputMapTwo" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
               <div class="input-group-append">
                 <input type="reset" class="btn btn-danger" aria-label="reset your value">
               </div>
@@ -630,16 +553,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Your calculation</span>
               </div>
-              <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              id="userInputMapThree" class="form-control" 
-              min="0" 
-              max="1000" 
-              step="0.01" 
-              aria-label="input value for your zone"
-                placeholder="e.g 12.34">
+              <input type="text" onkeypress="return isNumberKey(event)" oninput="validate(this)" id="userInputMapThree" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
               <div class="input-group-append">
                 <input type="reset" class="btn btn-danger" aria-label="reset your value">
               </div>
@@ -698,16 +612,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Your calculation</span>
               </div>
-              <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              id="userInputMapFour" class="form-control" 
-              min="0" 
-              max="1000" 
-              step="0.01" 
-              aria-label="input value for your zone"
-              placeholder="e.g 12.34">
+              <input type="text" onkeypress="return isNumberKey(event)" oninput="validate(this)" id="userInputMapFour" class="form-control" min="0" max="1000" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
               <div class="input-group-append">
                 <input type="reset" class="btn btn-danger" aria-label="reset your value">
               </div>
@@ -766,16 +671,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Your Calculation</span>
               </div>
-              <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              id="userInputMapFive" 
-              class="form-control" 
-              min="0" 
-              step="0.01" 
-              aria-label="input value for your zone" 
-              placeholder="e.g 12.34">
+              <input type="text" onkeypress="return isNumberKey(event)" oninput="validate(this)" id="userInputMapFive" class="form-control" min="0" step="0.01" aria-label="input value for your zone" placeholder="e.g 12.34">
               <div class="input-group-append">
                 <input type="reset" class="btn btn-danger" aria-label="reset your value">
               </div>
@@ -793,7 +689,7 @@
       </div>
     </div>
   </div>
-<div class="mb-1"></div>
+  <div class="mb-1"></div>
   <!-- Footer -->
   <footer class="page-footer font-small darken-3">
 
@@ -840,8 +736,7 @@
     <!-- Copyrightand Facebook Share -->
     <div class="container text-center">
       <div class="fb-share-button" data-href="https://pauld0051.github.io/physics-code/index.html" data-layout="button" data-size="large">
-        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphysics-code%2Findex.html&amp;src=sdkpreparse" 
-        class="fb-xfbml-parse-ignore">Share</a></div>
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphysics-code%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
     </div>
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
       <a href="index.html">Physics Code</a><br>

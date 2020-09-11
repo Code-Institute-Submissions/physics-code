@@ -24,9 +24,9 @@ document.getElementById("Four").addEventListener("click", mapVariables);
 document.getElementById("Five").addEventListener("click", mapVariables);
 
 function mapVariables() {
- // Onclick this will allow the current attribute to be enabled
- let span_click = document.getElementById(mapNumber + "Current");
- span_click.classList.remove("no-click-span");
+  // Onclick this will allow the current attribute to be enabled
+  let span_click = document.getElementById(mapNumber + "Current");
+  span_click.classList.remove("no-click-span");
   // Objects and constants identical for each map
   const conditions = {
     drygood: Math.random() * (0.9 - 0.8) + 0.8,
@@ -85,7 +85,7 @@ function mapVariables() {
     keyClim = climate[climateCondition];
   } else climate = false;
   console.log("Climate conditions", climateCondition, climate[climateCondition]);
-  console.log("Map number?", mapNumber); //Delete this line when correct outcome established
+  console.log("Map number?", mapNumber); 
   let carLength = Math.random() * (5.89 - 3.8) + 3.8;
   let reactionTime = Math.random() * (2.5 - 0.4) + 0.4;
 
@@ -230,5 +230,5 @@ function mapVariables() {
     document.getElementById(mapNumber + "ResultOne").innerHTML = results;
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
- }
+  }
 }

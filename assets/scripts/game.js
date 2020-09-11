@@ -39,8 +39,7 @@ function setTimerAmount() {
     $("#brake_button").on("click", function() {
       let timeEnd = new Date();
       let timeDiff = ((timeEnd - timeStart) / 1000) - timeInSeconds;
-      // Leaving this in here for examiners to see the random effect for the timer
-      console.log(timeInSeconds);
+            
       // Display the time for reaction time and prevent the brakes button from being pushed a second time
       $("#time").html(timeDiff.toFixed(3) + " s");
       $("#brake_button").attr("disabled", true);
