@@ -29,7 +29,8 @@ unsolved problems:
 1. After the share to Facebook button is pressed in the Reaction Time game, a link appears on the user account which would go to an approved app. However, for the purposes of
 this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
 Facebook goes beyond the requirement for this site. The issue will only occur externally on Facebook. 
-2. Advert blocking apps will cause unnoticed errors with the Facebook share button. No user experience is changed as a result. However, the Console will show an ERR_BLOCKED_BY_CLIENT alert. 
+2. Advert blocking apps will cause unnoticed errors with the Facebook share button. Usually no user experience is changed as a result. However, the Console will show 
+an ERR_BLOCKED_BY_CLIENT alert and occassionally the Facebook share button may not display at all. The only fix is to turn off ad-blockers. 
 3. Some unicode characters would not display on Android mobile devices. A calculator icon was to be used from Fontawesome for the "Calculate" button on the calculator. Due to the nature 
 of the code the value could not include a Fontawesome icon. A unicode icon was substituted, however, this was failing to replicate in all devices. Several other unicode variants 
 were trialed until a "check mark" x2713 was able to be displayed. 
