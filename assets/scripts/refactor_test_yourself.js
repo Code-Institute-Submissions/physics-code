@@ -5,7 +5,17 @@ let validate = function(e) {
   e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
 }
 
-var mapNumber = "Two";
+var mapNumber;
+
+const mybuttons = document.querySelectorAll('.mybuttons button');
+mybuttons.forEach(mybutton => {
+   mybutton.addEventListener('click', processClick);
+});
+
+function processClick() {
+    window.mapNumber = this.id;  // the id of the clicked button
+}
+console.log("The button push check", mapNumber);
 
 
 document.getElementById("One").addEventListener("click", mapVariables);
@@ -64,10 +74,10 @@ function mapVariables() {
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
   } else if (mapNumber === "Four") { 
-    climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
+    climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Four") { 
+  } else if (mapNumber === "Five") { 
     climate = ["dry", "light rain", "medium rain", "heavy rain"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];    
@@ -78,13 +88,13 @@ function mapVariables() {
   let reactionTime = Math.random() * (2.5 - 0.4) + 0.4;
 
   let velocity, yellowPhase, interPhase;
-  if (mapNumber === "One" || "Four" || "Five") {
+  if (mapNumber === "One" || mapNumber === "Four" || mapNumber === "Five") {
       velocity = Math.random() * (65 - 35) + 35;
       yellowPhase = Math.random() * (4.4 - 3.8) + 3.7;
       interPhase = Math.random() * (2.4 - 1.8) + 1.8;
   } else velocity = Math.random() * (105 - 65) + 65;
-         yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;   
-         interPhase = Math.random() * (3 - 2) + 2;
+      yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;   
+      interPhase = Math.random() * (3 - 2) + 2;
   
   // Onclick this will allow the current attribute to be enabled
   let currentScenario = document.getElementById(mapNumber + "current");
@@ -105,8 +115,9 @@ function mapVariables() {
   else if (mapNumber === "Two") { intersection = 79.75;}
   else if (mapNumber === "Three") { intersection = 66.18;}
   else if (mapNumber === "Four") { intersection = 43.8;}
-  else intersection === 51.5;
-
+  else if (mapNumber === "Five") {intersection = 51.5;}
+  else false;
+  console.log("Intersection size", intersection);
   document.getElementById(mapNumber + "submit").addEventListener("click", calculateScenario);
   function calculateScenario () {
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
@@ -149,7 +160,8 @@ function mapVariables() {
     else if (mapNumber === "Two") { zone = document.querySelector('input[name="MapTwoZone"]:checked').value;}
     else if (mapNumber === "Three") { zone = document.querySelector('input[name="MapThreeZone"]:checked').value;}
     else if (mapNumber === "Four") { zone = document.querySelector('input[name="MapFourZone"]:checked').value;}
-    else zone = document.querySelector('input[name="MapTwoZone"]:checked').value;
+    else if (mapNumber === "Five") { zone = document.querySelector('input[name="MapFiveZone"]:checked').value;}
+    else false;
 
     let answer;
     if (zone === "ozChecked" + mapNumber) {
@@ -180,7 +192,7 @@ function mapVariables() {
     else if (mapNumber === "Two"){ userInput = document.getElementById("userInputMapTwo").value;}
     else if (mapNumber === "Three"){ userInput = document.getElementById("userInputMapThree").value;}
     else if (mapNumber === "Four"){ userInput = document.getElementById("userInputMapFour").value;}
-    else if (mapNumber === "five"){ userInput = document.getElementById("userInputMapFive").value;}
+    else if (mapNumber === "Five"){ userInput = document.getElementById("userInputMapFive").value;}
     else alert("You need to add the value you got for the calculation before submitting.");
         
     let userResult;
