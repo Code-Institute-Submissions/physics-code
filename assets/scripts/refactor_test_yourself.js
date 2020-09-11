@@ -1,4 +1,4 @@
- /* refactored */
+/* refactored */
 // Allow up to two decimal places only in all inputs
 let validate = function(e) {
   let t = e.value;
@@ -9,14 +9,13 @@ var mapNumber;
 
 const mybuttons = document.querySelectorAll('.mybuttons button');
 mybuttons.forEach(mybutton => {
-   mybutton.addEventListener('click', processClick);
+  mybutton.addEventListener('click', processClick);
 });
 
 function processClick() {
-    window.mapNumber = this.id;  // the id of the clicked button
+  window.mapNumber = this.id; // the id of the clicked button
 }
 console.log("The button push check", mapNumber);
-
 
 document.getElementById("One").addEventListener("click", mapVariables);
 document.getElementById("Two").addEventListener("click", mapVariables);
@@ -25,7 +24,10 @@ document.getElementById("Four").addEventListener("click", mapVariables);
 document.getElementById("Five").addEventListener("click", mapVariables);
 
 function mapVariables() {
-// Objects and constants identical for each map
+ // Onclick this will allow the current attribute to be enabled
+ let span_click = document.getElementById(mapNumber + "Current");
+ span_click.classList.remove("no-click-span");
+  // Objects and constants identical for each map
   const conditions = {
     drygood: Math.random() * (0.9 - 0.8) + 0.8,
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
@@ -58,48 +60,43 @@ function mapVariables() {
     veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
     severeicebad: Math.random() * (0.105 - 0.1) + 0.1,
   };
-  
+
   const tires = ["good", "average", "bad"];
   const tireCondition = Math.floor(Math.random() * tires.length);
   const keyCond = tires[tireCondition];
   console.log("Tire conditions", tireCondition, tires[tireCondition]);
-  
+
   let climate;
-  if (mapNumber === "One" || mapNumber === "Three") { 
+  if (mapNumber === "One" || mapNumber === "Three") {
     climate = ["dry", "dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Two") { 
+  } else if (mapNumber === "Two") {
     climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Four") { 
+  } else if (mapNumber === "Four") {
     climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Five") { 
+  } else if (mapNumber === "Five") {
     climate = ["dry", "light rain", "medium rain", "heavy rain"];
     climateCondition = Math.floor(Math.random() * climate.length);
-    keyClim = climate[climateCondition];    
-  } else climate = false; 
-    console.log("Climate conditions", climateCondition, climate[climateCondition]);
-    console.log("Map number?", mapNumber); //Delete this line when correct outcome established
+    keyClim = climate[climateCondition];
+  } else climate = false;
+  console.log("Climate conditions", climateCondition, climate[climateCondition]);
+  console.log("Map number?", mapNumber); //Delete this line when correct outcome established
   let carLength = Math.random() * (5.89 - 3.8) + 3.8;
   let reactionTime = Math.random() * (2.5 - 0.4) + 0.4;
 
   let velocity, yellowPhase, interPhase;
   if (mapNumber === "One" || mapNumber === "Four" || mapNumber === "Five") {
-      velocity = Math.random() * (65 - 35) + 35;
-      yellowPhase = Math.random() * (4.4 - 3.8) + 3.7;
-      interPhase = Math.random() * (2.4 - 1.8) + 1.8;
+    velocity = Math.random() * (65 - 35) + 35;
+    yellowPhase = Math.random() * (4.4 - 3.8) + 3.7;
+    interPhase = Math.random() * (2.4 - 1.8) + 1.8;
   } else velocity = Math.random() * (105 - 65) + 65;
-      yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;   
-      interPhase = Math.random() * (3 - 2) + 2;
-  
-  // Onclick this will allow the current attribute to be enabled
-  let currentScenario = document.getElementById(mapNumber + "current");
-  currentScenario.removeAttribute("disabled");
-  console.log("Current scenario output", currentScenario);
+  yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;
+  interPhase = Math.random() * (3 - 2) + 2;
 
   // Onclick get the mapNumber and add it to the variable.
   document.getElementById(mapNumber + "initialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
@@ -111,19 +108,25 @@ function mapVariables() {
   document.getElementById(mapNumber + "carLength").innerHTML = carLength.toFixed(1);
 
   let intersection;
-  if (mapNumber === "One") { intersection = 52;}
-  else if (mapNumber === "Two") { intersection = 79.75;}
-  else if (mapNumber === "Three") { intersection = 66.18;}
-  else if (mapNumber === "Four") { intersection = 43.8;}
-  else if (mapNumber === "Five") {intersection = 51.5;}
-  else false;
+  if (mapNumber === "One") {
+    intersection = 52;
+  } else if (mapNumber === "Two") {
+    intersection = 79.75;
+  } else if (mapNumber === "Three") {
+    intersection = 66.18;
+  } else if (mapNumber === "Four") {
+    intersection = 43.8;
+  } else if (mapNumber === "Five") {
+    intersection = 51.5;
+  } else false;
   console.log("Intersection size", intersection);
   document.getElementById(mapNumber + "submit").addEventListener("click", calculateScenario);
-  function calculateScenario () {
+
+  function calculateScenario() {
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
     let initialVelocity = velocity / 3.6;
     let coefficient = conditions[keyClim.replace(/\s+/g, "") + keyCond];
-    
+
     // Calculate the going distance during yellow and interpahase subtract car length
     let distancePhase = ((initialVelocity * (yellowPhase + interPhase)) - carLength).toFixed(2);
     console.log("Initial Velocity", initialVelocity, "Yellow phase", yellowPhase, "Interphase", interPhase, "Car length", carLength);
@@ -156,12 +159,17 @@ function mapVariables() {
 
     // Check the type of zone the user has input
     let zone;
-    if (mapNumber === "One") { zone = document.querySelector('input[name="MapOneZone"]:checked').value;}
-    else if (mapNumber === "Two") { zone = document.querySelector('input[name="MapTwoZone"]:checked').value;}
-    else if (mapNumber === "Three") { zone = document.querySelector('input[name="MapThreeZone"]:checked').value;}
-    else if (mapNumber === "Four") { zone = document.querySelector('input[name="MapFourZone"]:checked').value;}
-    else if (mapNumber === "Five") { zone = document.querySelector('input[name="MapFiveZone"]:checked').value;}
-    else false;
+    if (mapNumber === "One") {
+      zone = document.querySelector('input[name="MapOneZone"]:checked').value;
+    } else if (mapNumber === "Two") {
+      zone = document.querySelector('input[name="MapTwoZone"]:checked').value;
+    } else if (mapNumber === "Three") {
+      zone = document.querySelector('input[name="MapThreeZone"]:checked').value;
+    } else if (mapNumber === "Four") {
+      zone = document.querySelector('input[name="MapFourZone"]:checked').value;
+    } else if (mapNumber === "Five") {
+      zone = document.querySelector('input[name="MapFiveZone"]:checked').value;
+    } else false;
 
     let answer;
     if (zone === "ozChecked" + mapNumber) {
@@ -186,15 +194,20 @@ function mapVariables() {
     // Allow up to 20% difference on student answers - this can be changed in the percentage variable
     let absoluteValue = Math.abs(valueHighChecked);
     let absoluteValue2 = Math.abs(valueLowChecked);
-    
+
     let userInput;
-    if (mapNumber === "One"){ userInput = document.getElementById("userInputMapOne").value;}
-    else if (mapNumber === "Two"){ userInput = document.getElementById("userInputMapTwo").value;}
-    else if (mapNumber === "Three"){ userInput = document.getElementById("userInputMapThree").value;}
-    else if (mapNumber === "Four"){ userInput = document.getElementById("userInputMapFour").value;}
-    else if (mapNumber === "Five"){ userInput = document.getElementById("userInputMapFive").value;}
-    else alert("You need to add the value you got for the calculation before submitting.");
-        
+    if (mapNumber === "One") {
+      userInput = document.getElementById("userInputMapOne").value;
+    } else if (mapNumber === "Two") {
+      userInput = document.getElementById("userInputMapTwo").value;
+    } else if (mapNumber === "Three") {
+      userInput = document.getElementById("userInputMapThree").value;
+    } else if (mapNumber === "Four") {
+      userInput = document.getElementById("userInputMapFour").value;
+    } else if (mapNumber === "Five") {
+      userInput = document.getElementById("userInputMapFive").value;
+    } else alert("You need to add the value you got for the calculation before submitting.");
+
     let userResult;
     if ((userInput > absoluteValue) && (answer === zoneOutcome)) {
       userResult = "But your value of <b>" + userInput + " m</b> is too high.";
@@ -217,6 +230,5 @@ function mapVariables() {
     document.getElementById(mapNumber + "ResultOne").innerHTML = results;
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
+ }
 }
-}
-

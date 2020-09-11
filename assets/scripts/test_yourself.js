@@ -490,8 +490,8 @@ document.getElementById("randomScenarioMapFour").addEventListener("click", MapFo
 
 function MapFourVariables() {
   // Remove the "disabled" attribute on the Current Scenario button
-  let currentScenario4 = document.getElementById("current-map-4");
-  currentScenario4.removeAttribute("disabled");
+  let currentScenario = document.getElementById(mapNumber + "current");
+  currentScenario.removeAttribute("disabled");
   let velocityMapFour = Math.random() * (60 - 35) + 35;
   let yellowPhaseMapFour = Math.random() * (4.4 - 3.8) + 3.7;
   let interPhaseMapFour = Math.random() * (2.4 - 1.8) + 1.8;
