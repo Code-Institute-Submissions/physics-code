@@ -238,7 +238,7 @@
               and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length from the south east and continuing north west on Leningradsky Ave over Tverskaya Zastava Square.</p>
             <div class="container" id="map_one"></div>
-            <div class="text-center">
+            <div class="text-center mybuttons">
               <button 
               class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
               id="One"
@@ -287,16 +287,16 @@
               and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the south west continuing north east on Sunnyholt Road over the M7.</p>
             <div class="container" id="map_two"></div>
-            <div class="text-center">
+            <div class="text-center mybuttons">
               <button 
               class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
-              id="randomScenarioMapTwo" 
+              id="Two" 
               data-toggle="modal" 
               data-target="#map-2-scene-1">
               <i class="fas fa-car-battery fa2x"></i> Scene</button>
               <button 
               class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded" 
-              id="current-map-2" 
+              id="Twocurrent" 
               data-toggle="modal" 
               data-target="#map-2-scene-1" 
               disabled><i class="fas fa-charging-station fa2x"></i> Current</button>
@@ -335,7 +335,7 @@
               and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the south west continuing north east on Lexington Drive over the Harry Byrd Highway.</p>
             <div class="container" id="map_three"></div>
-            <div class="text-center">
+            <div class="text-center mybuttons">
               <button 
               class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
               id="randomScenarioMapThree" 
@@ -344,7 +344,7 @@
               <i class="fas fa-car-battery fa2x"></i> Scene</button>
               <button 
               class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded" 
-              id="current-map-3" 
+              id="Threecurrent" 
               data-toggle="modal" 
               data-target="#map-3-scene-1" 
               disabled><i class="fas fa-charging-station fa2x"></i> Current</button>
@@ -383,7 +383,7 @@
               and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the east continuing west on Sigmundstraße over Leyher Street.</p>
             <div class="container" id="map_four"></div>
-            <div class="text-center">
+            <div class="text-center mybuttons">
               <button 
               class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
               id="randomScenarioMapFour" 
@@ -392,7 +392,7 @@
               <i class="fas fa-car-battery fa2x"></i> Scene</button>
               <button 
               class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded" 
-              id="current-map-4" 
+              id="Fourcurrent" 
               data-toggle="modal" 
               data-target="#map-4-scene-1" 
               disabled><i class="fas fa-charging-station fa2x"></i> Current</button>
@@ -431,7 +431,7 @@
               and once you have established road names you can turn off labels for ease in measuring the intersection.</p>
             <p>Measure the intersection length heading from the south continuing north on Constitutio Hill.</p>
             <div class="container" id="map_five"></div>
-            <div class="text-center">
+            <div class="text-center mybuttons">
               <button 
               class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
               id="randomScenarioMapFive" 
@@ -440,7 +440,7 @@
               <i class="fas fa-car-battery fa2x"></i> Scene</button>
               <button 
               class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded" 
-              id="current-map-5" 
+              id="Fivecurrent" 
               data-toggle="modal" 
               data-target="#map-5-scene-1" 
               disabled><i class="fas fa-charging-station fa2x"></i> Current</button>
@@ -533,27 +533,27 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>The initial velocity is <strong><span id="map-2-initialVelocity"></span></strong></p>
-          <p>Yellow light phase is <strong><span id="map-2-ylPhase"></span></strong></p>
-          <p>The interphase is <strong><span id="map-2-rlPhase"></span></strong></p>
-          <p>The driver's reaction time is <strong><span id="map-2-rtRandom"></span></strong></p>
-          <p>The vehicle's tire conditions are described as <strong><span id="map-2-tireCondition"></span></strong></p>
-          <p>The weather conditions are described as <strong><span id="map-2-weatherCondition"></span></strong></p>
-          <p>The vehicle is <strong><span id="map-2-carLength"></span></strong> m long</p>
+          <p>The initial velocity is <strong><span id="TwoinitialVelocity"></span></strong></p>
+          <p>Yellow light phase is <strong><span id="TwoPhase"></span></strong></p>
+          <p>The interphase is <strong><span id="TworlPhase"></span></strong></p>
+          <p>The driver's reaction time is <strong><span id="TwortRandom"></span></strong></p>
+          <p>The vehicle's tire conditions are described as <strong><span id="TwotireCondition"></span></strong></p>
+          <p>The weather conditions are described as <strong><span id="TwoweatherCondition"></span></strong></p>
+          <p>The vehicle is <strong><span id="TwocarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
               <p>Choose one option</p>
-              <input class="form-check-input" type="radio" name="MapTwoZone" id="dzCheckedMapTwo" value="dzCheckedMapTwo" checked>
-              <label class="form-check-label" for="dzCheckedMapTwo">
+              <input class="form-check-input" type="radio" name="MapTwoZone" id="dzCheckedTwo" value="dzCheckedTwo" checked>
+              <label class="form-check-label" for="dzCheckedTwo">
                 Dilemma Zone present
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="MapTwoZone" id="ozCheckedMapTwo" value="ozCheckedMapTwo">
-              <label class="form-check-label" for="ozCheckedMapTwo">
+              <input class="form-check-input" type="radio" name="MapTwoZone" id="ozCheckedTwo" value="ozCheckedTwo">
+              <label class="form-check-label" for="ozCheckedTwo">
                 Option Zone present
               </label>
             </div><br>
@@ -563,9 +563,9 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="number" 
+              type="text" 
               onkeypress="return isNumberKey(event)" 
-              onkeyup="return truncateDecimals(this, 2)" 
+              
               id="userInputMapTwo" class="form-control" 
               min="0" 
               max="1000" 
@@ -578,12 +578,12 @@
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
           </form>
-          <div><span id="MapTwoResultOne"></span></div>
-          <div><span id="MapTwoResultTwo"></span></div>
-          <div><span id="MapTwoResultThree"></span></div>
+          <div><span id="TwoResultOne"></span></div>
+          <div><span id="TwoResultTwo"></span></div>
+          <div><span id="TwoResultThree"></span></div>
         </div> <!-- End of second modal-->
         <div class="modal-footer">
-          <input type="submit" id="map-2-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+          <input type="submit" id="Twosubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -601,27 +601,27 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>The initial velocity is <strong><span id="map-3-initialVelocity"></span></strong></p>
-          <p>Yellow light phase is <strong><span id="map-3-ylPhase"></span></strong></p>
-          <p>The interphase is <strong><span id="map-3-rlPhase"></span></strong></p>
-          <p>The driver's reaction time is <strong><span id="map-3-rtRandom"></span></strong></p>
-          <p>The vehicle's tire conditions are described as <strong><span id="map-3-tireCondition"></span></strong></p>
-          <p>The weather conditions are described as <strong><span id="map-3-weatherCondition"></span></strong></p>
-          <p>The vehicle is <strong><span id="map-3-carLength"></span></strong> m long</p>
+          <p>The initial velocity is <strong><span id="ThreeinitialVelocity"></span></strong></p>
+          <p>Yellow light phase is <strong><span id="ThreePhase"></span></strong></p>
+          <p>The interphase is <strong><span id="ThreerlPhase"></span></strong></p>
+          <p>The driver's reaction time is <strong><span id="ThreertRandom"></span></strong></p>
+          <p>The vehicle's tire conditions are described as <strong><span id="ThreetireCondition"></span></strong></p>
+          <p>The weather conditions are described as <strong><span id="ThreeweatherCondition"></span></strong></p>
+          <p>The vehicle is <strong><span id="ThreecarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
               <p>Choose one option</p>
-              <input class="form-check-input" type="radio" name="MapThreeZone" id="dzCheckedMapThree" value="dzCheckedMapThree" checked>
-              <label class="form-check-label" for="dzCheckedMapThree">
+              <input class="form-check-input" type="radio" name="MapThreeZone" id="dzCheckedThree" value="dzCheckedThree" checked>
+              <label class="form-check-label" for="dzCheckedThree">
                 Dilemma Zone present
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="MapThreeZone" id="ozCheckedMapThree" value="ozCheckedMapThree">
-              <label class="form-check-label" for="ozCheckedMapThree">
+              <input class="form-check-input" type="radio" name="MapThreeZone" id="ozCheckedThree" value="ozCheckedThree">
+              <label class="form-check-label" for="ozCheckedThree">
                 Option Zone present
               </label>
             </div><br>
@@ -631,9 +631,9 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="number" 
+              type="text" 
               onkeypress="return isNumberKey(event)" 
-              onkeyup="return truncateDecimals(this, 2)" 
+              
               id="userInputMapThree" class="form-control" 
               min="0" 
               max="1000" 
@@ -646,12 +646,12 @@
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
           </form>
-          <div><span id="MapThreeResultOne"></span></div>
-          <div><span id="MapThreeResultTwo"></span></div>
-          <div><span id="MapThreeResultThree"></span></div>
+          <div><span id="ThreeResultOne"></span></div>
+          <div><span id="ThreeResultTwo"></span></div>
+          <div><span id="ThreeResultThree"></span></div>
         </div><!-- End of Modal three-->
         <div class="modal-footer">
-          <input type="submit" id="map-3-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+          <input type="submit" id="Threesubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -669,27 +669,27 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>The initial velocity is <strong><span id="map-4-initialVelocity"></span></strong></p>
-          <p>Yellow light phase is <strong><span id="map-4-ylPhase"></span></strong></p>
-          <p>The interphase is <strong><span id="map-4-rlPhase"></span></strong></p>
-          <p>The driver's reaction time is <strong><span id="map-4-rtRandom"></span></strong></p>
-          <p>The vehicle's tire conditions are described as <strong><span id="map-4-tireCondition"></span></strong></p>
-          <p>The weather conditions are described as <strong><span id="map-4-weatherCondition"></span></strong></p>
-          <p>The vehicle is <strong><span id="map-4-carLength"></span></strong> m long</p>
+          <p>The initial velocity is <strong><span id="FourinitialVelocity"></span></strong></p>
+          <p>Yellow light phase is <strong><span id="FourPhase"></span></strong></p>
+          <p>The interphase is <strong><span id="FourrlPhase"></span></strong></p>
+          <p>The driver's reaction time is <strong><span id="FourrtRandom"></span></strong></p>
+          <p>The vehicle's tire conditions are described as <strong><span id="FourtireCondition"></span></strong></p>
+          <p>The weather conditions are described as <strong><span id="FourweatherCondition"></span></strong></p>
+          <p>The vehicle is <strong><span id="FourcarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
               <p>Choose one option</p>
-              <input class="form-check-input" type="radio" name="MapFourZone" id="dzCheckedMapFour" value="dzCheckedMapFour" checked>
-              <label class="form-check-label" for="dzCheckedMapFour">
+              <input class="form-check-input" type="radio" name="MapFourZone" id="dzCheckedFour" value="dzCheckedFour" checked>
+              <label class="form-check-label" for="dzCheckedFour">
                 Dilemma Zone present
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="MapFourZone" id="ozCheckedMapFour" value="ozCheckedMapFour">
-              <label class="form-check-label" for="ozCheckedMapFour">
+              <input class="form-check-input" type="radio" name="MapFourZone" id="ozCheckedFour" value="ozCheckedFour">
+              <label class="form-check-label" for="ozCheckedFour">
                 Option Zone present
               </label>
             </div><br>
@@ -699,9 +699,9 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="number" 
+              type="text" 
               onkeypress="return isNumberKey(event)" 
-              onkeyup="return truncateDecimals(this, 2)" 
+             
               id="userInputMapFour" class="form-control" 
               min="0" 
               max="1000" 
@@ -714,12 +714,12 @@
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
           </form>
-          <div><span id="MapFourResultOne"></span></div>
-          <div><span id="MapFourResultTwo"></span></div>
-          <div><span id="MapFourResultThree"></span></div>
+          <div><span id="FourResultOne"></span></div>
+          <div><span id="FourResultTwo"></span></div>
+          <div><span id="FourResultThree"></span></div>
         </div> <!-- End of modal Four-->
         <div class="modal-footer">
-          <input type="submit" id="map-4-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+          <input type="submit" id="Foursubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -737,27 +737,27 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>The initial velocity is <strong><span id="map-5-initialVelocity"></span></strong></p>
-          <p>Yellow light phase is <strong><span id="map-5-ylPhase"></span></strong></p>
-          <p>The interphase is <strong><span id="map-5-rlPhase"></span></strong></p>
-          <p>The driver's reaction time is <strong><span id="map-5-rtRandom"></span></strong></p>
-          <p>The vehicle's tire conditions are described as <strong><span id="map-5-tireCondition"></span></strong></p>
-          <p>The weather conditions are described as <strong><span id="map-5-weatherCondition"></span></strong></p>
-          <p>The vehicle is <strong><span id="map-5-carLength"></span></strong> m long</p>
+          <p>The initial velocity is <strong><span id="FiveinitialVelocity"></span></strong></p>
+          <p>Yellow light phase is <strong><span id="FivePhase"></span></strong></p>
+          <p>The interphase is <strong><span id="FiverlPhase"></span></strong></p>
+          <p>The driver's reaction time is <strong><span id="FivertRandom"></span></strong></p>
+          <p>The vehicle's tire conditions are described as <strong><span id="FivetireCondition"></span></strong></p>
+          <p>The weather conditions are described as <strong><span id="FiveweatherCondition"></span></strong></p>
+          <p>The vehicle is <strong><span id="FivecarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
             <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
               <p>Choose one option</p>
-              <input class="form-check-input" type="radio" name="MapFiveZone" id="dzCheckedMapFive" value="dzCheckedMapFive" checked>
-              <label class="form-check-label" for="dzCheckedMapFive">
+              <input class="form-check-input" type="radio" name="MapFiveZone" id="dzCheckedFive" value="dzCheckedFive" checked>
+              <label class="form-check-label" for="dzCheckedFive">
                 Dilemma Zone present
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="MapFiveZone" id="ozCheckedMapFive" value="ozCheckedMapFive">
-              <label class="form-check-label" for="ozCheckedMapFive">
+              <input class="form-check-input" type="radio" name="MapFiveZone" id="ozCheckedFive" value="ozCheckedFive">
+              <label class="form-check-label" for="ozCheckedFive">
                 Option Zone present
               </label>
             </div><br>
@@ -767,9 +767,9 @@
                 <span class="input-group-text">Your Calculation</span>
               </div>
               <input 
-              type="number" 
+              type="text" 
               onkeypress="return isNumberKey(event)" 
-              onkeyup="return truncateDecimals(this, 2)" 
+              
               id="userInputMapFive" 
               class="form-control" 
               min="0" 
@@ -782,12 +782,12 @@
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
           </form>
-          <div><span id="MapFiveResultOne"></span></div>
-          <div><span id="MapFiveResultTwo"></span></div>
-          <div><span id="MapFiveResultThree"></span></div>
+          <div><span id="FiveResultOne"></span></div>
+          <div><span id="FiveResultTwo"></span></div>
+          <div><span id="FiveResultThree"></span></div>
         </div> <!-- End of modal five-->
         <div class="modal-footer">
-          <input type="submit" id="map-5-submit" class="btn btn-success btn-submit" value="&#x2713; Submit">
+          <input type="submit" id="Fivesubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>

@@ -5,12 +5,16 @@ let validate = function(e) {
   e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
 }
 
-document.getElementById("One").addEventListener("click", mapVariables);
-document.getElementById("randomScenarioMapTwo").addEventListener("click", mapVariables);
-document.getElementById("randomScenarioMapThree").addEventListener("click", mapVariables);
-document.getElementById("randomScenarioMapFour").addEventListener("click", mapVariables);
-document.getElementById("randomScenarioMapFive").addEventListener("click", mapVariables);
+var mapNumber = "Two";
 
+
+document.getElementById("One").addEventListener("click", mapVariables);
+document.getElementById("Two").addEventListener("click", mapVariables);
+document.getElementById("Three").addEventListener("click", mapVariables);
+document.getElementById("Four").addEventListener("click", mapVariables);
+document.getElementById("Five").addEventListener("click", mapVariables);
+
+function mapVariables() {
 // Objects and constants identical for each map
   const conditions = {
     drygood: Math.random() * (0.9 - 0.8) + 0.8,
@@ -44,27 +48,37 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
     veryicybad: Math.random() * (0.11 - 0.105) + 0.105,
     severeicebad: Math.random() * (0.105 - 0.1) + 0.1,
   };
-
+  
   const tires = ["good", "average", "bad"];
   const tireCondition = Math.floor(Math.random() * tires.length);
   const keyCond = tires[tireCondition];
   console.log("Tire conditions", tireCondition, tires[tireCondition]);
-
+  
   let climate;
-  if (mapNumber = "One" || "Three" || "Four") { 
-    climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
+  if (mapNumber === "One" || mapNumber === "Three") { 
+    climate = ["dry", "dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else climate = ["dry", "light rain", "medium rain", "heavy rain"];
+  } else if (mapNumber === "Two") { 
+    climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
+  } else if (mapNumber === "Four") { 
+    climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
+    climateCondition = Math.floor(Math.random() * climate.length);
+    keyClim = climate[climateCondition];
+  } else if (mapNumber === "Four") { 
+    climate = ["dry", "light rain", "medium rain", "heavy rain"];
+    climateCondition = Math.floor(Math.random() * climate.length);
+    keyClim = climate[climateCondition];    
+  } else climate = false; 
     console.log("Climate conditions", climateCondition, climate[climateCondition]);
-
+    console.log("Map number?", mapNumber); //Delete this line when correct outcome established
   let carLength = Math.random() * (5.89 - 3.8) + 3.8;
   let reactionTime = Math.random() * (2.5 - 0.4) + 0.4;
 
   let velocity, yellowPhase, interPhase;
-  if (mapNumber = "One" || "Four" || "Five") {
+  if (mapNumber === "One" || "Four" || "Five") {
       velocity = Math.random() * (65 - 35) + 35;
       yellowPhase = Math.random() * (4.4 - 3.8) + 3.7;
       interPhase = Math.random() * (2.4 - 1.8) + 1.8;
@@ -72,8 +86,6 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
          yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;   
          interPhase = Math.random() * (3 - 2) + 2;
   
-  function mapVariables() {
-      
   // Onclick this will allow the current attribute to be enabled
   let currentScenario = document.getElementById(mapNumber + "current");
   currentScenario.removeAttribute("disabled");
@@ -89,11 +101,11 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
   document.getElementById(mapNumber + "carLength").innerHTML = carLength.toFixed(1);
 
   let intersection;
-  if (mapNumber = "One") { intersection = 52;}
-  else if (mapNumber = "Two") { intersection = 79.75;}
-  else if (mapNumber = "Three") { intersection = 66.18;}
-  else if (mapNumber = "Four") { intersection = 43.8;}
-  else intersection = 51.5;
+  if (mapNumber === "One") { intersection = 52;}
+  else if (mapNumber === "Two") { intersection = 79.75;}
+  else if (mapNumber === "Three") { intersection = 66.18;}
+  else if (mapNumber === "Four") { intersection = 43.8;}
+  else intersection === 51.5;
 
   document.getElementById(mapNumber + "submit").addEventListener("click", calculateScenario);
   function calculateScenario () {
@@ -133,10 +145,10 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
 
     // Check the type of zone the user has input
     let zone;
-    if (mapNumber = "One") { zone = document.querySelector('input[name="MapOneZone"]:checked').value;}
-    else if (mapNumber = "Two") { zone = document.querySelector('input[name="MapTwoZone"]:checked').value;}
-    else if (mapNumber = "Three") { zone = document.querySelector('input[name="MapThreeZone"]:checked').value;}
-    else if (mapNumber = "Four") { zone = document.querySelector('input[name="MapFourZone"]:checked').value;}
+    if (mapNumber === "One") { zone = document.querySelector('input[name="MapOneZone"]:checked').value;}
+    else if (mapNumber === "Two") { zone = document.querySelector('input[name="MapTwoZone"]:checked').value;}
+    else if (mapNumber === "Three") { zone = document.querySelector('input[name="MapThreeZone"]:checked').value;}
+    else if (mapNumber === "Four") { zone = document.querySelector('input[name="MapFourZone"]:checked').value;}
     else zone = document.querySelector('input[name="MapTwoZone"]:checked').value;
 
     let answer;
@@ -164,11 +176,11 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
     let absoluteValue2 = Math.abs(valueLowChecked);
     
     let userInput;
-    if (mapNumber = "One"){ userInput = document.getElementById("userInputMapOne").value;}
-    else if (mapNumber = "Two"){ userInput = document.getElementById("userInputMapTwo").value;}
-    else if (mapNumber = "Three"){ userInput = document.getElementById("userInputMapThree").value;}
-    else if (mapNumber = "Four"){ userInput = document.getElementById("userInputMapFour").value;}
-    else if (mapNumber = "five"){ userInput = document.getElementById("userInputMapFive").value;}
+    if (mapNumber === "One"){ userInput = document.getElementById("userInputMapOne").value;}
+    else if (mapNumber === "Two"){ userInput = document.getElementById("userInputMapTwo").value;}
+    else if (mapNumber === "Three"){ userInput = document.getElementById("userInputMapThree").value;}
+    else if (mapNumber === "Four"){ userInput = document.getElementById("userInputMapFour").value;}
+    else if (mapNumber === "five"){ userInput = document.getElementById("userInputMapFive").value;}
     else alert("You need to add the value you got for the calculation before submitting.");
         
     let userResult;
@@ -188,7 +200,7 @@ document.getElementById("randomScenarioMapFive").addEventListener("click", mapVa
       userResult = "Although your value of <b>" + userInput + " m</b> is close, the type of zone needs correction.";
     } else userResult = "Your value of <b>" + userInput + " m</b> fits well in this scenario.";
     console.log("User result", userResult);
-
+    console.log("Which map number is being looked at?", mapNumber);
     //Outputs generated for the user to check their work
     document.getElementById(mapNumber + "ResultOne").innerHTML = results;
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
