@@ -120,11 +120,13 @@
               type="text" 
               name="inputVelocity" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)" 
+              oninput="validate(this)"
+              onkeyup="checkvalid(this)" 
               id="initialVelocity" 
               class="reset_form" 
-              value="10" 
-              step="0.01" 
+              value="10"
+              autocomplete="off"
+              aria-label="input value for velocity" 
               required><br>
               <label for="units">Units</label><br>
               <select name="units" id="units" style="width:60px;">
@@ -157,13 +159,13 @@
               type="text" 
               name="inputYellowPhase" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)" 
+              oninput="validate(this)"
+              onkeyup="checkvalid(this)" 
               id="yellowPhase" 
               class="reset_form" 
-              value="4" 
-              step="0.01" 
-              min="1" 
-              max="8" 
+              value="4"
+              autocomplete="off"
+              aria-label="input value for the yellow phase" 
               required><br>
             </div>
           </div>
@@ -192,13 +194,13 @@
               type="text" 
               name="inputInterPhase" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"   
+              oninput="validate(this)"
+              onkeyup="checkvalid(this)"   
               id="interPhase" 
               class="reset_form" 
               value="2" 
-              step="0.01" 
-              min="1" 
-              max="4" 
+              autocomplete="off"
+              aria-label="input value for the interphase"
               required><br>
             </div>
           </div>
@@ -243,13 +245,13 @@
               type="text" 
               name="inputReactionTime" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"   
+              oninput="validate(this)"
+              onkeyup="checkvalid(this)"   
               id="reactionTime" 
               class="reset_form" 
-              value="1" 
-              step="0.001" 
-              min="0" 
-              max="3" 
+              value="1"
+              autocomplete="off"
+              aria-label="input value for reaction time" 
               required><br>
             </div>
           </div>
@@ -274,13 +276,13 @@
               <input 
               type="text" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"  
+              oninput="validate(this)"
+              onkeyup="checkvalidFriction(this)"  
               id="friction" 
               class="reset_form" 
-              value="0.8" 
-              step="0.01" 
-              min="0" 
-              max="1" 
+              value="0.8"
+              autocomplete="off"
+              aria-label="input value for coefficient of friction" 
               required><br>
             </div>
           </div>
@@ -301,11 +303,13 @@
               <input 
               type="text" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"   
+              oninput="validate(this)"
+              onkeyup="checkvalid(this)"   
               id="intersectionDistance" 
               class="reset_form" 
-              value="40" 
-              step="0.01" 
+              value="40"
+              autocomplete="off"
+              aria-label="input value for the intersection distance" 
               required><br>
               <label for="length-units">Units</label><br>
               <select name="units" id="length-units" style="width:60px;">
@@ -352,11 +356,13 @@
               <input 
               type="text" 
               onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"  
+              oninput="validate(this)"
+              onkeyup="checkvalid(this)"  
               id="length" 
               class="reset_form" 
               value="4.5" 
-              step="0.01" 
+              autocomplete="off"
+              aria-label="input value for length of vehicle"
               required><br>
             </div>
           </div>
@@ -367,7 +373,8 @@
 
       <div class="row">
         <div class="col-6 text-right title-div">
-          <input type="submit" 
+          <input type="submit"
+          id="submitCalculation" 
           class="btn btn-success btn-green form--button btn-lg btn--padding btn-rounded" 
           onclick="validateForm();convert();convertDistance();dilemmaZone()" 
           value="&#x2713; Calculate" />
@@ -492,7 +499,6 @@
 
   </footer>
   <!-- Footer -->
-
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

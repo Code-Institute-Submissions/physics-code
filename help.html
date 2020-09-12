@@ -128,8 +128,8 @@
         <div class="card shadow" id="card-help-text-yellow">
           <div class="card-body">
             <p>The yellow light phase (<sub>yp</sub>) is a predetermined length of time controlled at the intersection.</p>
-            <p>A usual time a light remains yellow can range from 3 to 5 seconds. For best results, 
-            it is ideal to know the length of time the traffic signal remains yellow.</p>
+            <p>A usual time a light remains yellow can range from 3 to 5 seconds. For best results,
+              it is ideal to know the length of time the traffic signal remains yellow.</p>
             <p>This value, in seconds, gives the variable <em>time</em> in our velocity equation. This is rearranged to solve for distance.</p>
             <p>The equation to use: \[dist_{yp} = { velocity \cdot time_{yp}}\]</p>
           </div>
@@ -206,12 +206,9 @@
               logical or plausible in a real world context as this would suggest a complete frictionless system. Conversely, the highest possible friction
               would be one. Again, this would not be plausible as movement would then become impossible. You can estimate μ by using real world data.
               Good road conditions and good tires on the vehicle could see a range for μ between 0.70 and 0.90. Icy conditions could see μ as low as 0.1. </p>
-              <p>For more data you can check our accepted values here:
-              <button type="button" 
-              class="btn btn-link" 
-              data-toggle="modal" 
-              data-target="#frictionHelp">
-              <i class="far fa-question-circle"></i></button>
+            <p>For more data you can check our accepted values here:
+              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#frictionHelp">
+                <i class="far fa-question-circle"></i></button>
               \[μ\]</p>
           </div>
         </div>
@@ -277,7 +274,7 @@
         <div class="container heading-background heading-padding heading-margin">
           <h2>Putting it all together</h2>
           <p class="card-text">
-            When you have all your variables you can put them into our 
+            When you have all your variables you can put them into our
             <a href="calculator.html" class="underline" target="_blank"> calculator</a> or work it out yourself with this equation.
           </p>
         </div>
@@ -304,8 +301,8 @@
           </div>
         </div>
       </div>
-<!-- Prevent overun for MathJax equation on small screens -->
- <div class="col-lg-8 content-div d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
+      <!-- Prevent overun for MathJax equation on small screens -->
+      <div class="col-lg-8 content-div d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="card shadow" id="card-help-text-final2">
           <div class="card-body">
             <p>The final equation requires all the inputs for each variable.
@@ -320,113 +317,113 @@
 
     </div>
   </section>
-<!-- Friction help modal -->
-<div class="modal fade" id="frictionHelp" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">coefficient of friction list</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <!-- Friction help modal -->
+  <div class="modal fade" id="frictionHelp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">coefficient of friction list</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Table 1: A list of common coefficient of friction numbers
+          <table class="table table-hover">
+            <thead class="thead--blue">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tire Conditions</th>
+                <th scope="col">Weather Conditions</th>
+                <th scope="col">μ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Good</td>
+                <td>Dry</td>
+                <td>0.8 - 0.9</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">2</th>
+                <td>Good</td>
+                <td>Wet</td>
+                <td>0.6 - 0.7</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Good</td>
+                <td>Snowy</td>
+                <td>0.4 - 0.5</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">4</th>
+                <td>Good</td>
+                <td>Icy</td>
+                <td>0.1 - 0.3</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Average</td>
+                <td>Dry</td>
+                <td>0.75 - 0.8</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">6</th>
+                <td>Average</td>
+                <td>Wet</td>
+                <td>0.5 - 0.6</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Average</td>
+                <td>Snowy</td>
+                <td>0.3 - 0.4</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">8</th>
+                <td>Average</td>
+                <td>Icy</td>
+                <td>0.1 - 0.2</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Bad</td>
+                <td>Dry</td>
+                <td>0.7 - 0.75</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">10</th>
+                <td>Bad</td>
+                <td>Wet</td>
+                <td>0.4 - 0.5</td>
+              </tr>
+              <tr>
+                <th scope="row">11</th>
+                <td>Bad</td>
+                <td>Snowy</td>
+                <td>0.2 - 0.3</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">12</th>
+                <td>Bad</td>
+                <td>Icy</td>
+                <td>0.1</td>
+              </tr>
+            </tbody>
+          </table>
+          <small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator.
+            This is because the calculation includes some randomness to account for realistic scenarios.</small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
+        </div>
       </div>
-      <div class="modal-body">
-       Table 1: A list of common coefficient of friction numbers
-       <table class="table table-hover">
-  <thead class="thead--blue">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Tire Conditions</th>
-      <th scope="col">Weather Conditions</th>
-      <th scope="col">μ</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Good</td>
-      <td>Dry</td>
-      <td>0.8 - 0.9</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">2</th>
-      <td>Good</td>
-      <td>Wet</td>
-      <td>0.6 - 0.7</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Good</td>
-      <td>Snowy</td>
-      <td>0.4 - 0.5</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">4</th>
-      <td>Good</td>
-      <td>Icy</td>
-      <td>0.1 - 0.3</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Average</td>
-      <td>Dry</td>
-      <td>0.75 - 0.8</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">6</th>
-      <td>Average</td>
-      <td>Wet</td>
-      <td>0.5 - 0.6</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>Average</td>
-      <td>Snowy</td>
-      <td>0.3 - 0.4</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">8</th>
-      <td>Average</td>
-      <td>Icy</td>
-      <td>0.1 - 0.2</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>Bad</td>
-      <td>Dry</td>
-      <td>0.7 - 0.75</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">10</th>
-      <td>Bad</td>
-      <td>Wet</td>
-      <td>0.4 - 0.5</td>
-    </tr>
-    <tr>
-      <th scope="row">11</th>
-      <td>Bad</td>
-      <td>Snowy</td>
-      <td>0.2 - 0.3</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">12</th>
-      <td>Bad</td>
-      <td>Icy</td>
-      <td>0.1</td>
-    </tr>
-  </tbody>
-</table>
-<small>Some estimation is required for the calculation of μ which may lead to slightly altered results comparing to our calculator. 
-This is because the calculation includes some randomness to account for realistic scenarios.</small>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
-    </div>
     </div>
   </div>
-</div>
 
-<div class="mb-1"></div>
+  <div class="mb-1"></div>
   <!-- Footer -->
   <footer class="page-footer font-small darken-3">
 
@@ -486,7 +483,6 @@ This is because the calculation includes some randomness to account for realisti
 
   </footer>
   <!-- Footer -->
-
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

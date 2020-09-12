@@ -4,6 +4,18 @@ let validate = function(e) {
   e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 4)) : t;
 }
 
+function checkvalid(el) {
+  if (el.value.length === 0 || el.value.length > 5)
+    document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
+  else document.getElementById("submitCalculation").removeAttribute('disabled');
+}
+
+function checkvalidFriction(el) {
+  if (el.value.length === 0 || el.value > 1)
+    document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
+  else document.getElementById("submitCalculation").removeAttribute('disabled');
+}
+
 // Limit coefficient of friction to a max of 1 and a minimum of zero
 // Blank inputs not allowed
 function validateForm() {
