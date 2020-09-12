@@ -5,7 +5,8 @@ let validate = function(e) {
 }
 
 function checkvalid(el) {
-  if (el.value.length === 0 || el.value.length > 5)
+    let validInputFriction = document.getElementById("friction").value;
+  if (el.value.length === 0 || el.value.length > 5 || validInputFriction > 1 )
     document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
     else document.getElementById("submitCalculation").removeAttribute('disabled');
 }
