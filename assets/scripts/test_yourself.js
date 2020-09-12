@@ -16,6 +16,13 @@ function processClick() {
   window.mapNumber = this.id; // the id of the clicked button
 }
 
+function checkvalid(el) {
+if(el.value.length===0 || el.value.length>5)
+document.getElementById(mapNumber + "Submit").setAttribute("disabled","disabled"); 
+else
+document.getElementById(mapNumber + "Submit").removeAttribute('disabled'); 
+}
+
 document.getElementById("mapOne").addEventListener("click", mapVariables);
 document.getElementById("mapTwo").addEventListener("click", mapVariables);
 document.getElementById("mapThree").addEventListener("click", mapVariables);
@@ -116,7 +123,7 @@ function mapVariables() {
   } else if (mapNumber === "mapFive") {
     intersection = 51.5;
   } else false;
- 
+
   document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
   function calculateScenario() {
