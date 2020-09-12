@@ -1,8 +1,8 @@
 // Turn the traffic light green when "start" button clicked and remove the start button
 function makeGreen() {
   // Choose a random number for the top and left margins to locate the brake button
-  let margin_top = Math.floor(Math.random() * 31) + 10;
-  let margin_left = Math.floor(Math.random() * 81) + 20;
+  let margin_top = Math.floor(Math.random() * 10) + 10;
+  let margin_left = Math.floor(Math.random() * 71) + 20;
   // Choose whether that number is either positive or negative for the margins
   margin_top *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
   margin_left *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
