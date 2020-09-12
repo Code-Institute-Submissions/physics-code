@@ -16,11 +16,11 @@ function processClick() {
   window.mapNumber = this.id; // the id of the clicked button
 }
 
-document.getElementById("One").addEventListener("click", mapVariables);
-document.getElementById("Two").addEventListener("click", mapVariables);
-document.getElementById("Three").addEventListener("click", mapVariables);
-document.getElementById("Four").addEventListener("click", mapVariables);
-document.getElementById("Five").addEventListener("click", mapVariables);
+document.getElementById("mapOne").addEventListener("click", mapVariables);
+document.getElementById("mapTwo").addEventListener("click", mapVariables);
+document.getElementById("mapThree").addEventListener("click", mapVariables);
+document.getElementById("mapFour").addEventListener("click", mapVariables);
+document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
   // Onclick this will allow the current attribute to be enabled
@@ -65,19 +65,19 @@ function mapVariables() {
   const keyCond = tires[tireCondition];
 
   let climate;
-  if (mapNumber === "One" || mapNumber === "Three") {
+  if (mapNumber === "mapOne" || mapNumber === "mapThree") {
     climate = ["dry", "dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Two") {
+  } else if (mapNumber === "mapTwo") {
     climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Four") {
+  } else if (mapNumber === "mapFour") {
     climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
-  } else if (mapNumber === "Five") {
+  } else if (mapNumber === "mapFive") {
     climate = ["dry", "light rain", "medium rain", "heavy rain"];
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
@@ -87,7 +87,7 @@ function mapVariables() {
   let reactionTime = Math.random() * (2.5 - 0.4) + 0.4;
 
   let velocity, yellowPhase, interPhase;
-  if (mapNumber === "One" || mapNumber === "Four" || mapNumber === "Five") {
+  if (mapNumber === "mapOne" || mapNumber === "mapFour" || mapNumber === "mapFive") {
     velocity = Math.random() * (65 - 35) + 35;
     yellowPhase = Math.random() * (4.4 - 3.8) + 3.7;
     interPhase = Math.random() * (2.4 - 1.8) + 1.8;
@@ -96,28 +96,28 @@ function mapVariables() {
   interPhase = Math.random() * (3 - 2) + 2;
 
   // Onclick get the mapNumber and add it to the variable.
-  document.getElementById(mapNumber + "initialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
+  document.getElementById(mapNumber + "InitialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById(mapNumber + "Phase").innerHTML = yellowPhase.toFixed(1) + " s";
-  document.getElementById(mapNumber + "rlPhase").innerHTML = interPhase.toFixed(1) + " s";
-  document.getElementById(mapNumber + "rtRandom").innerHTML = reactionTime.toFixed(3) + " s";
-  document.getElementById(mapNumber + "tireCondition").innerHTML = tires[tireCondition];
-  document.getElementById(mapNumber + "weatherCondition").innerHTML = climate[climateCondition];
-  document.getElementById(mapNumber + "carLength").innerHTML = carLength.toFixed(1);
+  document.getElementById(mapNumber + "RlPhase").innerHTML = interPhase.toFixed(1) + " s";
+  document.getElementById(mapNumber + "RtRandom").innerHTML = reactionTime.toFixed(3) + " s";
+  document.getElementById(mapNumber + "TireCondition").innerHTML = tires[tireCondition];
+  document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
+  document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
 
   let intersection;
-  if (mapNumber === "One") {
+  if (mapNumber === "mapOne") {
     intersection = 52;
-  } else if (mapNumber === "Two") {
+  } else if (mapNumber === "mapTwo") {
     intersection = 79.75;
-  } else if (mapNumber === "Three") {
+  } else if (mapNumber === "mapThree") {
     intersection = 66.18;
-  } else if (mapNumber === "Four") {
+  } else if (mapNumber === "mapFour") {
     intersection = 43.8;
-  } else if (mapNumber === "Five") {
+  } else if (mapNumber === "mapFive") {
     intersection = 51.5;
   } else false;
  
-  document.getElementById(mapNumber + "submit").addEventListener("click", calculateScenario);
+  document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
   function calculateScenario() {
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
@@ -150,22 +150,22 @@ function mapVariables() {
     
     // Check the type of zone the user has input
     let zone;
-    if (mapNumber === "One") {
-      zone = document.querySelector('input[name="MapOneZone"]:checked').value;
-    } else if (mapNumber === "Two") {
-      zone = document.querySelector('input[name="MapTwoZone"]:checked').value;
-    } else if (mapNumber === "Three") {
-      zone = document.querySelector('input[name="MapThreeZone"]:checked').value;
-    } else if (mapNumber === "Four") {
-      zone = document.querySelector('input[name="MapFourZone"]:checked').value;
-    } else if (mapNumber === "Five") {
-      zone = document.querySelector('input[name="MapFiveZone"]:checked').value;
+    if (mapNumber === "mapOne") {
+      zone = document.querySelector('input[name="mapOneZone"]:checked').value;
+    } else if (mapNumber === "mapTwo") {
+      zone = document.querySelector('input[name="mapTwoZone"]:checked').value;
+    } else if (mapNumber === "mapThree") {
+      zone = document.querySelector('input[name="mapThreeZone"]:checked').value;
+    } else if (mapNumber === "mapFour") {
+      zone = document.querySelector('input[name="mapFourZone"]:checked').value;
+    } else if (mapNumber === "mapFive") {
+      zone = document.querySelector('input[name="mapFiveZone"]:checked').value;
     } else false;
 
     let answer;
-    if (zone === "ozChecked" + mapNumber) {
+    if (zone === mapNumber + "OzChecked") {
       answer = "Option Zone";
-    } else if (zone === "dzChecked" + mapNumber) {
+    } else if (zone === mapNumber + "DzChecked") {
       answer = "Dilemma Zone";
     } else answer = false;
     
@@ -184,16 +184,16 @@ function mapVariables() {
     let absoluteValue2 = Math.abs(valueLowChecked);
 
     let userInput;
-    if (mapNumber === "One") {
-      userInput = document.getElementById("userInputMapOne").value;
-    } else if (mapNumber === "Two") {
-      userInput = document.getElementById("userInputMapTwo").value;
-    } else if (mapNumber === "Three") {
-      userInput = document.getElementById("userInputMapThree").value;
-    } else if (mapNumber === "Four") {
-      userInput = document.getElementById("userInputMapFour").value;
-    } else if (mapNumber === "Five") {
-      userInput = document.getElementById("userInputMapFive").value;
+    if (mapNumber === "mapOne") {
+      userInput = document.getElementById("mapOneUserInput").value;
+    } else if (mapNumber === "mapTwo") {
+      userInput = document.getElementById("mapTwoUserInput").value;
+    } else if (mapNumber === "mapThree") {
+      userInput = document.getElementById("mapThreeUserInput").value;
+    } else if (mapNumber === "mapFour") {
+      userInput = document.getElementById("mapFourUserInput").value;
+    } else if (mapNumber === "mapFive") {
+      userInput = document.getElementById("mapFiveUserInput").value;
     } else alert("You need to add the value you got for the calculation before submitting.");
 
     let userResult;
