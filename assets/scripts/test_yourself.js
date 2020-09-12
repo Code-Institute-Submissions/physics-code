@@ -10,7 +10,7 @@ mybuttons.forEach(mybutton => {
   mybutton.addEventListener('click', processClick);
 });
 function processClick() {
-  window.mapNumber = this.id.replace("Current",""); // gets the id of the clicked button but without the word current
+  window.mapNumber = this.id;
 }
 // Doesn't allow empty input box to submit 
 function checkvalid(el) {
@@ -26,9 +26,6 @@ document.getElementById("mapFour").addEventListener("click", mapVariables);
 document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
-  // Onclick this will allow the Current button to be enabled
-  let span_click = document.getElementById(mapNumber + "Current");
-  span_click.classList.remove("no-click-span");
   // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");

@@ -226,9 +226,9 @@
             <p>Measure the intersection length from the south east and continuing north west on Leningradsky Ave over Tverskaya Zastava Square.</p>
             <div class="container" id="map_one"></div>
             <div class="text-center mybuttons">
-              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapOne" data-toggle="modal" data-target="#map-1-scene-1">
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapOne" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#mapOneModal">
                 <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <button class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="mapOneCurrent" data-toggle="modal" data-target="#map-1-scene-1"><i class="fas fa-charging-station fa2x"></i> Current</button>
+              
             </div>
           </div>
         </div>
@@ -265,9 +265,9 @@
             <p>Measure the intersection length heading from the south west continuing north east on Sunnyholt Road over the M7.</p>
             <div class="container" id="map_two"></div>
             <div class="text-center mybuttons">
-              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapTwo" data-toggle="modal" data-target="#map-2-scene-1">
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapTwo" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#mapTwoModal">
                 <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <button class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="mapTwoCurrent" data-toggle="modal" data-target="#map-2-scene-1"><i class="fas fa-charging-station fa2x"></i> Current</button>
+              
             </div>
           </div>
         </div>
@@ -304,10 +304,9 @@
             <p>Measure the intersection length heading from the south west continuing north east on Lexington Drive over the Harry Byrd Highway.</p>
             <div class="container" id="map_three"></div>
             <div class="text-center mybuttons">
-              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapThree" data-toggle="modal" data-target="#map-3-scene-1">
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapThree" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#mapThreeModal">
                 <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <button class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="mapThreeCurrent" data-toggle="modal" data-target="#map-3-scene-1"><i class="fas fa-charging-station fa2x"></i> Current</button>
-            </div>
+                 </div>
           </div>
         </div>
       </div>
@@ -343,9 +342,9 @@
             <p>Measure the intersection length heading from the east continuing west on Sigmundstraße over Leyher Street.</p>
             <div class="container" id="map_four"></div>
             <div class="text-center mybuttons">
-              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapFour" data-toggle="modal" data-target="#map-4-scene-1">
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapFour" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#mapFourModal">
                 <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <button class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="mapFourCurrent" data-toggle="modal" data-target="#map-4-scene-1"><i class="fas fa-charging-station fa2x"></i> Current</button>
+              
             </div>
           </div>
         </div>
@@ -382,9 +381,9 @@
             <p>Measure the intersection length heading from the south continuing north on Constitutio Hill.</p>
             <div class="container" id="map_five"></div>
             <div class="text-center mybuttons">
-              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapFive" data-toggle="modal" data-target="#map-5-scene-1">
+              <button class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" id="mapFive" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#mapFiveModal">
                 <i class="fas fa-car-battery fa2x"></i> Scene</button>
-              <button class="btn btn-danger btn-lgt-red form--button mt-2 mb-1 btn-rounded no-click-span" id="mapFiveCurrent" data-toggle="modal" data-target="#map-5-scene-1"><i class="fas fa-charging-station fa2x"></i> Current</button>
+              
             </div>
           </div>
         </div>
@@ -396,7 +395,7 @@
   <!-- Modals for Scenarios -->
   <!-- Map One-->
 
-  <div class="modal fade" id="map-1-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="mapOneModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -413,8 +412,7 @@
           <p>The vehicle's tire conditions are described as <strong><span id="mapOneTireCondition"></span></strong></p>
           <p>The weather conditions are described as <strong><span id="mapOneWeatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="mapOneCarLength"></span></strong> m long</p>
-          <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
-            <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+          <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
@@ -455,7 +453,7 @@
   </div>
 
   <!-- Map two-->
-  <div class="modal fade" id="map-2-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="mapTwoModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -473,7 +471,7 @@
           <p>The weather conditions are described as <strong><span id="mapTwoWeatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="mapTwoCarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
-            <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+            <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
@@ -514,7 +512,7 @@
   </div>
 
   <!-- Map three -->
-  <div class="modal fade" id="map-3-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="mapThreeModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -532,7 +530,7 @@
           <p>The weather conditions are described as <strong><span id="mapThreeWeatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="mapThreeCarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
-            <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+            <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
@@ -573,7 +571,7 @@
   </div>
 
   <!-- Map four -->
-  <div class="modal fade" id="map-4-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="mapFourModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -591,7 +589,7 @@
           <p>The weather conditions are described as <strong><span id="mapFourWeatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="mapFourCarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
-            <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+           <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">
@@ -632,7 +630,7 @@
   </div>
 
   <!-- Map five -->
-  <div class="modal fade" id="map-5-scene-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="mapFiveModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -650,7 +648,7 @@
           <p>The weather conditions are described as <strong><span id="mapFiveWeatherCondition"></span></strong></p>
           <p>The vehicle is <strong><span id="mapFiveCarLength"></span></strong> m long</p>
           <p>You can close this pop-up at any time, if you want to get this scenario's data back, click the <i class="fas fa-charging-station fa2x"></i>
-            <em> Current</em> button. Or, if you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
+            <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <form>
             <div class="form-check">

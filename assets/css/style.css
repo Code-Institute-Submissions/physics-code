@@ -245,6 +245,11 @@ input[type=number] {
 }
 
 /* Reaction Time Game */
+.game-card {
+    width: auto;
+    height: 375px;
+}
+
 .icon_hide_greenLight {
   display: none;
 }
