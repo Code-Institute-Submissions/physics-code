@@ -13,7 +13,7 @@ mybuttons.forEach(mybutton => {
 });
 
 function processClick() {
-  window.mapNumber = this.id; // the id of the clicked button
+  window.mapNumber = this.id.replace("Current",""); // the id of the clicked button
 }
 
 function checkvalid(el) {
@@ -32,7 +32,13 @@ document.getElementById("mapFive").addEventListener("click", mapVariables);
 function mapVariables() {
   // Onclick this will allow the current attribute to be enabled
   let span_click = document.getElementById(mapNumber + "Current");
-  span_click.classList.remove("no-click-span");
+  span_click.classList.remove("no-click-span");  
+  let displayResultOne = document.getElementById(mapNumber + "ResultOne");
+  let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
+  let displayResultThree = document.getElementById(mapNumber + "ResultThree");
+  displayResultOne.classList.add("d-none");
+  displayResultTwo.classList.add("d-none");
+  displayResultThree.classList.add("d-none");
   // Objects and constants identical for each map
   const conditions = {
     drygood: Math.random() * (0.9 - 0.8) + 0.8,
@@ -127,6 +133,12 @@ function mapVariables() {
   document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
   function calculateScenario() {
+  let showResultOne = document.getElementById(mapNumber + "ResultOne");
+  let showResultTwo = document.getElementById(mapNumber + "ResultTwo");
+  let showResultThree = document.getElementById(mapNumber + "ResultThree");
+  showResultOne.classList.remove("d-none");
+  showResultTwo.classList.remove("d-none");
+  showResultThree.classList.remove("d-none");  
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
     let initialVelocity = velocity / 3.6;
     let coefficient = conditions[keyClim.replace(/\s+/g, "") + keyCond];
