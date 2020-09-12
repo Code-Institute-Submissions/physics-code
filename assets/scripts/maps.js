@@ -121,34 +121,34 @@ function initMap() {
   });
   // Allow users to click on the map to open in a new window
   google.maps.event.addListener(map, "click", function() {
-    window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3");
   });
   google.maps.event.addListener(map2, "click", function() {
-    window.open("https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3");
   });
   google.maps.event.addListener(map3, "click", function() {
-    window.open("https://www.google.com/maps/@39.0605322,-77.4594559,79m/data=!3m1!1e3")
-  });
+    window.open("https://www.google.com/maps/@39.0605322,-77.4594559,79m/data=!3m1!1e3");
+});
   google.maps.event.addListener(map4, "click", function() {
-    window.open("https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3");
   });
   google.maps.event.addListener(map5, "click", function() {
-    window.open("https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3");
   });
   // Allow users to click on the marker to open in a new window
   google.maps.event.addListener(marker, "click", function() {
-    window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3");
   });
   google.maps.event.addListener(marker2, "click", function() {
-    window.open("https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3");
   });
   google.maps.event.addListener(marker3, "click", function() {
-    window.open("https://www.google.com/maps/@39.0605322,-77.4594559,79m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@39.0605322,-77.4594559,79m/data=!3m1!1e3");
   });
   google.maps.event.addListener(marker4, "click", function() {
-    window.open("https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3");
   });
   google.maps.event.addListener(marker5, "click", function() {
-    window.open("https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3")
+    window.open("https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3");
   });
 }

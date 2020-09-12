@@ -7,13 +7,16 @@ let validate = function(e) {
 function checkvalid(el) {
   if (el.value.length === 0 || el.value.length > 5)
     document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
-  else document.getElementById("submitCalculation").removeAttribute('disabled');
+    else document.getElementById("submitCalculation").removeAttribute('disabled');
 }
 
 function checkvalidFriction(el) {
-  if (el.value.length === 0 || el.value > 1)
+  if (el.value > 1 || el.value.length === 0 || el.value.length > 5) {
     document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
-  else document.getElementById("submitCalculation").removeAttribute('disabled');
+    alert("Coeffection of friction is between 0 and 1");}
+  if (el.value > 1) {
+      document.getElementById("friction").classList.add("warning_box");
+  } else document.getElementById("submitCalculation").removeAttribute('disabled');
 }
 
 // Limit coefficient of friction to a max of 1 and a minimum of zero
@@ -32,6 +35,7 @@ function validateForm() {
     inputInterPhase1 === "" ||
     inputReactionTime1 === "" ||
     inputCoefficient1 === "" ||
+    inputCoefficient1 > 1 ||
     inputIntersection1 === "" ||
     inputLength1 === ""
   ) {
