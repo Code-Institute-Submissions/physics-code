@@ -1,28 +1,24 @@
-/* refactored */
 // Allow up to two decimal places only in all inputs
 let validate = function(e) {
   let t = e.value;
   e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
 }
-
+// set the global variable for mapNumber
 var mapNumber;
-
 const mybuttons = document.querySelectorAll('.mybuttons button');
 mybuttons.forEach(mybutton => {
   mybutton.addEventListener('click', processClick);
 });
-
 function processClick() {
-  window.mapNumber = this.id.replace("Current",""); // the id of the clicked button
+  window.mapNumber = this.id.replace("Current",""); // gets the id of the clicked button but without the word current
 }
-
+// Doesn't allow empty input box to submit 
 function checkvalid(el) {
 if(el.value.length===0 || el.value.length>5)
 document.getElementById(mapNumber + "Submit").setAttribute("disabled","disabled"); 
-else
-document.getElementById(mapNumber + "Submit").removeAttribute('disabled'); 
+else document.getElementById(mapNumber + "Submit").removeAttribute('disabled'); 
 }
-
+// User chosen map with appropriate variables dependent on the map
 document.getElementById("mapOne").addEventListener("click", mapVariables);
 document.getElementById("mapTwo").addEventListener("click", mapVariables);
 document.getElementById("mapThree").addEventListener("click", mapVariables);
@@ -30,16 +26,17 @@ document.getElementById("mapFour").addEventListener("click", mapVariables);
 document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
-  // Onclick this will allow the current attribute to be enabled
+  // Onclick this will allow the Current button to be enabled
   let span_click = document.getElementById(mapNumber + "Current");
-  span_click.classList.remove("no-click-span");  
+  span_click.classList.remove("no-click-span");
+  // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
   let displayResultThree = document.getElementById(mapNumber + "ResultThree");
   displayResultOne.classList.add("d-none");
   displayResultTwo.classList.add("d-none");
   displayResultThree.classList.add("d-none");
-  // Objects and constants identical for each map
+  // Objects and constants for each map
   const conditions = {
     drygood: Math.random() * (0.9 - 0.8) + 0.8,
     dryaverage: Math.random() * (0.8 - 0.75) + 0.75,
@@ -108,7 +105,7 @@ function mapVariables() {
   yellowPhase = Math.random() * (5.0 - 4.0) + 4.0;
   interPhase = Math.random() * (3 - 2) + 2;
 
-  // Onclick get the mapNumber and add it to the variable.
+  // Onclick get the mapNumber and add it to the variable for display
   document.getElementById(mapNumber + "InitialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
   document.getElementById(mapNumber + "Phase").innerHTML = yellowPhase.toFixed(1) + " s";
   document.getElementById(mapNumber + "RlPhase").innerHTML = interPhase.toFixed(1) + " s";
@@ -116,7 +113,7 @@ function mapVariables() {
   document.getElementById(mapNumber + "TireCondition").innerHTML = tires[tireCondition];
   document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
   document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
-
+  // pre-measured intersection sizes 
   let intersection;
   if (mapNumber === "mapOne") {
     intersection = 52;
@@ -129,7 +126,7 @@ function mapVariables() {
   } else if (mapNumber === "mapFive") {
     intersection = 51.5;
   } else false;
-
+  // Calculate the outcome based on the data and match this to user input
   document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
   function calculateScenario() {
