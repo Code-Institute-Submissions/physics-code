@@ -16,7 +16,6 @@ document.getElementById("mapFour").addEventListener("click", mapVariables);
 document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
-    // prevent input of letters or invalid numbers
   document.getElementById(mapNumber + "UserInput").addEventListener("submit", function(event) {
    if (!document.querySelector('input[type="number"]').validity.valid) {
         event.preventDefault();
@@ -121,6 +120,22 @@ function mapVariables() {
   } else if (mapNumber === "mapFive") {
     intersection = 51.5;
   } else false;
+
+let elem = document.getElementById(mapNumber + "UserInput");
+
+elem.addEventListener("change", () => {
+  let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
+  let submitBtn = document.getElementById(mapNumber + "Submit");
+
+  if (theStyle === "rgb(234, 198, 198)") {
+    submitBtn.disabled = true;
+  } else if (theStyle === "rgb(251, 250, 245)") {
+    submitBtn.disabled = false;
+  }
+console.log(theStyle);
+});
+
+
   // Calculate the outcome based on the data and match this to user input
   document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
@@ -229,5 +244,5 @@ function mapVariables() {
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
   }
-  // Prevent invalid keypushes
 }
+
