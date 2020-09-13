@@ -5,18 +5,19 @@ let validate = function(e) {
 }
 
 function checkvalid(el) {
-    let validInputFriction = document.getElementById("friction").value;
-  if (el.value.length === 0 || el.value.length > 5 || validInputFriction > 1 )
+  let validInputFriction = document.getElementById("friction").value;
+  if (el.value.length === 0 || el.value.length > 5 || validInputFriction > 1)
     document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
-    else document.getElementById("submitCalculation").removeAttribute('disabled');
+  else document.getElementById("submitCalculation").removeAttribute('disabled');
 }
 
 function checkvalidFriction(el) {
   if (el.value > 1 || el.value.length === 0 || el.value.length > 5) {
     document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
-    alert("Coeffection of friction is between 0 and 1");}
+    alert("Coeffection of friction is between 0 and 1");
+  }
   if (el.value > 1) {
-      document.getElementById("friction").classList.add("warning_box");
+    document.getElementById("friction").classList.add("warning_box");
   } else document.getElementById("submitCalculation").removeAttribute('disabled');
 }
 
