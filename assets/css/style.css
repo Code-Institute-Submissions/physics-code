@@ -79,11 +79,11 @@ input[type="number"]:valid {
     background-color: #fbfaf5;
 }
 input[type="number"]:invalid {
-    background-color: #EAC6C6;
+    background-color: #eac6c6;
 }
 input[type="number"]:invalid + div {
     display: block;
-    color: #C66464; 
+    color: #c66464; 
 }
 
 /* navbar */

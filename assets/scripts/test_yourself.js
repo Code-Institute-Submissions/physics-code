@@ -22,7 +22,8 @@ function mapVariables() {
         event.preventDefault();
         alert("Invalid input, you can't submit just yet.");
    }
-});  
+});
+
   // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
