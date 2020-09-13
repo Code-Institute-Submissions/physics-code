@@ -477,11 +477,13 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="text" 
-              onkeyup="checkvalid(this)" 
-              oninput="validate(this)" 
+              type="number" 
               id="mapOneUserInput" 
               class="form-control" 
+              autocomplete="off"
+              min="0"
+              max="99999"
+              step="0.01"
               aria-label="input value for your zone" 
               placeholder="e.g 12.34">
               <div class="input-group-append">
@@ -495,7 +497,7 @@
           <div><span id="mapOneResultThree"></span></div>
         </div> <!-- End of the first modal-->
         <div class="modal-footer">
-          <input type="submit" id="mapOneSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit" disabled>
+          <input type="submit" id="mapOneSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -552,11 +554,13 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="text" 
-              onkeyup="checkvalid(this)" 
-              oninput="validate(this)" 
+              type="number" 
               id="mapTwoUserInput" 
-              class="form-control" 
+              class="form-control"
+              autocomplete="off"
+              min="0"
+              max="99999"
+              step="0.01" 
               aria-label="input value for your zone"
               placeholder="e.g 12.34">
               <div class="input-group-append">
@@ -570,7 +574,7 @@
           <div><span id="mapTwoResultThree"></span></div>
         </div> <!-- End of second modal-->
         <div class="modal-footer">
-          <input type="submit" id="mapTwoSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit" disabled>
+          <input type="submit" id="mapTwoSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -627,11 +631,13 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="text" 
-              onkeyup="checkvalid(this)" 
-              oninput="validate(this)" 
+              type="number" 
               id="mapThreeUserInput" 
-              class="form-control" 
+              class="form-control"
+              autocomplete="off"
+              min="0"
+              max="99999"
+              step="0.01" 
               aria-label="input value for your zone"
               placeholder="e.g 12.34">
               <div class="input-group-append">
@@ -645,7 +651,7 @@
           <div><span id="mapThreeResultThree"></span></div>
         </div><!-- End of Modal three-->
         <div class="modal-footer">
-          <input type="submit" id="mapThreeSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit" disabled>
+          <input type="submit" id="mapThreeSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -702,12 +708,13 @@
                 <span class="input-group-text">Your calculation</span>
               </div>
               <input 
-              type="text" 
-              onkeyup="checkvalid(this)" 
-              oninput="validate(this)" 
+              type="number" 
               id="mapFourUserInput"
-              autocomplete="off" 
-              class="form-control" 
+              class="form-control"
+              autocomplete="off"
+              min="0"
+              max="99999"
+              step="0.01" 
               aria-label="input value for your zone"
               placeholder="e.g 12.34">
               <div class="input-group-append">
@@ -721,7 +728,7 @@
           <div><span id="mapFourResultThree"></span></div>
         </div> <!-- End of modal Four-->
         <div class="modal-footer">
-          <input type="submit" id="mapFourSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit" disabled>
+          <input type="submit" id="mapFourSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -778,15 +785,17 @@
                 <span class="input-group-text">Your Calculation</span>
               </div>
               <input 
-              type="text" 
-              onkeyup="checkvalid(this)" 
-              oninput="validate(this)" 
+              type="number" 
               id="mapFiveUserInput" 
-              class="form-control" 
+              class="form-control"
+              autocomplete="off"
+              min="0"
+              max="99999"
+              step="0.01" 
               aria-label="input value for your zone" 
               placeholder="e.g 12.34">
               <div class="input-group-append">
-                <input type="reset" class="btn btn-danger" aria-label="reset your value">
+                <button type="submit" class="btn btn-danger" aria-label="reset your value">Reset5</button>
               </div>
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
@@ -796,7 +805,7 @@
           <div><span id="mapFiveResultThree"></span></div>
         </div> <!-- End of modal five-->
         <div class="modal-footer">
-          <input type="submit" id="mapFiveSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit" disabled>
+          <input type="submit" id="mapFiveSubmit" class="btn btn-success btn-submit" value="&#x2713; Submit">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>

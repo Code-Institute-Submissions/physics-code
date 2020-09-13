@@ -1,38 +1,13 @@
-// Prevent invalid keypushes
-document.getElementById("mapOneUserInput").addEventListener("keydown", isNumberKey);
-document.getElementById("mapTwoUserInput").addEventListener("keydown", isNumberKey); 
-document.getElementById("mapThreeUserInput").addEventListener("keydown", isNumberKey); 
-document.getElementById("mapFourUserInput").addEventListener("keydown", isNumberKey); 
-document.getElementById("mapFiveUserInput").addEventListener("keydown", isNumberKey);   
-function isNumberKey(evt) {
-  let charCode = (evt.which) ? evt.which : evt.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
-    evt.preventDefault();
-    return false;
-  }
-  return true;
-}
-
-// Allow up to two decimal places only in all inputs
-let validate = function(e) {
-  let t = e.value;
-  e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 3)) : t;
-}
 // set the global variable for mapNumber
 var mapNumber;
-const mybuttons = document.querySelectorAll('.mybuttons button');
+const mybuttons = document.querySelectorAll(".mybuttons button");
 mybuttons.forEach(mybutton => {
-  mybutton.addEventListener('click', processClick);
+  mybutton.addEventListener("click", processClick);
 });
 function processClick() {
   window.mapNumber = this.id;
 }
-// Doesn't allow empty input box to submit 
-function checkvalid(el) {
-if(el.value.length===0 || el.value.length>5)
-document.getElementById(mapNumber + "Submit").setAttribute("disabled","disabled"); 
-else document.getElementById(mapNumber + "Submit").removeAttribute('disabled'); 
-}
+
 // User chosen map with appropriate variables dependent on the map
 document.getElementById("mapOne").addEventListener("click", mapVariables);
 document.getElementById("mapTwo").addEventListener("click", mapVariables);
@@ -41,6 +16,13 @@ document.getElementById("mapFour").addEventListener("click", mapVariables);
 document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
+    // prevent input of letters or invalid numbers
+  document.getElementById(mapNumber + "UserInput").addEventListener("submit", function(event) {
+   if (!document.querySelector('input[type="number"]').validity.valid) {
+        event.preventDefault();
+        alert("Invalid input, you can't submit just yet.");
+   }
+});  
   // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
@@ -246,4 +228,5 @@ function mapVariables() {
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
   }
+  // Prevent invalid keypushes
 }
