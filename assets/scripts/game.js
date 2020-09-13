@@ -1,4 +1,5 @@
 // Turn the traffic light green when "start" button clicked and remove the start button
+document.getElementById("start_button").addEventListener("click", makeGreen);
 function makeGreen() {
   // Choose a random number for the top and left margins to locate the brake button
   let margin_top = Math.floor(Math.random() * 10) + 10;
@@ -21,6 +22,7 @@ function makeGreen() {
 // and add the brake button to be pushed
 // Then set up the timer for a random amount of time the light remains green for
 // timeInSeconds will be (25 - 5) + 3, but for the purposes of examination, the time has been set much shorter.
+document.getElementById("start_button").addEventListener("click", setTimerAmount);
 function setTimerAmount() {
   let timeInSeconds = Math.random() * (8 - 3) + 3;
   setTimeout(function() {
@@ -70,7 +72,7 @@ function setTimerAmount() {
 $("#brake_button").on("click", function(e) {
   $("#reaction_time_output").modal("show");
 });
-
+document.getElementById("restart_test").addEventListener("click", reset_timer);
 function reset_timer() {
   $(redLightStart).removeClass("icon_hide_redLight");
   $(greenLightStop).addClass("icon_hide_greenLight");
@@ -89,6 +91,7 @@ $(document).ready(function() {
 });
 
 // Sharing the result of the Reaction Time game to Facebook
+document.getElementById("share_button").addEventListener("click", share_result);
 function share_result() {
   FB.ui({
     app_id: 335490644461179,
