@@ -22,22 +22,3 @@ $('form').on('focus', 'input[type=number]', function(e) {
 $('form').on('blur', 'input[type=number]', function(e) {
   $(this).off('wheel.disableScroll');
 })
-
-// Facebook
-(function(d, s, id) {
-  let js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-function isNumberKey(evt) {
-  let charCode = (evt.which) ? evt.which : evt.keyCode;
-  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
-    evt.preventDefault();
-    return false;
-  }
-  return true;
-}

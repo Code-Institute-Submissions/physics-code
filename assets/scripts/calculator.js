@@ -1,50 +1,11 @@
-// Allow up to three decimal places only in all inputs
-let validate = function(e) {
-  let t = e.value;
-  e.value = (t.indexOf(".") >= 0) ? (t.substr(0, t.indexOf(".")) + t.substr(t.indexOf("."), 4)) : t;
+// Do not allow invalid submissions
+document.getElementById("dzCalculator").addEventListener("submit", function(event) {
+   if (!document.querySelector('input[type="number"]').validity.valid) {
+        event.preventDefault();
+        alert("Invalid input, you can't submit just yet.");
+   } else {
 }
-
-function checkvalid(el) {
-  let validInputFriction = document.getElementById("friction").value;
-  if (el.value.length === 0 || el.value.length > 5 || validInputFriction > 1)
-    document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
-  else document.getElementById("submitCalculation").removeAttribute('disabled');
-}
-
-function checkvalidFriction(el) {
-  if (el.value > 1 || el.value.length === 0 || el.value.length > 5) {
-    document.getElementById("submitCalculation").setAttribute("disabled", "disabled");
-    alert("Coeffection of friction is between 0 and 1");
-  }
-  if (el.value > 1) {
-    document.getElementById("friction").classList.add("warning_box");
-  } else document.getElementById("submitCalculation").removeAttribute('disabled');
-}
-
-// Limit coefficient of friction to a max of 1 and a minimum of zero
-// Blank inputs not allowed
-function validateForm() {
-  let inputVelocity1 = document.getElementById("initialVelocity").value;
-  let inputYellowPhase1 = document.getElementById("yellowPhase").value;
-  let inputInterPhase1 = document.getElementById("interPhase").value;
-  let inputReactionTime1 = document.getElementById("reactionTime").value;
-  let inputCoefficient1 = document.getElementById("friction").value;
-  let inputIntersection1 = document.getElementById("intersectionDistance").value;
-  let inputLength1 = document.getElementById("length").value;
-
-  if (inputVelocity1 === "" ||
-    inputYellowPhase1 === "" ||
-    inputInterPhase1 === "" ||
-    inputReactionTime1 === "" ||
-    inputCoefficient1 === "" ||
-    inputCoefficient1 > 1 ||
-    inputIntersection1 === "" ||
-    inputLength1 === ""
-  ) {
-    alert("Input all fields before attempting to calculate.");
-    return false;
-  }
-}
+});
 
 // Prevent the calculator from opening modal without appropriate form submission
 // Source https://codepen.io/hanapiers/pen/EXNrGP
@@ -54,8 +15,8 @@ $("#dzCalculator").on("submit", function(e) {
 });
 
 // Convert velocities from km/h or mph to m/s
+document.getElementById("submitCalculation").addEventListener("click", convert);
 let finalVelocity;
-
 function convert() {
   let vi = parseFloat(document.getElementById("initialVelocity").value);
   let unit = document.getElementById("units").value;
@@ -76,8 +37,8 @@ function convert() {
 }
 
 // Convert yards to metres
+document.getElementById("submitCalculation").addEventListener("click", convertDistance);
 let fullDistance;
-
 function convertDistance() {
   let id = parseFloat(document.getElementById("intersectionDistance").value);
   let lengthid = document.getElementById("length-units").value;
@@ -93,7 +54,7 @@ function convertDistance() {
   fullDistance = result;
   document.getElementById("conversion-dist").innerHTML = fullDistance.toFixed(2) + " m";
 }
-
+document.getElementById("submitCalculation").addEventListener("click", dilemmaZone);
 function dilemmaZone() {
   //Max distance vehicle travels without braking
   //use maxDistance (md) to calculate distance from stop line

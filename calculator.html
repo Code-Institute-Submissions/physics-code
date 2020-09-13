@@ -117,15 +117,15 @@
               <br>
               <label for="initialVelocity">Velocity</label><br>
               <input 
-              type="text" 
+              type="number" 
               name="inputVelocity" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              onkeyup="checkvalid(this)" 
               id="initialVelocity" 
               class="reset_form" 
               value="10"
               autocomplete="off"
+              min="0"
+              max="999"
+              step="0.01"
               aria-label="input value for velocity" 
               required><br>
               <label for="units">Units</label><br>
@@ -156,14 +156,14 @@
               <br>
               <label for="yellowPhase">Time of yellow phase in seconds</label><br>
               <input 
-              type="text" 
+              type="number" 
               name="inputYellowPhase" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              onkeyup="checkvalid(this)" 
               id="yellowPhase" 
               class="reset_form" 
               value="4"
+              min="0"
+              max="999"
+              step="0.01"
               autocomplete="off"
               aria-label="input value for the yellow phase" 
               required><br>
@@ -191,15 +191,15 @@
               <br>
               <label for="interPhase">Time of interphase in seconds</label><br>
               <input 
-              type="text" 
+              type="number" 
               name="inputInterPhase" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              onkeyup="checkvalid(this)"   
               id="interPhase" 
               class="reset_form" 
               value="2" 
               autocomplete="off"
+              min="0"
+              max="999"
+              step="0.01"
               aria-label="input value for the interphase"
               required><br>
             </div>
@@ -242,14 +242,14 @@
               <br>
               <label for="reactionTime">Reaction time in seconds</label><br>
               <input 
-              type="text" 
+              type="number" 
               name="inputReactionTime" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              onkeyup="checkvalid(this)"   
               id="reactionTime" 
               class="reset_form" 
               value="1"
+              min="0"
+              max="999"
+              step="0.001"
               autocomplete="off"
               aria-label="input value for reaction time" 
               required><br>
@@ -274,12 +274,13 @@
               <br>
               <label for="friction">Coefficient of friction</label><br>
               <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              onkeyup="checkvalidFriction(this)"
+              type="number" 
               id="friction" 
               class="reset_form" 
               value="0.8"
+              min="0"
+              max="1"
+              step="0.01"
               autocomplete="off"
               aria-label="input value for coefficient of friction" 
               required><br>
@@ -300,13 +301,13 @@
               <br>
               <label for="intersectionDistance">Length of intersection</label><br>
               <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              onkeyup="checkvalid(this)"   
+              type="number" 
               id="intersectionDistance" 
               class="reset_form" 
               value="40"
+              min="0"
+              max="999"
+              step="0.01"
               autocomplete="off"
               aria-label="input value for the intersection distance" 
               required><br>
@@ -353,14 +354,14 @@
               <br>
               <label for="length">Length of vehicle (m)</label><br>
               <input 
-              type="text" 
-              onkeypress="return isNumberKey(event)" 
-              oninput="validate(this)"
-              onkeyup="checkvalid(this)"  
+              type="number" 
               id="length" 
               class="reset_form" 
               value="4.5" 
               autocomplete="off"
+              min="0"
+              max="999"
+              step="0.01"
               aria-label="input value for length of vehicle"
               required><br>
             </div>
@@ -375,7 +376,6 @@
           <input type="submit"
           id="submitCalculation" 
           class="btn btn-success btn-green form--button btn-lg btn--padding btn-rounded" 
-          onclick="validateForm();convert();convertDistance();dilemmaZone()" 
           value="&#x2713; Calculate" />
         </div>
         <div class="col-6 text-left title-div">

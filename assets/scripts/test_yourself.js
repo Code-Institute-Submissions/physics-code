@@ -1,3 +1,18 @@
+// Prevent invalid keypushes
+document.getElementById("mapOneUserInput").addEventListener("keydown", isNumberKey);
+document.getElementById("mapTwoUserInput").addEventListener("keydown", isNumberKey); 
+document.getElementById("mapThreeUserInput").addEventListener("keydown", isNumberKey); 
+document.getElementById("mapFourUserInput").addEventListener("keydown", isNumberKey); 
+document.getElementById("mapFiveUserInput").addEventListener("keydown", isNumberKey);   
+function isNumberKey(evt) {
+  let charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46) {
+    evt.preventDefault();
+    return false;
+  }
+  return true;
+}
+
 // Allow up to two decimal places only in all inputs
 let validate = function(e) {
   let t = e.value;
