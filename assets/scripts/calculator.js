@@ -1,10 +1,3 @@
-// Do not allow invalid submissions
-document.getElementById("dzCalculator").addEventListener("submit", function(event) {
-   if (!document.querySelector('input[type="number"]').validity.valid) {
-        event.preventDefault();
-        alert("Invalid input, you can't submit just yet.");
-   } 
-});
 
 // Prevent the calculator from opening modal without appropriate form submission
 // Source https://codepen.io/hanapiers/pen/EXNrGP

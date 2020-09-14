@@ -16,13 +16,7 @@ document.getElementById("mapFour").addEventListener("click", mapVariables);
 document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
-  document.getElementById(mapNumber + "UserInput").addEventListener("submit", function(event) {
-   if (!document.querySelector('input[type="number"]').validity.valid) {
-        event.preventDefault();
-        alert("Invalid input, you can't submit just yet.");
-   }
-});
-
+ 
   // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
