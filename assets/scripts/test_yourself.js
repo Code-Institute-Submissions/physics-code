@@ -121,21 +121,6 @@ function mapVariables() {
     intersection = 51.5;
   } else false;
 
-let elem = document.getElementById(mapNumber + "UserInput");
-
-elem.addEventListener("change", () => {
-  let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
-  let submitBtn = document.getElementById(mapNumber + "Submit");
-
-  if (theStyle === "rgb(234, 198, 198)") {
-    submitBtn.disabled = true;
-  } else if (theStyle === "rgb(251, 250, 245)") {
-    submitBtn.disabled = false;
-  }
-console.log(theStyle);
-});
-
-
   // Calculate the outcome based on the data and match this to user input
   document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
