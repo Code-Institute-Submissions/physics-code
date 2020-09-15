@@ -17,7 +17,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkVelocity").each(function() {
       $val = $(this).val();
-      if ($val === "") {       
+      if ($val === "" || ($val.split(".")[1] || "").length > 2) {     
         $(this).popover({
           placement: "left",
            content: '<textarea class="popover-textarea"></textarea>',
@@ -33,10 +33,10 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-  $("#submitCalculation").click(function() {
+ $("#submitCalculation").click(function() {
     $(".checkYellowPhase").each(function() {
       $val = $(this).val();
-      if ($val === "") {       
+      if ($val === "" || ($val.split(".")[1] || "").length > 2) {       
         $(this).popover({
           placement: "bottom",  
            content: '<textarea class="popover-textarea"></textarea>',
@@ -55,7 +55,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkInterPhase").each(function() {
       $val = $(this).val();
-      if ($val === "") {       
+      if ($val === "" || ($val.split(".")[1] || "").length > 2) {        
         $(this).popover({
           placement: "right",  
           content: '<textarea class="popover-textarea"></textarea>',
@@ -74,7 +74,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkReactionTime").each(function() {
       $val = $(this).val();
-      if ($val === "") {       
+      if ($val === "" || ($val.split(".")[1] || "").length > 3) {      
         $(this).popover({
           placement: "bottom",  
           content: '<textarea class="popover-textarea"></textarea>',
@@ -93,7 +93,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkFriction").each(function() {
       $val = $(this).val();
-      if ($val === "") {      
+     if ($val === "" || ($val.split(".")[1] || "").length > 3) {   
         $(this).popover({
           placement: "bottom",  
            content: '<textarea class="popover-textarea"></textarea>',
@@ -112,7 +112,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkIntersection").each(function() {
       $val = $(this).val();
-      if ($val === "") {       
+      if ($val === "" || ($val.split(".")[1] || "").length > 2) {        
         $(this).popover({
           placement: "right",  
           content: '<textarea class="popover-textarea"></textarea>',
@@ -131,7 +131,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkLength").each(function() {
       $val = $(this).val();
-      if ($val === "") {       
+      if ($val === "" || ($val.split(".")[1] || "").length > 2) {    
         $(this).popover({
           html: true, 
           placement: "bottom",  
