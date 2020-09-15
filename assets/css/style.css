@@ -243,6 +243,18 @@ input[type=number] {
   margin: 0;
   line-height: 1.5;
  }
+#invalid-input1,
+#invalid-input2,
+#invalid-input3,
+#invalid-input4,
+#invalid-input5,
+#invalid-input6,
+#invalid-input7 {
+     font-size: 25px;
+     margin-left: 45%;
+     color: #ff0000;
+     text-shadow: 0 0 12.5px #ffff00;
+ }
 
 /* Help Page */
 /* Set card heights */

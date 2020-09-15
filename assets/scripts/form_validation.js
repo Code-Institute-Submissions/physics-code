@@ -109,21 +109,18 @@ $(document).ready(function() {
       $val = $(this).val();
       if ($val === "") {       
         $(this).popover({
-          html: true,  
+          html: true, 
           placement: "bottom",  
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>'+
-              '<h3 class="popover-title"><i class="fas fa-exclamation-triangle"></i> Heading Goes Here</h3><div class="popover-content">All the content goes here'+
-              '</div><div class="popover-footer"><button type="button" class="btn btn-primary popover-submit">'+
-              '<i class="fas fa-check-circle"></i>This is a button</button>&nbsp;'+
-              '<button type="button" class="btn btn-default popover-cancel">'+
-              '<i class="fas fa-times-circle"></i>This is also a button</button></div></div>' 
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input7"></i></div><div class="popover-content col-9">Enter a value between 2 and 50 m and up to 2 decimal places.'+
+              '</div></div>' 
         });
         $(this).popover("show");
+        $(this).click( function() {
+            $(this).popover("hide");
+        });
       }
     })
   })
 }) 
-
-
-
