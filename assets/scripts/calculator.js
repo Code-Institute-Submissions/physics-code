@@ -1,11 +1,3 @@
-
-// Prevent the calculator from opening modal without appropriate form submission
-// Source https://codepen.io/hanapiers/pen/EXNrGP
-$("#dzCalculator").on("submit", function(e) {
-  $("#dilemma_zone_output").modal("show");
-  e.preventDefault();
-});
-
 // Convert velocities from km/h or mph to m/s
 document.getElementById("submitCalculation").addEventListener("click", convert);
 let finalVelocity;
