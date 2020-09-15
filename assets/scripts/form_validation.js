@@ -20,7 +20,11 @@ $(document).ready(function() {
       if ($val === "") {       
         $(this).popover({
           placement: "left",
-          content: "Enter a non-zero number that represents velocity in either metres per second, kilometres per hour or miles per hour. The number should not exceed 200 but you can use two decimal places."
+           content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">'+
+              '</i></div><div class="popover-content col-9">Enter the velocity of the car between 10 and 300 ms<sup>-1</sup>, kmh<sup>-1</sup> or mph.'+
+              '</div></div>' 
         });
         $(this).popover('show');
       }
@@ -35,7 +39,11 @@ $(document).ready(function() {
       if ($val === "") {       
         $(this).popover({
           placement: "bottom",  
-          content: "Enter the time the traffic light remains yellow. Typically 4 to 8 seconds. You can use up to 2 decimal places."
+           content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">'+
+              '</i></div><div class="popover-content col-9">Enter a yellow phase time between 0 and 12 s. Usual time is 5 to 7 s.'+
+              '</div></div>' 
         });
         $(this).popover('show');
       }
@@ -50,7 +58,11 @@ $(document).ready(function() {
       if ($val === "") {       
         $(this).popover({
           placement: "right",  
-          content: "Enter the time the traffic lights are all red after a yellow phase has finished. Typically 1 to 3 seconds. You can use up to 2 decimal places."
+          content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">'+
+              '</i></div><div class="popover-content col-9">Enter an interphase time between 0 and 12 s. Usual time is 1.5 to 3 s.'+
+              '</div></div>' 
         });
         $(this).popover('show');
       }
@@ -65,7 +77,11 @@ $(document).ready(function() {
       if ($val === "") {       
         $(this).popover({
           placement: "bottom",  
-          content: "Enter the reaction time of the driver with up to 3 decimal places. Typically 0.800 to 1.200 is likely."
+          content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input4">'+
+              '</i></div><div class="popover-content col-9">Enter a reaction time between 0.001 and 6.000 s with up to 3 decimal places.'+
+              '</div></div>' 
         });
         $(this).popover('show');
       }
@@ -80,7 +96,11 @@ $(document).ready(function() {
       if ($val === "") {      
         $(this).popover({
           placement: "bottom",  
-          content: "Enter a numerical value between 0.001 and 1.000 and no more than 3 decimal places. Numbers must be non-zero or an infinitely long dilemma zone would exist."
+           content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input5">'+
+              '</i></div><div class="popover-content col-9">Enter a value between 0.001 and 1.000 with up to 3 decimal places.'+
+              '</div></div>' 
         });
         $(this).popover('show');
       }
@@ -95,7 +115,11 @@ $(document).ready(function() {
       if ($val === "") {       
         $(this).popover({
           placement: "right",  
-          content: "Enter the size of the intersection and select units. Intersections start from 10 m or yd and can contain 2 decimal places. Intersections should not exceed 350 m or yards."
+          content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input6">'+
+              '</i></div><div class="popover-content col-9">Enter a value between 10 and 350 m or yds with up to 2 decimal places.'+
+              '</div></div>' 
         });
         $(this).popover('show');
       }
@@ -113,7 +137,8 @@ $(document).ready(function() {
           placement: "bottom",  
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>'+
-              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input7"></i></div><div class="popover-content col-9">Enter a value between 2 and 50 m and up to 2 decimal places.'+
+              '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input7">'+
+              '</i></div><div class="popover-content col-9">Enter a value between 2 and 50 m with up to 2 decimal places.'+
               '</div></div>' 
         });
         $(this).popover("show");
