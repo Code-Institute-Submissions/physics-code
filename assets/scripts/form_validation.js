@@ -45,7 +45,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkVelocity").each(function() {
       const val = $(this).val();
-      if (isOpen(val)) {
+      if (isOpen(val) || val > 300) {
         $(this).popover({
           placement: "left",
           content: '<textarea class="popover-textarea"></textarea>',
@@ -67,7 +67,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkYellowPhase").each(function() {
       const val = $(this).val();
-      if (isOpen(val)) {
+      if (isOpen(val) || val > 12) {
         $(this).popover({
           placement: "bottom",
           content: '<textarea class="popover-textarea"></textarea>',
@@ -89,7 +89,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkInterPhase").each(function() {
       const val = $(this).val();
-      if (isOpen(val)) {
+      if (isOpen(val) || val > 12) {
         $(this).popover({
           placement: "right",
           content: '<textarea class="popover-textarea"></textarea>',
@@ -111,7 +111,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkReactionTime").each(function() {
       const val = $(this).val();
-      if (isOpen3dp(val)) {
+      if (isOpen3dp(val) || val > 6) {
         $(this).popover({
           placement: "bottom",
           content: '<textarea class="popover-textarea"></textarea>',
@@ -133,7 +133,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkFriction").each(function() {
       const val = $(this).val();
-      if (isOpen3dp(val)) {
+      if (isOpen3dp(val) || val > 1) {
         $(this).popover({
           placement: "bottom",
           content: '<textarea class="popover-textarea"></textarea>',
@@ -155,7 +155,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkIntersection").each(function() {
       const val = $(this).val();
-      if (isOpen(val)) {
+      if (isOpen(val) || val > 350) {
         $(this).popover({
           placement: "right",
           content: '<textarea class="popover-textarea"></textarea>',
@@ -177,7 +177,7 @@ $(document).ready(function() {
   $("#submitCalculation").click(function() {
     $(".checkLength").each(function() {
       const val = $(this).val();
-      if (isOpen(val)) {
+      if (isOpen(val) || val > 50) {
         $(this).popover({
           html: true,
           placement: "bottom",
@@ -195,3 +195,4 @@ $(document).ready(function() {
     })
   })
 })
+

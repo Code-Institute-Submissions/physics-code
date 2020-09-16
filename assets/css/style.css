@@ -148,6 +148,17 @@ input[type=number] {
   text-decoration: underline;
 }
 
+.card-animate {
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.card-animate:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
 /* Author image on index.html */
 .author-img {
     border-radius: 50%;

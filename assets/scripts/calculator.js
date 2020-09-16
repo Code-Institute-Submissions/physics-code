@@ -94,16 +94,11 @@ function dilemmaZone() {
     document.getElementById("optionZoneIcon").classList.add("icon_hide_optionzone");
 
   }
-
 }
 
-// Clear form on click of reset button
+// Clear form, reset values and hide popovers on click of reset button
 $(function() {
-
   $("#formReset").click(function() {
-
-    //Set the input text fields to empty string
-    $("input.reset_form").val("");
-  });
-
+     $("input.reset_form").popover("hide");
+  }); 
 });
