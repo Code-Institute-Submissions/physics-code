@@ -16,7 +16,17 @@ document.getElementById("mapFour").addEventListener("click", mapVariables);
 document.getElementById("mapFive").addEventListener("click", mapVariables);
 
 function mapVariables() {
- 
+ // Prevent invalid submissions   
+ const elem = document.getElementById(mapNumber + "UserInput");
+elem.addEventListener("keyup", () => {
+  let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
+  let submitBtn = document.getElementById(mapNumber + "Submit");
+  if (theStyle === "rgb(234, 198, 198)") {
+    submitBtn.disabled = true;
+  } else if (theStyle === "rgb(251, 250, 245)") {
+    submitBtn.disabled = false;
+  }
+});
   // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
@@ -124,7 +134,8 @@ function mapVariables() {
   let showResultThree = document.getElementById(mapNumber + "ResultThree");
   showResultOne.classList.remove("d-none");
   showResultTwo.classList.remove("d-none");
-  showResultThree.classList.remove("d-none");  
+  showResultThree.classList.remove("d-none");
+    
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
     let initialVelocity = velocity / 3.6;
     let coefficient = conditions[keyClim.replace(/\s+/g, "") + keyCond];
@@ -224,4 +235,5 @@ function mapVariables() {
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
   }
 }
+
 

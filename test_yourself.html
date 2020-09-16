@@ -429,7 +429,7 @@
   <!-- Map One-->
 
   <div class="modal fade" id="mapOneModal" tabindex="-1" role="dialog" aria-hidden="true">
-   <form>
+   <form id="mapOneForm">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -449,8 +449,7 @@
           <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
           <div>
-         
-            <div class="form-check">
+              <div class="form-check">
               <p>Choose one option</p>
               <input 
               class="form-check-input" 
@@ -481,12 +480,11 @@
               <input 
               type="number" 
               id="mapOneUserInput" 
-              class="form-control" 
+              class="form-control checkValid" 
               autocomplete="off"
               min="0"
               max="99999"
               step="0.01"
-              value=""
               aria-label="input value for your zone" 
               placeholder="e.g 12.34"
               required>
@@ -495,13 +493,12 @@
               </div>
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-         
           <div><span id="mapOneResultOne"></span></div>
           <div><span id="mapOneResultTwo"></span></div>
           <div><span id="mapOneResultThree"></span></div>
         </div> <!-- End of the first modal-->
         <div class="modal-footer">
-          <button type="button" id="mapOneSubmit" class="btn btn-success btn-submit">&#x2713; Submit</button>
+          <button type="button" id="mapOneSubmit" class="btn btn-success btn-submit mapSubmit">&#x2713; Submit</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="far fa-times-circle"></i> Close</button>
         </div>
       </div>
@@ -531,7 +528,6 @@
           <p>The vehicle is <strong><span id="mapTwoCarLength"></span></strong> m long</p>
           <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
-          
             <div class="form-check">
               <p>Choose one option</p>
               <input 
@@ -563,7 +559,7 @@
               <input 
               type="number" 
               id="mapTwoUserInput" 
-              class="form-control"
+              class="form-control checkValid"
               autocomplete="off"
               min="0"
               max="99999"
@@ -576,7 +572,6 @@
               </div>
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-          
           <div><span id="mapTwoResultOne"></span></div>
           <div><span id="mapTwoResultTwo"></span></div>
           <div><span id="mapTwoResultThree"></span></div>
@@ -611,7 +606,6 @@
           <p>The vehicle is <strong><span id="mapThreeCarLength"></span></strong> m long</p>
           <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
-          
             <div class="form-check">
               <p>Choose one option</p>
               <input 
@@ -643,7 +637,7 @@
               <input 
               type="number" 
               id="mapThreeUserInput" 
-              class="form-control"
+              class="form-control checkValid"
               autocomplete="off"
               min="0"
               max="99999"
@@ -656,7 +650,6 @@
               </div>
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-          
           <div><span id="mapThreeResultOne"></span></div>
           <div><span id="mapThreeResultTwo"></span></div>
           <div><span id="mapThreeResultThree"></span></div>
@@ -691,7 +684,6 @@
           <p>The vehicle is <strong><span id="mapFourCarLength"></span></strong> m long</p>
           <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
-          
             <div class="form-check">
               <p>Choose one option</p>
               <input 
@@ -723,7 +715,7 @@
               <input 
               type="number" 
               id="mapFourUserInput"
-              class="form-control"
+              class="form-control checkValid"
               autocomplete="off"
               min="0"
               max="99999"
@@ -736,7 +728,6 @@
               </div>
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-         
           <div><span id="mapFourResultOne"></span></div>
           <div><span id="mapFourResultTwo"></span></div>
           <div><span id="mapFourResultThree"></span></div>
@@ -771,7 +762,6 @@
           <p>The vehicle is <strong><span id="mapFiveCarLength"></span></strong> m long</p>
           <p>If you would like a new scenario, close this pop-up and click <i class="fas fa-car-battery"></i><em> Scene</em>.</p>
           <h4>Your answers</h4>
-          
             <div class="form-check">
               <p>Choose one option</p>
               <input 
@@ -803,7 +793,7 @@
               <input 
               type="number" 
               id="mapFiveUserInput" 
-              class="form-control"
+              class="form-control checkValid"
               autocomplete="off"
               min="0"
               max="99999"
@@ -816,7 +806,6 @@
               </div>
               <small>Then click on the <em>submit</em> button below to check your answers.</small>
             </div>
-          
           <div><span id="mapFiveResultOne"></span></div>
           <div><span id="mapFiveResultTwo"></span></div>
           <div><span id="mapFiveResultThree"></span></div>
@@ -896,7 +885,7 @@
   <script src="assets/scripts/maps.js"></script>
   <script src="assets/scripts/dependencies.js"></script>
   <script src="assets/scripts/test_yourself.js"></script>
-  <script src="assets/scripts/form_validation.js"></script>
+  <script src="assets/scripts/form_validation_tests.js"></script>
   <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap"></script>
   <div id="fb-root"></div>
