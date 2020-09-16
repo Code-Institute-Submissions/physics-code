@@ -19,7 +19,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isFilled(val) || val === "") {
         $(this).popover({
-          placement: "left",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-name">' +
@@ -42,7 +42,7 @@ $(document).ready(function() {
       const isValidEmail = inputEmailAddress.checkValidity();
       if (isFilled(val) || val === "" || isValidEmail == false) {
         $(this).popover({
-          placement: "left",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-mail">' +
@@ -64,7 +64,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isFilled(val) || val === "") {
         $(this).popover({
-          placement: "left",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-message">' +

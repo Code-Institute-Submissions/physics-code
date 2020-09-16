@@ -45,7 +45,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isOpen(val) || val > 300) {
         $(this).popover({
-          placement: "left",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">' +
@@ -67,7 +67,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isOpen(val) || val > 12) {
         $(this).popover({
-          placement: "bottom",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">' +
@@ -89,7 +89,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isOpen(val) || val > 12) {
         $(this).popover({
-          placement: "right",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">' +
@@ -111,7 +111,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isOpen3dp(val) || val > 6) {
         $(this).popover({
-          placement: "bottom",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input4">' +
@@ -133,7 +133,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isOpen3dp(val) || val > 1) {
         $(this).popover({
-          placement: "bottom",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input5">' +
@@ -155,7 +155,7 @@ $(document).ready(function() {
       const val = $(this).val();
       if (isOpen(val) || val > 350) {
         $(this).popover({
-          placement: "right",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input6">' +
@@ -178,7 +178,7 @@ $(document).ready(function() {
       if (isOpen(val) || val > 50) {
         $(this).popover({
           html: true,
-          placement: "bottom",
+          placement: "top",
           content: '<textarea class="popover-textarea"></textarea>',
           template: '<div class="popover"><div class="arrow"></div>' +
             '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input7">' +
