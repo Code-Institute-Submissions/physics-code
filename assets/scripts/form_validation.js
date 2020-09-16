@@ -1,9 +1,7 @@
 //prevent the browser from showing default error bubble / hint
-document.addEventListener("invalid", (function() {
-  return function(e) {
-    e.preventDefault();
-  };
-})(), true);
+ document.querySelector("form").addEventListener("invalid", function(event) {
+            event.preventDefault();
+        }, true );
 
 // Prevent the calculator from opening modal without appropriate form submission
 // Source https://codepen.io/hanapiers/pen/EXNrGP

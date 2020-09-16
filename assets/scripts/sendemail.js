@@ -1,3 +1,41 @@
+//prevent the browser from showing default error bubble / hint
+ document.querySelector("form").addEventListener("invalid", function(event) {
+            event.preventDefault();
+        }, true );
+
+const isFilled = (val) => {
+  const num = parseFloat(val);
+  if (isNaN(num)) {
+    return false;
+  } else {
+      return true;
+    }
+};
+
+// pop-over code first found: http://jsfiddle.net/bqo5mdcz/3/
+$(document).ready(function() {
+  $("#checkValid").click(function() {
+    $(".checkValid").each(function() {
+      const val = $(this).val();
+      if (isFilled(val) || val === "") {
+        $(this).popover({
+          placement: "left",
+          content: '<textarea class="popover-textarea"></textarea>',
+          template: '<div class="popover"><div class="arrow"></div>' +
+            '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-mail">' +
+            '</i></div><div class="popover-content col-9">Please fill in this field' +
+            '</div></div>'
+        });
+        $(this).popover("show");
+        $(this).click(function() {
+          $(this).popover("hide");
+        });
+      }
+    })
+  })
+})
+
+
 let myform = $("form#user_request");
 myform.submit(function(event) {
   event.preventDefault();
@@ -16,3 +54,4 @@ myform.submit(function(event) {
     });
   return false;
 });
+

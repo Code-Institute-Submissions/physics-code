@@ -422,6 +422,14 @@ input[type=number] {
     opacity: 0.6;
 }
 
+/* Contact Us page */
+#invalid-input-mail {
+    font-size: 18.25px;
+     margin-left: 45%;
+     color: #ff0000;
+     text-shadow: 0 0 9.0125px #ffff00;
+}
+
 /* footer */
 /* footer background color */
 .page-footer {
