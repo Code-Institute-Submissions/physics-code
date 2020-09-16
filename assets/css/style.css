@@ -423,7 +423,9 @@ input[type=number] {
 }
 
 /* Contact Us page */
-#invalid-input-mail {
+#invalid-input-mail,
+#invalid-input-name,
+#invalid-input-message {
     font-size: 18.25px;
      margin-left: 45%;
      color: #ff0000;
