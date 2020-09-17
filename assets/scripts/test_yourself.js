@@ -27,6 +27,13 @@ elem.addEventListener("keyup", () => {
     submitBtn.disabled = false;
   }
 });
+
+const reset = document.getElementById(mapNumber + "Reset")
+reset.addEventListener("click", disableSubmit);
+function disableSubmit() {
+document.getElementById(mapNumber + "Submit").disabled = true;
+};
+
   // Prevents previous data appearing when a new scenario is called  
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
@@ -235,5 +242,6 @@ elem.addEventListener("keyup", () => {
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
   }
 }
+
 
 
