@@ -150,7 +150,7 @@ input[type="number"]:invalid + div {
   text-decoration: underline;
 }
 
-/* animate cards on index.html */
+/* animate cards and images on index.html */
 .card-animate {
   margin: 10px 0;
   transition: 0.3s;
@@ -161,6 +161,18 @@ input[type="number"]:invalid + div {
   -ms-transform: scale(1.02);
   transform: scale(1.02);
 }
+
+.image-animate {
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.image-animate:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 /* Author image on index.html */
 .author-img {
