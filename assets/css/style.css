@@ -45,6 +45,8 @@ p {
   background-color: #b6d5eb;
 }
 
+
+
 /* rounded button edges and standardised colors */
 .btn-rounded {
   border-radius: 25px;
@@ -69,6 +71,18 @@ p {
 .form--button {
   width: 150px;
   height: auto;
+}
+
+/* Remove number input spinners Chrome, Safari, Edge, Opera - source https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove number input spinners Firefox - source https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* Number input validation errors */
@@ -100,19 +114,7 @@ input[type="number"]:invalid + div {
     color: #333 !important;
 }
 
-/* Remove number input spinners Chrome, Safari, Edge, Opera - source https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Remove number input spinners Firefox - source https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-/* Due to the extra size of the navigation text on the right hand side of the navbar this CSS avoids text wrapping */
+/* avoid text wrapping in navbar */
 @media (min-width: 1100px){
     .navbar-expand-custom {
         flex-direction: row;
@@ -148,6 +150,7 @@ input[type=number] {
   text-decoration: underline;
 }
 
+/* animate cards on index.html */
 .card-animate {
   margin: 10px 0;
   transition: 0.3s;
@@ -234,12 +237,12 @@ input[type=number] {
   display: none;
 }
 
-/* when icons are displayed in the modal dz = dilemma zone and oz = option zone */
+/* icons are displayed in modal after calculation (dz = dilemma zone and oz = option zone) */
 .dz-icon {
   color: #ff0000;
   font-size: 22px;
   position: absolute;
-  right: 7%;
+  right: 8.5%;
   top: 2%;
   margin: 0;
   line-height: 1.5;
@@ -249,11 +252,13 @@ input[type=number] {
   color: #0000ff;
   font-size: 22px;
   position: absolute;
-  right: 7%;
+  right: 8.5%;
   top: 2%;
   margin: 0;
   line-height: 1.5;
  }
+
+ /* icons in the tooltips */
 #invalid-input1,
 #invalid-input2,
 #invalid-input3,
@@ -422,6 +427,10 @@ input[type=number] {
     opacity: 0.6;
 }
 
+.blank-fill {
+    margin-top: 124px;
+}
+
 /* Contact Us page */
 #invalid-input-mail,
 #invalid-input-name,
@@ -463,7 +472,7 @@ input[type=number] {
   text-align: center;
 }
 
-/* $spacer amount extras not Bootstrap standard */
+/* $spacer amount extras non-Bootstrap standard */
 .mt-7 {
   margin-top: 112px !important;
 }

@@ -234,7 +234,7 @@
             <div class="container" id="map_one"></div>
             <div class="text-center mybuttons">
               <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
+              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded mapVariables" 
               id="mapOne" 
               data-toggle="modal" 
               data-backdrop="static" 
@@ -278,7 +278,7 @@
             <div class="container" id="map_two"></div>
             <div class="text-center mybuttons">
               <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
+              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded mapVariables" 
               id="mapTwo" 
               data-toggle="modal" 
               data-backdrop="static" 
@@ -322,7 +322,7 @@
             <div class="container" id="map_three"></div>
             <div class="text-center mybuttons">
               <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
+              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded mapVariables" 
               id="mapThree" 
               data-toggle="modal" 
               data-backdrop="static" 
@@ -366,7 +366,7 @@
             <div class="container" id="map_four"></div>
             <div class="text-center mybuttons">
               <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
+              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded mapVariables" 
               id="mapFour" 
               data-toggle="modal" 
               data-backdrop="static" 
@@ -410,7 +410,7 @@
             <div class="container" id="map_five"></div>
             <div class="text-center mybuttons">
               <button 
-              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded" 
+              class="btn btn-primary btn-lgt-blue form--button mt-2 mb-1 btn-rounded mapVariables" 
               id="mapFive" 
               data-toggle="modal" 
               data-backdrop="static" 
@@ -491,7 +491,7 @@
               <div class="input-group-append d-block">
                 <input type="reset" id="mapOneReset" class="btn btn-danger" aria-label="reset your value">
               </div>
-              <small>Then click on the <em>submit</em> button below to check your answers.</small>
+              <small id="mapOneInvalidResponse"></small>
             </div>
           <div><span id="mapOneResultOne"></span></div>
           <div><span id="mapOneResultTwo"></span></div>
@@ -570,7 +570,7 @@
               <div class="input-group-append d-block">
                 <input type="reset" id="mapTwoReset" class="btn btn-danger" aria-label="reset your value">
               </div>
-              <small>Then click on the <em>submit</em> button below to check your answers.</small>
+              <small id="mapTwoInvalidResponse"></small>
             </div>
           <div><span id="mapTwoResultOne"></span></div>
           <div><span id="mapTwoResultTwo"></span></div>
@@ -648,7 +648,7 @@
               <div class="input-group-append d-block">
                 <input type="reset" id="mapThreeReset" class="btn btn-danger" aria-label="reset your value">
               </div>
-              <small>Then click on the <em>submit</em> button below to check your answers.</small>
+              <small id="mapThreeInvalidResponse"></small>
             </div>
           <div><span id="mapThreeResultOne"></span></div>
           <div><span id="mapThreeResultTwo"></span></div>
@@ -726,7 +726,7 @@
               <div class="input-group-append d-block">
                 <input type="reset" id="mapFourReset" class="btn btn-danger" aria-label="reset your value">
               </div>
-              <small>Then click on the <em>submit</em> button below to check your answers.</small>
+              <small id="mapFourInvalidResponse"></small>
             </div>
           <div><span id="mapFourResultOne"></span></div>
           <div><span id="mapFourResultTwo"></span></div>
@@ -804,7 +804,7 @@
               <div class="input-group-append d-block">
                 <input type="reset" id="mapFiveReset" class="btn btn-danger" aria-label="reset your value">
               </div>
-              <small>Then click on the <em>submit</em> button below to check your answers.</small>
+              <small id="mapFiveInvalidResponse"></small>
             </div>
           <div><span id="mapFiveResultOne"></span></div>
           <div><span id="mapFiveResultTwo"></span></div>
@@ -885,7 +885,6 @@
   <script src="assets/scripts/maps.js"></script>
   <script src="assets/scripts/dependencies.js"></script>
   <script src="assets/scripts/test_yourself.js"></script>
-  <script src="assets/scripts/form_validation_tests.js"></script>
   <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap"></script>
   <div id="fb-root"></div>

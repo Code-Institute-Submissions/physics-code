@@ -4,37 +4,37 @@ const mybuttons = document.querySelectorAll(".mybuttons button");
 mybuttons.forEach(mybutton => {
   mybutton.addEventListener("click", processClick);
 });
+
 function processClick() {
   window.mapNumber = this.id;
 }
 
-// User chosen map with appropriate variables dependent on the map
-document.getElementById("mapOne").addEventListener("click", mapVariables);
-document.getElementById("mapTwo").addEventListener("click", mapVariables);
-document.getElementById("mapThree").addEventListener("click", mapVariables);
-document.getElementById("mapFour").addEventListener("click", mapVariables);
-document.getElementById("mapFive").addEventListener("click", mapVariables);
+document.querySelectorAll(".mapVariables").forEach(item => {
+  item.addEventListener('click', mapVariables)
+})
 
 function mapVariables() {
- // Prevent invalid submissions   
- const elem = document.getElementById(mapNumber + "UserInput");
-elem.addEventListener("keyup", () => {
-  let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
-  let submitBtn = document.getElementById(mapNumber + "Submit");
-  if (theStyle === "rgb(234, 198, 198)") {
-    submitBtn.disabled = true;
-  } else if (theStyle === "rgb(251, 250, 245)") {
-    submitBtn.disabled = false;
-  }
-});
+  // Prevent invalid submissions
+  const elem = document.getElementById(mapNumber + "UserInput");
+  elem.addEventListener("keyup", () => {
+    let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
+    let submitBtn = document.getElementById(mapNumber + "Submit");
+    if (theStyle === "rgb(234, 198, 198)") {
+      submitBtn.disabled = true;
+      document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a numerical value for your calcuation then click on the <em>submit</em> button below to check your answers."
+    } else if (theStyle === "rgb(251, 250, 245)") {
+      submitBtn.disabled = false;
+    }
+  });
 
-const reset = document.getElementById(mapNumber + "Reset")
-reset.addEventListener("click", disableSubmit);
-function disableSubmit() {
-document.getElementById(mapNumber + "Submit").disabled = true;
-};
+  const reset = document.getElementById(mapNumber + "Reset")
+  reset.addEventListener("click", disableSubmit);
 
-  // Prevents previous data appearing when a new scenario is called  
+  function disableSubmit() {
+    document.getElementById(mapNumber + "Submit").disabled = true;
+  };
+
+  // Prevents previous data appearing when a new scenario is called
   let displayResultOne = document.getElementById(mapNumber + "ResultOne");
   let displayResultTwo = document.getElementById(mapNumber + "ResultTwo");
   let displayResultThree = document.getElementById(mapNumber + "ResultThree");
@@ -97,7 +97,7 @@ document.getElementById(mapNumber + "Submit").disabled = true;
     climateCondition = Math.floor(Math.random() * climate.length);
     keyClim = climate[climateCondition];
   } else climate = false;
-  
+
   let carLength = Math.random() * (5.89 - 3.8) + 3.8;
   let reactionTime = Math.random() * (2.5 - 0.4) + 0.4;
 
@@ -118,7 +118,7 @@ document.getElementById(mapNumber + "Submit").disabled = true;
   document.getElementById(mapNumber + "TireCondition").innerHTML = tires[tireCondition];
   document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
   document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
-  // pre-measured intersection sizes 
+  // pre-measured intersection sizes
   let intersection;
   if (mapNumber === "mapOne") {
     intersection = 52;
@@ -136,31 +136,31 @@ document.getElementById(mapNumber + "Submit").disabled = true;
   document.getElementById(mapNumber + "Submit").addEventListener("click", calculateScenario);
 
   function calculateScenario() {
-  let showResultOne = document.getElementById(mapNumber + "ResultOne");
-  let showResultTwo = document.getElementById(mapNumber + "ResultTwo");
-  let showResultThree = document.getElementById(mapNumber + "ResultThree");
-  showResultOne.classList.remove("d-none");
-  showResultTwo.classList.remove("d-none");
-  showResultThree.classList.remove("d-none");
-    
+    let showResultOne = document.getElementById(mapNumber + "ResultOne");
+    let showResultTwo = document.getElementById(mapNumber + "ResultTwo");
+    let showResultThree = document.getElementById(mapNumber + "ResultThree");
+    showResultOne.classList.remove("d-none");
+    showResultTwo.classList.remove("d-none");
+    showResultThree.classList.remove("d-none");
+
     // Convert km/h into m/s and get climate and tire data to output a coefficient of friction
     let initialVelocity = velocity / 3.6;
     let coefficient = conditions[keyClim.replace(/\s+/g, "") + keyCond];
 
     // Calculate the going distance during yellow and interpahase subtract car length
     let distancePhase = ((initialVelocity * (yellowPhase + interPhase)) - carLength).toFixed(2);
-    
+
     // Calculate the stopping distance
     let reactionTimeDistance = (reactionTime * initialVelocity);
-    
+
     // Square the velocity for the stopping distance equation where 9.81 is due to gravity
     let velocitySquared = Math.pow(initialVelocity, 2);
     let stoppingDist = ((velocitySquared / (2 * coefficient * 9.81)) + reactionTimeDistance);
-    
+
     // Is there a dilemma zone?
     let totalDistance = distancePhase - intersection;
     let zoneCalc = totalDistance - stoppingDist;
-   
+
     // the end of the calculation function
     let zoneOutcome;
     if (zoneCalc > 0) {
@@ -168,9 +168,9 @@ document.getElementById(mapNumber + "Submit").disabled = true;
     } else if (zoneCalc <= 0) {
       zoneOutcome = "Dilemma Zone";
     } else zoneOutcome = false;
-    
+
     let exactAnswer = Math.abs(zoneCalc).toFixed(2);
-    
+
     // Check the type of zone the user has input
     let zone;
     if (mapNumber === "mapOne") {
@@ -191,16 +191,16 @@ document.getElementById(mapNumber + "Submit").disabled = true;
     } else if (zone === mapNumber + "DzChecked") {
       answer = "Dilemma Zone";
     } else answer = false;
-    
+
     let results;
     if (answer === zoneOutcome) {
       results = "You said: <b>" + answer + "</b> &#x2713;";
     } else results = "You said: <b>" + answer + "</b> &#x2a2f;";
-   
+
     let percentage = zoneCalc * 0.2;
     let valueHighChecked = zoneCalc + percentage;
     let valueLowChecked = zoneCalc - percentage;
-    
+
     // Convert all numbers to absolute for checking
     // Allow up to 20% difference on student answers - this can be changed in the percentage variable
     let absoluteValue = Math.abs(valueHighChecked);
@@ -235,13 +235,10 @@ document.getElementById(mapNumber + "Submit").disabled = true;
     } else if (answer !== zoneOutcome) {
       userResult = "Although your value of <b>" + userInput + " m</b> is close, the type of zone needs correction.";
     } else userResult = "Your value of <b>" + userInput + " m</b> fits well in this scenario.";
-    
+
     //Outputs generated for the user to check their work
     document.getElementById(mapNumber + "ResultOne").innerHTML = results;
     document.getElementById(mapNumber + "ResultTwo").innerHTML = userResult;
     document.getElementById(mapNumber + "ResultThree").innerHTML = "Our calculations: <b>" + Math.abs(zoneCalc).toFixed(2) + " m</b> " + zoneOutcome + ".";
   }
 }
-
-
-
