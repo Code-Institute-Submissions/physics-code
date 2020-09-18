@@ -56,6 +56,7 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+        $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
       }
     })
   })
@@ -78,6 +79,7 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+         $('html, body').scrollTop($(".cardBodyYellowLight").offset().top);
       }
     })
   })
@@ -100,6 +102,7 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+        $('html, body').scrollTop($(".cardBodyRedLight").offset().top);
       }
     })
   })
@@ -122,6 +125,7 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+        $('html, body').scrollTop($(".cardBodyReaction").offset().top);
       }
     })
   })
@@ -144,6 +148,7 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+        $('html, body').scrollTop($(".cardBodyFriction").offset().top);
       }
     })
   })
@@ -166,6 +171,7 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+         $('html, body').scrollTop($(".cardBodyIntersection").offset().top);
       }
     })
   })
@@ -189,8 +195,8 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
+         $('html, body').scrollTop($(".cardBodyLength").offset().top);
       }
     })
   })
 })
-

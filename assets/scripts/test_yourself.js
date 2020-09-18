@@ -21,7 +21,6 @@ function mapVariables() {
     let submitBtn = document.getElementById(mapNumber + "Submit");
     if (theStyle === "rgb(234, 198, 198)") {
       submitBtn.disabled = true;
-      document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a numerical value for your calcuation then click on the <em>submit</em> button below to check your answers."
     } else if (theStyle === "rgb(251, 250, 245)") {
       submitBtn.disabled = false;
     }

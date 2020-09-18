@@ -18,18 +18,7 @@ $(document).ready(function() {
     $(".checkValidName").each(function() {
       const val = $(this).val();
       if (isFilled(val) || val === "") {
-        $(this).popover({
-          placement: "top",
-          content: '<textarea class="popover-textarea"></textarea>',
-          template: '<div class="popover"><div class="arrow"></div>' +
-            '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-name">' +
-            '</i></div><div class="popover-content col-9">Please fill in your name' +
-            '</div></div>'
-        });
-        $(this).popover("show");
-        $(this).click(function() {
-          $(this).popover("hide");
-        });
+       document.getElementById("inputNames").innerText = "Make sure you have filled in your name here...";
       }
     })
   })
@@ -41,18 +30,7 @@ $(document).ready(function() {
       const val = $(this).val();
       const isValidEmail = inputEmailAddress.checkValidity();
       if (isFilled(val) || val === "" || isValidEmail == false) {
-        $(this).popover({
-          placement: "top",
-          content: '<textarea class="popover-textarea"></textarea>',
-          template: '<div class="popover"><div class="arrow"></div>' +
-            '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-mail">' +
-            '</i></div><div class="popover-content col-9">Please fill in your email address' +
-            '</div></div>'
-        });
-        $(this).popover("show");
-        $(this).click(function() {
-          $(this).popover("hide");
-        });
+        document.getElementById("inputEmails").innerText = "Make sure you have filled in your email here...";
       }
     })
   })
@@ -63,18 +41,7 @@ $(document).ready(function() {
     $(".checkValidMessage").each(function() {
       const val = $(this).val();
       if (isFilled(val) || val === "") {
-        $(this).popover({
-          placement: "top",
-          content: '<textarea class="popover-textarea"></textarea>',
-          template: '<div class="popover"><div class="arrow"></div>' +
-            '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input-message">' +
-            '</i></div><div class="popover-content col-9">Please fill in your requests here' +
-            '</div></div>'
-        });
-        $(this).popover("show");
-        $(this).click(function() {
-          $(this).popover("hide");
-        });
+        document.getElementById("inputUserRequests").innerText = "Fill in your requests here...";
       }
     })
   })
