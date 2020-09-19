@@ -19,7 +19,9 @@
   - [Container and Box Structure](#container-and-box-structure)
   - [Forms and Inputs](#forms-and-inputs)
 - [Wireframes](#wireframes)
-  - [View Wireframes](#physics-code-wireframes-view)
+  - [View Wireframes](#wireframes-view)
+  - [Final Design](#final-design)
+
 
 
 ## DESCRIPTION
@@ -36,7 +38,7 @@ essays, mathematical modelling, exams, and other educational needs. Users can:
    - develop their own understanding at their pace of the concepts presented 
    - test themselves on the concept being presented in randomised variable challenges 
    - adapt the information into their own context by using the onboard calculators
-- The website is **accessible** to anyone regardless of their level in Phsyics and with some easy navigation can learn and scaffold with the concepts being presented.
+- The website is **accessible** to anyone regardless of their level in Physics and with some easy navigation can learn and scaffold with the concepts being presented.
  Users can:
    - scaffold their own knowledge by using the navigation plane 
    - apply their curiosity to any of the input fields without the fear of being judged for trying something new or unexpected
@@ -56,7 +58,7 @@ under extreme braking conditions. Users can:
    - investigate their own intersections based on the information given
    - test themselves with randomised and realistic scenarios that allow for extremes on the [test yourself](https://pauld0051.github.io/physics-code/test_yourself.html)
    - explore one of five maps from around the world with a real life intersection and realistic scenarios that allow for extremes
-   - refresh scenarios to have nearly unlimited types of randmosied variables that can be calculated using the seven variables in the [calculator](https://pauld0051.github.io/physics-code/calculator.html)
+   - refresh scenarios to have nearly unlimited types of randomised variables that can be calculated using the seven variables in the [calculator](https://pauld0051.github.io/physics-code/calculator.html)
    - attempt to calculate outcomes themselves without the use of the [calculator](https://pauld0051.github.io/physics-code/calculator.html) by following the [help page](https://pauld0051.github.io/physics-code/help.html) page.
 - The website provides an interactive **game** that helps the user become aware of their reaction time to help calculate a dilemma zone. Users:
    - can estimate their reaction time at the [game](https://pauld0051.github.io/physics-code/game.html) page 
@@ -80,7 +82,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 - As the website develops it is anticipated that:
    - more calculators and help pages will come online 
    - more tests for users will become available based on the new calculators
-   - additions to current the dilemma zone calculator to include an optional dilemma zone for perpindicular roads and for non-constant acceleration
+   - additions to current the dilemma zone calculator to include an optional dilemma zone for perpendicular roads and for non-constant acceleration
    - additional APIs based on the context of the new calculators and could include other reality based principles including climate-change
 
 
@@ -100,7 +102,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
     [![Physics Code navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-navigation.png "Physics Code first view navigation")](https://pauld0051.github.io/physics-code/index.html)
 
-    - View the access cards to all the various pages and applications that the user can click on to naviagte to with ease;
+    - View the access cards to all the various pages and applications that the user can click on to navigate to with ease;
 
     [![Physics Code home cards](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-homecards.png "Physics Code first view cards on the homepage")](https://pauld0051.github.io/physics-code/index.html)
 
@@ -108,13 +110,13 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
     [![Physics Code author](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-author.png "Physics Code first view author representation")](https://pauld0051.github.io/physics-code/index.html)
     
-    - Scroll down to see an uncluttered and relaxed page with an indentical footer on each page giving access to social media links, sharing, terms and conditions, and privacy policies of the page;
+    - Scroll down to see an uncluttered and relaxed page with an identical footer on each page giving access to social media links, sharing, terms and conditions, and privacy policies of the page;
 
     [![Physics Code footer](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-footer.png "Physics Code first view footer")](https://pauld0051.github.io/physics-code/index.html)
 
     - Access the world's first online dilemma zone calculator to input variables with large cards and icon hints for each variable set out in textbook fashion;
 
-    [![Physics Code calculator](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-calculator.png "Physics Code first view claculator")](https://pauld0051.github.io/physics-code/calculator.html)
+    [![Physics Code calculator](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-calculator.png "Physics Code first view calculator")](https://pauld0051.github.io/physics-code/calculator.html)
 
     - Input the seven variables and scroll down to calculate the outcome;
 
@@ -128,7 +130,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
     [![Physics Code tooltip](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-tooltip.png "Physics Code first view tooltips")](https://pauld0051.github.io/physics-code/calculator.html)
     
-    - See the caclulated outcome of the input variables;
+    - See the calculated outcome of the input variables;
 
     [![Physics Code outcome](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-outcome.png "Physics Code first view")](https://pauld0051.github.io/physics-code/calculator.html)
 
@@ -140,7 +142,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
     [![Physics Code reset](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-reset.png "Physics Code first view reset button")](https://pauld0051.github.io/physics-code/calculator.html)
 
-    - View the help page with ease and see more detailed information on the dilemma zone and the calculator variables with matching cards and symbols with descripton about the calculation
+    - View the help page with ease and see more detailed information on the dilemma zone and the calculator variables with matching cards and symbols with description about the calculation
 
     [![Physics Code help](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-help.png "Physics Code first view help page")](https://pauld0051.github.io/physics-code/help.html)
 
@@ -192,15 +194,15 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
     [![Physics Code test yourself outcome](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-outcome.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/test_yourself.html)
 
-    - Can accidentally move the map off of center and the map will automatically return to the intersection so users can not get lost;
+    - Can accidentally move the map off of centre and the map will automatically return to the intersection so users can not get lost;
 
     [![Physics Code test yourself map animation]((https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-map-move.gif)](https://gyazo.com/c570bd47b04221265b12b54b0902d79c)
 
-    - Can explore the map from a driver's point of view by using Google's Steet View;
+    - Can explore the map from a driver's point of view by using Google's Street View;
 
     [![Physics Code test yourself explore](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-explore.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/test_yourself.html)
 
-    - Can contact the site's author to request new calculators or simply message the author with questions or grattidude;
+    - Can contact the site's author to request new calculators or simply message the author with questions or gratitude;
 
     [![Physics Code contact](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-contact.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/contact.html)
 
@@ -238,7 +240,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
     - Easily see new content and access previous content as a teacher or student;  
     - Set goals for a class, lesson or themselves to complete equations and calculations pertaining to the dilemma zone 
     - Find their own data from Google Maps and base their model on the site's ready-to-use calculator
-    - Keep in touch witht he page author 
+    - Keep in touch with he page author 
     - Share the page to Facebook or add it into their Google Classroom or similar educational niché platform
     - Challenge other uses in the reaction time game or at solving dilemma zone equations
 
@@ -273,7 +275,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
   - The navigation bar uses #d7e9f5 as a background colour - a light blue colour that compliments the dark text and highlights the bright red Physics Code icon 
   - The heading boxes of each page are nested in a darker blue compliment to the navigation bar - #54a5d5
   - The background of each heading and subheading box is based on the near white colour #f8f8ff with some opacity to allow for a bold heading or writing to stand out 
-  - The actionable content and cards are located on a lighter blue background that compliments both the naviagtion and the headings of the page. The user has 
+  - The actionable content and cards are located on a lighter blue background that compliments both the navigation and the headings of the page. The user has 
     a clear understanding that each section is separated from the other. The colour of #b6d5eb is used in all content dis 
   - A rule of thirds is instigated on every page, with a container filling up 67% of the screen width on large screens leaving some white space on either side 
     (approximately 16.2% on each side)
@@ -288,11 +290,11 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
   - All graphics are small sized png files or jpg with the exception of the icons which are sourced from 
     [Fontawesome](https://fontawesome.com/) and the favicon which is an ico
-  - Silouhette images are used on all cards and are primarily single tone black on a white background. With the exception of the two traffic light pictures on the 
+  - Silhouette images are used on all cards and are primarily single tone black on a white background. With the exception of the two traffic light pictures on the 
     home page which have a red light filled in on one of the images and a yellow light on the other - this does not affect user experience as the cards are specifically 
     labelled 
-  - Other card images are sourced from Fontawesome and are coloured black to appear as a Silouhette 
-  - The author's charactitures was created in [Bitmoji](https://www.bitmoji.com/) and saved as a png file
+  - Other card images are sourced from Fontawesome and are coloured black to appear as a silhouette 
+  - The author's caricatures was created in [Bitmoji](https://www.bitmoji.com/) and saved as a png file
   - Card images were sourced from [Flaticon](www.flaticon.com), [Freepik](https://www.freepik.com/), [Clipartlove](https://www.clipartlove.com/) and 
     [Cleanpng](https://www.cleanpng.com/)
   - Edits to the pictures were made in [GIMP](https://www.gimp.org/) which included colouring the traffic lights and flipping images or shading as required 
@@ -309,7 +311,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
   - Headings are all coloured in a dark crimson #85144b and is set as a colour opposite of the darker blue background
   - All paragraph text uses the font family Ubuntu also falling back to Sans Serif should Ubuntu fail to load. The font was first discovered at 
     [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=Ubuntu)
-  - Fonts were chosen for thier clarity and ease to read even though the font styling was subtly unique but retained boldness and perspicuousness
+  - Fonts were chosen for their clarity and ease to read even though the font styling was subtly unique but retained boldness and perspicuousness
   - Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at 
     [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
 
@@ -322,11 +324,11 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
     containing the heading texts
   - The containers are separated by title boxes and are always followed by content boxes. All content is readable by being placed on the same off white background
   - Box structure is used to separate content, highlight interactive locations and guide the user through easy to follow instructions on site usage
-  - Maps on the test yourself page are large sized and easy to manipulate, movable as well as being clickable to see in a full screen on a new broswer tab 
+  - Maps on the test yourself page are large sized and easy to manipulate, movable as well as being clickable to see in a full screen on a new browser tab 
   - The game box takes up considerably more space than the average card to allow for more random patterns for where the brake button will show 
   - The contact-us page uses a large sized form that occupies two thirds of the screen with easy to follow directions
   - Mobile users still enjoy a rule-of-thirds, however, less white space is apparent
-  - Overflow is removed from the content so users on any devices, espcially mobile, do not need to scroll left or right for the same visual experience regarless of 
+  - Overflow is removed from the content so users on any devices, especially mobile, do not need to scroll left or right for the same visual experience regardless of 
   screen size
 
 
@@ -334,7 +336,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 [Top](#contents)
 
   - All forms on the page (contact us in particular) use Bootstrap's [form control](https://getbootstrap.com/docs/4.0/components/forms/)
-  - Inputs on the calculator and test yourself pages are validated via CSS and turn a pinky red (#c66464) when an invalid input is received 
+  - Inputs on the calculator and test yourself pages are validated via CSS and turn a pinky red (#c66464) when an invalid input is recieved 
   - Inputs turn a pale white for contrast with valid inputs (#fbfaf5)
   - Inputs on the calculator page are highlighted and a tooltip presented if an invalid response is given 
   - Inputs on the calculator page with invalid responses are scrolled to automatically on submit 
@@ -348,7 +350,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 - #### Design Strategy
 [Top](#contents)
 
-The overall strategy goals of the webiste design is to produce an easy flowing, uncluttered site but without being too minimal. Removing distractions from the student 
+The overall strategy goals of the website design is to produce an easy flowing, uncluttered site but without being too minimal. Removing distractions from the student 
 is advantageous for the context of their work while at the same time, large easy to navigate cards allow user input and interaction. This further drives 
 the curiosity of the student who can associate images with hints towards the variables required in the calculator or the type of button that they're about 
 to press. This helps scaffold the site and differentiate for all users. A beginner in Physics will see the car emblem for instance and recognize this as a kinetic object 
@@ -358,7 +360,7 @@ demonstration or homework assignment for their students or students will be able
 calculations on the random scenarios. Each page is designed with the same format and layout as the previous page leaving no surprises or the feeling that the user is on 
 the wrong page. Any external links are opened in a new browser tab and if the user is on the Calculator page they can access the help page without losing their data. 
 
-The textbook-feel of the site provides a sense of professionalism and trust for the student but without being overwhelming. A seeminlgy difficult task, such as 
+The textbook-feel of the site provides a sense of professionalism and trust for the student but without being overwhelming. A seemingly difficult task, such as 
 calculation of the dilemma zone is made easy by splitting each variable in a logical order for input. The beginner will only require primary data which can be obtained 
 easily on the site with default values already input into the calculator. A more seasoned Physics student will want to gather their own data and might further investigate 
 reaction times, intersection sizes, phase times for traffic lights and so on, and can then calculate for secondary data. Those who are looking to manipulate the data 
@@ -373,8 +375,8 @@ constructed to reflect this. As the JavaScript was completed it was apparent tha
 a simple design template for each page. New wireframes were made for the game, test yourself and contact pages. The final wireframe to be added was for the landing page 
 which was subsequently the last page to be designed and added to the site index. Page design remained consistent and modelled on the wireframes with very little change 
 made to the original design. The game page required a considerably larger game pad area to allow for more randomness and excitement in users getting a good representation 
-of reaction time. Equations were originally going to be screenshots from an equation editor. However, that never occured and the MathJax libraries were added for the 
-[help](https://pauld0051.github.io/physics-code/help.html) page increasing professionalism and clairty of the display.
+of reaction time. Equations were originally going to be screenshots from an equation editor. However, that never occurred and the MathJax libraries were added for the 
+[help](https://pauld0051.github.io/physics-code/help.html) page increasing professionalism and clarity of the display.
 
 The main sources for additional content such as API and external libraries were considered in the building of the wireframe. The only APIs to be visible 
 on the page were from Google Maps and Facebook. However, emailJS is added as a background functionality. Visible libraries such as [Bootstrap](https://getbootstrap.com/) 
@@ -427,8 +429,53 @@ Twitter is likely to be added at a later stage before other social media share b
   - [Bootstrap](https://getbootstrap.com/) libraries were used to set up a grid, box and container system 
     - Bootstrap functionality and design is shown in all wireframes 
 
-Wireframes can be viewed here: 
-  - [Physics Code wireframes view](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/wireframes/physics_code_wireframes.pdf "Physics Code wireframes")
+- #### View wireframes: 
+[Top](#contents)
+
+  - [Click to see wireframes](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/wireframes/physics_code_wireframes.pdf "Physics Code wireframes")
+
+- ### Final Design 
+
+The initial wireframe designs were chosen due to their low amount of clutter, ease of reading, adaptability and consistency among each page. The colour schemes 
+were picked to enhance the design and keep the site closer to neutral without overwhelming colours or intrusive design. Various icons were replaced as more appropriate 
+icons were discovered and each button had an icon added to it that represented the button's process. For example, a paper plane was added to the submit button on the 
+contact page. The design had also been intended to include a calculator on the "calculate" button however, due to the nature of the "input", a value for an HTML entity 
+code (allowing the use of icons in the value attribute) calculator detracted from the final anticipated design. Therefore a check mark (tick) was used as a clear 
+indicator that button was for "checking" work. 
+
+A terms and conditions as well as a privacy page with links in the footer were added at a later stage after discovering their requirement for Facebook to allow an app 
+number for the ability to share the page and scores on the game page. These links are embedded in each footer on each page and the text and HTML was generated by a 
+a wizard found at [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard) and 
+[Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard). No additional styling was required other than paragraph spacing and the use of 
+the site's default fonts. 
+
+The equations used on the [Help](https://pauld0051.github.io/physics-code/help.html) page were all generated using [MathJax](https://www.mathjax.org/) libraries, however, 
+the code is not actively responsive and large equations did not wrap on mobile devices. This was unforeseen at the initial production phase and was only discovered when 
+viewing on a mobile telephone outside of Chrome's "inspection". Initial consultation suggested that the equation should be removed and replaced with a fluid image that 
+would be more responsive. However, this detracted from the site's purpose to appear more like a textbook as well as a website. Instead of adding images, 
+[Bootstrap Display Properties](https://getbootstrap.com/docs/4.0/utilities/display/) were added to the code at the card level. A user on a large screen is able to view 
+the equation on three lines, where a mobile user will see the equation appear on five lines at appropriate break points. MathJax equations can not have a d-none attribute 
+and this would fail to hide the equation. It was discovered the entire card that contained the equation needed to be hidden for the anticipated outcome to occur. 
+
+The author picture (displayed on the home page wireframe) was not the final chosen picture. Instead, on a large screen, a full body picture with the caricatures holding 
+books is displayed. On a smaller screen, a close up of the caricature's head is displayed. Both allow a hover enhancement which enlarges the picture by 10%. Hover 
+enlargement is also found on the index page as users mouse-over the display cards. It was anticipated this would be included for all cards throughout the site, but the 
+enlarging cards detracted from the purpose and was not included in the final version. Originally, cards didn't enlarge, but shrunk. This also detracted from their purpose. 
+Although [Hover.css:](https://ianlunn.github.io/Hover/) had been considered for the site, in the end a previously used hover code was included. 
+
+The site had undergone several colour changes. Initially, to help in design, distinct colours were used for each division and section to aid in the creation. However, 
+these were not considered final colours and were removed as the project became closer to completion. Colours were added by using colour palettes ideas from 
+[Color Hex](https://www.color-hex.com/color-palettes/). However, the final production did not use a palette from the site, but author generated colours were used instead 
+and consultation with colour efficient parties was made. 
+
+An additional [404 page](https://pauld0051.github.io/physics-code/404.html) was added for users who accidentally key in the wrong address in the address bar of their 
+browser. 
+
+The vast majority of the site is represented in the wireframes, right down to the chosen maps on the [test yourself](https://pauld0051.github.io/physics-code/test_yourself.html) 
+page.
+
+
+
   
 
 
@@ -465,8 +512,8 @@ trigger the "required" attribute in the input tags. Changing the button to type=
 added that allows the modal to operate, as normal, even with a type="submit" button in place. The form needed to have an ID and the modal's ID was parsed into the 
 function. 
 3. The min="0" and max="1" worked for the coefficient of friction, but required a step="0.001" to allow for decimal places.
-4. Adding and removing classes was needed for multiple form inputs. If someone was putting in an input that calculated a delimma zone, the delimma zone icon would 
-appear in the modal header. If the user then continued to do another output, and this returned an option zone, they'd see both option zone and delimma zone icons. 
+4. Adding and removing classes was needed for multiple form inputs. If someone was putting in an input that calculated a dilemma zone, the dilemma zone icon would 
+appear in the modal header. If the user then continued to do another output, and this returned an option zone, they'd see both option zone and dilemma zone icons. 
 To fix this an add class to bring the icon to the header was used as well as a remove class if one had been added previously. 
 5. The dilemma zone calculator works out a dilemma zone as a negative number. But the actual dilemma zone is a positive number as a "size". To remove the negative symbol, 
 the Math.abs(total) syntax was tagged onto the function printing out the dilemma zone calculations. 
@@ -474,7 +521,7 @@ the Math.abs(total) syntax was tagged onto the function printing out the dilemma
 button remained active and was able to be pushed again. An initial attempt to remove the ID that allows the "click" event to be listened to failed to work. Finally, a jQuery
 button disabled function was able to complete the job. 
 7. :invalid input alerts on Firefox browsers are not anchored to the input field where users have supplied an incorrect value (for example more than 2 decimal places on calculator.html).
-The result is a floating alert box (PICTURED) that detracts from the value of the page. The fix to this is to force the user into using 2 decimal places by javascript.
+The result is a floating alert box (PICTURED) that detracts from the value of the page. The fix to this is to force the user into using 2 decimal places by javaScript.
 8. Buttons on the test_yourself.html page are monitored to set the value of the mapNumber in the JS file. However, in doing so, this meant that other buttons on the page 
 also affected the mapNumber variable. The fix was to remove the button tag and replace with a span. The span now acts identically to a button but is controlled by CSS. 
 There is no user experience difference and users will not be able to notice the difference. 
@@ -486,13 +533,13 @@ unsolved problems:
 this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
 Facebook goes beyond the requirement for this site. The issue will only occur externally on Facebook. 
 2. Advert blocking apps will cause unnoticed errors with the Facebook share button. Usually no user experience is changed as a result. However, the Console will show 
-an ERR_BLOCKED_BY_CLIENT alert and occassionally the Facebook share button may not display at all. The only fix is to turn off ad-blockers. 
+an ERR_BLOCKED_BY_CLIENT alert and occasionally the Facebook share button may not display at all. The only fix is to turn off ad-blockers. 
 3. Some unicode characters would not display on Android mobile devices. A calculator icon was to be used from Fontawesome for the "Calculate" button on the calculator. Due to the nature 
 of the code the value could not include a Fontawesome icon. A unicode icon was substituted, however, this was failing to replicate in all devices. Several other unicode variants 
 were trialed until a "check mark" x2713 was able to be displayed. 
 
 
-Privacy Policy Geneator https://www.privacypolicygenerator.info/#wizard
+Privacy Policy Generator https://www.privacypolicygenerator.info/#wizard
 Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard
 Converting from png to ico for favicons and map marker icon https://icoconvert.com/
 MathJax for the equations on the help page
