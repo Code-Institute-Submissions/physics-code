@@ -21,6 +21,20 @@
 - [Wireframes](#wireframes)
   - [View Wireframes](#wireframes-view)
   - [Final Design](#final-design)
+- [Features](#features)
+  - [Responsive Displays](#responsive-displays)
+    - [Mobile First](#mobile-first)
+    - [Large Screen Displays](#large-screen-displays)
+  - [Interactivity](#interactivity)
+    - [Calculator](#calculator)
+    - [Game](#game)
+    - [Contact](#contact)
+  - [Future Features](#future-features)
+    - [New Calculators](#new-calculators)
+    - [New Help Files](#new-help-files)
+    - [New Games](#new-games)
+ 
+
 
 
 
@@ -165,6 +179,8 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
     - Will be able to try to hit a brake button as quick as they can but will be surprised to see the button appearing in a random location within the card;
 
     [![Physics Code game brake](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-brake.png "Physics Code first view game button for brake")](https://pauld0051.github.io/physics-code/game.html)
+
+    - Watch a short 7 second animation of the reaction time game being played;
     
     [![Physics Code game animation](https://i.gyazo.com/11957619f00a27f62c5ebb8a2e0e7a09.gif "Physics Code game animation sequence")](https://gyazo.com/11957619f00a27f62c5ebb8a2e0e7a09)
 
@@ -183,6 +199,8 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
     - Try out unique and random scenarios based on real world data for each of the five intersections with seven variables to use in their calculation;
 
     [![Physics Code test yourself scenario](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-scenario.png "Physics Code first view random scenario for a given map")](https://pauld0051.github.io/physics-code/test_yourself.html)
+
+    - Discover a new way to measure small distacnes on Google Maps, this short seveon second animation shows how quickly this can be done;
     
     [![Gif from Gyazo](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-maps.gif "Physics Code first view map measurement animation")](https://pauld0051.github.io/physics-code/test_yourself.html)
 
@@ -472,11 +490,238 @@ An additional [404 page](https://pauld0051.github.io/physics-code/404.html) was 
 browser. 
 
 The vast majority of the site is represented in the wireframes, right down to the chosen maps on the [test yourself](https://pauld0051.github.io/physics-code/test_yourself.html) 
-page.
+page. Minor changes were made based on user comments during alpha testing and where the site did not display as anticipated on a particular sized screen. 
 
 
+## FEATURES
+[Top](#contents)
 
+- ### Responsive displays 
   
+  - #### Mobile First 
+  - Physics Code is primarily designed for use on mobile devices or smaller screen devices.
+  - Alpha testing was conducted on a Samsung Galaxy S7, Huawei P20 pro and Apple iPhone 8+.
+  - [Bootstrap Grid Systems](https://getbootstrap.com/docs/4.0/layout/grid/) were extensively used throughout the site. On smaller devices, cards appear on one line, one on top of 
+  the other making content easily scrollable. 
+  - The [Landing Page](https://pauld0051.github.io/physics-code/index.html) provides easy access to each of the navigation cards and a close-up Bitmoji character 
+  of the author is displayed.
+  - The menu system uses the [Bootstrap Navbar](https://getbootstrap.com/docs/4.0/components/navbar/) functionality for small screens using the 
+  toggle capability for the drop down menu list from a hamburger icon which pushes content neatly down. The content below the menu drop down is always visible 
+  to some degree.
+  - Headers were not made sticky as they interfered with the site's content and detracted from required entry of input. It also was not considered necessary 
+  for the site to have sticky navbars remaining in the top field as the site's scrollable content was not extensive and the Footer has a link back to the home page 
+  from any of the site's pages. 
+  - All images that need to resize are done so by using [Bootstrap's Responsive Images](https://getbootstrap.com/docs/4.0/content/images/) and the img-fluid class. 
+  - All maps on the site resize with their container width and height to remain in focus at all times. Maps are clickable and interactive. 
+  - White space is minimised on mobile displays, however, a rule of thirds still remains so the screen is not overwhelming.
+
+  -#### Large Screen Displays
+  - Alpha testing was conducted on 32in (71 cm width), 55in (121.7 cm) and more common 15in to 24in (38 cm to 61 cm) displays.
+  - Headers and footers are not fixed in place and scroll with the content. 
+  - The navigation menu remains open and does not toggle into the hamburger menu style unless screen width is below 1100 px. This differs from 
+  [Bootstrap breakpoints](https://getbootstrap.com/docs/4.4/layout/overview/#responsive-breakpoints) due to the extra wording on the right hand side of the 
+  navigation pane. As screen size becomes smaller, the tendency for links to wrap detracted from the aesthetically pleasing navbar element. To prevent that 
+  the new breakpoint was added in CSS3. 
+  - Images remain fluid on all pages and are generally at their maximum size on large screens but are still limited to the container that holds them. 
+
+- ### Interactivity
+[Top](#contents)
+
+Users are encouraged to interact on most pages by clicking for tooltips, inputting data, submitting data, sending messages to the author, using maps, calculating 
+dilemma zones etc. The main feature of the site is the [Dilemma Zone Calculator](https://pauld0051.github.io/physics-code/calculator.html), the first of its kind on 
+the internet. The calculator allows users to input seven variables to calculate the existence of dilemma zones based on their known primary data. The second key 
+element to interactivity is the [Reaction Time Game](https://pauld0051.github.io/physics-code/game.html) providing the user with a reasonable estimate for their 
+reaction time (one of the seven variables for the calculator). The next key interactive element is the random scenario generator from one of five possible intersections 
+around the world. Not only does this encourage the user to calculate the outcome of the dilemma or option zone, but their working out is checked by JavaScript. 
+Furthermore, there is nearly an endless supply of random outcomes based on initial velocity, traffic light phases, reaction times, tire conditions, weather conditions, 
+and car lengths. The intersections are pre-measured before adding to the website, but users are to make their own measurements on [Google Maps](https://www.google.com/maps/). 
+Finally, users can interact with the site's author by sending a message through [EmailJS](https://www.emailjs.com/) on the site's 
+[Contact](https://pauld0051.github.io/physics-code/contact.html) page. It is noted that currently only a free subscription to EmailJS exists which limits emails to only 
+200 submissions per month. During the testing phase, 21 emails were sent and received successfully. 
+
+  - #### Calculator
+[Top](#contents)
+
+  - Users can input seven variables, default values are in place as a guideline only and can easily be erased with new variable values added 
+  - The calculator has tooltips on each variable to give more advice on the input values 
+  - There are links to the [Help](https://pauld0051.github.io/physics-code/help.html) page which opens in a new browser tab
+  - Calculations will not submit if data is non-numerical in any of the seven inputs 
+  - Input fields change colour based on valid and invalid data 
+  - Tooltips flash up on the input field if an invalid value is being submitted 
+  - The input field is scrolled to if an invalid value is being submitted 
+  - Calculations are completed and all values are displayed in a pop-up modal, users will be able to see;
+    - distance the vehicle travels throughout the yellow and interphase duration
+    - distance the vehicle travels throughout the duration of the reaction time
+    - total distance from the stop-line required for the vehicle coming to a complete halt
+    - maximum Distance the vehicle is from stop-line 
+    - non-absolute value (either negative or positive) for the type of zone discovered 
+    - absolute value of the zone and type of zone 
+    - velocity in metres per second (especially if converted from one of the other two units, kilometres per hour or miles per hour)
+    - intersection size in metres (especially if converted from the alternative unit of yards)
+    - type of zone in the header of the modal 
+  - Users can then reset all data to the default values and re-input a new calculation
+
+  - #### Game
+  [Top](#contents)
+
+  - The game helps determine one of the seven variables of the calculator, reaction time 
+  - Users are greeted with a start button and a red-light (a lamp icon) 
+  - Once the start button is pushed, the light turns green and the user is anticipating an upcoming stop on a red light 
+  - The light remains green for a random amount of time (set to a maximum of 8 seconds and minimum of 3)
+  - The user will then attempt to push the brakes button as soon as it appears and the light has turned red 
+  - The brake button appears at one of a nearly unlimited amount of positions within the display frame 
+  - Users can then see their best score in a pop-up and their current score 
+  - A reset button sets the game up to start again 
+  - A share button allows users to share their best score on their Facebook timeline 
+
+  - #### Test Yourself 
+  [Top](#contents) 
+
+  - Users can view one of five real world intersections on the website 
+  - Maps are familiar to the user as Google Maps and allow similar interactivity on the site 
+  - Users can click on the maps anywhere to open them in a new, full sized tab for ease of calculation of intersection distance 
+  - Maps are able to be navigated as normal within the test-yourself page, users can access street view included
+  - It is possible to move the maps around, but to avoid being "lost" maps re-centre on the intersection after 3 seconds 
+  - Users are supplied with seven variables to help determine the risk of a dilemma zone;
+    - initial velocity 
+    - yellow light phase
+    - interphase 
+    - driver's reaction time
+    - vehicle's tire conditions
+    - weather conditions
+    - vehicle length 
+    - intersection size is measured using Google Maps with instructions provided by Google in the main heading of the page 
+  - Users can then either use their own method of calculation, the [Help](https://pauld0051.github.io/physics-code/help.html) 
+  page or the [Calculator](https://pauld0051.github.io/physics-code/calculator.html) page to determine if a dilemma zone exists in 
+  the given scenario 
+  - Once users have calculated their type of zone, a radio button choice is made, users can choose either;
+    - Dilemma Zone 
+    - Option Zone
+  - Users input their value and submit this for calculation and self assessment based on a supplied answer 
+  - Invalid inputs are treated similarly to the Calculator](https://pauld0051.github.io/physics-code/calculator.html) page except the 
+  submit button is disabled until a valid input is received 
+  - Users will be prompted by inline text underneath the input to make sure they're aware of a the required valid response 
+  - It is possible to reset the input field (causing the submit button to disable until a valid input is recieved) 
+  - Users can choose to get a new scenario from any of the five available maps 
+  - Answers are displayed as;
+    - type of zone picked by the user followed by a check mark (tick) for correct choice or "X" for an incorrect answer 
+    - the user's input value and then is described as too low, too high or within an acceptable range regardless of zone type chosen 
+    - users can achieve a perfect response 
+    - finally, the calculations as derived by the JavaScript based on intersection size and variables mentioned is given for the user to evaluate their score 
+    - users will get be within acceptable range when they are +/- 20% of the expected value (this allows for differneces in intersection measurment and 
+    coefficient of friction) 
+  - Users can attempt each map and random scenario an unlimited amount of times 
+
+- #### Contact
+[Top](#contents) 
+
+ - Users who have an email address will be able to contact the page's author without the need to access their own personal email 
+ - Respondents will be asked to supply a name, email and a message to the author 
+ - A submit button indicates "sending..." when pushed and an alert is given for a successfully sent email 
+ - Users will be prompted to add valid inputs into each field with similar inline prompts at each invalid response 
+ - Failed messages will also be prompted - however, till date this has not been confirmed 
+
+- ### Future Features
+[Top](#contents) 
+
+All efforts are being made to future proof Physics Code and the contents. A whole host of new features will be able to go live over time as the site gains traction 
+among students and teachers alike. New calculators, games and tests can be added with ease as well as new help pages and features. It is anticipated that Physics Code 
+will be able to increase usability with membership and monthly newsletters. It is already possible for users to contact the author with suggestions for new site features. 
+
+- #### New Calculators
+[Top](#contents) 
+
+The original site investigation lead to the idea of providing a projectile motion calculator, however, code was already written and available online for projectile motion as 
+well as many interactive sites promoting their projectile calculator. In order to be unique, and ahead of the game, the more complex Dilemma Zone Calculator was designed 
+and was based on an original assignment given to Queensland students in Australia as part of their Year 11 assessments. At the time the site was produced, no other site has 
+offered a dilemma zone calculator, Physics Code is the first and unique in this sense. However, not all calculators need ot be unique as they are added to the site. Calculators 
+should be useful, intuitive, easy to access, will not require special technology or devices and will have a large interactive component attached. A number of calculators are 
+being considered for coding:
+
+ - Projectile Motion Calculator
+ This will involve inputting a number of variables;
+   - angle of launch
+   - either initial velocity (overall) or;
+   - horizontal or vertical velocity 
+   - gravity 
+   - starting height (if required)
+   - ending height (if required)
+The calculator will not require all inputs so long either angle and one of the velocities are supplied or; two velocities (initial, horizontal or vertical) - providing 
+any two of those are known, a triangle can be formed and from that all the other variables can be determined. 
+
+The calculator, although not unique, will be provided in similar fashion to the Dilemma Zone calculator with large cards, input variable fields and images to hint for 
+the type of input required. Along with this, tooltips will be provided in much the same fashion. 
+
+ - Dilemma Zone Calculation with Perpendicular Roads 
+ Due to the high complexity of angled velocity in motor vehicles, including road angle, vehicle mass, turning arc etc, the idea of introducing this as a starting 
+ calculator was deterred. This feature will be added in with an "Advanced Options" feature at a later stage. The calculator will then include:
+   - vehicle mass 
+   - angle of turn 
+   - constant velocity (using circumference of a circle and arc-length)
+
+Users will then be expected to supply their own data for this calculation. Although Google Maps could find the distance in an angled turn, the accuracy of such 
+needs to be considered. 
+
+ - Uncertainty Calculator 
+ The third calculator is something all first year Phsyics students struggle with, the concept of uncertainty. The calculator will add a range of possibilities for the 
+ user to input variables, units, addition, subtraction, multiplication, division, exponents, square roots, averages etc. The calculator will build their equation using MathJax 
+ and display their answer, with absolute uncertainty. Displayed answers will also include percentage uncertainties where required. 
+
+ - Other calculators up for consideration but are not limited to;
+   - Pendulum calculator
+   - Spring calculator 
+   - Inductance calculator (including transformers)
+   - Relativity calculators 
+   - Kinetic energy conversions (including Newton's Gravitation) 
+   - Thermal conductivity and themral transfer calculators including specific heat and power calculations
+   - Diffraction and interference calculators 
+   - Standing wave calculators 
+   - Electrical circuit calculators, including a Kirchoff's Law calculator 
+   - Magneitc effects calculations (on charged particles, on current carrying wires etc)
+   - Doppler effect calculator 
+   - Half life and nuclear decay calculator 
+
+All calculators will be based on a minimum requirement for the International Baccalaureate DP1 and DP2 High Level Program.
+
+- #### New Help files 
+[Top](#contents) 
+
+All calculators will be coupled with a help page set up using [MathJax](https://www.mathjax.org/) for equation display. Other LaTeX libraries may be considered 
+depending on availablity. Help pages, like their counterpart calculators, can be reached through dropdown navigation on the navbar (not currently active due to 
+only one calculator, help page etc being available on first release) using [Bootstrap's drop down](https://getbootstrap.com/docs/4.4/components/navbar/) ability 
+for all navbar links. Access to help files will also be available on each calculator through the infolink ("i" in a blue circle). 
+
+- #### New Games 
+[Top](#contents) 
+
+In similar fashion to the current reaction time game, games linked to a variable or variables in each calculator will be offered. Some examples are give here:
+
+- Projectile Motion Game
+  - Hit a target with the projectile motion calculator after being given a random distance, inital and final height of the target
+  - Target will be displayed in 2d and a parabola drawn tracing the motion of the projectile
+  - Users will determine angle and initial velocity to hit the target and will be scored on accuracy 
+  - Users will need to race the clock to get the highest scores - the faster the user determines the initial velocity and angle, and the closer to the 
+  target the user gets, the more points will be associated
+  - Users will be able to share their scores in similar methods as currently available on the reaction time game 
+
+- Bungee Jumping Game (associated with the spring calculator)
+  - Users will need to pick the correct bungee length and spring constant for a given human's height, mass and height of jump 
+  - Scores will be determined on the "fun" that the human jumper had - for example if they want to get wet (ie the bungee length allows the human to be 
+  dunked in the water below), the human was slow enough as they entered the water to eliminate risk of being hurt, the human was slowed down at a reasonable 
+  rate and was able to "bounce" back etc
+  - Scores will also be determined on time it took to work out the calculation for spring constant and bungee length given the random variables
+
+- Age, length, momentum and energy game (based on the relativity calculator)
+  - Users will be given random velocities (up until the speed of light) of a given object carrying a human 
+  - From the data supplied users will determine how old the occupant will be when they return to Earth, how "long" their spacecraft was 
+  to an observer at maximum velocity, their momentum and energy at various points of the journey
+  - Participants will need to be quick and accurate in order to answer questions and score points 
+
+As with help pages, all calculators will have variable associated games. As a calculator comes online, so will its associated help page and game page. 
+
+There is a near unlimited amount of potential for other calculators, help pages and games and the site will continually expand and be accessible for all. 
+
+
 
 
 
