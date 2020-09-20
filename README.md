@@ -32,7 +32,11 @@
   - [Future Features](#future-features)
     - [New Calculators](#new-calculators)
     - [New Help Files](#new-help-files)
-    - [New Games](#new-games)
+    - [New Games](#new-games)    
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Libraries](#libraries)
+  - [Programs](#programs)
  
 
 
@@ -720,6 +724,95 @@ In similar fashion to the current reaction time game, games linked to a variable
 As with help pages, all calculators will have variable associated games. As a calculator comes online, so will its associated help page and game page. 
 
 There is a near unlimited amount of potential for other calculators, help pages and games and the site will continually expand and be accessible for all. 
+
+## TECHNOLOGIES USED
+
+- ### Languages
+[Top](#contents)
+
+Physics Code uses three main languages as a basis for the code on all the pages, these include;
+
+  - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) (75.7%)
+  - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) (4.2%)
+  - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (18.6%)
+  
+- ### Libraries
+[Top](#contents)
+
+The coding for the website included libraries and frameworks that make use of the languages involved, these include (in alphabetical order);
+
+  - [Bootstrap](https://getbootstrap.com/)
+  - [Fontawesome](https://fontawesome.com/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [Google Maps](https://www.google.com/maps/)
+  - [jQuery](https://jquery.com/)
+  jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
+  - [MathJax](https://www.mathjax.org/)
+
+- ### Programs
+[Top](#contents)
+
+All of the code for the website was produced and enhanced by using the following software applications (in alphabetical order);
+
+  - [Atom](https://atom.io/)
+  Atom is an integrated development environment (IDE) used to store Physics Code's HTML, CSS and JavaScript files as well as to beautify the script using 
+  Atom Beautify.
+
+  - [Balsamic](https://balsamiq.com/)
+  The site's wireframes were created using Balsamiq software.
+
+  - [Bitmoji](https://www.bitmoji.com/)
+  The author's cartoon pictures were created in Bitmoji on an Android device.
+
+  - [ConvertICO](https://convertico.com/)
+  The favicon that appears in the browser tab was converted from png to ico using convertico. The site was also used to convert jpg to png. 
+
+  - [EmailJS](https://www.emailjs.com/)
+  Is a replacement for the need to add a backend or server for contacting the page author. Emails are sent from the site via the author's Gmail account. Up to 200 
+  emails can be sent per month for free. 
+  
+  - [GIMP](https://www.gimp.org/)
+  GIMP (GNU Image Manipulation Program) was used for shading, adjusting, colouring and saving all images on the website
+
+  - [Github](https://github.com/)
+  Github acted as a repositroy for all versions of the website and as a host for the website's pages.
+
+  - [Gitpod](https://www.gitpod.io)
+  Gitpod is an IDE that was used extensively to code and test all versions of the website as well as to push the code through to the repositroy at Github.
+
+  - [Gyazo](https://gyazo.com/)
+  Gyazo was used to capture animated images for this README.md file as well as a visual display to focus on errors with the site's display and to share animated files 
+  within the network to troubleshoot the issue.
+
+  - [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php)
+  The site's spelling was checked using this service
+
+  - [JSBin](https://jsbin.com/?html,output)
+  Used to test small snippets of code that in an external environment. 
+
+  - [Libre Open Office](https://www.libreoffice.org/)
+  The README.md spelling was checked through this open office software. 
+
+  - [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard)
+  The site's privacy policy content was created using this generator. 
+
+  - [Snip & Sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab)
+  Is a Windows utility used to capture screenshots and was primarily used to produce the images for the README.md file presented here. 
+
+  - [Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard)
+  The site's terms and condition content was created with this generator. 
+
+  - [TinyPNG](https://tinypng.com/)
+  All images on the site were first sent to TinyPNG before beoing uploaded to Gitpod and sent to the Github repository. The aim is to make the page load 
+  faster but also to keep the same image quality that users would expect. 
+
+  
+
+
+
+  
+
+
 
 
 
