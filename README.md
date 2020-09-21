@@ -218,7 +218,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
     - Can accidentally move the map off of centre and the map will automatically return to the intersection so users can not get lost;
 
-    [![Physics Code test yourself map animation]((https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-map-move.gif)](https://gyazo.com/c570bd47b04221265b12b54b0902d79c)
+    [![Physics Code test yourself map animation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-map-move.gif)](https://gyazo.com/c570bd47b04221265b12b54b0902d79c)
 
     - Can explore the map from a driver's point of view by using Google's Street View;
 
@@ -519,7 +519,7 @@ page. Minor changes were made based on user comments during alpha testing and wh
   - All maps on the site resize with their container width and height to remain in focus at all times. Maps are clickable and interactive. 
   - White space is minimised on mobile displays, however, a rule of thirds still remains so the screen is not overwhelming.
 
-  -#### Large Screen Displays
+  - #### Large Screen Displays
   - Alpha testing was conducted on 32in (71 cm width), 55in (121.7 cm) and more common 15in to 24in (38 cm to 61 cm) displays.
   - Headers and footers are not fixed in place and scroll with the content. 
   - The navigation menu remains open and does not toggle into the hamburger menu style unless screen width is below 1100 px. This differs from 
@@ -745,7 +745,7 @@ The coding for the website included libraries and frameworks that make use of th
   - [Fontawesome](https://fontawesome.com/)
   - [Google Fonts](https://fonts.google.com/)
   - [Google Maps](https://www.google.com/maps/)
-  - [jQuery](https://jquery.com/)
+  - [jQuery](https://jquery.com/) 
   jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
   - [MathJax](https://www.mathjax.org/)
 
@@ -753,6 +753,9 @@ The coding for the website included libraries and frameworks that make use of th
 [Top](#contents)
 
 All of the code for the website was produced and enhanced by using the following software applications (in alphabetical order);
+
+  - [Am I Responsive](http://ami.responsivedesign.is/#)
+  Allows editors to see how the site is displayed on various sized screens.
 
   - [Atom](https://atom.io/)
   Atom is an integrated development environment (IDE) used to store Physics Code's HTML, CSS and JavaScript files as well as to beautify the script using 
@@ -790,8 +793,14 @@ All of the code for the website was produced and enhanced by using the following
   - [JSBin](https://jsbin.com/?html,output)
   Used to test small snippets of code that in an external environment. 
 
+  - [JSHint](https://jshint.com/)
+  A handy, online JavaScript validator.
+
   - [Libre Open Office](https://www.libreoffice.org/)
   The README.md spelling was checked through this open office software. 
+
+  - [Pingdom](https://tools.pingdom.com)
+  For testing the site's speed and response.
 
   - [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard)
   The site's privacy policy content was created using this generator. 
@@ -805,6 +814,16 @@ All of the code for the website was produced and enhanced by using the following
   - [TinyPNG](https://tinypng.com/)
   All images on the site were first sent to TinyPNG before beoing uploaded to Gitpod and sent to the Github repository. The aim is to make the page load 
   faster but also to keep the same image quality that users would expect. 
+
+  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+  Helped with checking CSS file validation
+
+  - [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+  Enabled checking the site's HTML coding with ease.
+
+  
+
+
 
   
 
