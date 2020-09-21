@@ -40,10 +40,8 @@
   - [Application Programming Interfaces](#application-programming-interfaces)
     - [Maps JavaScript API](#maps-javascript-api)
     - [Facebook Software Development Kit](#facebook-software-development-kit-(sdk))
- 
-
-
-
+    - [EmailJS](#emailjs)
+  - [Script Refactoring](#script-refactoring)
 
 ## DESCRIPTION
 - **Physics Code** is an educational website aimed at bringing free Physics based content to students and teachers worldwide in a simple and aesthetically pleasing manner. 
@@ -998,6 +996,77 @@ The full JavaScript is then run from the sendemail.js file:
             -  });
             -  return false;
             -  });
+
+- ### Script Refactoring
+Due to the extensive nature of the site, scripts had the tendency to be large files that could evidentally slow the site down and produce difficult to manipulate code. 
+In particular the test_yourself.js code file was over 800 lines long in the earlier stages of development. Although this was somewhat intentional to begin with, it was 
+clear that the entire content had numerous areas for improvement and readability. 
+
+To begin with there are five maps, each with a sepcific [mapNumber] variable (eg "One", "Two", "Three" etc). This allowed maps to be separated in the scripts whole at the 
+same time allowing unique situations to be called on and parsed into the scenario data. Each map is called as soon as the user selects the Scene button at the bottom of 
+each map. The [mapNumber] then becomes a global variable and is used to calculate the scene. 
+
+An example of refactoring is shown here:
+
+ - Original code:
+
+        -  document.getElementById("One").addEventListener("click", mapVariables);
+        -  document.getElementById("Two").addEventListener("click", mapVariables);
+        -  document.getElementById("Three").addEventListener("click", mapVariables);
+        -  document.getElementById("Four").addEventListener("click", mapVariables);
+        -  document.getElementById("Five").addEventListener("click", mapVariables);
+
+Although only taking up five lines of code, this was refactored to:
+
+        -  document.querySelectorAll(".mapVariables").forEach(item => {
+        -  item.addEventListener('click', mapVariables)
+        -  })
+
+Essentially just two lines of code. 
+
+In the first editions of the test_yourself page each map was separated to have unique variables. In the refactored version, each map still had unique variables 
+but was called on from one set of data instead of five individual sets. Each map gets the variables from this code:
+
+        -  document.getElementById(mapNumber + "InitialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
+        -  document.getElementById(mapNumber + "Phase").innerHTML = yellowPhase.toFixed(1) + " s";
+        -  document.getElementById(mapNumber + "RlPhase").innerHTML = interPhase.toFixed(1) + " s";
+        -  document.getElementById(mapNumber + "RtRandom").innerHTML = reactionTime.toFixed(3) + " s";
+        -  document.getElementById(mapNumber + "TireCondition").innerHTML = tires[tireCondition];
+        -  document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
+        -  document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
+
+The date for each can then be taken from also one location rather than five individual locations such as the date for climate which needs to be individualised for 
+each map:
+
+        -  let climate;
+        -  if (mapNumber === "mapOne" || mapNumber === "mapThree") {
+        -  climate = ["dry", "dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
+        -  climateCondition = Math.floor(Math.random() * climate.length);
+        -  keyClim = climate[climateCondition];
+        -  } else if (mapNumber === "mapTwo") {
+        -  climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain"];
+        -  climateCondition = Math.floor(Math.random() * climate.length);
+        -  keyClim = climate[climateCondition];
+        -  } else if (mapNumber === "mapFour") {
+        -  climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
+        -  climateCondition = Math.floor(Math.random() * climate.length);
+        -  keyClim = climate[climateCondition];
+        -  } else if (mapNumber === "mapFive") {
+        -  climate = ["dry", "light rain", "medium rain", "heavy rain"];
+        -  climateCondition = Math.floor(Math.random() * climate.length);
+        -  keyClim = climate[climateCondition];
+        -  } else climate = false;
+
+Now new maps can be added with ease or use existing data. Note that some of the random conditions contain the same variable, such as map two with "dry" appearing 
+three times. This prevents the randomisation selecting a variable with an even distribution. As the location of map two is Sydney, the area is more likely to be dry 
+than to have rain. Although rain is still a possiblity, it is not an even distribution. There are subsequent methods that can be employed to lower the risk of producing 
+an even distribution for the chance of an event occurring, however, for practicality, it was more valid to add the variable in more times as required. Now "dry" is 
+able to be picked three times out of six, or approximately 50% of the time. Furthermore, it is never likely to snow in Sydney (though it has happened, but extremely 
+rarely) and therefore it would be a poor user experience to include an unrealistic scenario for the city. Therefore map one and three where snow is likely and can be 
+heavy and map four, where light snow and ice is possible allows for a more realistic setting for each intersection. 
+
+The entire code was reduced by about 70% from near 800 lines to around 240 lines. 
+
 
 
 
