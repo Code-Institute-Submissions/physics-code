@@ -37,6 +37,9 @@
   - [Languages](#languages)
   - [Libraries](#libraries)
   - [Programs](#programs)
+  - [Application Programming Interfaces](#application-programming-interfaces)
+    - [Maps JavaScript API](#maps-javascript-api)
+    - [Facebook Software Development Kit](#facebook-software-development-kit-(sdk))
  
 
 
@@ -820,6 +823,189 @@ All of the code for the website was produced and enhanced by using the following
 
   - [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
   Enabled checking the site's HTML coding with ease.
+
+- ### Application Programming Interfaces (API's) Used
+[Top](#contents)
+
+Primarily Physics Code relies on Google Maps API for access to map data for display as part of the user's ability to test themselves as a random calculation for a given 
+real-world intersection. All API calls are located at the bottom of the HTML page so as to increase the speed users can access the page and thus loading of JavaScript happens 
+secondary. This is backed up with the evidence of an "A" in [Pingdom's]() test which responded with the following:
+
+[![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-javascript.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
+
+- #### Maps JavaScript API
+[Top](#contents)
+
+All maps were provided by Google by accessing the [Google Developers Console](https://console.developers.google.com/) and applying for an Maps API key. This key is used 
+only for this site and has restrictions for all other URLs other than Physics Code. The key is called on in the maps.js file via these two scripts located at the bottom of 
+the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page:
+
+            - <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
+            - <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap"></script>
+
+Each map is called by its location (coordinates latitude and longitude) which are picked up from the map itself. For example, intersection one is called by:
+
+            -  let intersection_one = {
+            -  lat: 55.777034,
+            -  lng: 37.583926
+            -  };
+
+Each intersection is labelled intersection_[map number] to a total of five maps. The maps are then set to display as a satellite picture with a pre-set zoom:
+
+            -  let map2 = new google.maps.Map(
+            -  document.getElementById('map_two'), {
+            -  zoom: 19,
+            -  center: intersection_two,
+            -  mapTypeId: 'satellite',
+            -  zoomControl: false,
+            -  rotateControl: false
+            -  });   
+
+Zoom controls were removed from the maps to allow a crisper view of the entire interscetion and rotational control was removed as this could confuse the user as to the 
+direction required for calculation of the intersection. 
+
+The unique map icon located at the center of each intersection was positioned by this code:
+
+            -  let marker = new google.maps.Marker({
+            -  position: intersection_one,
+            -  map: map,
+            -  icon: image
+            -  });
+
+A previously labelled variable (intersection_[map number]) was used to locate the position of the marker and the image was derived from:
+
+            -  let image = 'assets/images/map_icon_marker.ico';
+
+Users are able to scroll around in the maps and use them as though they are on Google's own site. However, in doing so, a user may become disoriented and may then become 
+frustrated when trying to find the intersection again. This could be seen as a poor user experience. To compensate for this, the map returns to its centered position after 
+3000 ms (3 seconds) by using the following code:
+
+            -  let marker2 = new google.maps.Marker({
+            -  position: intersection_two,
+            -  map: map2,
+            -  icon: image
+            -  });
+            -  map2.addListener("center_changed", () => {
+            -  window.setTimeout(() => {
+            -  map2.panTo(marker2.getPosition());
+            -  }, 3000);
+            -  });
+
+Finally, users are able to click on the map at any point (on the marker or anywhere on the map) to access the map in a full screen on a new broswer tab. The code 
+allowing for this is:
+
+            -  google.maps.event.addListener(map2, "click", function() {
+            -  window.open("https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3");
+            -  });
+
+All code pertaining to the Maps JavaScript API are located in a single file maps.js. 
+
+Documentation and description of the codes is found by exploring the vast documentation at the 
+[Google Map JavaScript API Guide](https://developers.google.com/maps/documentation/javascript/overview). 
+
+- #### Facebook Software Development Kit (SDK)
+[Top](#contents)
+
+To allow users to share the site on their Facebook timelines a Facebook share button was added to each of the pages in the footer. For further sharing ability, 
+game share of scores was also enabled using similar code. To access the [Facebook SDK](https://developers.facebook.com/docs/apis-and-sdks/) 
+a Facebook account is needed. At the bottom of each page a share functionality was embeded inside of script tags. An app number is appkied for and granted when a page 
+can prove it has both a terms and conditions and privacy policy for public view. When this is completed, the app number is granted and can be used for various application 
+processes. Again, this is restricted to the application being used, in this case, solely for Physics Code. In order for share functionality, developers are recommended 
+to include og tags for meta data at the top of each page that is being shared. Although this was optional, all pages recieved the same meta data. 
+
+The scripts at the bottom of each page set the share functionality and the share button is embedded into the HTML at the location where the developer wishes this to appear. 
+
+The HTML is as follows (located in the footer of each page):
+
+            -  <div class="container text-center">
+            -  <div class="fb-share-button" data-href="https://pauld0051.github.io/physics-code/index.html" data-layout="button" data-size="large">
+            -  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphysics-code%2Findex.html&amp;src=sdkpreparse" 
+            -  class="fb-xfbml-parse-ignore">Share</a></div>
+            -  </div>
+
+This is followed by the script being loaded at the bottom of the page:
+
+            -   <div id="fb-root"></div>
+            -  <script src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=335490644461179&autoLogAppEvents=1" nonce="jH6xsmAN"></script>
+
+The metatags at the header of each page are as follows:
+
+            -  <meta property="og:url" content="https://pauld0051.github.io/physics-code/index.html" />
+            -  <meta property="og:type" content="website" />
+            -  <meta property="og:title" content="Physics Code" />
+            -  <meta property="og:description" content="A free web resource for Physics students." />
+            -  <meta property="og:image" content="https://pauld0051.github.io/physics-code/assets/images/logo-main.png" />
+
+This also helps with search engines to find the site and provides Facebook share services with the information required to display the logo as well as a small tag line 
+about the site. The information and code development for a share button can be found at [Facebook Share Button](https://developers.facebook.com/docs/plugins/share-button/) 
+documentation. 
+
+To share results from the reaction time game, the app with the app number (previously discussed) is used with the following code:
+
+            -  document.getElementById("share_button").addEventListener("click", share_result);
+            -  function share_result() {
+            -  FB.ui({
+            -  app_id: 335490644461179,
+            -  method: 'feed',
+            -  link: 'https://pauld0051.github.io/physics-code/',
+            -  quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
+            -  }, function(response) {
+            -  if (response && !response.error_message) {
+            -  alert('Posting completed.');
+            -  } else {
+            -  alert('Oopsy daisy. Your score was not posted, did you close before sharing?');
+            -  }
+            -  });
+            -  }
+
+This code also includes alerts if a user closes the share function before actually sharing to their profile and timeline. Information for this code is found 
+at the [Facebook Share Dialogue](https://developers.facebook.com/docs/sharing/reference/share-dialog) documentation.
+
+- ### EmailJS 
+[Top](#contents)
+
+An account and email address is required to access the EmailJS services. From there, an email template can be created with necessary requirements filled out. 
+When an account has been created and an email added it is possible then to add templates via the [EmailJS Template Editor](https://dashboard.emailjs.com/admin/templates).
+
+For Physics Code the template was set up to include an email "to", an email "from", the user's name and a message (with prompt). 
+
+[![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/emailjs-template.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
+
+The final part of the message ` {{from_name}} can be contacted at {{from_email}} ` shows the user's email address for easy reply. 
+
+With the template set up, the script required to call the emailJS functionality is initiated in the HTML at the bottom of the page along with the other scripts:
+
+            -  <script type="text/javascript">
+            -  (function() {
+            -  emailjs.init("user_4M0aY6Qk6YuN226ZoNGhW");
+            -  })();
+            -  </script>
+
+The full JavaScript is then run from the sendemail.js file:
+
+            -  let myform = $("form#user_request");
+            -  myform.submit(function(event) {
+            -  event.preventDefault();
+            -  let service_id = "default_service";
+            -  let template_id = "physics_code_message";
+            -  myform.find("button").html('<i class="fas fa-paper-plane"></i> Sending...');
+            -  emailjs.sendForm(service_id, template_id, myform[0]).then(function() {
+            -  alert("Sent!");
+            -  myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
+            -  }, function(err) {
+            -  alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+            -  myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
+            -  });
+            -  return false;
+            -  });
+
+
+
+
+
+
+
+
 
   
 
