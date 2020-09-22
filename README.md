@@ -42,6 +42,7 @@
     - [Facebook Software Development Kit](#facebook-software-development-kit-(sdk))
     - [EmailJS](#emailjs)
   - [Script Refactoring](#script-refactoring)
+  - [Input Validation](#input-validation)
 
 ## DESCRIPTION
 - **Physics Code** is an educational website aimed at bringing free Physics based content to students and teachers worldwide in a simple and aesthetically pleasing manner. 
@@ -292,9 +293,10 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 - #### Colour Scheme
 [Top](#contents)
 
-  - The site uses light colours to aid those with colour deficiencies which make up over 12% of the world's population
-  - The site's colour scheme does not use black text on red backgrounds or strong red over a dark colour
-  - The author has mild colour blindness and uses this to make the site accessible for all and checks with colour efficient users for appropriate gradients
+  - The site uses light colours to aid those with colour vision deficiency which make up about 5% of the world's population (1 in 12 males and 1 in 200 females)
+  - The site's colour scheme avoids the use of black or dark text on red backgrounds or strong red over a dark colour
+  - The author has mild colour blindness and uses this to make the site accessible for anyone, furthermore, checks are made with 
+  testers who have normal colour vision to make sure there is efficient use of colours and appropriate gradients and contrast
   - The navigation bar uses #d7e9f5 as a background colour - a light blue colour that compliments the dark text and highlights the bright red Physics Code icon 
   - The heading boxes of each page are nested in a darker blue compliment to the navigation bar - #54a5d5
   - The background of each heading and subheading box is based on the near white colour #f8f8ff with some opacity to allow for a bold heading or writing to stand out 
@@ -489,7 +491,7 @@ Although [Hover.css:](https://ianlunn.github.io/Hover/) had been considered for 
 The site had undergone several colour changes. Initially, to help in design, distinct colours were used for each division and section to aid in the creation. However, 
 these were not considered final colours and were removed as the project became closer to completion. Colours were added by using colour palettes ideas from 
 [Color Hex](https://www.color-hex.com/color-palettes/). However, the final production did not use a palette from the site, but author generated colours were used instead 
-and consultation with colour efficient parties was made. 
+and consultation with normal colour vision parties was made. 
 
 An additional [404 page](https://pauld0051.github.io/physics-code/404.html) was added for users who accidentally key in the wrong address in the address bar of their 
 browser. 
@@ -747,6 +749,7 @@ The coding for the website included libraries and frameworks that make use of th
   - [Google Fonts](https://fonts.google.com/)
   - [Google Maps](https://www.google.com/maps/)
   - [jQuery](https://jquery.com/) 
+  
   jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
   - [MathJax](https://www.mathjax.org/)
 
@@ -827,7 +830,7 @@ All of the code for the website was produced and enhanced by using the following
 
 Primarily Physics Code relies on Google Maps API for access to map data for display as part of the user's ability to test themselves as a random calculation for a given 
 real-world intersection. All API calls are located at the bottom of the HTML page so as to increase the speed users can access the page and thus loading of JavaScript happens 
-secondary. This is backed up with the evidence of an "A" in [Pingdom's]() test which responded with the following:
+secondary. This is backed up with the evidence of an "A" in [Pingdom's](https://tools.pingdom.com/) test which responded with the following:
 
 [![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-javascript.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
 
@@ -1035,7 +1038,7 @@ but was called on from one set of data instead of five individual sets. Each map
         -  document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
         -  document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
 
-The date for each can then be taken from also one location rather than five individual locations such as the date for climate which needs to be individualised for 
+The data for each can then be taken from also one location rather than five individual locations such as the data for climate which needs to be individualised for 
 each map:
 
         -  let climate;
@@ -1066,6 +1069,143 @@ rarely) and therefore it would be a poor user experience to include an unrealist
 heavy and map four, where light snow and ice is possible allows for a more realistic setting for each intersection. 
 
 The entire code was reduced by about 70% from near 800 lines to around 240 lines. 
+
+- ### Input validation
+[Top](#contents)
+
+Input validation was considerably more time consuming than many of the other sections of code. The main reason for adding external validation checks for input was due to 
+browser differences between two of the most popular browsers in use. On Chrome, the intupt type="number" prevents the input of letters, except "e" (for exponentials) 
+and on mobile phone opens up the numeric keypad instantly when the input is selected. However, on Firefox, input type="number" neither prevents input of letters and fails to 
+effectively validate for such. Despite these two major differences, HTML validation is certainly not entirely reliable and should not be considered the only source of 
+validation. Secondly, Firefox validation does provide a default user hint in a bubble/tooltip that is seemingly anchored to the input where an invalid response has been received. 
+Unfortunately if the user scrolls, the tooltip is no longer anchored and floats up the screen as the user scrolls. Not only is this unsightly, but defeats the purpose of 
+the tooltip showing the user where their invalid input has been located. Because of this scenario, default tooltips on all broswers was turned off using the following code:
+
+        -  document.querySelector("form").addEventListener("invalid", function(event) {
+        -  event.preventDefault();
+        -  }, true );
+
+Secondly, code was added to CSS to change the colour of inputs if they are valid or invalid by using this code: (Pablo Darde, 2020)
+
+        -  input[type="number"] + div {
+        -  display: none;
+        -  }
+        -  input[type="number"]:valid {
+        -  background-color: #fbfaf5;
+        -  }
+        -  input[type="number"]:invalid {
+        -  background-color: #eac6c6;
+        -  }
+        -  input[type="number"]:invalid + div {
+        -  display: block;
+        -  color: #c66464; 
+        -  }
+
+Spinners on number inputs were also removed using code first found at [W3Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp):
+
+        -  input::-webkit-outer-spin-button,
+        -  input::-webkit-inner-spin-button {
+        -  -webkit-appearance: none;
+        -  margin: 0;
+        -  }
+        -  input[type=number] {
+        -  -moz-appearance: textfield;
+        -  }
+
+Finally, JavaScript was used to determing if a number had been inputted and contained only 2 or 3 decimal places and no exponents. 
+
+For two decimal places the variable was set from the following:
+
+        -  const isOpen = (val) => {
+        -  const num = parseFloat(val);
+        -  if (isNaN(num)) {
+        -  return true;
+        -  } else {
+        -  const decimals = num.toString().split('.')[1] || '';
+        -  if (decimals.length > 2) {
+        -  return true;
+        -  } else {
+        -  return false;
+        -  }
+        -  }
+        -  };
+
+Discussion with others at [StackOverflow](https://stackoverflow.com/) had suggested to replace this code with a regex code instead. Although plenty of regex code was 
+available, this code had already been written and was suitable to complete the job. For future use, a regex code will be used, especially for email. 
+
+The constants are then parsed into the validation filter to trigger a tooltip and a scroll "up" to the invalid input if required:
+
+        -  $(document).ready(function() {
+        -  $("#submitCalculation").click(function() {
+        -  $(".checkVelocity").each(function() {
+        -  const val = $(this).val();
+        -  if (isOpen(val) || val > 300) {
+        -  $(this).popover({
+        -  placement: "top",
+        -  content: '<textarea class="popover-textarea"></textarea>',
+        -  template: '<div class="popover"><div class="arrow"></div>' +
+        -  '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">' +
+        -  '</i></div><div class="popover-content col-9">Enter the velocity of the car between 10 and 300 ms<sup>-1</sup>, kmh<sup>-1</sup> or mph.' +
+        -  '</div></div>'
+        -  });
+        -  $(this).popover("show");
+        -  $(this).click(function() {
+        -  $(this).popover("hide");
+        -  });
+        -  $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
+        -  }
+        -  })
+        -  })
+        -  })
+
+This code is on the form_validation.js file and checks the validation of the velocity input on the [calculator](https://pauld0051.github.io/physics-code/calculator.html) page.
+
+The code allowed tooltips (pop-overs) to occur at the invalid input (code partly from [Bootstrap Tooltips](https://getbootstrap.com/docs/4.0/components/tooltips/)) as well 
+as the scroll function to the first invalid response. If multiple invalid responses occur, each time the user attempts to submit the function will scroll to the next 
+invalid input. The original code and idea was first found here: http://jsfiddle.net/bqo5mdcz/3/ through a Google search, however, it was not clear who the original author was. 
+
+Although email and name validation is also run by similar code, instead of having a non-numerical value ping "false", a numerical only value in the name or email field would. 
+
+Names and emails, although can have numbers, can not be numbers. Again, a suitable regex could be used for this purpose. 
+
+Although vast numbers of libraries exist that help control for input, the learning experience was more valuable to include a unique validation system. Further projects 
+may include libraries or parts of code from libraries to cut down on the extensive amount of time spent on coding for validation of inputs. 
+
+The site release and current version has three different methods of preventing user invalid input. Because there is no backend or serve side requirements, all validation can 
+be completed with HTML, CSS and JavaScript. The calculator page validation has been described. Subtle differences appear on the validation of the 
+[test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page. Because there is only one user input field, there is no requirement to scroll to the input box. 
+However, if the user was albe to input an invalid number, because of the global requirement of the mapNumber variable, a user would be able to submit and a calculation would 
+still be performed even without a number. Many methods to prevent code from continuing had been tested, including ` event.preventDefault ` and ` event.stopPropagation ` but 
+to no avail. Finally, it was decided that the default "enabled" submit button would need the ` disabled ` attribute until such a time a valid input was included. 
+This also meant the reset button would clear the input and would also set the submit button to ` disabled `. The main issue was getting the "submit" button to listen for 
+invalid inputs after the default ` disabled ` was removed (for example, an invalid input was backspaced to a point where a valid input was ready to be accepted but the 
+user continued to re-input an invalid response). To further make this task difficult, the response to disable the sunmit button needed to be instantenous. Because the CSS 
+had been controlling for the colour of the input field, it was believed a code could read the colour of the input and adjust the submission button status through this method. 
+
+The original code was authored and edited testing at JSBin however, the final code was consulted with sale108 from [StackOverflow](https://stackoverflow.com/) with 
+subtle changes allowing for the code to read the input values instantly (keyup listener). 
+
+The final code to listen for the colour of the input field is as follows:
+
+        -  const elem = document.getElementById(mapNumber + "UserInput");
+        -  elem.addEventListener("keyup", () => {
+        -  let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
+        -  let submitBtn = document.getElementById(mapNumber + "Submit");
+        -  if (theStyle === "rgb(234, 198, 198)") {
+        -  submitBtn.disabled = true;
+        -  document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a value for your calcuation then click on the <em>submit</em> button below to check your answers."
+        -  } else if (theStyle === "rgb(251, 250, 245)") {
+        -  submitBtn.disabled = false;
+        -  }
+        -  });
+        -  const reset = document.getElementById(mapNumber + "Reset")
+        -  reset.addEventListener("click", disableSubmit);
+        -  function disableSubmit() {
+        -  document.getElementById(mapNumber + "Submit").disabled = true;
+        -  };
+
+To cut down on code, the RGB value was used and not converted to hex (16).
+
 
 
 
