@@ -950,7 +950,7 @@ A handy, online JavaScript validator.
 
 - [Libre Open Office](https://www.libreoffice.org/)
 
-The README.md spelling was checked through this open office software.
+The README.md spelling was checked through this open office software. However, this is not a recommended process as format issues occurred directly after pasting the spell checked text back into Gitpod's editor.
 
 - [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
 
@@ -967,6 +967,10 @@ The site's privacy policy content was created using this generator.
 - [Snip & Sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab)
 
 Snip & Sketch is a Windows utility used to capture screenshots and was primarily used to produce the images for the README.md file presented here.
+
+- [StackEdit](https://stackedit.io/app#)
+
+Re-formating of the README.md file after formating was lost from reinserting text from Libre Office. This will now be the preferred editor for other markdown pages in the future.
 
 - [StackOverflow](https://stackoverflow.com/)
 
