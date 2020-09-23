@@ -43,6 +43,11 @@
     - [EmailJS](#emailjs)
   - [Script Refactoring](#script-refactoring)
   - [Input Validation](#input-validation)
+  - [Equations](#equations)
+- [Known Bugs](#known-bugs)
+  - [Facebook Timeline Sharing](#facebook-timeline-sharing)
+  - [Icons and Unicode](#icons-and-unicode)
+  - [Other Bugs](#other-bugs)
 
 ## DESCRIPTION
 - **Physics Code** is an educational website aimed at bringing free Physics based content to students and teachers worldwide in a simple and aesthetically pleasing manner. 
@@ -531,6 +536,12 @@ page. Minor changes were made based on user comments during alpha testing and wh
   the new breakpoint was added in CSS3. 
   - Images remain fluid on all pages and are generally at their maximum size on large screens but are still limited to the container that holds them. 
 
+The site was tested on numerous devices, and while all care is taken to make sure the site displays accurately, it is possible that some browsers or devices may cause 
+slight variations in display. During testing, [Am-I-Responsive](http://ami.responsivedesign.is/) was used to display the site on various sized displays:
+
+[![Responsive displays](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/am-i-responsive.png "responsive displays")](https://pauld0051.github.io/physics-code/game.html)
+
+
 - ### Interactivity
 [Top](#contents)
 
@@ -777,6 +788,9 @@ All of the code for the website was produced and enhanced by using the following
   - [EmailJS](https://www.emailjs.com/)
   Is a replacement for the need to add a backend or server for contacting the page author. Emails are sent from the site via the author's Gmail account. Up to 200 
   emails can be sent per month for free. 
+
+  - [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm) 
+  All unicode characters were taken from FileFormat.
   
   - [GIMP](https://www.gimp.org/)
   GIMP (GNU Image Manipulation Program) was used for shading, adjusting, colouring and saving all images on the website
@@ -811,6 +825,10 @@ All of the code for the website was produced and enhanced by using the following
 
   - [Snip & Sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab)
   Is a Windows utility used to capture screenshots and was primarily used to produce the images for the README.md file presented here. 
+
+  - [StackOverflow](https://stackoverflow.com/)
+  The wealth of knowledge of the many is the most valuable resource for anyone starting out and learning new code. Stackoverflow was a heavily used 
+  network or resources, both for asking questions, confirming code and searching code. 
 
   - [Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard)
   The site's terms and condition content was created with this generator. 
@@ -1171,11 +1189,11 @@ Names and emails, although can have numbers, can not be numbers. Again, a suitab
 Although vast numbers of libraries exist that help control for input, the learning experience was more valuable to include a unique validation system. Further projects 
 may include libraries or parts of code from libraries to cut down on the extensive amount of time spent on coding for validation of inputs. 
 
-The site release and current version has three different methods of preventing user invalid input. Because there is no backend or serve side requirements, all validation can 
-be completed with HTML, CSS and JavaScript. The calculator page validation has been described. Subtle differences appear on the validation of the 
-[test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page. Because there is only one user input field, there is no requirement to scroll to the input box. 
-However, if the user was albe to input an invalid number, because of the global requirement of the mapNumber variable, a user would be able to submit and a calculation would 
-still be performed even without a number. Many methods to prevent code from continuing had been tested, including ` event.preventDefault ` and ` event.stopPropagation ` but 
+The site release and current version has slightly varying methods of preventing user invalid input on the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page. 
+Because there is no backend or serve side requirements, all validation can be completed with HTML, CSS and JavaScript. Because there is only one user input field, 
+there is no requirement to scroll to the input box. However, if the user was albe to input an invalid number, because of the global requirement of 
+the mapNumber variable, a user would be able to submit and a calculation would still be performed even without a number. 
+Many methods to prevent code from continuing had been tested, including ` event.preventDefault ` and ` event.stopPropagation ` but 
 to no avail. Finally, it was decided that the default "enabled" submit button would need the ` disabled ` attribute until such a time a valid input was included. 
 This also meant the reset button would clear the input and would also set the submit button to ` disabled `. The main issue was getting the "submit" button to listen for 
 invalid inputs after the default ` disabled ` was removed (for example, an invalid input was backspaced to a point where a valid input was ready to be accepted but the 
@@ -1206,95 +1224,192 @@ The final code to listen for the colour of the input field is as follows:
 
 To cut down on code, the RGB value was used and not converted to hex (16).
 
+- ### Equations
+[Top](#contents)
 
+For the vast majority of the calculations it is easier for students to see individual variables broken down and where multiple variables are required, they are 
+separated in chunks and slowly scaffolded. Giving an entire equation ignores students who may have more difficulties with the mathemtical side of physics. For this student 
+the site allows individual variables to be entered and the calculation works in the background. For students who have a more advanced mathemiatical ability will still be 
+able to add variables in the same manner, and will not see this any less than primary data addition. Providing benefits for lower end students provides benefits for all. 
 
+Therefore the equations in JavaScript pertaining to the dilemma zone are also broken down to provide the eight outcomes for the dilemma zone. 
 
+Firstly the car's velocity is calculated if required (ie, units other than metres per second were used). Because default values have already been included, students could 
+use this calculator to convert from kilometres per hour or miles per hour into metres per second without adding any further variables. 
 
+The car's velocity is then used to determine how far it can travel within the time before traffic lights on perpendicular roads turn green allowing traffic from other roads 
+to progress. The time is an addition of yellow and interphase times in seconds. 
 
+` velocity = distance(travelled) / time `
 
+From this the calculator can determine exactly how far back from the intersection a vehicle can be to exit the intersection safely within this time. Thereofre the vehicle's 
+length and intersection distance are used and then subtracted from the total distance the vehicle can travel in the yellow and interphase time. This now provides the furthest 
+point from the intersection a vehicle can be as soon as a traffic light turns yellow. 
 
+` total distance from intersection = distance(travelled) - (intersection length + car length) `
 
+This ends the first section of the equation, the second section works out stopping distance. This requires the vehicle's initial velocity, the driver's reaction time, 
+and the coefficient of friction. 
 
+` stopping distance = (reaction time * velocity) + (velocity squared / 2 * coefficient of friction * gravity (9.81)) `
 
-  
+Finally, the dilemma zone is when the stopping distance is smaller than the distance the vehicle can travel through the intersection. Depending on the treatment of the 
+two equations a negative number will determine a dilemma zone (ie, stopping distance > distance able to be travelled). If stopping distance is less than the distance 
+able to be travelled, then an option zone will exist (ie, a vehicle's driver has a choice to either continue going or brake to stop). 
 
+All numbers are set to a maximum of two decimal places in the final answer (reaction time and coefficient of friction allows for three decimal place inputs). This avoids 
+extreme numbers with insiginficant data. 
 
+## KNOWN BUGS 
+[Top](#contents)
 
-  
+Currently, there are few known bugs in the code and the code operates as anticipated. However, there are multiple limitations to the code and equations used. Firstly, the 
+equation can only determine if a dilemma zone exists (or option zone) if a vehicle has either a constant velocity or constant de-acceleration (braking). This means that only 
+straight line dilemma zones can be determined. Vehicles that are using perpendicular roads to travel to or from are excluded from this equation. Secondly, users are limited 
+to realistic values to avoid extreme numbers that display incorrectly in Bootstrap modals. Thirdly, the equations for dilemma and option zones assume flat roads with no 
+hills or turns. 
 
+- ### Facebook Timeline Sharing 
+[Top](#contents)
 
+After a user has completed a game and shared the results on their Facebook timeline, a link to the Reaction Timer - Physics Code is displayed in the top of the person's 
+post:
 
-  
+[![Timeline sharing onto Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/timeline-sharing.png "Facebook timeline sharing")](https://pauld0051.github.io/physics-code/game.html)
 
+This takes the user directly to the Physic's Code page, originally the link returned an error on Facebook suggested the application had not been approved. It has since been 
+approved and users should not be troubled by this error. 
 
+However, advert blocking applicaitons such as [uBlock Origin](https://github.com/gorhill/uBlock) may prevent the Facebook share button from accessing various components on the 
+user's browser. However, this does not affect the user's ability to input valid responses and share the site on their Facebook timeline. The only time this may be 
+noticed is if the user with an advert blocking application accesses the "inspect" function of the browser:
 
+[![Timeline sharing onto Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/warning-facebook.png "Facebook warning")](https://pauld0051.github.io/physics-code/game.html)
 
+Although instances of the Facebook share button disappearing have been noted during testing phase, it has not been shown to be caused by advert blocking applications. Instead 
+it was most likely due to updating the code which may have impacted on the Facebook sharing code. At present, the share button appears on several tested devices with and 
+without advert blocking applications. Because Facebook sharing is a third party addon to Physics Code, this can be monitored over time. However, it is hoped that Facebook 
+will notify developers of changes that occur to the code which may prevent share facilities from displaying accurately. 
 
+- ### Icons and Unicode 
+[Top](#contents)
 
+The site relies heavily on icon hints in various cards and buttons. However, due to the nature of <input> verses <button> meant that input tags require a "value" attribute 
+however, button tags can have text input including Fontawesome icons. Although Fontawesome does display the unicode equivalent of their icons, the unicode supplied did not 
+provide the icon when used in an <input> tag. This meant alternatives were sought or fixes. In this case, alternative unicode icons were sought. All unicode HTML 
+characters were taken from [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm). Although not every devices has been checked, it is apparent these 
+unicode characters are more likely to be displayed than icons. 
 
+- ### Other Bugs
+[Top](#contents)
 
+- Previously mentioned invalid input default validators will ignore various letter inputs producing a non-number equation. This was prevented by adding a second layer of 
+validation via JavaScript; see [Input Validation](#input-validation). 
 
+- Spinners from all inputs were removed to prevent negative numbers from being presented. Although this is stopped in JavaScript, this is a secondary method to prevent invalid 
+inputs. 
 
+- A "current" scenario button had been included in earlier versions of the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page, 
+but due to input validation, it was impossible to re-open a modal without a) refreshing the content inside or; b) ignoring the current map number preventing input from the 
+user. Although many possible considerations were made to include the button, it was not an overall requirement. It was then decided to prevent the user from accidentally 
+closing the modal with a key push or clicking outside of the modal. Instead, a user must now use one of the two active "close" buttons. This was included in HTML 
+attributes:
 
+            -  data-backdrop="static" 
+            -  data-keyboard="false" 
+(source: https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca)
 
+This prevented accidental closing of modals when a calculation was being performed. 
 
+- In early versions of the Physics Code calculator, users could accidental "scroll" when the mouse was over an input and change their value for the variables. This was 
+prevented by adding this code:
 
+            -  $('form').on('focus', 'input[type=number]', function(e) {
+            -  $(this).on('wheel.disableScroll', function(e) {
+            -  e.preventDefault();
+            -  });
+            -  });
+            -  $('form').on('blur', 'input[type=number]', function(e) {
+            -  $(this).off('wheel.disableScroll');
+            -  })
+(source: https://stackoverflow.com/questions/9712295/disable-scrolling-on-input-type-number)
 
+- Negative numbers in the dilemma zone calculation need to be given as "absolute" so the Math.abs(total) code was used. 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-Solved issues:
-1. Make sure no inputs other than numbers and decimal points can be inserted into any field. Using the "number" attribute didn't work as anyone can manually override this
-and spinners were removed in the CSS. So a JS isNumberKey(evt) was added that only allows numbers and decimal points. Multiple decimal points can still be added, but the
-calculator only picks up the first decimal point. This meant users can not enter incorrect terms into the fields and prevents a NaN return on submit. 
-2. Modals will not open when using a button with type="submit". This meant that the "required" attribute could not work in the form as the button type="button" does not 
-trigger the "required" attribute in the input tags. Changing the button to type="submit" then meant the modal will not be triggered. To overcome this, some jQuery was
-added that allows the modal to operate, as normal, even with a type="submit" button in place. The form needed to have an ID and the modal's ID was parsed into the 
-function. 
-3. The min="0" and max="1" worked for the coefficient of friction, but required a step="0.001" to allow for decimal places.
-4. Adding and removing classes was needed for multiple form inputs. If someone was putting in an input that calculated a dilemma zone, the dilemma zone icon would 
-appear in the modal header. If the user then continued to do another output, and this returned an option zone, they'd see both option zone and dilemma zone icons. 
-To fix this an add class to bring the icon to the header was used as well as a remove class if one had been added previously. 
-5. The dilemma zone calculator works out a dilemma zone as a negative number. But the actual dilemma zone is a positive number as a "size". To remove the negative symbol, 
-the Math.abs(total) syntax was tagged onto the function printing out the dilemma zone calculations. 
-6. The reaction time game prototype showed that the counter was able to stop and work out the number of seconds the user took to press the "brakes" button. However, the brakes
+- The reaction time game prototype showed that the counter was able to stop and work out the number of seconds the user took to press the "brakes" button. However, the brakes
 button remained active and was able to be pushed again. An initial attempt to remove the ID that allows the "click" event to be listened to failed to work. Finally, a jQuery
 button disabled function was able to complete the job. 
-7. :invalid input alerts on Firefox browsers are not anchored to the input field where users have supplied an incorrect value (for example more than 2 decimal places on calculator.html).
-The result is a floating alert box (PICTURED) that detracts from the value of the page. The fix to this is to force the user into using 2 decimal places by javaScript.
-8. Buttons on the test_yourself.html page are monitored to set the value of the mapNumber in the JS file. However, in doing so, this meant that other buttons on the page 
-also affected the mapNumber variable. The fix was to remove the button tag and replace with a span. The span now acts identically to a button but is controlled by CSS. 
-There is no user experience difference and users will not be able to notice the difference. 
-9. Refactoring 
+
+            -  $("#brake_button").attr("disabled", true);
+
+- Screensize negatively affected the display of MathJax equations, especially the final equation on the [help](https://pauld0051.github.io/physics-code/help.html) page which 
+subsequently is also the largest equation. The only avaiable fix for this that worked was to give the entire card where the equation was displayed a "no-display" 
+class for small screens but instead display the equation presented with more line breaks added. This was all done using Bootstrap display functions. 
+
+- Occassionally maps may not display all sectors. It is not yet understood what causes some secotrs in maps not displaying, however, the rarity of the situation is not 
+causing concern. The most likely explanation is to do with browser loading capabilities. 
 
 
-unsolved problems:
-1. After the share to Facebook button is pressed in the Reaction Time game, a link appears on the user account which would go to an approved app. However, for the purposes of
-this project, the app has not been approved. The idea of the share to Facebook button was to use API and SDKs from third party sites. The requirement to complete the app for 
-Facebook goes beyond the requirement for this site. The issue will only occur externally on Facebook. 
-2. Advert blocking apps will cause unnoticed errors with the Facebook share button. Usually no user experience is changed as a result. However, the Console will show 
-an ERR_BLOCKED_BY_CLIENT alert and occasionally the Facebook share button may not display at all. The only fix is to turn off ad-blockers. 
-3. Some unicode characters would not display on Android mobile devices. A calculator icon was to be used from Fontawesome for the "Calculate" button on the calculator. Due to the nature 
-of the code the value could not include a Fontawesome icon. A unicode icon was substituted, however, this was failing to replicate in all devices. Several other unicode variants 
-were trialed until a "check mark" x2713 was able to be displayed. 
 
 
-Privacy Policy Generator https://www.privacypolicygenerator.info/#wizard
-Terms and Conditions Generator https://www.termsofservicegenerator.net/#wizard
-Converting from png to ico for favicons and map marker icon https://icoconvert.com/
-MathJax for the equations on the help page
-https://www.internetmarketingninjas.com/online-spell-checker.php 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 
 ## END OF THE CONTENT
