@@ -398,6 +398,19 @@ easily on the site with default values already input into the calcula
 reaction times, intersection sizes, phase times for traffic lights and so on, and can then calculate for secondary data. Those who are looking to manipulate the data 
 further can adjust scenarios easily and the model allows for a simple single variable change over a large range to allow secondary and tertiary data to be obtained. 
 
+- #### Site Speed 
+[Top](#contents)
+
+Physics Code is primarily for students around the world. It is anticipated that a large variance in internet speeds will be encountered and as such, images have been 
+made as small in size as possible using [TinyPNG](https://tinypng.com/) as well as making pages less data intrusive. The site was tested using [Pingdom](https://tools.pingdom.com/)
+ and was found to be responsive at a "B" level. Certain known issues such as Expires Headers have been considered. But for this particular project, will not be included. 
+
+ Users close to Stockholm (closest server appears to be Frnakfurt) have a very fast response time to enter the site at just 376 ms. 
+
+ [![Pingdom results Frankfurt](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-frankfurt.png "Pingdom Results - Franfurt")](https://pauld0051.github.io/physics-code/index.html)
+
+
+
 ##  WIREFRAMES
 [Top](#contents)
 
@@ -997,7 +1010,7 @@ When an account has been created and an email added it is possible 
 
 For Physics Code the template was set up to include an email "to", an email "from", the user's name and a message (with prompt). 
 
-[![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/emailjs-template.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
+[![EmailJS template](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/emailjs-template.png "EmailJS Template")](https://pauld0051.github.io/physics-code/game.html)
 
 The final part of the message ` {{from_name}} can be contacted at {{from_email}} ` shows the user's email address for easy reply. 
 
