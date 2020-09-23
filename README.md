@@ -315,72 +315,114 @@
 #### Colour Scheme
 [Top](#contents)
 
-- The site uses light colours to aid those with colour vision deficiency which make up about 5% of the world's population (1 in 12 males and 1 in 200 females)
-- The site's colour scheme avoids the use of black or dark text on red backgrounds or strong red over a dark colour
-- The author has mild colour blindness and uses this to make the site accessible for anyone, furthermore, checks are made with testers who have 
-normal colour vision to make sure there is efficient use of colours and appropriate gradients and contrast
-- The navigation bar uses #d7e9f5 as a background colour - a light blue colour that compliments the dark text and highlights the bright red Physics Code icon 
-- The heading boxes of each page are nested in a darker blue compliment to the navigation bar - #54a5d5
-- The background of each heading and subheading box is based on the near white colour #f8f8ff with some opacity to allow for a bold heading or writing to stand out 
-- The actionable content and cards are located on a lighter blue background that compliments both the navigation and the headings of the page. 
-- The user has a clear understanding that each section is separated from the other. The colour of #b6d5eb is used in all content dis 
-- A rule of thirds is instigated on every page, with a container filling up 67% of the screen width on large screens leaving some white space on either side 
-(approximately 16.2% on each side)
-- Each content container does not take up more than a third of the page before being broken by a heading div on a darker blue background (#54a5d5)
-- The colour scheme remains consistent on smaller devices, but due to limitation of space and for ease of viewing, the white space on each side of the content is much reduced in size and does not obstruct user view 
-- The page flows onto the footer with the same colour as the header's navigation bar of #d7e9f5
+- The site uses light colours to aid those with colour vision deficiency which make up about 5% of the world's population (1 in 12 males and 1 in 200 females)
+
+- The site's colour scheme avoids the use of black or dark text on red backgrounds or strong red over a dark colour
+
+- The author has mild colour blindness and uses this to make the site accessible for anyone, furthermore, checks are made with testers who have normal colour vision to make sure there is efficient use of colours and appropriate gradients and contrast
+
+- The navigation bar uses #d7e9f5 as a background colour - a light blue colour that compliments the dark text and highlights the bright red Physics Code icon
+
+- The heading boxes of each page are nested in a darker blue compliment to the navigation bar - #54a5d5
+
+- The background of each heading and subheading box is based on the near white colour #f8f8ff with some opacity to allow for a bold heading or writing to stand out
+
+- The actionable content and cards are located on a lighter blue background that compliments both the navigation and the headings of the page.
+
+- The user has a clear understanding that each section is separated from the other. The colour of #b6d5eb is used in all content divs
+
+- A rule of thirds is instigated on every page, with a container filling up 67% of the screen width on large screens leaving some white space on either side (approximately 16.2% on each side)
+
+- Each content container does not take up more than a third of the page before being broken by a heading div on a darker blue background (#54a5d5)
+
+- The colour scheme remains consistent on smaller devices, but due to limitation of space and for ease of viewing, the white space on each side of the content is much reduced in size and does not obstruct user view
+
+- The page flows onto the footer with the same colour as the header's navigation bar of #d7e9f5
 
 #### Graphics and Images
 [Top](#contents)
 
-- All graphics are small sized png files or jpg with the exception of the icons which are sourced from [Fontawesome](https://fontawesome.com/) and the favicon which is an ico
-- Silhouette images are used on all cards and are primarily single tone black on a white background. T
-- Two traffic light pictures on the home page which have a red light filled in on one of the images and a yellow light on the other - this does not affect user experience as the cards are specifically labelled 
-- Other card images are sourced from Fontawesome and are coloured black to appear as a silhouette 
-- The author's caricatures was created in [Bitmoji](https://www.bitmoji.com/) and saved as a png file
-- Card images were sourced from [Flaticon](https://www.flaticon.com), [pngfuel](https://www.pngfuel.com/), [kindpng](https://www.kindpng.com/), [webstock review](https://webstockreview.net/), [freepik](https://www.freepik.com) and [pngguru](https://www.pngguru.com/)
-- Edits to the pictures were made in [GIMP](https://www.gimp.org/) which included colouring the traffic lights and flipping images or shading as required 
-- Images are clean, non-confrontational, contextual, add to the user's visual recognition of particular variables and helps provide hints to requirements of the input values
-- Familiar icons are used within buttons and include checkmarks for submit, crosses for close, paper planes for send etc 
-- Question mark icons are used to provide clickable tooltips or links to other pages such as the info button leading to the help page
+- All graphics are small sized png files or jpg with the exception of the icons which are sourced from [Fontawesome](https://fontawesome.com/) and the favicon which is an ico file type 
+
+- Silhouette images are used on all cards and are primarily single tone black on a white background. 
+
+- Two traffic light pictures on the home page which have a red light filled in on one of the images and a yellow light on the other - this does not affect user experience as the cards are specifically labelled
+
+- Other card images are sourced from Fontawesome and are coloured black to appear as a silhouette
+
+- The author's caricatures was created in [Bitmoji](https://www.bitmoji.com/) and saved as a png file
+
+- Card images were sourced from [Flaticon](https://www.flaticon.com), [pngfuel](https://www.pngfuel.com/), [kindpng](https://www.kindpng.com/), [webstock review](https://webstockreview.net/), [freepik](https://www.freepik.com) and [pngguru](https://www.pngguru.com/)
+
+- Edits to the pictures were made in [GIMP](https://www.gimp.org/) which included colouring the traffic lights and flipping images or shading as required
+
+- Images are clean, non-confrontational, contextual, add to the user's visual recognition of particular variables and helps provide hints to requirements of the input values
+
+- Familiar icons are used within buttons and include checkmarks for submit, crosses for close, paper planes for send etc
+
+- Question mark icons are used to provide clickable tooltips or links to other pages such as the info button leading to the help page
 
 #### Fonts and Typography
 [Top](#contents)
 
-- All headings use the font family Rubik with a fall back of San Serif if Rubik fails to load. Rubik was first discovered at 
-- [Google Fonts](https://fonts.google.com/specimen/Rubik?query=rubik)
-- Headings are all coloured in a dark crimson #85144b and is set as a colour opposite of the darker blue background
-- All paragraph text uses the font family Ubuntu also falling back to Sans Serif should Ubuntu fail to load. The font was first discovered at 
-- [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=Ubuntu)
-- Fonts were chosen for their clarity and ease to read even though the font styling was subtly unique but retained boldness and perspicuousness
-- Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at 
-- [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
+
+- All headings use the font family Rubik with a fall back of San Serif if Rubik fails to load. Rubik was first discovered at
+
+-  [Google Fonts](https://fonts.google.com/specimen/Rubik?query=rubik)
+
+- Headings are all coloured in a dark crimson #85144b and is set as a colour opposite of the darker blue background
+
+- All paragraph text uses the font family Ubuntu also falling back to Sans Serif should Ubuntu fail to load. The font was first discovered at
+
+-  [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=Ubuntu)
+
+- Fonts were chosen for their clarity and ease to read even though the font styling was subtly unique but retained boldness and perspicuousness
+
+- Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at
+
+-  [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
 
 #### Container and Box Structure
 [Top](#contents)
 
-- The site uses the [Bootstrap grid system](https://getbootstrap.com/docs/4.0/layout/grid/) to effectively separate each heading division and subsequent subdivision
-- The heading box is lowered slightly from the navigation bar allowing a gap for users to see the structure. Inside each heading box is a rounded off white background containing the heading texts
-- The containers are separated by title boxes and are always followed by content boxes. All content is readable by being placed on the same off white background
-- Box structure is used to separate content, highlight interactive locations and guide the user through easy to follow instructions on site usage
-- Maps on the test yourself page are large sized and easy to manipulate, movable as well as being clickable to see in a full screen on a new browser tab 
-- The game box takes up considerably more space than the average card to allow for more random patterns for where the brake button will show 
-- The contact-us page uses a large sized form that occupies two thirds of the screen with easy to follow directions
-- Mobile users still enjoy a rule-of-thirds, however, less white space is apparent
-- Overflow is removed from the content so users on any devices, especially mobile, do not need to scroll left or right for the same visual experience regardless of screen size
+- The site uses the [Bootstrap grid system](https://getbootstrap.com/docs/4.0/layout/grid/) to effectively separate each heading division and subsequent subdivision
+
+- The heading box is lowered slightly from the navigation bar allowing a gap for users to see the structure. Inside each heading box is a rounded off white background containing the heading texts
+
+- The containers are separated by title boxes and are always followed by content boxes. All content is readable by being placed on the same off white background
+
+- Box structure is used to separate content, highlight interactive locations and guide the user through easy to follow instructions on site usage
+
+- Maps on the test yourself page are large sized and easy to manipulate, movable as well as being clickable to see in a full screen on a new browser tab
+
+- The game box takes up considerably more space than the average card to allow for more random patterns for where the brake button will show
+
+- The contact-us page uses a large sized form that occupies two thirds of the screen with easy to follow directions
+
+- Mobile users still enjoy a rule-of-thirds, however, less white space is apparent
+
+- Overflow is removed from the content so users on any devices, especially mobile, do not need to scroll left or right for the same visual experience regardless of screen size
 
 #### Forms and Inputs
 [Top](#contents)
 
-- All forms on the page (contact us in particular) use Bootstrap's [form control](https://getbootstrap.com/docs/4.0/components/forms/)
-- Inputs on the calculator and test yourself pages are validated via CSS and turn a pinky red (#c66464) when an invalid input is received 
-- Inputs turn a pale white for contrast with valid inputs (#fbfaf5)
-- Inputs on the calculator page are highlighted and a tooltip presented if an invalid response is given 
-- Inputs on the calculator page with invalid responses are scrolled to automatically on submit 
-- All form fields on the contact us page needs to be completed before submission can occur. Inline text help is given when an incorrect input is completed by a user in one of the fields
-- When users have calculated a scenario on the test yourself page they are prompted to add a value to the input box but are not able to submit this until a number is presented 
-- Users are prompted when an invalid input is received and the input box turns pinky red (#c66464) with invalid responses such as non-number input 
-- All forms are validated in HTML using browser validation and complimented with JavaScript validation written by the author
+- All forms on the page (contact us in particular) use Bootstrap's [form control](https://getbootstrap.com/docs/4.0/components/forms/)
+
+- Inputs on the calculator and test yourself pages are validated via CSS and turn a pinky red (#c66464) when an invalid input is received
+
+- Inputs turn a pale white for contrast with valid inputs (#fbfaf5)
+
+- Inputs on the calculator page are highlighted and a tooltip presented if an invalid response is given
+
+- Inputs on the calculator page with invalid responses are scrolled to automatically on submit
+
+- All form fields on the contact us page needs to be completed before submission can occur. Inline text help is given when an incorrect input is completed by a user in one of the fields
+
+- When users have calculated a scenario on the test yourself page they are prompted to add a value to the input box but are not able to submit this until a number is presented
+
+- Users are prompted when an invalid input is received and the input box turns pinky red (#c66464) with invalid responses such as non-number input
+
+- All forms are validated in HTML using browser validation and complimented with JavaScript validation written by the author
 
 #### Design Strategy
 [Top](#contents)
@@ -427,42 +469,59 @@ This was remedied with the current table on the [Help](https://pauld0051.github.
 The data also better reflected the updated and refactored JavaScript randomised friction generators based on tire quality and weather.
 
 - API sources that were considered in the wireframes:
+   
+-  [Google Maps](https://www.google.com/maps/) used on the [Test Yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page;
 
-    - [Google Maps](https://www.google.com/maps/) used on the [Test Yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page;
-    - Five intersections were considered and included for this project
-    - Russia - Leningradsky Ave over Tverskaya Zastava Square in [Moscow](https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3)
-    - Australia - Sunnyholt Road at the M7 intersection in [Sydney](https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3)
-    - United States of America - Lexington Drive over the Harry Byrd Highway in [Ashburn, Virginia](https://www.google.com/maps/@39.0605322,-77.4594559,112m/data=!3m1!1e3)
-    - Germany - Sigmundstraße and Leyher Street in [Nürnberg](https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3)
-    - Ireland - Constitution Hill at the intersection on Western Way [Dublin](https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3)
+- Five intersections were considered and included for this project
+
+- Russia - Leningradsky Ave over Tverskaya Zastava Square in [Moscow](https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3)
+
+- Australia - Sunnyholt Road at the M7 intersection in [Sydney](https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3)
+
+- United States of America - Lexington Drive over the Harry Byrd Highway in [Ashburn, Virginia](https://www.google.com/maps/@39.0605322,-77.4594559,112m/data=!3m1!1e3)
+
+- Germany - Sigmundstraße and Leyher Street in [Nürnberg](https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3)
+
+- Ireland - Constitution Hill at the intersection on Western Way [Dublin](https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3)
 
 All maps were considered based on media reports, local knowledge and searching Google Maps for appropriately sized intersections. Intersections were only added if certain criteria was met. The intersection needed to be greater than 40 metres in length, have no corners or turns, allowed for unique weather conditions (eg ice, snow, heavy rain etc), and were controlled by traffic light signals. Maps also needed to be accessible with satellite view and were clear enough at mobile phone size to see the intersection for measurement.
 
 - Social media share functionality:
 
-    - [Facebook for developers](https://developers.facebook.com/) used on each page and in particular the [Game](https://pauld0051.github.io/physics-code/game.html) page;
-    - Each page was to have a share button to Facebook in the footer regardless of the content the page was presenting
-    - The share button would default to the [landing](https://pauld0051.github.io/physics-code/index.html) page as a link on the user's timeline
-    - An extra share function was built into the [Game](https://pauld0051.github.io/physics-code/game.html) to allow sharing of scores directly to Facebook
+-  [Facebook for developers](https://developers.facebook.com/) used on each page and in particular the [Game](https://pauld0051.github.io/physics-code/game.html) page;
 
-Other social media share functionality was also considered, however, Facebook was the only one added in the wireframes and first released version of the site. 
-Twitter is likely to be added at a later stage before other social media share buttons.
+- Each page was to have a share button to Facebook in the footer regardless of the content the page was presenting
 
-- Graphical representation of equations:
+- The share button would default to the [landing](https://pauld0051.github.io/physics-code/index.html) page as a link on the user's timeline
 
-    - [MathJax](https://www.mathjax.org/) LaTeX mathematical equation builder used on the [Help]\(<https://pauld0051.github.io/physics-code/help.html>;
-    - Equation display is critical in helping the user understand complex equations 
-    - Although images were considered as they can be made fluid, the overall presentation using MathJax was considerably more valuable and useful for site presentation
+- An extra share function was built into the [Game](https://pauld0051.github.io/physics-code/game.html) to allow sharing of scores directly to Facebook
 
-- Contact ability without backend or server requirements:
 
-    - [EmailJS](https://www.emailjs.com/) is used on the [Contact](https://pauld0051.github.io/physics-code/contact.html) page only;
-    - Wireframes are not affected by the use of emailJS
+Other social media share functionality was also considered, however, Facebook was the only one added in the wireframes and first released version of the site.
 
-- Responsive display:
+Twitter is likely to be added at a later stage before other social media share buttons.
 
-    - [Bootstrap](https://getbootstrap.com/) libraries were used to set up a grid, box and container system 
-    - Bootstrap functionality and design is shown in all wireframes 
+  
+
+- Graphical representation of equations:
+
+-  [MathJax](https://www.mathjax.org/) LaTeX mathematical equation builder used on the [Help]\(<https://pauld0051.github.io/physics-code/help.html>;
+
+- Equation display is critical in helping the user understand complex equations
+
+- Although images were considered as they can be made fluid, the overall presentation using MathJax was considerably more valuable and useful for site presentation
+
+- Contact ability without backend or server requirements:
+
+-  [EmailJS](https://www.emailjs.com/) is used on the [Contact](https://pauld0051.github.io/physics-code/contact.html) page only;
+
+- Wireframes are not affected by the use of emailJS
+
+- Responsive display:
+
+-  [Bootstrap](https://getbootstrap.com/) libraries were used to set up a grid, box and container system
+
+- Bootstrap functionality and design is shown in all wireframes
 
 #### View wireframes
 [Top](#contents)
@@ -507,24 +566,36 @@ The vast majority of the site is represented in the wireframes, right down to th
 ### Responsive displays 
 
 #### Mobile First
-- Physics Code is primarily designed for use on mobile devices or smaller screen devices.
-- Alpha testing was conducted on a Samsung Galaxy S7, Huawei P20 pro and Apple iPhone 8+.
-- [Bootstrap Grid Systems](https://getbootstrap.com/docs/4.0/layout/grid/) were extensively used throughout the site. On smaller devices, cards appear on one line, one on top of the other making content easily scrollable. 
-- The [Landing Page](https://pauld0051.github.io/physics-code/index.html) provides easy access to each of the navigation cards and a close-up Bitmoji character of the author is displayed.
-- The menu system uses the [Bootstrap Navbar](https://getbootstrap.com/docs/4.0/components/navbar/) functionality for small screens using the toggle capability for the drop down menu list from a hamburger icon which pushes content neatly down. The content below the menu drop down is always visible to some degree.
-- Headers were not made sticky as they interfered with the site's content and detracted from required entry of input. It also was not considered necessary for the site to have sticky navbars remaining in the top field as the site's scrollable content was not extensive and the Footer has a link back to the home page from any of the site's pages. 
-- All images that need to resize are done so by using [Bootstrap's Responsive Images](https://getbootstrap.com/docs/4.0/content/images/) and the img-fluid class. 
-- All maps on the site resize with their container width and height to remain in focus at all times. Maps are clickable and interactive. 
-- White space is minimised on mobile displays, however, a rule of thirds still remains so the screen is not overwhelming.
+
+- Physics Code is primarily designed for use on mobile devices or smaller screen devices.
+
+- Alpha testing was conducted on a Samsung Galaxy S7, Huawei P20 pro and Apple iPhone 8+.
+
+-  [Bootstrap Grid Systems](https://getbootstrap.com/docs/4.0/layout/grid/) were extensively used throughout the site. On smaller devices, cards appear on one line, one on top of the other making content easily scrollable.
+
+- The [Landing Page](https://pauld0051.github.io/physics-code/index.html) provides easy access to each of the navigation cards and a close-up Bitmoji character of the author is displayed.
+
+- The menu system uses the [Bootstrap Navbar](https://getbootstrap.com/docs/4.0/components/navbar/) functionality for small screens using the toggle capability for the drop down menu list from a hamburger icon which pushes content neatly down. The content below the menu drop down is always visible to some degree.
+
+- Headers were not made sticky as they interfered with the site's content and detracted from required entry of input. It also was not considered necessary for the site to have sticky navbars remaining in the top field as the site's scrollable content was not extensive and the Footer has a link back to the home page from any of the site's pages.
+
+- All images that need to resize are done so by using [Bootstrap's Responsive Images](https://getbootstrap.com/docs/4.0/content/images/) and the img-fluid class.
+
+- All maps on the site resize with their container width and height to remain in focus at all times. Maps are clickable and interactive.
+
+- White space is minimised on mobile displays, however, a rule of thirds still remains so the screen is not overwhelming.
 
 #### Large Screen Displays
-- Alpha testing was conducted on 32in (71 cm width), 55in (121.7 cm) and more common 15in to 24in (38 cm to 61 cm) displays.
-- Headers and footers are not fixed in place and scroll with the content. 
-- The navigation menu remains open and does not toggle into the hamburger menu style unless screen width is below 1100 px. This differs from [Bootstrap breakpoints](https://getbootstrap.com/docs/4.4/layout/overview/#responsive-breakpoints) due to the extra wording on the right hand side of the navigation pane. As screen size becomes smaller, the tendency for links to wrap detracted from the aesthetically pleasing navbar element. To prevent that the new breakpoint was added in CSS3. 
-- Images remain fluid on all pages and are generally at their maximum size on large screens but are still limited to the container that holds them. 
 
-The site was tested on numerous devices, and while all care is taken to make sure the site displays accurately, it is possible that some browsers or devices may cause 
-slight variations in display. During testing, [Am-I-Responsive](http://ami.responsivedesign.is/) was used to display the site on various sized displays:
+- Alpha testing was conducted on 32in (71 cm width), 55in (121.7 cm) and more common 15in to 24in (38 cm to 61 cm) displays.
+
+- Headers and footers are not fixed in place and scroll with the content.
+
+- The navigation menu remains open and does not toggle into the hamburger menu style unless screen width is below 1100 px. This differs from [Bootstrap breakpoints](https://getbootstrap.com/docs/4.4/layout/overview/#responsive-breakpoints) due to the extra wording on the right hand side of the navigation pane. As screen size becomes smaller, the tendency for links to wrap detracted from the aesthetically pleasing navbar element. To prevent that the new breakpoint was added in CSS3.
+
+- Images remain fluid on all pages and are generally at their maximum size on large screens but are still limited to the container that holds them.
+
+The site was tested on numerous devices, and while all care is taken to make sure the site displays accurately, it is possible that some browsers or devices may cause slight variations in display. During testing, [Am-I-Responsive](http://ami.responsivedesign.is/) was used to display the site on various sized displays:
 
 [![Responsive displays](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/am-i-responsive.png "responsive displays")](https://pauld0051.github.io/physics-code/game.html)
 
@@ -540,81 +611,139 @@ Finally, users can interact with the site's author by sending a message through 
 #### Calculator
 [Top](#contents)
 
-- Users can input seven variables, default values are in place as a guideline only and can easily be erased with new variable values added 
-- The calculator has tooltips on each variable to give more advice on the input values 
-- There are links to the [Help](https://pauld0051.github.io/physics-code/help.html) page which opens in a new browser tab
-- Calculations will not submit if data is non-numerical in any of the seven inputs 
-- Input fields change colour based on valid and invalid data 
-- Tooltips flash up on the input field if an invalid value is being submitted 
-- The input field is scrolled to if an invalid value is being submitted 
-- Calculations are completed and all values are displayed in a pop-up modal, users will be able to see;
-    - distance the vehicle travels throughout the yellow and interphase duration
-    - distance the vehicle travels throughout the duration of the reaction time
-    - total distance from the stop-line required for the vehicle coming to a complete halt
-    - maximum Distance the vehicle is from stop-line 
-    - non-absolute value (either negative or positive) for the type of zone discovered 
-    - absolute value of the zone and type of zone 
-    - velocity in metres per second (especially if converted from one of the other two units, kilometres per hour or miles per hour)
-    - intersection size in metres (especially if converted from the alternative unit of yards)
-    - type of zone in the header of the modal 
-    - Users can then reset all data to the default values and re-input a new calculation
+- Users can input seven variables, default values are in place as a guideline only and can easily be erased with new variable values added
 
+- The calculator has tooltips on each variable to give more advice on the input values
+
+- There are links to the [Help](https://pauld0051.github.io/physics-code/help.html) page which opens in a new browser tab
+
+- Calculations will not submit if data is non-numerical in any of the seven inputs
+
+- Input fields change colour based on valid and invalid data
+
+- Tooltips flash up on the input field if an invalid value is being submitted
+
+- The input field is scrolled to if an invalid value is being submitted
+
+- Calculations are completed and all values are displayed in a pop-up modal, users will be able to see;
+
+- distance the vehicle travels throughout the yellow and interphase duration
+
+- distance the vehicle travels throughout the duration of the reaction time
+
+- total distance from the stop-line required for the vehicle coming to a complete halt
+
+- maximum Distance the vehicle is from stop-line
+
+- non-absolute value (either negative or positive) for the type of zone discovered
+
+- absolute value of the zone and type of zone
+
+- velocity in metres per second (especially if converted from one of the other two units, kilometres per hour or miles per hour)
+
+- intersection size in metres (especially if converted from the alternative unit of yards)
+
+- type of zone in the header of the modal
+
+- Users can then reset all data to the default values and re-input a new calculation
 
 #### Game
 [Top](#contents)
 
-- The game helps determine one of the seven variables of the calculator, reaction time 
-- Users are greeted with a start button and a red-light (a lamp icon) 
-- Once the start button is pushed, the light turns green and the user is anticipating an upcoming stop on a red light 
-- The light remains green for a random amount of time (set to a maximum of 8 seconds and minimum of 3)
-- The user will then attempt to push the brakes button as soon as it appears and the light has turned red 
-- The brake button appears at one of a nearly unlimited amount of positions within the display frame 
-- Users can then see their best score in a pop-up and their current score 
-- A reset button sets the game up to start again 
-- A share button allows users to share their best score on their Facebook timeline 
+
+- The game helps determine one of the seven variables of the calculator, reaction time
+
+- Users are greeted with a start button and a red-light (a lamp icon)
+
+- Once the start button is pushed, the light turns green and the user is anticipating an upcoming stop on a red light
+
+- The light remains green for a random amount of time (set to a maximum of 8 seconds and minimum of 3)
+
+- The user will then attempt to push the brakes button as soon as it appears and the light has turned red
+
+- The brake button appears at one of a nearly unlimited amount of positions within the display frame
+
+- Users can then see their best score in a pop-up and their current score
+
+- A reset button sets the game up to start again
+
+- A share button allows users to share their best score on their Facebook timeline
 
 #### Test Yourself 
 [Top](#contents) 
 
-- Users can view one of five real world intersections on the website 
-- Maps are familiar to the user as Google Maps and allow similar interactivity on the site 
-- Users can click on the maps anywhere to open them in a new, full sized tab for ease of calculation of intersection distance 
-- Maps are able to be navigated as normal within the test-yourself page, users can access street view included
-- It is possible to move the maps around, but to avoid being "lost" maps re-centre on the intersection after 3 seconds 
-- Users are supplied with seven variables to help determine the risk of a dilemma zone;
-    - initial velocity 
-    - yellow light phase
-    - interphase 
-    - driver's reaction time
-    - vehicle's tire conditions
-    - weather conditions
-    - vehicle length 
-    - intersection size is measured using Google Maps with instructions provided by Google in the main heading of the page 
-    - Users can then either use their own method of calculation, the [Help](https://pauld0051.github.io/physics-code/help.html) page or the [Calculator](https://pauld0051.github.io/physics-code/calculator.html) page to determine if a dilemma zone exists in the given scenario 
-    - Once users have calculated their type of zone, a radio button choice is made, users can choose either;
-        - Dilemma Zone 
-        - Option Zone
-    - Users input their value and submit this for calculation and self assessment based on a supplied answer 
-    - Invalid inputs are treated similarly to the Calculator](<https://pauld0051.github.io/physics-code/calculator.html>) page except the submit button is disabled until a valid input is received 
-    - Users will be prompted by inline text underneath the input to make sure they're aware of a the required valid response 
-    - It is possible to reset the input field (causing the submit button to disable until a valid input is received) 
-    - Users can choose to get a new scenario from any of the five available maps 
-    - Answers are displayed as;
-        - type of zone picked by the user followed by a check mark (tick) for correct choice or "X" for an incorrect answer 
-        - the user's input value and then is described as too low, too high or within an acceptable range regardless of zone type chosen 
-        - users can achieve a perfect response 
-    - finally, the calculations as derived by the JavaScript based on intersection size and variables mentioned is given for the user to evaluate their score 
-    - users will get be within acceptable range when they are +/- 20% of the expected value (this allows for differences in intersection measurement and coefficient of friction) 
-    - Users can attempt each map and random scenario an unlimited amount of times 
+- Users can view one of five real world intersections on the website
+
+- Maps are familiar to the user as Google Maps and allow similar interactivity on the site
+
+- Users can click on the maps anywhere to open them in a new, full sized tab for ease of calculation of intersection distance
+
+- Maps are able to be navigated as normal within the test-yourself page, users can access street view included
+
+- It is possible to move the maps around, but to avoid being "lost" maps re-centre on the intersection after 3 seconds
+
+- Users are supplied with seven variables to help determine the risk of a dilemma zone;
+
+	- initial velocity
+
+	- yellow light phase
+
+	- interphase
+
+	- driver's reaction time
+
+	- vehicle's tire conditions
+
+	- weather conditions
+
+	- vehicle length
+
+- intersection size is measured using Google Maps with instructions provided by Google in the main heading of the page
+
+- Users can then either use their own method of calculation, the [Help](https://pauld0051.github.io/physics-code/help.html) page or the [Calculator](https://pauld0051.github.io/physics-code/calculator.html) page to determine if a dilemma zone exists in the given scenario
+
+- Once users have calculated their type of zone, a radio button choice is made, users can choose either;
+
+	- Dilemma Zone
+
+	- Option Zone
+
+- Users input their value and submit this for calculation and self assessment based on a supplied answer
+
+- Invalid inputs are treated similarly to the Calculator](<https://pauld0051.github.io/physics-code/calculator.html>) page except the submit button is disabled until a valid input is received
+
+- Users will be prompted by inline text underneath the input to make sure they're aware of a the required valid response
+
+- It is possible to reset the input field (causing the submit button to disable until a valid input is received)
+
+- Users can choose to get a new scenario from any of the five available maps
+
+- Answers are displayed as;
+
+	- type of zone picked by the user followed by a check mark (tick) for correct choice or "X" for an incorrect answer
+
+	- the user's input value and then is described as too low, too high or within an acceptable range regardless of zone type chosen
+
+	- users can achieve a perfect response
+
+- finally, the calculations as derived by the JavaScript based on intersection size and variables mentioned is given for the user to evaluate their score
+
+- users will get be within acceptable range when they are +/- 20% of the expected value (this allows for differences in intersection measurement and coefficient of friction)
+
+- Users can attempt each map and random scenario an unlimited amount of times
 
 #### Contact
 [Top](#contents) 
 
-- Users who have an email address will be able to contact the page's author without the need to access their own personal email 
-- Respondents will be asked to supply a name, email and a message to the author 
-- A submit button indicates "sending..." when pushed and an alert is given for a successfully sent email 
-- Users will be prompted to add valid inputs into each field with similar inline prompts at each invalid response 
-- Failed messages will also be prompted - however, till date this has not been confirmed 
+- Users who have an email address will be able to contact the page's author without the need to access their own personal email
+
+- Respondents will be asked to supply a name, email and a message to the author
+
+- A submit button indicates "sending..." when pushed and an alert is given for a successfully sent email
+
+- Users will be prompted to add valid inputs into each field with similar inline prompts at each invalid response
+
+- Failed messages will also be prompted - however, till date this has not been confirmed
 
 ### Future Features
 [Top](#contents) 
@@ -626,16 +755,21 @@ All efforts are being made to future proof Physics Code and the contents. A whol
 
 The original site investigation lead to the idea of providing a projectile motion calculator, however, code was already written and available online for projectile motion as well as many interactive sites promoting their projectile calculator. In order to be unique, and ahead of the game, the more complex Dilemma Zone Calculator was designed and was based on an original assignment given to Queensland students in Australia as part of their Year 11 assessments. At the time the site was produced, no other site has offered a dilemma zone calculator, Physics Code is the first and unique in this sense. However, not all calculators need to be unique as they are added to the site. Calculators should be useful, intuitive, easy to access, will not require special technology or devices and will have a large interactive component attached. A number of calculators are being considered for coding:
 
-- Projectile Motion Calculator
+- Projectile Motion Calculator
 
- This will involve inputting a number of variables;
+This will involve inputting a number of variables;  
 
-- angle of launch
-- either initial velocity (overall) or;
-- horizontal or vertical velocity 
-- gravity 
-- starting height (if required)
-- ending height (if required)
+- angle of launch
+
+- either initial velocity (overall) or;
+
+- horizontal or vertical velocity
+
+- gravity
+
+- starting height (if required)
+
+- ending height (if required)
 
 The calculator will not require all inputs so long either angle and one of the velocities are supplied or; two velocities (initial, horizontal or vertical) - providing any two of those are known, a triangle can be formed and from that all the other variables can be determined.
 
@@ -645,9 +779,11 @@ The calculator, although not unique, will be provided in similar fashion to the 
  
 Due to the high complexity of angled velocity in motor vehicles, including road angle, vehicle mass, turning arc etc, the idea of introducing this as a starting calculator was deterred. This feature will be added in with an "Advanced Options" feature at a later stage. The calculator will then include:
   
-- vehicle mass 
-- angle of turn 
-- constant velocity (using circumference of a circle and arc-length)
+- vehicle mass
+
+- angle of turn
+
+- constant velocity (using circumference of a circle and arc-length)
 
 Users will then be expected to supply their own data for this calculation. Although Google Maps could find the distance in an angled turn, the accuracy of such needs to be considered.
 
@@ -655,191 +791,192 @@ Users will then be expected to supply their own data for this calculation. Altho
  
 The third calculator is something all first year Physics students struggle with, the concept of uncertainty. The calculator will add a range of possibilities for the user to input variables, units, addition, subtraction, multiplication, division, exponents, square roots, averages etc. The calculator will build their equation using MathJax and display their answer, with absolute uncertainty. Displayed answers will also include percentage uncertainties where required.
 
-- Other calculators up for consideration but are not limited to;
-    - Pendulum calculator
-    - Spring calculator 
-    - Inductance calculator (including transformers)
-    - Relativity calculators 
-    - Kinetic energy conversions (including Newton's Gravitation) 
-    - Thermal conductivity and thermal transfer calculators including specific heat and power calculations
-    - Diffraction and interference calculators 
-    - Standing wave calculators 
-    - Electrical circuit calculators, including a Kirchoff's Law calculator 
-    - Magnetic effects calculations (on charged particles, on current carrying wires etc)
-    - Doppler effect calculator 
-    - Half life and nuclear decay calculator 
+- Other calculators up for consideration but are not limited to;
 
-All calculators will be based on a minimum requirement for the International Baccalaureate DP1 and DP2 High Level Program.
+	- Pendulum calculator
 
-#### New Help files 
-[Top](#contents) 
+	- Spring calculator
 
-All calculators will be coupled with a help page set up using [MathJax](https://www.mathjax.org/) for equation display. Other LaTeX libraries may be considered 
-depending on availability. Help pages, like their counterpart calculators, can be reached through dropdown navigation on the navbar (not currently active due to 
-only one calculator, help page etc being available on first release) using [Bootstrap's drop down](https://getbootstrap.com/docs/4.4/components/navbar/) ability 
-for all navbar links. Access to help files will also be available on each calculator through the infolink ("i" in a blue circle). 
+	- Inductance calculator (including transformers)
+
+	- Relativity calculators
+
+	- Kinetic energy conversions (including Newton's Gravitation)
+
+	- Thermal conductivity and thermal transfer calculators including specific heat and power calculations
+
+	- Diffraction and interference calculators
+
+	- Standing wave calculators
+
+	- Electrical circuit calculators, including a Kirchoff's Law calculator
+
+	- Magnetic effects calculations (on charged particles, on current carrying wires etc)
+
+	- Doppler effect calculator
+
+	- Half life and nuclear decay calculator
+
+
+All calculators will be based on a minimum requirement for the International Baccalaureate DP1 and DP2 High Level Program.
+
+#### New Help files
+[Top](#contents)
+
+All calculators will be coupled with a help page set up using [MathJax](https://www.mathjax.org/) for equation display. Other LaTeX libraries may be considered depending on availability. Help pages, like their counterpart calculators, can be reached through dropdown navigation on the navbar (not currently active due to only one calculator, help page etc being available on first release) using [Bootstrap's drop down](https://getbootstrap.com/docs/4.4/components/navbar/) ability for all navbar links. Access to help files will also be available on each calculator through the infolink ("i" in a blue circle).
 
 #### New Games 
 [Top](#contents) 
 
-In similar fashion to the current reaction time game, games linked to a variable or variables in each calculator will be offered. Some examples are give here:
 
-- Projectile Motion Game
-    - Hit a target with the projectile motion calculator after being given a random distance, initial and final height of the target
-    - Target will be displayed in 2d and a parabola drawn tracing the motion of the projectile
-    - Users will determine angle and initial velocity to hit the target and will be scored on accuracy 
-    - Users will need to race the clock to get the highest scores - the faster the user determines the initial velocity and angle, and the closer to the target the user gets, the more points will be associated
-    - Users will be able to share their scores in similar methods as currently available on the reaction time game 
+In similar fashion to the current reaction time game, games linked to a variable or variables in each calculator will be offered. Some examples are give here:
 
-- Bungee Jumping Game (associated with the spring calculator)
-    - Users will need to pick the correct bungee length and spring constant for a given human's height, mass and height of jump 
-    - Scores will be determined on the "fun" that the human jumper had - for example if they want to get wet (ie the bungee length allows the human to be dunked in the water below), the human was slow enough as they entered the water to eliminate risk of being hurt, the human was slowed down at a reasonable rate and was able to "bounce" back etc
-    - Scores will also be determined on time it took to work out the calculation for spring constant and bungee length given the random variables
+- Projectile Motion Game
 
-- Age, Length, Momentum and Energy Game (based on the relativity calculator)
-    - Users will be given random velocities (up until the speed of light) of a given object carrying a human 
-    - From the data supplied users will determine how old the occupant will be when they return to Earth, how "long" their spacecraft was to an observer at maximum velocity, their momentum and energy at various points of the journey
-    - Participants will need to be quick and accurate in order to answer questions and score points 
+	- Hit a target with the projectile motion calculator after being given a random distance, initial and final height of the target
 
-As with help pages, all calculators will have variable associated games. As a calculator comes online, so will its associated help page and game page. 
+	- Target will be displayed in 2d and a parabola drawn tracing the motion of the projectile
 
-There is a near unlimited amount of potential for other calculators, help pages and games and the site will continually expand and be accessible for all.
+	- Users will determine angle and initial velocity to hit the target and will be scored on accuracy
+
+	- Users will need to race the clock to get the highest scores - the faster the user determines the initial velocity and angle, and the closer to the target the user gets, the more points will be associated
+
+	- Users will be able to share their scores in similar methods as currently available on the reaction time game
+
+- Bungee Jumping Game (associated with the spring calculator)
+
+	- Users will need to pick the correct bungee length and spring constant for a given human's height, mass and height of jump
+
+	- Scores will be determined on the "fun" that the human jumper had - for example if they want to get wet (ie the bungee length allows the human to be dunked in the water below), the human was slow enough as they entered the water to eliminate risk of being hurt, the human was slowed down at a reasonable rate and was able to "bounce" back etc
+
+	- Scores will also be determined on time it took to work out the calculation for spring constant and bungee length given the random variables
+
+ - Age, Length, Momentum and Energy Game (based on the relativity calculator)
+
+	- Users will be given random velocities (up until the speed of light) of a given object carrying a human
+
+	- From the data supplied users will determine how old the occupant will be when they return to Earth, how "long" their spacecraft was to an observer at maximum velocity, their momentum and energy at various points of the journey
+
+	- Participants will need to be quick and accurate in order to answer questions and score points
+
+As with help pages, all calculators will have variable associated games. As a calculator comes online, so will its associated help page and game page.
+
+There is a near unlimited amount of potential for other calculators, help pages and games and the site will continually expand and be accessible for all.
 
 ## TECHNOLOGIES USED
 
 ### Languages
 [Top](#contents)
 
-Physics Code uses three main languages as a basis for the code on all the pages, these include;
+Physics Code uses three main languages as a basis for the code on all the pages, these include;
 
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) (75.7%)
-- [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) (4.2%)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (18.6%)
+-  [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) (75.7%)
+
+-  [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) (4.2%)
+
+-  [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (18.6%)
 
 ### Libraries
 [Top](#contents)
 
-The coding for the website included libraries and frameworks that make use of the languages involved, these include (in alphabetical order);
+The coding for the website included libraries and frameworks that make use of the languages involved, these include (in alphabetical order);
 
-- [Bootstrap](https://getbootstrap.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
-- [Fontawesome](https://fontawesome.com/)
+- [Fontawesome](https://fontawesome.com/)
 
-- [Google Fonts](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
 
-- [Google Maps](https://www.google.com/maps/)
+- [Google Maps](https://www.google.com/maps/)
 
-- [jQuery](https://jquery.com/) 
+- [jQuery](https://jquery.com/)
+jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
 
-jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
-
-- [MathJax](https://www.mathjax.org/)
+- [MathJax](https://www.mathjax.org/)
 
 ### Programs
 [Top](#contents)
 
-All of the code for the website was produced and enhanced by using the following software applications (in alphabetical order);
+All of the code for the website was produced and enhanced by using the following software applications (in alphabetical order);
 
-- [Am I Responsive](http://ami.responsivedesign.is/#) 
+- [Am I Responsive](http://ami.responsivedesign.is/#)
+Allows editors to see how the site is displayed on various sized screens.
 
-Allows editors to see how the site is displayed on various sized screens.
+- [Atom](https://atom.io/)
+Atom is an integrated development environment (IDE) used to store Physics Code's HTML, CSS and JavaScript files as well as to beautify the script using Atom Beautify.
 
-- [Atom](https://atom.io/)
+- [Balsamic](https://balsamiq.com/)
+The site's wireframes were created using Balsamiq software.
 
-Atom is an integrated development environment (IDE) used to store Physics Code's HTML, CSS and JavaScript files as well as to beautify the script using Atom Beautify.
+- [Bitmoji](https://www.bitmoji.com/)
+The author's cartoon pictures were created in Bitmoji on an Android device.
 
-- [Balsamic](https://balsamiq.com/)
+- [ConvertICO](https://convertico.com/)
+The favicon that appears in the browser tab was converted from png to ico using convertico. The site was also used to convert jpg to png.
 
-The site's wireframes were created using Balsamiq software.
+- [EmailJS](https://www.emailjs.com/)
+Is a replacement for the need to add a backend or server for contacting the page author. Emails are sent from the site via the author's Gmail account. Up to 200 emails can be sent per month for free.
 
-- [Bitmoji](https://www.bitmoji.com/)
+- [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm)
+All unicode characters were taken from FileFormat.
 
-The author's cartoon pictures were created in Bitmoji on an Android device.
+- [GIMP](https://www.gimp.org/)
+GIMP (GNU Image Manipulation Program) was used for shading, adjusting, colouring and saving all images on the website
 
-- [ConvertICO](https://convertico.com/)
+- [Github](https://github.com/)
+Github acted as a repository for all versions of the website and as a host for the website's pages.
 
-The favicon that appears in the browser tab was converted from png to ico using convertico. The site was also used to convert jpg to png. 
+- [Gitpod](https://www.gitpod.io)
+Gitpod is an IDE that was used extensively to code and test all versions of the website as well as to push the code through to the repository at Github.
 
-- [EmailJS](https://www.emailjs.com/)
+- [Gyazo](https://gyazo.com/)
+Gyazo was used to capture animated images for this README.md file as well as a visual display to focus on errors with the site's display and to share animated files within the network to troubleshoot the issue.
 
-Is a replacement for the need to add a backend or server for contacting the page author. Emails are sent from the site via the author's Gmail account. Up to 200 emails can be sent per month for free. 
+- [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php)
+The site's spelling was checked using this service
 
-- [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm) 
+- [JSBin](https://jsbin.com/?html,output)
+Used to test small snippets of code that in an external environment.
 
-All unicode characters were taken from FileFormat.
+- [JSHint](https://jshint.com/)
+A handy, online JavaScript validator.
 
-- [GIMP](https://www.gimp.org/)
+- [Libre Open Office](https://www.libreoffice.org/)
+The README.md spelling was checked through this open office software.
 
-GIMP (GNU Image Manipulation Program) was used for shading, adjusting, colouring and saving all images on the website
+- [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
+Mozilla's developer network documentation is an extensive resource for code and usage.
 
-- [Github](https://github.com/)
+- [Pingdom](https://tools.pingdom.com)
+For testing the site's speed and response.
 
-Github acted as a repository for all versions of the website and as a host for the website's pages.
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard)
+The site's privacy policy content was created using this generator.
 
-- [Gitpod](https://www.gitpod.io) 
+- [Snip & Sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab)
+Snip & Sketch is a Windows utility used to capture screenshots and was primarily used to produce the images for the README.md file presented here.
 
-Gitpod is an IDE that was used extensively to code and test all versions of the website as well as to push the code through to the repository at Github.
+- [StackOverflow](https://stackoverflow.com/)
+The wealth of knowledge of the many is the most valuable resource for anyone starting out and learning new code. Stackoverflow was a heavily used network or resources, both for asking questions, confirming code and searching code.
 
-- [Gyazo](https://gyazo.com/)
+- [Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard)
+The site's terms and condition content was created with this generator.
 
-Gyazo was used to capture animated images for this README.md file as well as a visual display to focus on errors with the site's display and to share animated files within the network to troubleshoot the issue.
+- [TinyPNG](https://tinypng.com/)
+All images on the site were first sent to TinyPNG before being uploaded to Gitpod and sent to the Github repository. The aim is to make the page load faster but also to keep the same image quality that users would expect.
 
-- [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php) 
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+Helped with checking CSS file validation
 
-The site's spelling was checked using this service
+- [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+Enabled checking the site's HTML coding with ease.
 
-- [JSBin](https://jsbin.com/?html,output) 
+### Application Programming Interfaces
 
-Used to test small snippets of code that in an external environment. 
-
-- [JSHint](https://jshint.com/)
-
-A handy, online JavaScript validator.
-
-- [Libre Open Office](https://www.libreoffice.org/)
-
-The README.md spelling was checked through this open office software. 
-
-- [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
-
-Mozilla's developer network documentation is an extensive resource for code and usage. 
-
-- [Pingdom](https://tools.pingdom.com)
-
-For testing the site's speed and response.
-
-- [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard)
-
-The site's privacy policy content was created using this generator. 
-
-- [Snip & Sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab)
-
-Is a Windows utility used to capture screenshots and was primarily used to produce the images for the README.md file presented here. 
-
-- [StackOverflow](https://stackoverflow.com/)
-
-The wealth of knowledge of the many is the most valuable resource for anyone starting out and learning new code. Stackoverflow was a heavily used network or resources, both for asking questions, confirming code and searching code. 
-
-- [Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard)
-
-The site's terms and condition content was created with this generator. 
-
-- [TinyPNG](https://tinypng.com/)
-
-All images on the site were first sent to TinyPNG before being uploaded to Gitpod and sent to the Github repository. The aim is to make the page load faster but also to keep the same image quality that users would expect. 
-
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-
-Helped with checking CSS file validation
-
-- [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
-
-Enabled checking the site's HTML coding with ease.
-
-### Application Programming Interfaces
 [Top](#contents)
 
 Primarily Physics Code relies on Google Maps API for access to map data for display as part of the user's ability to test themselves as a random calculation for a given real-world intersection. All API calls are located at the bottom of the HTML page so as to increase the speed users can access the page and thus loading of JavaScript happens secondary. This is backed up with the evidence of an "A" in [Pingdom's](https://tools.pingdom.com/) test which responded with the following:
+
 
 [![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-javascript.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
 
@@ -858,7 +995,7 @@ Each map is called by its location (coordinates latitude and longitude) which ar
             \-  lng: 37.583926
             \-  };
 
-Each intersection is labelled intersection\_[map number] to a total of five maps. The maps are then set to display as a satellite picture with a pre-set zoom:
+Each intersection is labelled intersection\_[map number] to a total of five maps. The maps are then set to display as a satellite picture with a pre-set zoom:
 
             \-  let map2 = new google.maps.Map(
             \-  document.getElementById('map_two'), {
@@ -1293,13 +1430,15 @@ Github Pages deployment is conducted from the settings page and uses 
 ### Forking the Github Repository
 [Top](#contents)
 
-A copy of the GitHub Repository can be made by forking the GitHub account preferably, with permission of the author. 
-This copy can be viewed and changes can be made to the copy without affecting the original repository. In order to create a fork follow these steps:
+A copy of the GitHub Repository can be made by forking the GitHub account preferably, with permission of the author.
 
-- Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
-- On the top right locate the "Fork" Button;
-- Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
+This copy can be viewed and changes can be made to the copy without affecting the original repository. In order to create a fork follow these steps:
 
+- Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
+
+- On the top right locate the "Fork" Button;
+
+- Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
 
 It is plausible that a clone of this repository will be made so that more calculators and games can be added along with help files. Cloning is conducted at the [GitHub Repository](https://github.com/pauld0051/physics-code) by clicking on the code button and downloading the repository. This can then be uploaded in a new repository or worked on locally using an IDE such as Atom.
 
@@ -1309,9 +1448,8 @@ It is plausible that a clone of this repository will be made so that more calcul
 
 All code was written by Paul Davis in consultation with the following:
 
--   ### Acknowledgements
-    [Top](#contents)
-
+### Acknowledgements
+[Top](#contents)
 
 There are a number of people and organisations that helped make Physics Code possible.
 
