@@ -12,14 +12,14 @@
     - [Returning Visitor Goals](#returning-visitor-goals)
     - [Frequent Visitor Goals](#frequent-visitor-goals)
     - [Mobile Menu](#mobile-menu)
-- [Display](#display)
+- [Display](#display) 
   - [Colour Scheme](#colour-scheme)
   - [Graphics and Images](#graphics-and-images)
   - [Fonts and Typography](#fonts-and-typography)
   - [Container and Box Structure](#container-and-box-structure)
   - [Forms and Inputs](#forms-and-inputs)
 - [Wireframes](#wireframes)
-  - [View Wireframes](#wireframes-view)
+  - [View Wireframes](#view-wireframes)
   - [Final Design](#final-design)
 - [Features](#features)
   - [Responsive Displays](#responsive-displays)
@@ -28,6 +28,7 @@
   - [Interactivity](#interactivity)
     - [Calculator](#calculator)
     - [Game](#game)
+    - [Test Yourself](#test-yourself)
     - [Contact](#contact)
   - [Future Features](#future-features)
     - [New Calculators](#new-calculators)
@@ -297,11 +298,10 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
 
  [![Physics Code mobile equations](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-equations.png "Physics Code mobile navigation")](https://pauld0051.github.io/physics-code/help.html)
 
-
- ## DISPLAY
+## DISPLAY
  [Top](#contents)
 
-- #### Colour Scheme
+- #### Colour Scheme
 [Top](#contents)
 
   - The site uses light colours to aid those with colour vision deficiency which make up about 5% of the world's population (1 in 12 males and 1 in 200 females)
@@ -320,7 +320,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
     is much reduced in size and does not obstruct user view 
   - The page flows onto the footer with the same colour as the header's navigation bar of #d7e9f5
 
-- #### Graphics and Images
+- #### Graphics and Images
 [Top](#contents)
 
   - All graphics are small sized png files or jpg with the exception of the icons which are sourced from 
@@ -337,7 +337,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
   - Familiar icons are used within buttons and include checkmarks for submit, crosses for close, paper planes for send etc 
   - Question mark icons are used to provide clickable tooltips or links to other pages such as the info button leading to the help page
 
-- #### Fonts and Typography 
+- #### Fonts and Typography
 [Top](#contents)
 
   - All headings use the font family Rubik with a fall back of San Serif if Rubik fails to load. Rubik was first discovered at 
@@ -349,7 +349,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
   - Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at 
     [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
 
-- #### Container and Box Structure
+- #### Container and Box Structure 
 [Top](#contents)
 
   - The site uses the [Bootstrap grid system](https://getbootstrap.com/docs/4.0/layout/grid/) to effectively separate each heading division and subsequent subdivision
@@ -364,7 +364,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
   - Overflow is removed from the content so users on any devices, especially mobile, do not need to scroll left or right for the same visual experience regardless of 
   screen size
 
-- #### Forms and Inputs
+- #### Forms and Inputs
 [Top](#contents)
 
   - All forms on the page (contact us in particular) use Bootstrap's [form control](https://getbootstrap.com/docs/4.0/components/forms/)
@@ -379,7 +379,7 @@ MathML, and AsciiMath notation that works in all modern browsers, with built-in 
   - Users are prompted when an invalid input is received and the input box turns pinky red (#c66464) with invalid responses such as non-number input 
   - All forms are validated in HTML using browser validation and complimented with JavaScript validation written by the author
 
-- #### Design Strategy
+- #### Design Strategy
 [Top](#contents)
 
 The overall strategy goals of the website design is to produce an easy flowing, uncluttered site but without being too minimal. Removing distractions from the student 
@@ -398,7 +398,7 @@ easily on the site with default values already input into the calcula
 reaction times, intersection sizes, phase times for traffic lights and so on, and can then calculate for secondary data. Those who are looking to manipulate the data 
 further can adjust scenarios easily and the model allows for a simple single variable change over a large range to allow secondary and tertiary data to be obtained. 
 
-## WIREFRAMES
+##  WIREFRAMES
 [Top](#contents)
 
 The original site design had not included a landing page, this was later added. The first version of the site included only a calculator page. The game and test yourself 
@@ -461,12 +461,13 @@ Twitter is likely to be added at a later stage before other social 
   - [Bootstrap](https://getbootstrap.com/) libraries were used to set up a grid, box and container system 
     - Bootstrap functionality and design is shown in all wireframes 
 
-- #### View wireframes: 
+- #### View wireframes
 [Top](#contents)
 
   - [Click to see wireframes](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/wireframes/physics_code_wireframes.pdf "Physics Code wireframes")
 
-- ### Final Design 
+- ### Final Design
+[Top](#contents)
 
 The initial wireframe designs were chosen due to their low amount of clutter, ease of reading, adaptability and consistency among each page. The colour schemes 
 were picked to enhance the design and keep the site closer to neutral without overwhelming colours or intrusive design. Various icons were replaced as more appropriate 
@@ -506,12 +507,12 @@ browser. 
 The vast majority of the site is represented in the wireframes, right down to the chosen maps on the [test yourself](https://pauld0051.github.io/physics-code/test_yourself.html) 
 page. Minor changes were made based on user comments during alpha testing and where the site did not display as anticipated on a particular sized screen. 
 
-## FEATURES
+## FEATURES 
 [Top](#contents)
 
-- ### Responsive displays 
+- ### Responsive displays 
   
-  - #### Mobile First 
+  - #### Mobile First
   - Physics Code is primarily designed for use on mobile devices or smaller screen devices.
   - Alpha testing was conducted on a Samsung Galaxy S7, Huawei P20 pro and Apple iPhone 8+.
   - [Bootstrap Grid Systems](https://getbootstrap.com/docs/4.0/layout/grid/) were extensively used throughout the site. On smaller devices, cards appear on one line, one on top of 
@@ -528,7 +529,7 @@ page. Minor changes were made based on user comments during alpha tes
   - All maps on the site resize with their container width and height to remain in focus at all times. Maps are clickable and interactive. 
   - White space is minimised on mobile displays, however, a rule of thirds still remains so the screen is not overwhelming.
 
-  - #### Large Screen Displays
+  - #### Large Screen Displays
   - Alpha testing was conducted on 32in (71 cm width), 55in (121.7 cm) and more common 15in to 24in (38 cm to 61 cm) displays.
   - Headers and footers are not fixed in place and scroll with the content. 
   - The navigation menu remains open and does not toggle into the hamburger menu style unless screen width is below 1100 px. This differs from 
@@ -542,7 +543,7 @@ slight variations in display. During testing, [Am-I-Responsive](http://ami
 
 [![Responsive displays](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/am-i-responsive.png "responsive displays")](https://pauld0051.github.io/physics-code/game.html)
 
-- ### Interactivity
+- ### Interactivity
 [Top](#contents)
 
 Users are encouraged to interact on most pages by clicking for tooltips, inputting data, submitting data, sending messages to the author, using maps, calculating 
@@ -557,7 +558,7 @@ Finally, users can interact with the site's author by sending a messa
 [Contact](https://pauld0051.github.io/physics-code/contact.html) page. It is noted that currently only a free subscription to EmailJS exists which limits emails to only 
 200 submissions per month. During the testing phase, 21 emails were sent and received successfully. 
 
-  - #### Calculator
+- #### Calculator
 [Top](#contents)
 
   - Users can input seven variables, default values are in place as a guideline only and can easily be erased with new variable values added 
@@ -579,7 +580,7 @@ Finally, users can interact with the site's author by sending a messa
     - type of zone in the header of the modal 
   - Users can then reset all data to the default values and re-input a new calculation
 
-  - #### Game
+- #### Game
   [Top](#contents)
 
   - The game helps determine one of the seven variables of the calculator, reaction time 
@@ -592,7 +593,7 @@ Finally, users can interact with the site's author by sending a messa
   - A reset button sets the game up to start again 
   - A share button allows users to share their best score on their Facebook timeline 
 
-  - #### Test Yourself 
+- #### Test Yourself 
   [Top](#contents) 
 
   - Users can view one of five real world intersections on the website 
@@ -630,7 +631,7 @@ Finally, users can interact with the site's author by sending a messa
     coefficient of friction) 
   - Users can attempt each map and random scenario an unlimited amount of times 
 
-- #### Contact
+- #### Contact
 [Top](#contents) 
 
  - Users who have an email address will be able to contact the page's author without the need to access their own personal email 
@@ -639,14 +640,14 @@ Finally, users can interact with the site's author by sending a messa
  - Users will be prompted to add valid inputs into each field with similar inline prompts at each invalid response 
  - Failed messages will also be prompted - however, till date this has not been confirmed 
 
-- ### Future Features
+- ### Future Features
 [Top](#contents) 
 
 All efforts are being made to future proof Physics Code and the contents. A whole host of new features will be able to go live over time as the site gains traction 
 among students and teachers alike. New calculators, games and tests can be added with ease as well as new help pages and features. It is anticipated that Physics Code 
 will be able to increase usability with membership and monthly newsletters. It is already possible for users to contact the author with suggestions for new site features. 
 
-- #### New Calculators
+- #### New Calculators
 [Top](#contents) 
 
 The original site investigation lead to the idea of providing a projectile motion calculator, however, code was already written and available online for projectile motion as 
@@ -701,7 +702,7 @@ needs to be considered. 
 
 All calculators will be based on a minimum requirement for the International Baccalaureate DP1 and DP2 High Level Program.
 
-- #### New Help files 
+- #### New Help files 
 [Top](#contents) 
 
 All calculators will be coupled with a help page set up using [MathJax](https://www.mathjax.org/) for equation display. Other LaTeX libraries may be considered 
@@ -709,7 +710,7 @@ depending on availability. Help pages, like their counterpart calculator
 only one calculator, help page etc being available on first release) using [Bootstrap's drop down](https://getbootstrap.com/docs/4.4/components/navbar/) ability 
 for all navbar links. Access to help files will also be available on each calculator through the infolink ("i" in a blue circle). 
 
-- #### New Games 
+- #### New Games 
 [Top](#contents) 
 
 In similar fashion to the current reaction time game, games linked to a variable or variables in each calculator will be offered. Some examples are give here:
@@ -741,7 +742,7 @@ There is a near unlimited amount of potential for other calculators, 
 
 ## TECHNOLOGIES USED
 
-- ### Languages
+- ### Languages
 [Top](#contents)
 
 Physics Code uses three main languages as a basis for the code on all the pages, these include;
@@ -750,21 +751,26 @@ Physics Code uses three main languages as a basis for the code on a
   - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) (4.2%)
   - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (18.6%)
   
-- ### Libraries
+- ### Libraries
 [Top](#contents)
 
 The coding for the website included libraries and frameworks that make use of the languages involved, these include (in alphabetical order);
 
   - [Bootstrap](https://getbootstrap.com/)
+
   - [Fontawesome](https://fontawesome.com/)
+
   - [Google Fonts](https://fonts.google.com/)
+
   - [Google Maps](https://www.google.com/maps/)
+
   - [jQuery](https://jquery.com/) 
   
   jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
+
   - [MathJax](https://www.mathjax.org/)
 
-- ### Programs
+- ### Programs
 [Top](#contents)
 
 All of the code for the website was produced and enhanced by using the following software applications (in alphabetical order);
@@ -846,7 +852,7 @@ All of the code for the website was produced and enhanced by using 
   - [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
   Enabled checking the site's HTML coding with ease.
 
-- ### Application Programming Interfaces (API's) Used
+- ### Application Programming Interfaces
 [Top](#contents)
 
 Primarily Physics Code relies on Google Maps API for access to map data for display as part of the user's ability to test themselves as a random calculation for a given 
@@ -855,7 +861,7 @@ secondary. This is backed up with the evidence of an "A" in [Pingdom
 
 [![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-javascript.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
 
-- #### Maps JavaScript API
+- #### Maps JavaScript API
 [Top](#contents)
 
 All maps were provided by Google by accessing the [Google Developers Console](https://console.developers.google.com/) and applying for an Maps API key. This key is used 
@@ -925,7 +931,7 @@ All code pertaining to the Maps JavaScript API are located in a sing
 Documentation and description of the codes is found by exploring the vast documentation at the 
 [Google Map JavaScript API Guide](https://developers.google.com/maps/documentation/javascript/overview). 
 
-- #### Facebook Software Development Kit (SDK)
+- #### Facebook Software Development Kit (SDK)
 [Top](#contents)
 
 To allow users to share the site on their Facebook timelines a Facebook share button was added to each of the pages in the footer. For further sharing ability, 
@@ -983,7 +989,7 @@ To share results from the reaction time game, the app with the app 
 This code also includes alerts if a user closes the share function before actually sharing to their profile and timeline. Information for this code is found 
 at the [Facebook Share Dialogue](https://developers.facebook.com/docs/sharing/reference/share-dialog) documentation.
 
-- ### EmailJS 
+- #### EmailJS 
 [Top](#contents)
 
 An account and email address is required to access the EmailJS services. From there, an email template can be created with necessary requirements filled out. 
@@ -1021,7 +1027,9 @@ The full JavaScript is then run from the sendemail.js file:
             -  return false;
             -  });
 
-- ### Script Refactoring
+- ### Script Refactoring
+[Top](#contents)
+
 Due to the extensive nature of the site, scripts had the tendency to be large files that could evidentially slow the site down and produce difficult to manipulate code. 
 In particular the test_yourself.js code file was over 800 lines long in the earlier stages of development. Although this was somewhat intentional to begin with, it was 
 clear that the entire content had numerous areas for improvement and readability. 
@@ -1091,7 +1099,7 @@ heavy and map four, where light snow and ice is possible allows for�
 
 The entire code was reduced by about 70% from near 800 lines to around 240 lines. 
 
-- ### Input validation
+- ### Input validation
 [Top](#contents)
 
 Input validation was considerably more time consuming than many of the other sections of code. The main reason for adding external validation checks for input was due to 
@@ -1227,7 +1235,7 @@ The final code to listen for the colour of the input field is as f
 
 To cut down on code, the RGB value was used and not converted to hex (16).
 
-- ### Equations
+- ### Equations
 [Top](#contents)
 
 For the vast majority of the calculations it is easier for students to see individual variables broken down and where multiple variables are required, they are 
@@ -1263,7 +1271,7 @@ able to be travelled, then an option zone will exist (ie, a vehicle'
 All numbers are set to a maximum of two decimal places in the final answer (reaction time and coefficient of friction allows for three decimal place inputs). This avoids 
 extreme numbers with insignificant data. 
 
-## KNOWN BUGS 
+## KNOWN BUGS
 [Top](#contents)
 
 Currently, there are few known bugs in the code and the code operates as anticipated. However, there are multiple limitations to the code and equations used. Firstly, the 
@@ -1272,7 +1280,7 @@ straight line dilemma zones can be determined. Vehicles that are using
 to realistic values to avoid extreme numbers that display incorrectly in Bootstrap modals. Thirdly, the equations for dilemma and option zones assume flat roads with no 
 hills or turns. 
 
-- ### Facebook Timeline Sharing 
+- ### Facebook Timeline Sharing
 [Top](#contents)
 
 After a user has completed a game and shared the results on their Facebook timeline, a link to the Reaction Timer - Physics Code is displayed in the top of the person's 
@@ -1294,7 +1302,7 @@ it was most likely due to updating the code which may have impacted�
 without advert blocking applications. Because Facebook sharing is a third party add-on to Physics Code, this can be monitored over time. However, it is hoped that Facebook 
 will notify developers of changes that occur to the code which may prevent share facilities from displaying accurately. 
 
-- ### Icons and Unicode 
+- ### Icons and Unicode 
 [Top](#contents)
 
 The site relies heavily on icon hints in various cards and buttons. However, due to the nature of `<input>` verses `<button>` meant that input tags require a "value" attribute 
@@ -1303,7 +1311,7 @@ provide the icon when used in an `<input>` tag. This meant alternativ
 characters were taken from [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm). Although not every devices has been checked, it is apparent these 
 unicode characters are more likely to be displayed than icons. 
 
-- ### Other Bugs
+- ### Other Bugs
 [Top](#contents)
 
 - Previously mentioned invalid input default validators will ignore various letter inputs producing a non-number equation. This was prevented by adding a second layer of 
@@ -1365,7 +1373,8 @@ Github Pages deployment is conducted from the settings page and uses 
 
 [![Deployment to Github Pages](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-pages.png "Github-Pages")](https://pauld0051.github.io/physics-code/game.html)
 
-- ### Forking the Github Repository
+- ### Forking the Github Repository
+[Top](#contents)
 
 A copy of the GitHub Repository can be made by forking the GitHub account preferably, with permission of the author. 
 This copy can be viewed and changes can be made to the copy without affecting the original repository. In order to create a fork follow these steps:
@@ -1383,7 +1392,8 @@ or worked on locally using an IDE such as Atom. 
 
 All code was written by Paul Davis in consultation with the following:
 
-- ### Acknowledgements
+- ### Acknowledgements
+[Top](#contents)
 
 There are a number of people and organisations that helped make Physics Code possible. Above all, [Felipe Alarcon](https://github.com/felipe-alarcon) and his commitment 
 along with encouragement as well as imparting countless bits of knowledge and providing expertise on all areas of coding. Felipe was available at short notice 
@@ -1407,28 +1417,41 @@ Continuous support from peers at the Code Institute Slack channel. 
 Code has been credited internally by use of inline comments or throughout this Readme file. These include codes that were originally found at:
 
 - [W3Schools](https://www.w3schools.com/)
+
 - [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
+
 - [Bootstrap](https://getbootstrap.com/)
+
 - [jQuery](https://jquery.com/)
+
 - User code at [Codepen](https://codepen.io/)
+
 - [Fontawesome](https://fontawesome.com/)
 
-- ### Media 
+
+- ### Media
 [Top](#contents)
 
 All images were first downloaded and used from one of four locations:
 
 - [Vehicle Silhouette](https://www.flaticon.com/free-icon/coupe-car_55180)
+
 - [Traffic light Silhouette](https://www.pngfuel.com/free-png/rxbkq)
+
 - [Stopwatch Silhouette](https://www.pngfuel.com/free-png/nbupo)
+
 - [Tire Silhouette](https://www.kindpng.com/imgv/hoJJx_silhouette-tire-vector-transparent-tire-png-vector-png/)
+
 - [Intersection Silhouette](https://www.pngguru.com/free-transparent-background-png-clipart-nfwhh)
+
 - [Various Vehicle Lengths Silhouette](https://www.freepik.com/premium-vector/cars-silhouette-automobiles-type-isolated-bus-motorhome-van-tow-truck-sedan-taxi-limousine-suv-car-vehicle-flat-icon-collection-urban-auto-motor-transport-silhouette-models-set_8763680.htm)
+
 - [Calculator Silhouette](https://webstockreview.net/images/calculator-clipart-silhouette-10.jpg)
+
 
 All images are subject to international copyright laws. 
 
-## VERSION CONTROL 
+## VERSION CONTROL
 [Top](#contents)
 
 Throughout the development phase, regular commits were made and pushed to the Github repository. Early version commits were not made in the imperative as 
