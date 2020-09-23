@@ -851,7 +851,7 @@ All maps were provided by Google by accessing the [Google Developers Console (ht
             \- [script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"](<script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js">)</script>
             \- [script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap"](<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap">)</script>
 
-Each map is called by its location (coordinates latitude and longitude) which are picked up from the map itself. For example, intersection one is called by:
+Each map is called by its location (coordinates latitude and longitude) which are picked up from the map itself. For example, intersection one is called by:
 
             \-  let intersection_one = {
             \-  lat: 55.777034,
@@ -871,7 +871,7 @@ Each intersection is labelled intersection\_[map number] to a total of�
 
 Zoom controls were removed from the maps to allow a crisper view of the entire intersection and rotational control was removed as this could confuse the user as to the direction required for calculation of the intersection.
 
-The unique map icon located at the center of each intersection was positioned by this code:
+The unique map icon located at the center of each intersection was positioned by this code:
 
             \-  let marker = new google.maps.Marker({
             \-  position: intersection_one,
@@ -879,7 +879,7 @@ The unique map icon located at the center of each intersection was p
             \-  icon: image
             \-  });
 
-A previously labelled variable (intersection\_[map number]) was used to locate the position of the marker and the image was derived from:
+A previously labelled variable (intersection\_[map number]) was used to locate the position of the marker and the image was derived from:
 
             \-  let image = 'assets/images/map_icon_marker.ico';
 
@@ -941,7 +941,7 @@ The metatags at the header of each page are as follows:
 
 This also helps with search engines to find the site and provides Facebook share services with the information required to display the logo as well as a small tag line about the site. The information and code development for a share button can be found at [Facebook Share Button](https://developers.facebook.com/docs/plugins/share-button/) documentation.
 
-To share results from the reaction time game, the app with the app number (previously discussed) is used with the following code:
+To share results from the reaction time game, the app with the app number (previously discussed) is used with the following code:
 
             \-  document.getElementById("share_button").addEventListener("click", share_result);
             \-  function share_result() {
@@ -964,16 +964,17 @@ This code also includes alerts if a user closes the share function before actual
 #### EmailJS 
 [Top](#contents)
 
-An account and email address is required to access the EmailJS services. From there, an email template can be created with necessary requirements filled out. 
-When an account has been created and an email added it is possible then to add templates via the [EmailJS Template Editor](https://dashboard.emailjs.com/admin/templates).
+An account and email address is required to access the EmailJS services. From there, an email template can be created with necessary requirements filled out.
 
-For Physics Code the template was set up to include an email "to", an email "from", the user's name and a message (with prompt). 
+When an account has been created and an email added it is possible then to add templates via the [EmailJS Template Editor](https://dashboard.emailjs.com/admin/templates).
+
+For Physics Code the template was set up to include an email "to", an email "from", the user's name and a message (with prompt).
 
 [![EmailJS template](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/emailjs-template.png "EmailJS Template")](https://pauld0051.github.io/physics-code/game.html)
 
-The final part of the message `{{from_name}} can be contacted at {{from_email}}` shows the user's email address for easy reply. 
+The final part of the message `{{from_name}} can be contacted at {{from_email}}` shows the user's email address for easy reply.
 
-With the template set up, the script required to call the emailJS functionality is initiated in the HTML at the bottom of the page along with the other scripts:
+With the template set up, the script required to call the emailJS functionality is initiated in the HTML at the bottom of the page along with the other scripts:
 
             \-  <script type="text/javascript">
             \-  (function() {
@@ -1266,8 +1267,7 @@ In early versions of the Physics Code calculator, users could accidental "scroll
         - })
 (source: <https://stackoverflow.com/questions/9712295/disable-scrolling-on-input-type-number>)
 
-Negative numbers in the dilemma zone calculation need to be given as "absolute" so the Math.abs(total) code was used. 
-
+Negative numbers in the dilemma zone calculation need to be given as "absolute" so the Math.abs(total) code was used.
 
 The reaction time game prototype showed that the counter was able to stop and work out the number of seconds the user took to press the "brakes" button. However, the brakes button remained active and was able to be pushed again. An initial attempt to remove the ID that allows the "click" event to be listened to failed to work. Finally, a jQuery button disabled function was able to complete the job.
 
