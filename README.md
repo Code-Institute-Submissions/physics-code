@@ -18,6 +18,8 @@
   - [Fonts and Typography](#fonts-and-typography)
   - [Container and Box Structure](#container-and-box-structure)
   - [Forms and Inputs](#forms-and-inputs)
+  - [Design Strategy](#design-strategy)
+  - [Site Speed](#site-speed)
 - [Wireframes](#wireframes)
   - [View Wireframes](#view-wireframes)
   - [Final Design](#final-design)
@@ -405,9 +407,25 @@ Physics Code is primarily for students around the world. It is anticipated that 
 made as small in size as possible using [TinyPNG](https://tinypng.com/) as well as making pages less data intrusive. The site was tested using [Pingdom](https://tools.pingdom.com/)
  and was found to be responsive at a "B" level. Certain known issues such as Expires Headers have been considered. But for this particular project, will not be included. 
 
- Users close to Stockholm (closest server appears to be Frnakfurt) have a very fast response time to enter the site at just 376 ms. 
+Users close to Stockholm (closest server appears to be Frnakfurt) have a very fast response time to enter the site at just 376 ms. 
 
  [![Pingdom results Frankfurt](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-frankfurt.png "Pingdom Results - Franfurt")](https://pauld0051.github.io/physics-code/index.html)
+
+Those who access the site from further away, in Washington still recieve excellent load times at 475 ms. 
+
+ [![Pingdom results Washington](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-washington.png "Pingdom Results - Washington")](https://pauld0051.github.io/physics-code/index.html)
+
+People accessing the site from Sydney can also rely on fast loading times at 1.82 s. 
+
+[![Pingdom results Sydney](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-wasydneyshington.png "Pingdom Results - Sydney")](https://pauld0051.github.io/physics-code/index.html)
+
+
+
+
+
+
+
+
 
 
 
@@ -1447,19 +1465,19 @@ Code has been credited internally by use of inline comments or throug
 
 All images were first downloaded and used from one of four locations:
 
-- [Vehicle Silhouette](https://www.flaticon.com/free-icon/coupe-car_55180)
+- [Vehicle Silhouette - flaticon](https://www.flaticon.com/free-icon/coupe-car_55180)
 
-- [Traffic light Silhouette](https://www.pngfuel.com/free-png/rxbkq)
+- [Traffic light Silhouette - pngfuel](https://www.pngfuel.com/free-png/rxbkq)
 
-- [Stopwatch Silhouette](https://www.pngfuel.com/free-png/nbupo)
+- [Stopwatch Silhouette - pngfuel](https://www.pngfuel.com/free-png/nbupo)
 
-- [Tire Silhouette](https://www.kindpng.com/imgv/hoJJx_silhouette-tire-vector-transparent-tire-png-vector-png/)
+- [Tire Silhouette - kindpng](https://www.kindpng.com/imgv/hoJJx_silhouette-tire-vector-transparent-tire-png-vector-png/)
 
-- [Intersection Silhouette](https://www.pngguru.com/free-transparent-background-png-clipart-nfwhh)
+- [Intersection Silhouette - pngguru](https://www.pngguru.com/free-transparent-background-png-clipart-nfwhh)
 
-- [Various Vehicle Lengths Silhouette](https://www.freepik.com/premium-vector/cars-silhouette-automobiles-type-isolated-bus-motorhome-van-tow-truck-sedan-taxi-limousine-suv-car-vehicle-flat-icon-collection-urban-auto-motor-transport-silhouette-models-set_8763680.htm)
+- [Various Vehicle Lengths Silhouette - freepik](https://www.freepik.com/premium-vector/cars-silhouette-automobiles-type-isolated-bus-motorhome-van-tow-truck-sedan-taxi-limousine-suv-car-vehicle-flat-icon-collection-urban-auto-motor-transport-silhouette-models-set_8763680.htm)
 
-- [Calculator Silhouette](https://webstockreview.net/images/calculator-clipart-silhouette-10.jpg)
+- [Calculator Silhouette - webstockreview](https://webstockreview.net/images/calculator-clipart-silhouette-10.jpg)
 
 
 All images are subject to international copyright laws. 
@@ -1471,7 +1489,8 @@ Throughout the development phase, regular commits were made and pushed to the Gi
 feedback had not yet been received from the MS1. This was adjusted as soon as the feedback was received. The following is the list of commits over the entire 
 project. 
 
-The full list of commits are available at 
+The full list of commits are available in pdf format:
+
 [Click to see version control](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/version-control/version_control.pdf "Physics Code version control")
 
 ## END OF THE CONTENT
