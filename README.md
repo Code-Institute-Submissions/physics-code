@@ -366,21 +366,15 @@
 [Top](#contents)
 
 
-- All headings use the font family Rubik with a fall back of San Serif if Rubik fails to load. Rubik was first discovered at
-
--  [Google Fonts](https://fonts.google.com/specimen/Rubik?query=rubik)
+- All headings use the font family Rubik with a fall back of San Serif if Rubik fails to load. Rubik was first discovered at [Google Fonts](https://fonts.google.com/specimen/Rubik?query=rubik)
 
 - Headings are all coloured in a dark crimson #85144b and is set as a colour opposite of the darker blue background
 
-- All paragraph text uses the font family Ubuntu also falling back to Sans Serif should Ubuntu fail to load. The font was first discovered at
-
--  [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=Ubuntu)
+- All paragraph text uses the font family Ubuntu also falling back to Sans Serif should Ubuntu fail to load. The font was first discovered at [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=Ubuntu)
 
 - Fonts were chosen for their clarity and ease to read even though the font styling was subtly unique but retained boldness and perspicuousness
 
-- Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at
-
--  [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
+- Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
 
 #### Container and Box Structure
 [Top](#contents)
@@ -427,16 +421,16 @@
 #### Design Strategy
 [Top](#contents)
 
-The overall strategy goals of the website design is to produce an easy flowing, uncluttered site but without being too minimal. Removing distractions from the student is advantageous for the context of their work while at the same time, large easy to navigate cards allow user input and interaction. This further drives the curiosity of the student who can associate images with hints towards the variables required in the calculator or the type of button that they're about to press. This helps scaffold the site and differentiate for all users. A beginner in Physics will see the car emblem for instance and recognize this as a kinetic object and is prompted by the word velocity. A more seasoned user will instantly see the scientific notation for metres per second and associate the site with SI Units even though they will be able to add imperial units in at least two of the calculator inputs. And professional educators will be able to use the site as a demonstration or homework assignment for their students or students will be able to model their own data from Google Maps or similar after completing their own calculations on the random scenarios. Each page is designed with the same format and layout as the previous page leaving no surprises or the feeling that the user is on the wrong page. Any external links are opened in a new browser tab and if the user is on the Calculator page they can access the help page without losing their data. 
+The overall strategy goals of the website design is to produce an easy flowing, uncluttered site but without being too minimal. Removing distractions from the student is advantageous for the context of their work while at the same time, large easy to navigate cards allow user input and interaction. This further drives the curiosity of the student who can associate images with hints towards the variables required in the calculator or the type of button that they're about to press. This helps scaffold the site and differentiate for all users. A beginner in Physics will see the car emblem for instance and recognize this as a kinetic object and is prompted by the word velocity. A more seasoned user will instantly see the scientific notation for metres per second and associate the site with SI Units even though they will be able to add imperial units in at least two of the calculator inputs. And professional educators will be able to use the site as a demonstration or homework assignment for their students or students will be able to model their own data from Google Maps or similar after completing their own calculations on the random scenarios. Each page is designed with the same format and layout as the previous page leaving no surprises or the feeling that the user is on the wrong page. Any external links are opened in a new browser tab and if the user is on the Calculator page they can access the help page without losing their data.
 
-The textbook feel of the site provides a sense of professionalism and trust for the student but without being overwhelming. A seemingly difficult task, such as calculation of the dilemma zone is made easy by splitting each variable in a logical order for input. The beginner will only require primary data which can be obtained easily on the site with default values already input into the calculator. A more seasoned Physics student will want to gather their own data and might further investigate reaction times, intersection sizes, phase times for traffic lights and so on, and can then calculate for secondary data. Those who are looking to manipulate the data further can adjust scenarios easily and the model allows for a simple single variable change over a large range to allow secondary and tertiary data to be obtained. 
+The textbook feel of the site provides a sense of professionalism and trust for the student but without being overwhelming. A seemingly difficult task, such as calculation of the dilemma zone is made easy by splitting each variable in a logical order for input. The beginner will only require primary data which can be obtained easily on the site with default values already input into the calculator. A more seasoned Physics student will want to gather their own data and might further investigate reaction times, intersection sizes, phase times for traffic lights and so on, and can then calculate for secondary data. Those who are looking to manipulate the data further can adjust scenarios easily and the model allows for a simple single variable change over a large range to allow secondary and tertiary data to be obtained.
 
 #### Site Speed
 [Top](#contents)
 
 Physics Code is primarily for students around the world. It is anticipated that a large variance in internet speeds will be encountered and as such, images have been made as small in size as possible using [TinyPNG](https://tinypng.com/) as well as making pages less data intrusive. The site was tested using [Pingdom](https://tools.pingdom.com/) and was found to be responsive at a "B" level. Certain known issues such as Expires Headers have been considered. But for this particular project, will not be included.
 
-Users close to Stockholm (closest server appears to be Frnakfurt) have a very fast response time to enter the site at just 376 ms.
+Users close to Stockholm (closest server appears to be Frankfurt) have a very fast response time to enter the site at just 376 ms.
 
  [![Pingdom results Frankfurt](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-frankfurt.png "Pingdom Results - Franfurt")](https://pauld0051.github.io/physics-code/index.html)
 
@@ -501,27 +495,25 @@ Other social media share functionality was also considered, however, Facebook wa
 
 Twitter is likely to be added at a later stage before other social media share buttons.
 
-  
-
 - Graphical representation of equations:
 
--  [MathJax](https://www.mathjax.org/) LaTeX mathematical equation builder used on the [Help]\(<https://pauld0051.github.io/physics-code/help.html>;
+	-  [MathJax](https://www.mathjax.org/) LaTeX mathematical equation builder used on the [Help]\(<https://pauld0051.github.io/physics-code/help.html>;
 
-- Equation display is critical in helping the user understand complex equations
+	- Equation display is critical in helping the user understand complex equations
 
-- Although images were considered as they can be made fluid, the overall presentation using MathJax was considerably more valuable and useful for site presentation
+	- Screenshot images of equations were considered as they can be made fluid, however, the overall presentation using MathJax was considerably more valuable and useful for site presentation
 
-- Contact ability without backend or server requirements:
+- Contact-Us ability without backend or server requirements:
 
--  [EmailJS](https://www.emailjs.com/) is used on the [Contact](https://pauld0051.github.io/physics-code/contact.html) page only;
+	-  [EmailJS](https://www.emailjs.com/) is used on the [Contact](https://pauld0051.github.io/physics-code/contact.html) page only;
 
-- Wireframes are not affected by the use of emailJS
+	- Wireframes are not affected by the use of emailJS as the system runs in the background and requires no particular display module other than an input form
 
 - Responsive display:
 
--  [Bootstrap](https://getbootstrap.com/) libraries were used to set up a grid, box and container system
+	-  [Bootstrap](https://getbootstrap.com/) libraries were used to set up a grid, box and container system
 
-- Bootstrap functionality and design is shown in all wireframes
+	- Bootstrap functionality and design is shown in all wireframes
 
 #### View wireframes
 [Top](#contents)
@@ -616,34 +608,34 @@ Finally, users can interact with the site's author by sending a message through 
 - The calculator has tooltips on each variable to give more advice on the input values
 
 - There are links to the [Help](https://pauld0051.github.io/physics-code/help.html) page which opens in a new browser tab
-
+- 
 - Calculations will not submit if data is non-numerical in any of the seven inputs
 
-- Input fields change colour based on valid and invalid data
+	- Input fields change colour based on valid and invalid data
 
-- Tooltips flash up on the input field if an invalid value is being submitted
+	- Tooltips flash up on the input field if an invalid value is being submitted
 
-- The input field is scrolled to if an invalid value is being submitted
+	- The input field is scrolled to if an invalid value is being submitted
 
 - Calculations are completed and all values are displayed in a pop-up modal, users will be able to see;
 
-- distance the vehicle travels throughout the yellow and interphase duration
+	- distance the vehicle travels throughout the yellow and interphase duration
 
-- distance the vehicle travels throughout the duration of the reaction time
+	- distance the vehicle travels throughout the duration of the reaction time
 
-- total distance from the stop-line required for the vehicle coming to a complete halt
+	- total distance from the stop-line required for the vehicle coming to a complete halt
 
-- maximum Distance the vehicle is from stop-line
+	- maximum Distance the vehicle is from stop-line
 
-- non-absolute value (either negative or positive) for the type of zone discovered
+	- non-absolute value (either negative or positive) for the type of zone discovered
 
-- absolute value of the zone and type of zone
+	- absolute value of the zone and type of zone
 
-- velocity in metres per second (especially if converted from one of the other two units, kilometres per hour or miles per hour)
+	- velocity in metres per second (especially if converted from one of the other two units, kilometres per hour or miles per hour)
 
-- intersection size in metres (especially if converted from the alternative unit of yards)
+	- intersection size in metres (especially if converted from the alternative unit of yards)
 
-- type of zone in the header of the modal
+	- type of zone in the header of the modal
 
 - Users can then reset all data to the default values and re-input a new calculation
 
@@ -890,6 +882,7 @@ The coding for the website included libraries and frameworks that make use of th
 - [Google Maps](https://www.google.com/maps/)
 
 - [jQuery](https://jquery.com/)
+
 jQuery is used extensively in Bootstrap and was also in replacement of some JavaScript functions
 
 - [MathJax](https://www.mathjax.org/)
@@ -900,75 +893,99 @@ jQuery is used extensively in Bootstrap and was also in replacement of some Java
 All of the code for the website was produced and enhanced by using the following software applications (in alphabetical order);
 
 - [Am I Responsive](http://ami.responsivedesign.is/#)
+
 Allows editors to see how the site is displayed on various sized screens.
 
 - [Atom](https://atom.io/)
+
 Atom is an integrated development environment (IDE) used to store Physics Code's HTML, CSS and JavaScript files as well as to beautify the script using Atom Beautify.
 
 - [Balsamic](https://balsamiq.com/)
+
 The site's wireframes were created using Balsamiq software.
 
 - [Bitmoji](https://www.bitmoji.com/)
+
 The author's cartoon pictures were created in Bitmoji on an Android device.
 
 - [ConvertICO](https://convertico.com/)
+
 The favicon that appears in the browser tab was converted from png to ico using convertico. The site was also used to convert jpg to png.
 
 - [EmailJS](https://www.emailjs.com/)
+
 Is a replacement for the need to add a backend or server for contacting the page author. Emails are sent from the site via the author's Gmail account. Up to 200 emails can be sent per month for free.
 
 - [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm)
-All unicode characters were taken from FileFormat.
+
+All Unicode characters were taken from FileFormat.
 
 - [GIMP](https://www.gimp.org/)
+
 GIMP (GNU Image Manipulation Program) was used for shading, adjusting, colouring and saving all images on the website
 
 - [Github](https://github.com/)
+
 Github acted as a repository for all versions of the website and as a host for the website's pages.
 
 - [Gitpod](https://www.gitpod.io)
+
 Gitpod is an IDE that was used extensively to code and test all versions of the website as well as to push the code through to the repository at Github.
 
 - [Gyazo](https://gyazo.com/)
+
 Gyazo was used to capture animated images for this README.md file as well as a visual display to focus on errors with the site's display and to share animated files within the network to troubleshoot the issue.
 
 - [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php)
+
 The site's spelling was checked using this service
 
 - [JSBin](https://jsbin.com/?html,output)
+
 Used to test small snippets of code that in an external environment.
 
 - [JSHint](https://jshint.com/)
+
 A handy, online JavaScript validator.
 
 - [Libre Open Office](https://www.libreoffice.org/)
+
 The README.md spelling was checked through this open office software.
 
 - [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
+
 Mozilla's developer network documentation is an extensive resource for code and usage.
 
 - [Pingdom](https://tools.pingdom.com)
+
 For testing the site's speed and response.
 
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard)
+
 The site's privacy policy content was created using this generator.
 
 - [Snip & Sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab)
+
 Snip & Sketch is a Windows utility used to capture screenshots and was primarily used to produce the images for the README.md file presented here.
 
 - [StackOverflow](https://stackoverflow.com/)
+
 The wealth of knowledge of the many is the most valuable resource for anyone starting out and learning new code. Stackoverflow was a heavily used network or resources, both for asking questions, confirming code and searching code.
 
 - [Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard)
+
 The site's terms and condition content was created with this generator.
 
 - [TinyPNG](https://tinypng.com/)
+
 All images on the site were first sent to TinyPNG before being uploaded to Gitpod and sent to the Github repository. The aim is to make the page load faster but also to keep the same image quality that users would expect.
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
 Helped with checking CSS file validation
 
 - [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+
 Enabled checking the site's HTML coding with ease.
 
 ### Application Programming Interfaces
@@ -1257,7 +1274,7 @@ For two decimal places the variable was set from the following:
 
 Discussion with others at [StackOverflow](https://stackoverflow.com/) had suggested to replace this code with a regex code instead. Although plenty of regex code was available, this code had already been written and was suitable to complete the job. For future use, a regex code will be used, especially for email.
 
-The constants are then parsed into the validation filter to trigger a tooltip and a scroll "up" to the invalid input if required:
+The constants are then parsed into the validation filter to trigger a tooltip and a scroll "up" to the invalid input if required:
 
             \- $(document).ready(function() {
             \- $("#submitCalculation").click(function() {
@@ -1418,7 +1435,6 @@ Occasionally maps may not display all sectors. It is not yet understood what cau
 ## DEPLOYMENT
 [Top](#contents)
 
-
 The initial site will be deployed using [Github Pages](https://pages.github.com/), however, it is possible further editions of the site will be released on public domains with an appropriate URL.
 
 The initial project was written entirely using [Gitpod](https://gitpod.io/) and [Atom](https://atom.io/) as IDEs and then pushed to [Github] making [Github Pages](https://pages.github.com/) the first choice for initial deployment.
@@ -1510,6 +1526,6 @@ Throughout the development phase, regular commits were made and pushed to the Gi
 
 The full list of commits are available in pdf format:
 
-[Click to see version control](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/version-control/version_control.pdf "Physics Code version control")
+[Click here to see version control](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/version-control/version_control.pdf "Physics Code version control")
 
 ## END OF THE CONTENT
