@@ -262,9 +262,9 @@
 
 #### Returning Visitor Goals
 
-    [Top](#contents)
+[Top](#contents)
 
--   The returning visitor will want to:
+- The returning visitor will want to:
 
     -   Easily see new content with the help of easy to navigate cards on the home page with uncluttered content;
 
@@ -1145,14 +1145,14 @@ Secondly, code was added to CSS to change the colour of inputs if t
 
 Spinners on number inputs were also removed using code first found at [W3Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp):
 
-        \-  input::-webkit-outer-spin-button,
-        \-  input::-webkit-inner-spin-button {
-        \-  -webkit-appearance: none;
-        \-  margin: 0;
-        \-  }
-        \-  input[type=number] {
-        \-  -moz-appearance: textfield;
-        \-  }
+            \- input::-webkit-outer-spin-button,
+            \- input::-webkit-inner-spin-button {
+            \- -webkit-appearance: none;
+            \- margin: 0;
+            \- }
+            \- input[type=number] {
+            \- -moz-appearance: textfield;
+            \- }
 
 Finally, JavaScript was used to determine if a number had been inputted and contained only 2 or 3 decimal places and no exponents. 
 
@@ -1177,28 +1177,28 @@ available, this code had already been written and was suitable to com
 
 The constants are then parsed into the validation filter to trigger a tooltip and a scroll "up" to the invalid input if required:
 
-            \-  $(document).ready(function() {
-            \-  $("#submitCalculation").click(function() {
-            \-  $(".checkVelocity").each(function() {
-            \-  const val = $(this).val();
-            \-  if (isOpen(val) || val > 300) {
-            \-  $(this).popover({
-            \-  placement: "top",
-            \-  content: '<textarea class="popover-textarea"></textarea>',
-            \-  template: '<div class="popover"><div class="arrow"></div>' +
-            \-  '<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">' +
-            \-  '</i></div><div class="popover-content col-9">Enter the velocity of the car between 10 and 300 ms<sup>-1</sup>, kmh<sup>-1</sup> or mph.' +
-            \-  '</div></div>'
-            \-  });
-            \-  $(this).popover("show");
-            \-  $(this).click(function() {
-            \-  $(this).popover("hide");
-            \-  });
-            \-  $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
-            \-  }
-            \-  })
-            \-  })
-            \-  })
+            \- $(document).ready(function() {
+            \- $("#submitCalculation").click(function() {
+            \- $(".checkVelocity").each(function() {
+            \- const val = $(this).val();
+            \- if (isOpen(val) || val > 300) {
+            \- $(this).popover({
+            \- placement: "top",
+            \- content: `'<textarea class="popover-textarea"></textarea>',`
+            \- template: `'<div class="popover"><div class="arrow"></div>'` +
+            \- `'<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">'` +
+            \- `'</i></div><div class="popover-content col-9">Enter the velocity of the car between 10 and 300 ms<sup>-1</sup>, kmh<sup>-1</sup> or mph.'` +
+            \- `'</div></div>'`
+            \- });
+            \- $(this).popover("show");
+            \- $(this).click(function() {
+            \- $(this).popover("hide");
+            \- });
+            \- $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
+            \- }
+            \- })
+            \- })
+            \- })
 
 This code is on the form_validation.js file and checks the validation of the velocity input on the [calculator](https://pauld0051.github.io/physics-code/calculator.html) page.
 
@@ -1328,36 +1328,35 @@ unicode characters are more likely to be displayed than icons. 
 ### Other Bugs
 [Top](#contents)
 
-- Previously mentioned invalid input default validators will ignore various letter inputs producing a non-number equation. This was prevented by adding a second layer of 
+Previously mentioned invalid input default validators will ignore various letter inputs producing a non-number equation. This was prevented by adding a second layer of 
 validation via JavaScript; see [Input Validation](#input-validation). 
 
-- Spinners from all inputs were removed to prevent negative numbers from being presented. Although this is stopped in JavaScript, this is a secondary method to prevent invalid 
+Spinners from all inputs were removed to prevent negative numbers from being presented. Although this is stopped in JavaScript, this is a secondary method to prevent invalid 
 inputs. 
 
-- A "current" scenario button had been included in earlier versions of the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page, 
+A "current" scenario button had been included in earlier versions of the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page, 
 but due to input validation, it was impossible to re-open a modal without a) refreshing the content inside or; b) ignoring the current map number preventing input from the 
 user. Although many possible considerations were made to include the button, it was not an overall requirement. It was then decided to prevent the user from accidentally 
 closing the modal with a key push or clicking outside of the modal. Instead, a user must now use one of the two active "close" buttons. This was included in HTML 
 attributes:
-
-                \-  data-backdrop="static" 
-                \-  data-keyboard="false" 
+    
+    -  data-backdrop="static" 
+    -  data-keyboard="false" 
 (source: <https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca>)
 
 This prevented accidental closing of modals when a calculation was being performed. 
 
-- In early versions of the Physics Code calculator, users could accidental "scroll" when the mouse was over an input and change their value for the variables. This was 
+In early versions of the Physics Code calculator, users could accidental "scroll" when the mouse was over an input and change their value for the variables. This was 
 prevented by adding this code:
 
                 -  $('form').on('focus', 'input[type=number]', function(e) {
-
-                \-  $(this).on('wheel.disableScroll', function(e) {
-                \-  e.preventDefault();
-                \-  });
-                \-  });
-                \-  $('form').on('blur', 'input[type=number]', function(e) {
-                \-  $(this).off('wheel.disableScroll');
-                \-  })
+                -  $(this).on('wheel.disableScroll', function(e) {
+                -  e.preventDefault();
+                -  });
+                -  });
+                -  $('form').on('blur', 'input[type=number]', function(e) {
+                -  $(this).off('wheel.disableScroll');
+                -  })
 (source: <https://stackoverflow.com/questions/9712295/disable-scrolling-on-input-type-number>)
 
 - Negative numbers in the dilemma zone calculation need to be given as "absolute" so the Math.abs(total) code was used. 
@@ -1376,7 +1375,6 @@ class for small screens but instead display the equation presented wit
 causing concern. The most likely explanation is to do with browser loading capabilities.
 
 ## DEPLOYMENT
-
 [Top](#contents)
 
 The initial site will be deployed using [Github Pages](https://pages.github.com/), however, it is possible further editions of the site will be released on public domains 
@@ -1389,15 +1387,15 @@ Github Pages deployment is conducted from the settings page and uses 
 
 [![Deployment to Github Pages](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-pages.png "Github-Pages")](https://pauld0051.github.io/physics-code/game.html)
 
--   ### Forking the Github Repository
-    [Top](#contents)
+### Forking the Github Repository
+[Top](#contents)
 
 A copy of the GitHub Repository can be made by forking the GitHub account preferably, with permission of the author. 
 This copy can be viewed and changes can be made to the copy without affecting the original repository. In order to create a fork follow these steps:
 
-\- Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
-\- On the top right locate the "Fork" Button;
-\- Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
+- Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
+- On the top right locate the "Fork" Button;
+- Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
 
 It is plausible that a clone of this repository will be made so that more calculators and games can be added along with help files. Cloning is conducted at the 
 [GitHub Repository](https://github.com/pauld0051/physics-code) by clicking on the code button and downloading the repository. This can then be uploaded in a new repository 
@@ -1412,9 +1410,10 @@ All code was written by Paul Davis in consultation with the following
 -   ### Acknowledgements
     [Top](#contents)
 
-There are a number of people and organisations that helped make Physics Code possible. Above all, [Felipe Alarcon](https://github.com/felipe-alarcon) and his commitment
-along with encouragement as well as imparting countless bits of knowledge and providing expertise on all areas of coding. Felipe was available at short notice 
-and was continually active on [Slack](https://slack.com/intl/en-se/) to provide his field of expertise.  
+There are a number of people and organisations that helped make Physics Code possible. 
+
+Above all, [Felipe Alarcon](https://github.com/felipe-alarcon) and his commitment along with encouragement as well as imparting countless bits of knowledge and providing expertise on all areas of coding. 
+Felipe was available at short notice and was continually active on [Slack](https://slack.com/intl/en-se/) to provide his field of expertise.  
 
 The community at [StackOverflow](https://stackoverflow.com/) where countless questions have been asked and answered. Usually within minutes of being posted. I am looking to 
 pay this community back 10 fold as my experience grows. 
