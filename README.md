@@ -1122,6 +1122,52 @@ allowing for this is:
 
 All code pertaining to the Maps JavaScript API are located in a single file maps.js. 
 
+To insert maps into your own projects you will need to first acquire an API from Google.  Full documentation on this can be found at Google's [Get an API Key](https://developers.google.com/maps/documentation/javascript/get-api-key) help files.  The following is a brief description of how to get your own API and secure it to prevent others using the API key maliciously. 
+
+Firstly, access the [Get an API Key](https://developers.google.com/maps/documentation/javascript/get-api-key) to begin the process. You will be greeted with some options, if this is your first project, go directly to the button marked "Go to the project selector page"
+
+[![Google get an API key](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-api.png "Get an API Key")]
+
+When at the "project selector page" select "Create new project" on the top right. 
+
+[![Create new project](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project.png "Get an API Key")]
+
+When you select a new project you can name it and organise it as needed. 
+
+[![Create new project](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-new-project.png "Get an API Key")]
+
+When you have named you project and saved, you will then be taken to this screen which shows the details of your new project. 
+
+[![Create new project](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project1a.png "Get an API Key")]
+
+You will need to now select APIs and Services and click "Credentials":
+
+[![Create new project](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project1b.png "Get an API Key")]
+
+This takes you to your dashboard to create new API keys. 
+
+[![Create new API Keys](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project2.png "Get an API Key")]
+
+In the top panel select "Create Credentials":
+
+[![Create new API Keys](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project2a.png "Get an API Key")]
+
+Followed by API Key:
+
+[![Create new API Key](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project2b.png "Get an API Key")]
+
+The API key is then created (in this case, the one pictured here is blanked out to avoid malicious use, keep your API keys safe, even if you have them restricted). 
+
+[![Create new API Key](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project3.png "Get an API Key")]
+
+You should then restrict the API to your website only by selecting: HTTP referrers followed by your website address in the Web Restrictions "New item" box.
+
+[![Restrict API Key](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project4.png "Get an API Key")]
+
+And then your API key is created, safe, restricted and ready for you to use. 
+
+[![Restrict API Key](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/google-api/create-project5.png "Get an API Key")]
+
 Documentation and description of the codes is found by exploring the vast documentation at the 
 [Google Map JavaScript API Guide](https://developers.google.com/maps/documentation/javascript/overview). 
 
