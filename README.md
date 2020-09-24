@@ -967,6 +967,10 @@ The author's cartoon pictures were created in Bitmoji on an Android device.
 
 The favicon that appears in the browser tab was converted from png to ico using convertico. The site was also used to convert jpg to png.
 
+- [Develop.com](https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial)
+
+Tutorial on building custom alert boxes with code ready for styling.
+
 - [EmailJS](https://www.emailjs.com/)
 
 Is a replacement for the need to add a backend or server for contacting the page author. Emails are sent from the site via the author's Gmail account. Up to 200 emails can be sent per month for free.

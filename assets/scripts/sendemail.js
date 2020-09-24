@@ -78,7 +78,7 @@ function CustomAlert(){
         dialogbox.style.left = (winW/2) - (550 * .5)+"px";
         dialogbox.style.top = "100px";
         dialogbox.style.display = "block";
-        document.getElementById('dialogboxhead').innerHTML = "Your message to us...";
+        document.getElementById('dialogboxhead').innerHTML = "<strong>Your message to us...</strong>";
         document.getElementById('dialogboxbody').innerHTML = dialog;
         document.getElementById('dialogboxfoot').innerHTML = '<button class="btn btn-danger" onclick="Alert.ok()"><i class="far fa-times-circle"></i> Close</button>';
     }

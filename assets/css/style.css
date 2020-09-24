@@ -508,19 +508,19 @@ input[type="number"]:invalid + div {
 #dialogbox {
   display: none;
   position: fixed;
-  background: #000;
-  border-radius:7px; 
-  width:550px;
+  background: #0b6623;
+  border-radius: 7px; 
+  width: 550px;
   z-index: 2001;
 }
 
 #dialogbox > div { 
-  background:#FFF; 
-  margin:8px; 
+  background: #FFF; 
+  margin: 8px; 
 }
 
 #dialogbox > div > #dialogboxhead { 
-  background: #d7e9f5; 
+  background: #fff; 
   font-size: 19px; 
   padding: 10px; 
   color: #333; 
@@ -529,11 +529,11 @@ input[type="number"]:invalid + div {
 #dialogbox > div > #dialogboxbody {
   background: #fff; 
   padding: 20px; 
-  color:#111;
+  color: #111;
 }
 
 #dialogbox > div > #dialogboxfoot { 
-  background: #d7e9f5; 
+  background: #fff; 
   padding: 10px; 
   text-align: right; 
 }
