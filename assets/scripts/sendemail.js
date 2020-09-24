@@ -57,11 +57,35 @@ myform.submit(function(event) {
   myform.find("button").html('<i class="fas fa-paper-plane"></i> Sending...');
   emailjs.sendForm(service_id, template_id, myform[0])
     .then(function() {
-      alert("Sent!");
+      Alert.render("Sent! Thank you, we look forward to your message.");
       myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
     }, function(err) {
-      alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+      Alert.render("Failed to get through!\r\n Response:\n " + JSON.stringify(err));
       myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
     });
   return false;
 });
+
+// Custom Dialog Box source: https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial
+function CustomAlert(){
+    this.render = function(dialog){
+        let winW = window.innerWidth;
+        let winH = window.innerHeight;
+        let dialogoverlay = document.getElementById('dialogoverlay');
+        let dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = "Your message to us...";
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = '<button class="btn btn-danger" onclick="Alert.ok()"><i class="far fa-times-circle"></i> Close</button>';
+    }
+	this.ok = function(){
+		document.getElementById('dialogbox').style.display = "none";
+		document.getElementById('dialogoverlay').style.display = "none";
+	}
+}
+let Alert = new CustomAlert();
+

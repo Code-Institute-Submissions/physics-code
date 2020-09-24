@@ -100,19 +100,20 @@ function share_result() {
     quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
   }, function(response) {
     if (response && !response.error_message) {
-      alert('Posting completed.');
+      Alert.render("Thank you for sharing. Think of all the people you just helped!");
     } else {
       Alert.render("Oopsy daisy. Your score was not posted, did you close before sharing?");
     }
   });
 }
 
+// Custom Dialog Box source: https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial
 function CustomAlert(){
     this.render = function(dialog){
-        var winW = window.innerWidth;
-        var winH = window.innerHeight;
-        var dialogoverlay = document.getElementById('dialogoverlay');
-        var dialogbox = document.getElementById('dialogbox');
+        let winW = window.innerWidth;
+        let winH = window.innerHeight;
+        let dialogoverlay = document.getElementById('dialogoverlay');
+        let dialogbox = document.getElementById('dialogbox');
         dialogoverlay.style.display = "block";
         dialogoverlay.style.height = winH+"px";
         dialogbox.style.left = (winW/2) - (550 * .5)+"px";
@@ -120,11 +121,11 @@ function CustomAlert(){
         dialogbox.style.display = "block";
         document.getElementById('dialogboxhead').innerHTML = "Share your score to Facebook";
         document.getElementById('dialogboxbody').innerHTML = dialog;
-        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">Close</button>';
+        document.getElementById('dialogboxfoot').innerHTML = '<button class="btn btn-danger" onclick="Alert.ok()"><i class="far fa-times-circle"></i> Close</button>';
     }
 	this.ok = function(){
 		document.getElementById('dialogbox').style.display = "none";
 		document.getElementById('dialogoverlay').style.display = "none";
 	}
 }
-var Alert = new CustomAlert();
+let Alert = new CustomAlert();

@@ -34,7 +34,7 @@ h6 {
 
 p {
   font-family: "Ubuntu", sans-serif;
-  color: #111111;
+  color: #111;
 }
 
 .title-div {
@@ -520,22 +520,22 @@ input[type="number"]:invalid + div {
 }
 
 #dialogbox > div > #dialogboxhead { 
-  background: #666; 
-  font-size:19px; 
-  padding:10px; 
-  color:#CCC; 
+  background: #d7e9f5; 
+  font-size: 19px; 
+  padding: 10px; 
+  color: #333; 
 }
 
 #dialogbox > div > #dialogboxbody {
-  background:#333; 
-  padding:20px; 
-  color:#FFF;
+  background: #fff; 
+  padding: 20px; 
+  color:#111;
 }
 
 #dialogbox > div > #dialogboxfoot { 
-  background: #666; 
-  padding:10px; 
-  text-align:right; 
+  background: #d7e9f5; 
+  padding: 10px; 
+  text-align: right; 
 }
 
 /* End Custom Dialog Display Box */
