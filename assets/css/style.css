@@ -492,3 +492,50 @@ input[type="number"]:invalid + div {
 .mb--1 {
   margin-bottom: -11.2px;
 }
+
+/* Custom Dialog Boxes (game and contact pages) - source https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial */
+#dialogoverlay {
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 2000;
+}
+
+#dialogbox {
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius:7px; 
+  width:550px;
+  z-index: 2001;
+}
+
+#dialogbox > div { 
+  background:#FFF; 
+  margin:8px; 
+}
+
+#dialogbox > div > #dialogboxhead { 
+  background: #666; 
+  font-size:19px; 
+  padding:10px; 
+  color:#CCC; 
+}
+
+#dialogbox > div > #dialogboxbody {
+  background:#333; 
+  padding:20px; 
+  color:#FFF;
+}
+
+#dialogbox > div > #dialogboxfoot { 
+  background: #666; 
+  padding:10px; 
+  text-align:right; 
+}
+
+/* End Custom Dialog Display Box */

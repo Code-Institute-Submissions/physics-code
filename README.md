@@ -111,7 +111,6 @@
 
 -  [Version Control](#version-control)
 
-
 ## DESCRIPTION
 
 -   **Physics Code** is an educational website aimed at bringing free Physics based content to students and teachers worldwide in a simple and aesthetically pleasing manner.
