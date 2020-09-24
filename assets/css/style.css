@@ -508,9 +508,14 @@ input[type="number"]:invalid + div {
 #dialogbox {
   display: none;
   position: fixed;
+  margin-top: 17.5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #0b6623;
-  border-radius: 7px; 
-  width: 550px;
+  border-radius: 7px;
+  width: 67.7%;
+  max-width: 550px;
   z-index: 2001;
 }
 
@@ -537,5 +542,3 @@ input[type="number"]:invalid + div {
   padding: 10px; 
   text-align: right; 
 }
-
-/* End Custom Dialog Display Box */
