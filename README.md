@@ -4,59 +4,113 @@
 
 ## CONTENTS
 
--   [Description](#description)
-    -   [Goals](#site-goals)
--   [User Experience UX](#user-experience-(ux))
-    -   [User Stories](#user-stories)
-        -   [First Time Visitor Goals](#first-time-visitor-goals)
-        -   [Returning Visitor Goals](#returning-visitor-goals)
-        -   [Frequent Visitor Goals](#frequent-visitor-goals)
-        -   [Mobile Menu](#mobile-menu)
--   [Display](#display)
-    -   [Colour Scheme](#colour-scheme)
-    -   [Graphics and Images](#graphics-and-images)
-    -   [Fonts and Typography](#fonts-and-typography)
-    -   [Container and Box Structure](#container-and-box-structure)
-    -   [Forms and Inputs](#forms-and-inputs)
-    -   [Design Strategy](#design-strategy)
-    -   [Site Speed](#site-speed)
--   [Wireframes](#wireframes)
-    -   [View Wireframes](#view-wireframes)
-    -   [Final Design](#final-design)
--   [Features](#features)
-    -   [Responsive Displays](#responsive-displays)
-        -   [Mobile First](#mobile-first)
-        -   [Large Screen Displays](#large-screen-displays)
-    -   [Interactivity](#interactivity)
-        -   [Calculator](#calculator)
-        -   [Game](#game)
-        -   [Test Yourself](#test-yourself)
-        -   [Contact](#contact)
-    -   [Future Features](#future-features)
-        -   [New Calculators](#new-calculators)
-        -   [New Help Files](#new-help-files)
-        -   [New Games](#new-games)    
--   [Technologies Used](#technologies-used)
-    -   [Languages](#languages)
-    -   [Libraries](#libraries)
-    -   [Programs](#programs)
-    -   [Application Programming Interfaces](#application-programming-interfaces)
-        -   [Maps JavaScript API](#maps-javascript-api)
-        -   [Facebook Software Development Kit](#facebook-software-development-kit-(sdk))
-        -   [EmailJS](#emailjs)
-    -   [Script Refactoring](#script-refactoring)
-    -   [Input Validation](#input-validation)
-    -   [Equations](#equations)
--   [Known Bugs](#known-bugs)
-    -   [Facebook Timeline Sharing](#facebook-timeline-sharing)
-    -   [Icons and Unicode](#icons-and-unicode)
-    -   [Other Bugs](#other-bugs)
--   [Deployment](#deployment)
-    -   [Forking the Github Repository](#forking-the-github-repository)
--   [Credits](#credits)
-    -   [Acknowledgements](#acknowledgements)
-    -   [Media](#media)
--   [Version Control](#version-control)
+-  [Description](#description)
+
+	-  [Goals](#site-goals)
+
+-  [User Experience UX](#user-experience-(ux))
+
+	-  [User Stories](#user-stories)
+
+		-  [First Time Visitor Goals](#first-time-visitor-goals)
+
+		-  [Returning Visitor Goals](#returning-visitor-goals)
+
+		-  [Frequent Visitor Goals](#frequent-visitor-goals)
+
+		-  [Mobile Menu](#mobile-menu)
+
+-  [Display](#display)
+
+	-  [Colour Scheme](#colour-scheme)
+
+	-  [Graphics and Images](#graphics-and-images)
+
+	-  [Fonts and Typography](#fonts-and-typography)
+
+	-  [Container and Box Structure](#container-and-box-structure)
+
+	-  [Forms and Inputs](#forms-and-inputs)
+
+	-  [Design Strategy](#design-strategy)
+
+	-  [Site Speed](#site-speed)
+
+
+-  [Wireframes](#wireframes)
+
+	-  [View Wireframes](#view-wireframes)
+
+	-  [Final Design](#final-design)
+
+-  [Features](#features)
+
+	-  [Responsive Displays](#responsive-displays)
+
+		-  [Mobile First](#mobile-first)
+
+		-  [Large Screen Displays](#large-screen-displays)
+
+	-  [Interactivity](#interactivity)
+
+		-  [Calculator](#calculator)
+
+		-  [Game](#game)
+
+		-  [Test Yourself](#test-yourself)
+
+		-  [Contact](#contact)
+
+	-  [Future Features](#future-features)
+
+		-  [New Calculators](#new-calculators)
+
+		-  [New Help Files](#new-help-files)
+
+		-  [New Games](#new-games)
+
+-  [Technologies Used](#technologies-used)
+
+	-  [Languages](#languages)
+
+	-  [Libraries](#libraries)
+
+	-  [Programs](#programs)
+
+	-  [Application Programming Interfaces](#application-programming-interfaces)
+
+		-  [Maps JavaScript API](#maps-javascript-api)
+
+		-  [Facebook Software Development Kit](#facebook-software-development-kit-(sdk))
+
+		-  [EmailJS](#emailjs)
+
+	-  [Script Refactoring](#script-refactoring)
+
+	-  [Input Validation](#input-validation)
+
+	-  [Equations](#equations)
+
+-  [Known Bugs](#known-bugs)
+
+	-  [Facebook Timeline Sharing](#facebook-timeline-sharing)
+
+	-  [Icons and Unicode](#icons-and-unicode)
+
+	-  [Other Bugs](#other-bugs)
+
+-  [Deployment](#deployment)
+
+	-  [Forking the Github Repository](#forking-the-github-repository)
+
+-  [Credits](#credits)
+
+	-  [Acknowledgements](#acknowledgements)
+
+	-  [Media](#media)
+
+-  [Version Control](#version-control)
+
 
 ## DESCRIPTION
 
@@ -660,6 +714,8 @@ Finally, users can interact with the site's author by sending a message through 
 - A reset button sets the game up to start again
 
 - A share button allows users to share their best score on their Facebook timeline
+
+In upcoming editions of new games, the Reaction Time game will be slightly modified to remove the hidden "brakes" button and replace this with an empty div. The button will be added to the DOM via JavaScript rather than the current method of adding and removing CSS classes. For this particular project, the adding and removing of classes seemed the most logical method to achieve the desired goal. However, it is possibly better in the long run not to have hidden buttons, but rather no button at all until called upon. 
 
 #### Test Yourself 
 [Top](#contents) 
