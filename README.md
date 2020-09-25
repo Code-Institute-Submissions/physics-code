@@ -1065,62 +1065,62 @@ Primarily Physics Code relies on Google Maps API for access to map data for disp
 #### Maps JavaScript API
 [Top](#contents)
 
-All maps were provided by Google by accessing the [Google Developers Console (https://console.developers.google.com/) and applying for an Maps API key. This key is used only for this site and has restrictions for all other URLs other than Physics Code. The key is called on in the maps.js file via these two scripts located at the bottom of the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page:
+All maps were provided by Google by accessing the [Google Developers Console](https://console.developers.google.com/) and applying for an Maps API key. This key is used only for this site and has restrictions for all other URLs other than Physics Code. The key is called on in the maps.js file via these two scripts located at the bottom of the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page:
 
-            \- [script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"](<script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js">)</script>
-            \- [script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap"](<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap">)</script>
+    [script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"](<script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js">)</script>
+    [script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap"](<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHz27Q-E_mW5wHULLj6Wgap3VOjrCbs&callback=initMap">)</script>
 
 Each map is called by its location (coordinates latitude and longitude) which are picked up from the map itself. For example, intersection one is called by:
 
-            \-  let intersection_one = {
-            \-  lat: 55.777034,
-            \-  lng: 37.583926
-            \-  };
+    let intersection_one = {
+    lat: 55.777034,
+    lng: 37.583926
+    };
 
 Each intersection is labelled intersection\_[map number] to a total of five maps. The maps are then set to display as a satellite picture with a pre-set zoom:
 
-            \-  let map2 = new google.maps.Map(
-            \-  document.getElementById('map_two'), {
-            \-  zoom: 19,
-            \-  center: intersection_two,
-            \-  mapTypeId: 'satellite',
-            \-  zoomControl: false,
-            \-  rotateControl: false
-            \-  });   
+    let map2 = new google.maps.Map(
+    document.getElementById('map_two'), {
+    zoom: 19,
+    center: intersection_two,
+    mapTypeId: 'satellite',
+    zoomControl: false,
+    rotateControl: false
+    });
 
 Zoom controls were removed from the maps to allow a crisper view of the entire intersection and rotational control was removed as this could confuse the user as to the direction required for calculation of the intersection.
 
 The unique map icon located at the center of each intersection was positioned by this code:
 
-            \-  let marker = new google.maps.Marker({
-            \-  position: intersection_one,
-            \-  map: map,
-            \-  icon: image
-            \-  });
+    let marker = new google.maps.Marker({
+    position: intersection_one,
+    map: map,
+    icon: image
+    });
 
 A previously labelled variable (intersection\_[map number]) was used to locate the position of the marker and the image was derived from:
 
-            \-  let image = 'assets/images/map_icon_marker.ico';
+    let image = 'assets/images/map_icon_marker.ico';
 
 Users are able to scroll around in the maps and use them as though they are on Google's own site. However, in doing so, a user may become disoriented and may then become frustrated when trying to find the intersection again. This could be seen as a poor user experience. To compensate for this, the map returns to its centred position after 3000 ms (3 seconds) by using the following code:
 
-            \-  let marker2 = new google.maps.Marker({
-            \-  position: intersection_two,
-            \-  map: map2,
-            \-  icon: image
-            \-  });
-            \-  map2.addListener("center_changed", () => {
-            \-  window.setTimeout(() => {
-            \-  map2.panTo(marker2.getPosition());
-            \-  }, 3000);
-            \-  });
+    let marker2 = new google.maps.Marker({
+    position: intersection_two,
+    map: map2,
+    icon: image
+    });
+    map2.addListener("center_changed", () => {
+    window.setTimeout(() => {
+    map2.panTo(marker2.getPosition());
+    }, 3000);
+    });
 
 Finally, users are able to click on the map at any point (on the marker or anywhere on the map) to access the map in a full screen on a new browser tab. The code 
 allowing for this is:
 
-            \-  google.maps.event.addListener(map2, "click", function() {
-            \-  window.open("<https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3">);
-            \-  });
+    google.maps.event.addListener(map2, "click", function() {
+    window.open("<https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3">);
+    });
 
 All code pertaining to the Maps JavaScript API are located in a single file maps.js. 
 
@@ -1184,47 +1184,88 @@ The scripts at the bottom of each page set the share functionality a
 
 The HTML is as follows (located in the footer of each page):
 
-            \-  <div class="container text-center">
-            \-  [div class="fb-share-button" data-href="https://pauld0051.github.io/physics-code/index.html" data-layout="button" data-size="large"](<div class="fb-share-button" data-href="https://pauld0051.github.io/physics-code/index.html" data-layout="button" data-size="large">)
-            \-  [a target="\_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphysics-code%2Findex.html&src=sdkpreparse" 
-            \-  class="fb-xfbml-parse-ignore"](<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphysics-code%2Findex.html&src=sdkpreparse" 
-            \-  class="fb-xfbml-parse-ignore">)Share</a></div>
-            \-  </div>
+    <div  class="container text-center">
+    <div  class="fb-share-button"  data-href="https://pauld0051.github.io/physics-code/index.html"  data-layout="button"  data-size="large">
+    <a  target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpauld0051.github.io%2Fphysics-code%2Findex.html&amp;src=sdkpreparse"
+    class="fb-xfbml-parse-ignore">Share</a></div>
+    </div>
 
 This is followed by the script being loaded at the bottom of the page:
 
-            \-   <div id="fb-root"></div>
-            \-  [script src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=335490644461179&autoLogAppEvents=1" nonce="jH6xsmAN"](<script src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=335490644461179&autoLogAppEvents=1" nonce="jH6xsmAN">)</script>
+    <div  id="fb-root"></div>
+    <script  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=335490644461179&autoLogAppEvents=1"  nonce="jH6xsmAN"></script>
 
 The metatags at the header of each page are as follows:
 
-            \-  [meta property="og:url" content="https://pauld0051.github.io/physics-code/index.html" /](<meta property="og:url" content="https://pauld0051.github.io/physics-code/index.html" />)
-            \-  <meta property="og:type" content="website" />
-            \-  <meta property="og:title" content="Physics Code" />
-            \-  <meta property="og:description" content="A free web resource for Physics students." />
-            \-  [meta property="og:image" content="https://pauld0051.github.io/physics-code/assets/images/logo-main.png" /](<meta property="og:image" content="https://pauld0051.github.io/physics-code/assets/images/logo-main.png" />)
+    <meta property="og:url" content="https://pauld0051.github.io/physics-code/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Physics Code" />
+    <meta property="og:description" content="A free web resource for Physics students." />
+    <meta property="og:image" content="https://pauld0051.github.io/physics-code/assets/images/logo-main.png" >
 
 This also helps with search engines to find the site and provides Facebook share services with the information required to display the logo as well as a small tag line about the site. The information and code development for a share button can be found at [Facebook Share Button](https://developers.facebook.com/docs/plugins/share-button/) documentation.
 
 To share results from the reaction time game, the app with the app number (previously discussed) is used with the following code:
 
-            \-  document.getElementById("share_button").addEventListener("click", share_result);
-            \-  function share_result() {
-            \-  FB.ui({
-            \-  app_id: 335490644461179,
-            \-  method: 'feed',
-            \-  link: '<https://pauld0051.github.io/physics-code/'>,
-            \-  quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
-            \-  }, function(response) {
-            \-  if (response && !response.error_message) {
-            \-  Alert.render("Thank you for sharing. Think of all the people you just helped!");
-            \-  } else {
-            \-  Alert.render("Oopsy daisy. Your score was not posted, did you close before sharing?");
-            \-  }
-            \-  });
-            \-  }
+    document.getElementById("share_button").addEventListener("click", share_result);
+    function share_result() {
+    FB.ui({
+    app_id: [APP NUMBER HERE],
+    method: 'feed',
+    link: '<https://pauld0051.github.io/physics-code/'>,
+    quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
+    }, function(response) {
+    if (response && !response.error_message) {
+    Alert.render("Thank you for sharing. Think of all the people you just helped!");
+    } else {
+    Alert.render("Oopsy daisy. Your score was not posted, did you close before sharing?");
+    }
+    });
+    }
 
 This code also includes custom alerts if a user closes the share function before actually sharing to their profile and timeline. Information for this code is found at the [Facebook Share Dialogue](https://developers.facebook.com/docs/sharing/reference/share-dialog) documentation.
+
+To add a share button to your site you can follow the code instructions at the [Share Button Documentation](https://developers.facebook.com/docs/plugins/share-button/) page at Facebook. For the following you will require a [Facebook](https://www.facebook.com/) account. 
+
+![Create a share button for Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/share-button1.png "Create a share button for Facebook")
+
+Copy and paste the code into the location you want the button to appear. 
+
+![Create a share button for Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/share-button2.png "Create a share button for Facebook")
+
+Although the SDK recommends the Facebook script be loaded at the top of the page, this was the last script to be loaded and is at the bottom of the page. 
+
+To make an app that can be shared to Facebook can visit [Facebook for Developers](https://developers.facebook.com/apps/) to create a new app. 
+
+![Create a new app and app number for Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/create-app1.png "Create a new app and app number Facebook")
+
+Choose the type of application you're going to want an app number for, in this case, because the game was being made on a website (able to be played on mobile too) the app was created for off Facebook selecting the "Integrate Third-Party Gaming App". 
+
+![Create a new app and app number for Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/create-app2.png "Create a new app and app number Facebook")
+
+Create the app by making a name, using your email address that is associated with your Facebook account and add your Business Manager account if applicable. 
+
+![Create a new app and app number for Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/create-app3.png "Create a new app and app number Facebook")
+
+From this point you will be able to access your dashboard and will have an app number which acts as an API key for your application(s). 
+
+![Dashboard for your Facebook app](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/fb-dashboard1.png "Dashboard for your new Facebook app")
+
+On your dashboard you will need to be able to supply a privacy policy as well as a terms and conditions page for your application or website. These were generated for Physics Code at [Privacy Policy Generator](https://www.privacypolicygenerator.info/#wizard) and [Terms and Conditions Generator](https://www.termsofservicegenerator.net/#wizard) respectively. 
+
+Enter these into your applications "Basic" settings on the dashboard:
+
+![Dashboard for your Facebook app](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/fb-dashboard2.png "Dashboard for your new Facebook app")
+
+Currently individual verification has been paused due to the outbreak of COVID-19, however, this has not impacted on Physics Code users and is unlikely to cause any issues in the future. 
+
+![Dashboard for your Facebook app](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/fb-dashboard3.png "Dashboard for your new Facebook app")
+
+Scroll further down on your Basic settings dashboard and fill in your address details as well as the application site details. Although this is not confirmed, it is believed this allows Facebook timeline sharing to produce a clickable link to your page. 
+
+![Dashboard for your Facebook app](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/facebook-api/fb-dashboard4.png "Dashboard for your new Facebook app")
+
+When you have completed this data, it may take some time before this feature is fully active and functional. For Physics Code, this took approximately two weeks. 
 
 #### EmailJS 
 [Top](#contents)
@@ -1241,29 +1282,29 @@ The final part of the message `{{from_name}} can be contacted at {{from_email}}`
 
 With the template set up, the script required to call the emailJS functionality is initiated in the HTML at the bottom of the page along with the other scripts:
 
-            \-  <script type="text/javascript">
-            \-  (function() {
-            \-  emailjs.init("user_4M0aY6Qk6YuN226ZoNGhW");
-            \-  })();
-            \-  </script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_4M0aY6Qk6YuN226ZoNGhW");
+    })();
+    </script>
 
 The full JavaScript is then run from the sendemail.js file:
 
-            \-  let myform = $("form#user_request");
-            \-  myform.submit(function(event) {
-            \-  event.preventDefault();
-            \-  let service_id = "default_service";
-            \-  let template_id = "physics_code_message";
-            \-  myform.find("button").html('<i class="fas fa-paper-plane"></i> Sending...');
-            \-  emailjs.sendForm(service_id, template_id, myform[0]).then(function() {
-            \-  Alert.render("Sent! Thank you, we look forward to your message.");
-            \-  myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
-            \-  }, function(err) {
-            \-  Alert.render("Failed to get through!\r\n Response:\n " + JSON.stringify(err));
-            \-  myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
-            \-  });
-            \-  return false;
-            \-  });
+    let myform = $("form#user_request");
+    myform.submit(function(event) {
+    event.preventDefault();
+    let service_id = "default_service";
+    let template_id = "physics_code_message";
+    myform.find("button").html('<i class="fas fa-paper-plane"></i> Sending...');
+    emailjs.sendForm(service_id, template_id, myform[0]).then(function() {
+    Alert.render("Sent! Thank you, we look forward to your message.");
+    myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
+    }, function(err) {
+    Alert.render("Failed to get through!\r\n Response:\n " + JSON.stringify(err));
+    myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
+    });
+    return false;
+    });
 
 ### Script Refactoring
 [Top](#contents)
