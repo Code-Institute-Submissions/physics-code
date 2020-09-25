@@ -91,6 +91,8 @@
 
 	-  [Equations](#equations)
 
+    -  [Custom Alert Boxes](#custom-alert-boxes)
+
 -  [Known Bugs](#known-bugs)
 
 	-  [Facebook Timeline Sharing](#facebook-timeline-sharing)
@@ -190,127 +192,127 @@
 
         -   Easily understand the purpose of the site;
 
-        [![Physics Code first view](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-first-view.png "Physics Code first view homepage")](https://pauld0051.github.io/physics-code/index.html)
+        ![Physics Code first view](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-first-view.png "Physics Code first view homepage")
 
         -   Be able to navigate easily and seamlessly throughout the whole site with the same navbar and text at the head of the page;
 
-        [![Physics Code navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-navigation.png "Physics Code first view navigation")](https://pauld0051.github.io/physics-code/index.html)
+        ![Physics Code navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-navigation.png "Physics Code first view navigation")
 
         -   View the access cards to all the various pages and applications that the user can click on to navigate to with ease;
 
-        [![Physics Code home cards](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-homecards.png "Physics Code first view cards on the homepage")](https://pauld0051.github.io/physics-code/index.html)
+        ![Physics Code home cards](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-homecards.png "Physics Code first view cards on the homepage")
 
         -   View information on the author to see relevant qualifications;
 
-        [![Physics Code author](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-author.png "Physics Code first view author representation")](https://pauld0051.github.io/physics-code/index.html)
+        ![Physics Code author](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-author.png "Physics Code first view author representation")
 
         -   Scroll down to see an uncluttered and relaxed page with an identical footer on each page giving access to social media links, sharing, terms and conditions, and privacy policies of the page;
 
-        [![Physics Code footer](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-footer.png "Physics Code first view footer")](https://pauld0051.github.io/physics-code/index.html)
+        ![Physics Code footer](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-footer.png "Physics Code first view footer")
 
         -   Access the world's first online dilemma zone calculator to input variables with large cards and icon hints for each variable set out in textbook fashion;
 
-        [![Physics Code calculator](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-calculator.png "Physics Code first view calculator")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code calculator](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-calculator.png "Physics Code first view calculator")
 
         -   Input the seven variables and scroll down to calculate the outcome;
 
-        [![Physics Code variables](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-variables.png "Physics Code first view calculator variables")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code variables](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-variables.png "Physics Code first view calculator variables")
 
         -   View the help page with a single click which navigates to a new browser tab leaving the user's current calculation untouched;
 
-        [![Physics Code infolink](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-infolink.png "Physics Code first view info links")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code infolink](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-infolink.png "Physics Code first view info links")
 
         -   Access short hints about the variable being input;
 
-        [![Physics Code tooltip](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-tooltip.png "Physics Code first view tooltips")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code tooltip](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-tooltip.png "Physics Code first view tooltips")
 
         -   See the calculated outcome of the input variables;
 
-        [![Physics Code outcome](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-outcome.png "Physics Code first view")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code outcome](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-outcome.png "Physics Code first view")
 
         -   Find errors in the input due to accidental keypresses or numbers that exceed realistic values;
 
-        [![Physics Code input errors](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-input-error.png "Physics Code first view input errors")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code input errors](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-input-error.png "Physics Code first view input errors")
 
         -   Reset the variables to their default values with a single click;
 
-        [![Physics Code reset](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-reset.png "Physics Code first view reset button")](https://pauld0051.github.io/physics-code/calculator.html)
+        ![Physics Code reset](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-reset.png "Physics Code first view reset button")
 
         -   View the help page with ease and see more detailed information on the dilemma zone and the calculator variables with matching cards and symbols with description about the calculation
 
-        [![Physics Code help](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-help.png "Physics Code first view help page")](https://pauld0051.github.io/physics-code/help.html)
+        ![Physics Code help](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-help.png "Physics Code first view help page")
 
         -   Access data about individual variables by clicking the help question mark;
 
-        [![Physics Code extra data](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-extra-data.png "Physics Code first view friction data")](https://pauld0051.github.io/physics-code/help.html)
+        ![Physics Code extra data](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-extra-data.png "Physics Code first view friction data")
 
         -   See beautifully presented equations using LaTeX based formulas;
 
-        [![Physics Code equations](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-equations.png "Physics Code first view equations")](https://pauld0051.github.io/physics-code/help.html)
+        ![Physics Code equations](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-equations.png "Physics Code first view equations")
 
         -   Access an interactive game measuring reaction time, one of the variables for the dilemma zone calculator;
 
-        [![Physics Code game](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game.png "Physics Code first view game")](https://pauld0051.github.io/physics-code/game.html)
+        ![Physics Code game](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game.png "Physics Code first view game")
 
         -   Will get to try to hit a brake button as quick as they can after pushing a start button and waiting a random amount of time before the brake button appears;
 
-        [![Physics Code game ready](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-ready.png "Physics Code first view game buttons")](https://pauld0051.github.io/physics-code/game.html)
+        ![Physics Code game ready](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-ready.png "Physics Code first view game buttons")
 
         -   Will be able to try to hit a brake button as quick as they can but will be surprised to see the button appearing in a random location within the card;
 
-        [![Physics Code game brake](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-brake.png "Physics Code first view game button for brake")](https://pauld0051.github.io/physics-code/game.html)
+        ![Physics Code game brake](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-brake.png "Physics Code first view game button for brake")
 
         -   Watch a short 7 second animation of the reaction time game being played;
 
-        [![Physics Code game animation](https://i.gyazo.com/11957619f00a27f62c5ebb8a2e0e7a09.gif "Physics Code game animation sequence")](https://gyazo.com/11957619f00a27f62c5ebb8a2e0e7a09)
+        ![Physics Code game animation](https://i.gyazo.com/11957619f00a27f62c5ebb8a2e0e7a09.gif "Physics Code game animation sequence")
 
         -   Users will be able to save their high scores within the cache of their browser and can reset the game to begin again. Score saving is automatic;
 
-        [![Physics Code game save](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-save.png "Physics Code first view score saving")](https://pauld0051.github.io/physics-code/game.html)
+        ![Physics Code game save](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-save.png "Physics Code first view score saving")
 
         -   Users will be able to share their best scores to their Facebook timeline if they are logged in to Facebook;
 
-        [![Physics Code game share](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-share.png "Physics Code first view share to Facebook")](https://pauld0051.github.io/physics-code/game.html)
+        ![Physics Code game share](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-game-share.png "Physics Code first view share to Facebook")
 
         -   Try to test their knowledge by accessing highly detailed Google Maps of real world intersections with full instructions for desktop or mobile phone (Android or Apple);
 
-        [![Physics Code test yourself](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself.png "Physics Code first view Google Map data")](https://pauld0051.github.io/physics-code/test_yourself.html)
+        ![Physics Code test yourself](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself.png "Physics Code first view Google Map data")
 
         -   Try out unique and random scenarios based on real world data for each of the five intersections with seven variables to use in their calculation;
 
-        [![Physics Code test yourself scenario](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-scenario.png "Physics Code first view random scenario for a given map")](https://pauld0051.github.io/physics-code/test_yourself.html)
+        ![Physics Code test yourself scenario](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-scenario.png "Physics Code first view random scenario for a given map")
 
         -   Discover a new way to measure small distacnes on Google Maps, this short seveon second animation shows how quickly this can be done;
 
-        [![Gif from Gyazo](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-maps.gif "Physics Code first view map measurement animation")](https://pauld0051.github.io/physics-code/test_yourself.html)
+        ![Gif from Gyazo](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-maps.gif "Physics Code first view map measurement animation")
 
         -   Will not get surprises with incorrect or blank inputs for their answers and are guided to input the correct outcome for their calculation;
 
-        [![Physics Code test yourself scenario](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-calculation.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/test_yourself.html)
+        ![Physics Code test yourself scenario](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-calculation.png "Physics Code first view test yourself calculation")
 
         -   Can compare their data to the expected data based on the scenario;
 
-        [![Physics Code test yourself outcome](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-outcome.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/test_yourself.html)
+        ![Physics Code test yourself outcome](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-outcome.png "Physics Code first view test yourself calculation")
 
         -   Can accidentally move the map off of centre and the map will automatically return to the intersection so users can not get lost;
 
-        [![Physics Code test yourself map animation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-map-move.gif)](https://gyazo.com/c570bd47b04221265b12b54b0902d79c)
+        ![Physics Code test yourself map animation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-map-move.gif)
 
         -   Can explore the map from a driver's point of view by using Google's Street View;
 
-        [![Physics Code test yourself explore](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-explore.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/test_yourself.html)
+        ![Physics Code test yourself explore](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-testyourself-explore.png "Physics Code first view test yourself calculation")
 
         -   Can contact the site's author to request new calculators or simply message the author with questions or gratitude;
 
-        [![Physics Code contact](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-contact.png "Physics Code first view test yourself calculation")](https://pauld0051.github.io/physics-code/contact.html)
+        ![Physics Code contact](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-contact.png "Physics Code first view test yourself calculation")
 
         -   Share the site directly to their Facebook timeline by using the Facebook Share button in the footer of each page;
 
-        [![Physics Code Facebook Share](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-facebook.png "Physics Code first view share the page")](https://pauld0051.github.io/physics-code/contact.html)
+        ![Physics Code Facebook Share](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-facebook.png "Physics Code first view share the page")
 
         -   If users get lost, they can easily find their way back to the homepage or get links to any of the other pages on the site with a 404 error page;
 
-        [![Physics Code 404](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-404.png "Physics Code first view 404")](https://pauld0051.github.io/physics-code/404.html)
+        ![Physics Code 404](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-404.png "Physics Code first view 404")
 
 
 #### Returning Visitor Goals
@@ -321,7 +323,7 @@
 
     -   Easily see new content with the help of easy to navigate cards on the home page with uncluttered content;
 
-        [![Physics Code new content](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/returning-user-new-content.png "Physics Code new content")](https://pauld0051.github.io/physics-code/404.html)
+        ![Physics Code new content](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/returning-user-new-content.png "Physics Code new content")
 
     -   Return to pages that they have previously encountered to try new scenarios or games via the easy to use navigation on all pages
     -   Try to beat their high score in the reaction time game or new games as they come online
@@ -354,13 +356,13 @@
 
 -   Mobile navigation is made easy with a hamburger drop down menu which pushes content down to display the navigation panel and text;
 
-    [![Physics Code collapsed navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-collapse-menu.png "Physics Code mobile navigation")](https://pauld0051.github.io/physics-code/index.html)
-    [![Physics Code opened navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-opened-menu.png "Physics Code mobile navigation")](https://pauld0051.github.io/physics-code/index.html)
+    ![Physics Code collapsed navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-collapse-menu.png "Physics Code mobile navigation")
+    ![Physics Code opened navigation](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-opened-menu.png "Physics Code mobile navigation")
 
 -   The site's navigation is familiar and all pages are accessible. Some display changes can be noticed on a mobile phone or smaller device width. The MathJax equations
     on the [Help](https://pauld0051.github.io/physics-code/help.html) page are wrapped to allow users on smaller devices to see the full equation without left or right scrolling;
 
-    [![Physics Code mobile equations](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-equations.png "Physics Code mobile navigation")](https://pauld0051.github.io/physics-code/help.html)
+    ![Physics Code mobile equations](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/mobile-user-equations.png "Physics Code mobile navigation")
 
 ## DISPLAY
 [Top](#contents)
@@ -453,7 +455,7 @@
 #### Forms and Inputs
 [Top](#contents)
 
-- All forms on the page (contact us in particular) use Bootstrap's [form control](https://getbootstrap.com/docs/4.0/components/forms/)
+- All forms on the page (contact us in particular) use [Bootstrap's form control](https://getbootstrap.com/docs/4.0/components/forms/)
 
 - Inputs on the calculator and test yourself pages are validated via CSS and turn a pinky red (#c66464) when an invalid input is received
 
@@ -485,15 +487,15 @@ Physics Code is primarily for students around the world. It is anticipated that 
 
 Users close to Stockholm (closest server appears to be Frankfurt) have a very fast response time to enter the site at just 376 ms.
 
- [![Pingdom results Frankfurt](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-frankfurt.png "Pingdom Results - Franfurt")](https://pauld0051.github.io/physics-code/index.html)
+ ![Pingdom results Frankfurt](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-frankfurt.png "Pingdom Results - Franfurt")
 
 Those who access the site from further away, in Washington still recieve excellent load times at 475 ms.
 
- [![Pingdom results Washington](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-washington.png "Pingdom Results - Washington")](https://pauld0051.github.io/physics-code/index.html)
+ ![Pingdom results Washington](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-washington.png "Pingdom Results - Washington")
 
 People accessing the site from Sydney can also rely on fast loading times at 1.82 s.
 
-[![Pingdom results Sydney](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-wasydneyshington.png "Pingdom Results - Sydney")](https://pauld0051.github.io/physics-code/index.html)
+![Pingdom results Sydney](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-sydney.png "Pingdom Results - Sydney")
 
 ##  WIREFRAMES
 
@@ -642,7 +644,7 @@ The vast majority of the site is represented in the wireframes, right down to th
 
 The site was tested on numerous devices, and while all care is taken to make sure the site displays accurately, it is possible that some browsers or devices may cause slight variations in display. During testing, [Am-I-Responsive](http://ami.responsivedesign.is/) was used to display the site on various sized displays:
 
-[![Responsive displays](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/am-i-responsive.png "responsive displays")](https://pauld0051.github.io/physics-code/game.html)
+![Responsive displays](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/am-i-responsive.png "responsive displays")
 
 ### Interactivity
 [Top](#contents)
@@ -1058,7 +1060,7 @@ Enabled checking the site's HTML coding with ease.
 Primarily Physics Code relies on Google Maps API for access to map data for display as part of the user's ability to test themselves as a random calculation for a given real-world intersection. All API calls are located at the bottom of the HTML page so as to increase the speed users can access the page and thus loading of JavaScript happens secondary. This is backed up with the evidence of an "A" in [Pingdom's](https://tools.pingdom.com/) test which responded with the following:
 
 
-[![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-javascript.png "Pingdom results")](https://pauld0051.github.io/physics-code/game.html)
+![Pingdom results](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/pingdom-javascript.png "Pingdom results")
 
 #### Maps JavaScript API
 [Top](#contents)
@@ -1215,14 +1217,14 @@ To share results from the reaction time game, the app with the app number (previ
             \-  quote: "I got a high score of " + localStorage.getItem('score') + "s in the Reaction Time game at Physics Code."
             \-  }, function(response) {
             \-  if (response && !response.error_message) {
-            \-  alert('Posting completed.');
+            \-  Alert.render("Thank you for sharing. Think of all the people you just helped!");
             \-  } else {
-            \-  alert('Oopsy daisy. Your score was not posted, did you close before sharing?');
+            \-  Alert.render("Oopsy daisy. Your score was not posted, did you close before sharing?");
             \-  }
             \-  });
             \-  }
 
-This code also includes alerts if a user closes the share function before actually sharing to their profile and timeline. Information for this code is found at the [Facebook Share Dialogue](https://developers.facebook.com/docs/sharing/reference/share-dialog) documentation.
+This code also includes custom alerts if a user closes the share function before actually sharing to their profile and timeline. Information for this code is found at the [Facebook Share Dialogue](https://developers.facebook.com/docs/sharing/reference/share-dialog) documentation.
 
 #### EmailJS 
 [Top](#contents)
@@ -1233,7 +1235,7 @@ When an account has been created and an email added it is possible then to add t
 
 For Physics Code the template was set up to include an email "to", an email "from", the user's name and a message (with prompt).
 
-[![EmailJS template](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/emailjs-template.png "EmailJS Template")](https://pauld0051.github.io/physics-code/game.html)
+![EmailJS template](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/emailjs-template.png "EmailJS Template")
 
 The final part of the message `{{from_name}} can be contacted at {{from_email}}` shows the user's email address for easy reply.
 
@@ -1254,10 +1256,10 @@ The full JavaScript is then run from the sendemail.js file:
             \-  let template_id = "physics_code_message";
             \-  myform.find("button").html('<i class="fas fa-paper-plane"></i> Sending...');
             \-  emailjs.sendForm(service_id, template_id, myform[0]).then(function() {
-            \-  alert("Sent!");
+            \-  Alert.render("Sent! Thank you, we look forward to your message.");
             \-  myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
             \-  }, function(err) {
-            \-  alert("Send email failed!\\r\\n Response:\\n " + JSON.stringify(err));
+            \-  Alert.render("Failed to get through!\r\n Response:\n " + JSON.stringify(err));
             \-  myform.find("button").html('<i class="fas fa-paper-plane"></i> Submit');
             \-  });
             \-  return false;
@@ -1276,50 +1278,50 @@ An example of refactoring is shown here:
 
 #### Original code:
 
-            \-  document.getElementById("One").addEventListener("click", mapVariables);
-            \-  document.getElementById("Two").addEventListener("click", mapVariables);
-            \-  document.getElementById("Three").addEventListener("click", mapVariables);
-            \-  document.getElementById("Four").addEventListener("click", mapVariables);
-            \-  document.getElementById("Five").addEventListener("click", mapVariables);
+    document.getElementById("One").addEventListener("click", mapVariables);
+    document.getElementById("Two").addEventListener("click", mapVariables);
+    document.getElementById("Three").addEventListener("click", mapVariables);
+    document.getElementById("Four").addEventListener("click", mapVariables);
+    document.getElementById("Five").addEventListener("click", mapVariables);
 
 Although only taking up five lines of code, this was refactored to:
 
-            \-  document.querySelectorAll(".mapVariables").forEach(item => {
-            \-  item.addEventListener('click', mapVariables)
-            \-  })
+    document.querySelectorAll(".mapVariables").forEach(item => {
+    item.addEventListener('click', mapVariables)
+    })
 
 Essentially just two lines of code. 
 
 In the first editions of the test_yourself page each map was separated to have unique variables. In the refactored version, each map still had unique variables but was called on from one set of data instead of five individual sets. Each map gets the variables from this code:
 
-            \-  document.getElementById(mapNumber + "InitialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
-            \-  document.getElementById(mapNumber + "Phase").innerHTML = yellowPhase.toFixed(1) + " s";
-            \-  document.getElementById(mapNumber + "RlPhase").innerHTML = interPhase.toFixed(1) + " s";
-            \-  document.getElementById(mapNumber + "RtRandom").innerHTML = reactionTime.toFixed(3) + " s";
-            \-  document.getElementById(mapNumber + "TireCondition").innerHTML = tires[tireCondition];
-            \-  document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
-            \-  document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
+    document.getElementById(mapNumber + "InitialVelocity").innerHTML = velocity.toFixed(2) + " kmh<sup>-1</sup>";
+    document.getElementById(mapNumber + "Phase").innerHTML = yellowPhase.toFixed(1) + " s";
+    document.getElementById(mapNumber + "RlPhase").innerHTML = interPhase.toFixed(1) + " s";
+    document.getElementById(mapNumber + "RtRandom").innerHTML = reactionTime.toFixed(3) + " s";
+    document.getElementById(mapNumber + "TireCondition").innerHTML = tires[tireCondition];
+    document.getElementById(mapNumber + "WeatherCondition").innerHTML = climate[climateCondition];
+    document.getElementById(mapNumber + "CarLength").innerHTML = carLength.toFixed(1);
 
 The data for each can then be taken from also one location rather than five individual locations such as the data for climate which needs to be individualised for each map:
 
-            \-  let climate;
-            \-  if (mapNumber === "mapOne" || mapNumber === "mapThree") {
-            \-  climate = ["dry", "dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
-            \-  climateCondition = Math.floor(Math.random() _ climate.length);
-            \-  keyClim = climate[climateCondition];
-            \-  } else if (mapNumber === "mapTwo") {
-            \-  climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain"];
-            \-  climateCondition = Math.floor(Math.random() _ climate.length);
-            \-  keyClim = climate[climateCondition];
-            \-  } else if (mapNumber === "mapFour") {
-            \-  climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
-            \-  climateCondition = Math.floor(Math.random() _ climate.length);
-            \-  keyClim = climate[climateCondition];
-            \-  } else if (mapNumber === "mapFive") {
-            \-  climate = ["dry", "light rain", "medium rain", "heavy rain"];
-            \-  climateCondition = Math.floor(Math.random() _ climate.length);
-            \-  keyClim = climate[climateCondition];
-            \-  } else climate = false;
+    let climate;
+    if (mapNumber === "mapOne" || mapNumber === "mapThree") {
+    climate = ["dry", "dry", "dry", "dry", "light rain", "medium rain", "heavy rain", "light snow", "medium snow", "heavy snow", "light ice", "very icy", "severe ice"];
+    climateCondition = Math.floor(Math.random() _ climate.length);
+    keyClim = climate[climateCondition];
+    } else if (mapNumber === "mapTwo") {
+    climate = ["dry", "dry", "dry", "light rain", "medium rain", "heavy rain"];
+    climateCondition = Math.floor(Math.random() _ climate.length);
+    keyClim = climate[climateCondition];
+    } else if (mapNumber === "mapFour") {
+    climate = ["dry", "light rain", "medium rain", "heavy rain", "light snow", "light ice"];
+    climateCondition = Math.floor(Math.random() _ climate.length);
+    keyClim = climate[climateCondition];
+    } else if (mapNumber === "mapFive") {
+    climate = ["dry", "light rain", "medium rain", "heavy rain"];
+    climateCondition = Math.floor(Math.random() _ climate.length);
+    keyClim = climate[climateCondition];
+    } else climate = false;
 
 Now new maps can be added with ease or use existing data. Note that some of the random conditions contain the same variable, such as map two with "dry" appearing three times. This prevents the randomisation selecting a variable with an even distribution. As the location of map two is Sydney, the area is more likely to be dry than to have rain. Although rain is still a possibility, it is not an even distribution. There are subsequent methods that can be employed to lower the risk of producing an even distribution for the chance of an event occurring, however, for practicality, it was more valid to add the variable in more times as required. Now "dry" is able to be picked three times out of six, or approximately 50% of the time. Furthermore, it is never likely to snow in Sydney (though it has happened, but extremely rarely) and therefore it would be a poor user experience to include an unrealistic scenario for the city. Therefore map one and three where snow is likely and can be heavy and map four, where light snow and ice is possible allows for a more realistic setting for each intersection.
 
@@ -1332,81 +1334,83 @@ Input validation was considerably more time consuming than many of the other sec
 
 Unfortunately if the user scrolls, the tooltip is no longer anchored and floats up the screen as the user scrolls. Not only is this unsightly, but defeats the purpose of the tooltip showing the user where their invalid input has been located. Because of this scenario, default tooltips on all browsers was turned off using the following code:
 
-            \-  document.querySelector("form").addEventListener("invalid", function(event) {
-            \-  event.preventDefault();
-            \-  }, true );
+    document.querySelector("form").addEventListener("invalid", function(event) {
+    event.preventDefault();
+    }, true );
 
 Secondly, code was added to CSS to change the colour of inputs if they are valid or invalid by using this code: (Pablo Darde, 2020)
 
-            \-  input[type="number"] + div {
-            \-  display: none;
-            \-  }
-            \-  input[type="number"]&#x3A;valid {
-            \-  background-color: #fbfaf5;
-            \-  }
-            \-  input[type="number"]&#x3A;invalid {
-            \-  background-color: #eac6c6;
-            \-  }
-            \-  input[type="number"]&#x3A;invalid + div {
-            \-  display: block;
-            \-  color: #c66464; 
-            \-  }
+    input[type="number"] + div {
+    display: none;
+    }
+    input[type="number"]&#x3A;valid {
+    background-color: #fbfaf5;
+    }
+    input[type="number"]&#x3A;invalid {
+    background-color: #eac6c6;
+    }
+    input[type="number"]&#x3A;invalid + div {
+    display: block;
+    color: #c66464; 
+    }
 
 Spinners on number inputs were also removed using code first found at [W3Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp):
 
-            \- input::-webkit-outer-spin-button,
-            \- input::-webkit-inner-spin-button {
-            \- -webkit-appearance: none;
-            \- margin: 0;
-            \- }
-            \- input[type=number] {
-            \- -moz-appearance: textfield;
-            \- }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
 
 Finally, JavaScript was used to determine if a number had been inputted and contained only 2 or 3 decimal places and no exponents. 
 
 For two decimal places the variable was set from the following:
 
-            \-  const isOpen = (val) => {
-            \-  const num = parseFloat(val);
-            \-  if (isNaN(num)) {
-            \-  return true;
-            \-  } else {
-            \-  const decimals = num.toString().split('.')[1] || '';
-            \-  if (decimals.length > 2) {
-            \-  return true;
-            \-  } else {
-            \-  return false;
-            \-  }
-            \-  }
-            \-  };
+    const isOpen = (val) => {
+    const num = parseFloat(val);
+    if (isNaN(num)) {
+    return true;
+    } else {
+    const decimals = num.toString().split('.')[1] || '';
+    if (decimals.length > 2) {
+    return true;
+    } else {
+    return false;
+    }
+    }
+    };
+
+
 
 Discussion with others at [StackOverflow](https://stackoverflow.com/) had suggested to replace this code with a regex code instead. Although plenty of regex code was available, this code had already been written and was suitable to complete the job. For future use, a regex code will be used, especially for email.
 
 The constants are then parsed into the validation filter to trigger a tooltip and a scroll "up" to the invalid input if required:
 
-            \- $(document).ready(function() {
-            \- $("#submitCalculation").click(function() {
-            \- $(".checkVelocity").each(function() {
-            \- const val = $(this).val();
-            \- if (isOpen(val) || val > 300) {
-            \- $(this).popover({
-            \- placement: "top",
-            \- content: `'<textarea class="popover-textarea"></textarea>',`
-            \- template: `'<div class="popover"><div class="arrow"></div>'` +
-            \- `'<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">'` +
-            \- `'</i></div><div class="popover-content col-9">Enter the velocity of the car between 10 and 300 ms<sup>-1</sup>, kmh<sup>-1</sup> or mph.'` +
-            \- `'</div></div>'`
-            \- });
-            \- $(this).popover("show");
-            \- $(this).click(function() {
-            \- $(this).popover("hide");
-            \- });
-            \- $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
-            \- }
-            \- })
-            \- })
-            \- })
+    $(document).ready(function() {
+    $("#submitCalculation").click(function() {
+    $(".checkVelocity").each(function() {
+    const val = $(this).val();
+    if (isOpen(val) || val > 300) {
+    $(this).popover({
+    placement: "top",
+    content: `'<textarea class="popover-textarea"></textarea>',`
+    template: `'<div class="popover"><div class="arrow"></div>'` +
+    `'<div class="row"><div class="col-3 my-auto"><i class="fas fa-exclamation-triangle" id="invalid-input3">'` +
+    `'</i></div><div class="popover-content col-9">Enter the velocity of the car between 10 and 300 ms<sup>-1</sup>, kmh<sup>-1</sup> or mph.'` +
+    `'</div></div>'`
+    });
+    $(this).popover("show");
+    $(this).click(function() {
+    $(this).popover("hide");
+    });
+    $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
+    }
+    })
+    })
+    })
 
 This code is on the form_validation.js file and checks the validation of the velocity input on the [calculator](https://pauld0051.github.io/physics-code/calculator.html) page.
 
@@ -1430,22 +1434,22 @@ The original code was authored and edited testing at JSBin however, the final co
 
 The final code to listen for the colour of the input field is as follows:
 
-            \-  const elem = document.getElementById(mapNumber + "UserInput");
-            \-  elem.addEventListener("keyup", () => {
-            \-  let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
-            \-  let submitBtn = document.getElementById(mapNumber + "Submit");
-            \-  if (theStyle === "rgb(234, 198, 198)") {
-            \-  submitBtn.disabled = true;
-            \-  document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a value for your calculation then click on the <em>submit</em> button below to check your answers."
-            \-  } else if (theStyle === "rgb(251, 250, 245)") {
-            \-  submitBtn.disabled = false;
-            \-  }
-            \-  });
-            \-  const reset = document.getElementById(mapNumber + "Reset")
-            \-  reset.addEventListener("click", disableSubmit);
-            \-  function disableSubmit() {
-            \-  document.getElementById(mapNumber + "Submit").disabled = true;
-            \-  };
+    const elem = document.getElementById(mapNumber + "UserInput");
+    elem.addEventListener("keyup", () => {
+    let theStyle = window.getComputedStyle(elem, "").getPropertyValue("background-color");
+    let submitBtn = document.getElementById(mapNumber + "Submit");
+    if (theStyle === "rgb(234, 198, 198)") {
+    submitBtn.disabled = true;
+    document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a value for your calculation then click on the <em>submit</em> button below to check your answers."
+    } else if (theStyle === "rgb(251, 250, 245)") {
+    submitBtn.disabled = false;
+    }
+    });
+    const reset = document.getElementById(mapNumber + "Reset")
+    reset.addEventListener("click", disableSubmit);
+    function disableSubmit() {
+    document.getElementById(mapNumber + "Submit").disabled = true;
+    };
 
 To cut down on code, the RGB value was used and not converted to hex (16).
 
@@ -1474,6 +1478,58 @@ Finally, the dilemma zone is when the stopping distance is smaller than the dist
 
 All numbers are set to a maximum of two decimal places in the final answer (reaction time and coefficient of friction allows for three decimal place inputs). This avoids extreme numbers with insignificant data.
 
+### Custom Alert Boxes
+
+Custom alert boxes were first introduced as a last minute alternative to the default JavaScript alert boxes. The default boxes, although effective, did not appear visually to represent the site nor fit in with any particular theme. Although a few options were tested, only one particular style was considered. The custom dialog (sic) box tutorials at [Develop.com](https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial) were decided on due to the ease of integration and simplicity of styling. However, the code itself is not without problems, especially as it is not written for mobile first. On a small display the alert box does not render correctly, is not fluid and the "close" button can not be seen. It is also noted that the overlay does not extend all the way down to the footer and some vertical scrolling, although extremely limited, is still possible. 
+
+The original script allowed for a 550px sized box which would render correctly on large screen directly in the centre of the screen with the following code:
+    
+    function CustomAlert(){
+    this.render = function(dialog){
+    ~~let winW = window.innerWidth;~~ // Removed
+    let winH = window.innerHeight;
+    let dialogoverlay = document.getElementById('dialogoverlay');
+    let dialogbox = document.getElementById('dialogbox');
+    dialogoverlay.style.display = "block";
+    dialogoverlay.style.height = winH+"px";
+    ~~dialogbox.style.left = (winW/2) - (550 * .5)+"px";~~ // Removed
+    dialogbox.style.top = "100px";
+    dialogbox.style.display = "block";
+    document.getElementById('dialogboxhead').innerHTML = '<strong>Share your score to Facebook</strong>';
+    document.getElementById('dialogboxbody').innerHTML = dialog;
+    document.getElementById('dialogboxfoot').innerHTML = '<button  class="btn btn-danger"  onclick="Alert.ok()"><i  class="far fa-times-circle"></i> Close</button>';
+    }
+    this.ok = function(){
+    document.getElementById('dialogbox').style.display = "none";
+    document.getElementById('dialogoverlay').style.display = "none";
+    }
+    }
+    let Alert = new CustomAlert();
+
+However, because of the fixed sizing the two lines (as indicated) were removed to make the code mobile-first responsive. 
+
+The CSS delivers the style to the boxes and now provides the location as well. 
+
+    #dialogbox {
+    display: none;
+    position: fixed;
+    margin-top: 17.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0b6623;
+    border-radius: 7px;
+    width: 67.7%;
+    max-width: 550px;
+    z-index: 2001;
+    }
+
+The margin-top, top, left, transform: translate, colour, width and max-width were all modified to allow for mobile first display rendering. 
+
+All the other code remains identical to the tutorial code in the link above (with the exception of the JavaScript "var" being replaced with "let"). 
+
+Some minor issues still remain, the code doesn't allow for a natural centre for the dialog box and due to the length of the messages in the dialog box body, the alert box now wraps (appropriately) on smaller displays. 
+
 ## KNOWN BUGS
 
 [Top](#contents)
@@ -1485,13 +1541,13 @@ Currently, there are few known bugs in the code and the code operates as anticip
 
 After a user has completed a game and shared the results on their Facebook timeline, a link to the Reaction Timer - Physics Code is displayed in the top of the person's post:
 
-[![Timeline sharing onto Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/timeline-sharing.png "Facebook timeline sharing")](https://pauld0051.github.io/physics-code/game.html)
+![Timeline sharing onto Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/timeline-sharing.png "Facebook timeline sharing")
 
 This takes the user directly to the Physic's Code page, originally the link returned an error on Facebook and suggested the application had not been approved. It has since been approved and users should not be troubled by this error.
 
 However, advert blocking applications such as [uBlock Origin](https://github.com/gorhill/uBlock) may prevent the Facebook share button from accessing various components on the user's browser. However, this does not affect the user's ability to input valid responses and share the site on their Facebook timeline. The only time this may be noticed is if the user with an advert blocking application accesses the "inspect" function of the browser:
 
-[![Timeline sharing onto Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/warning-facebook.png "Facebook warning")](https://pauld0051.github.io/physics-code/game.html)
+![Timeline sharing onto Facebook](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/warning-facebook.png "Facebook warning")
 
 Although instances of the Facebook share button disappearing have been noted during testing phase, it has not been shown to be caused by advert blocking applications. Instead it was most likely due to updating the code which may have impacted on the Facebook sharing code. At present, the share button appears on several tested devices with and without advert blocking applications. Because Facebook sharing is a third party add-on to Physics Code, this can be monitored over time. However, it is hoped that Facebook will notify developers of changes that occur to the code which may prevent share facilities from displaying accurately.
 
@@ -1550,7 +1606,7 @@ The initial project was written entirely using [Gitpod](https://gitpod.io/) and 
 
 Github Pages deployment is conducted from the settings page and uses the following information:
 
-[![Deployment to Github Pages](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-pages.png "Github-Pages")](https://pauld0051.github.io/physics-code/game.html)
+![Deployment to Github Pages](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-pages.png "Github-Pages deploying Physics Code to the web")
 
 ### Forking the Github Repository
 [Top](#contents)
