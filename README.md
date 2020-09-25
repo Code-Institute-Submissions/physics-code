@@ -1795,40 +1795,42 @@ Rudolf Grigeľ for providing a one-on-one consultation to finalise inpu
 
 Continuous support from peers at the Code Institute Slack channel. 
 
-Code has been credited internally by use of inline comments or throughout this Readme file. These include codes that were originally found at:
 
-- [W3Schools](https://www.w3schools.com/)
+Code has been credited internally by use of inline comments or throughout this Readme file. These include codes that were originally found at:
 
-- [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
+- [W3Schools](https://www.w3schools.com/)
 
-- [Bootstrap](https://getbootstrap.com/)
+- [MDN Webdocs](https://developer.mozilla.org/en-US/docs/Tools)
 
-- [jQuery](https://jquery.com/)
+- [Bootstrap](https://getbootstrap.com/)  
 
-- User code at [Codepen](https://codepen.io/)
+- [jQuery](https://jquery.com/)
 
-- [Fontawesome](https://fontawesome.com/)
+- User code at [Codepen](https://codepen.io/)
+
+- [Fontawesome](https://fontawesome.com/)
 
 ### Media
 [Top](#contents)
 
-All images were first downloaded and used from one of four locations:
 
-- [Vehicle Silhouette - flaticon](https://www.flaticon.com/free-icon/coupe-car_55180)
+All images were first downloaded and used from one of four locations:
 
-- [Traffic light Silhouette - pngfuel](https://www.pngfuel.com/free-png/rxbkq)
+- [Vehicle Silhouette - flaticon](https://www.flaticon.com/free-icon/coupe-car_55180)
 
-- [Stopwatch Silhouette - pngfuel](https://www.pngfuel.com/free-png/nbupo)
+- [Traffic light Silhouette - pngfuel](https://www.pngfuel.com/free-png/rxbkq)
 
-- [Tire Silhouette - kindpng](https://www.kindpng.com/imgv/hoJJx_silhouette-tire-vector-transparent-tire-png-vector-png/)
+- [Stopwatch Silhouette - pngfuel](https://www.pngfuel.com/free-png/nbupo)
 
-- [Intersection Silhouette - pngguru](https://www.pngguru.com/free-transparent-background-png-clipart-nfwhh)
+- [Tire Silhouette - kindpng](https://www.kindpng.com/imgv/hoJJx_silhouette-tire-vector-transparent-tire-png-vector-png/)
 
-- [Various Vehicle Lengths Silhouette - freepik](https://www.freepik.com/premium-vector/cars-silhouette-automobiles-type-isolated-bus-motorhome-van-tow-truck-sedan-taxi-limousine-suv-car-vehicle-flat-icon-collection-urban-auto-motor-transport-silhouette-models-set_8763680.htm)
+- [Intersection Silhouette - pngguru](https://www.pngguru.com/free-transparent-background-png-clipart-nfwhh)
 
-- [Calculator Silhouette - webstockreview](https://webstockreview.net/images/calculator-clipart-silhouette-10.jpg)
+- [Various Vehicle Lengths Silhouette - freepik](https://www.freepik.com/premium-vector/cars-silhouette-automobiles-type-isolated-bus-motorhome-van-tow-truck-sedan-taxi-limousine-suv-car-vehicle-flat-icon-collection-urban-auto-motor-transport-silhouette-models-set_8763680.htm)
 
-All images are subject to international copyright laws. 
+- [Calculator Silhouette - webstockreview](https://webstockreview.net/images/calculator-clipart-silhouette-10.jpg)
+
+All images are subject to international copyright laws.
 
 ## VERSION CONTROL
 
