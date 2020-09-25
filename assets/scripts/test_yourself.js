@@ -10,8 +10,8 @@ function processClick() {
 }
 
 document.querySelectorAll(".mapVariables").forEach(item => {
-  item.addEventListener('click', mapVariables)
-})
+  item.addEventListener('click', mapVariables);
+});
 
 function mapVariables() {
   // Prevent invalid submissions
@@ -21,13 +21,13 @@ function mapVariables() {
     let submitBtn = document.getElementById(mapNumber + "Submit");
     if (theStyle === "rgb(234, 198, 198)") {
       submitBtn.disabled = true;
-      document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a value for your calculation then click on the <em>submit</em> button below to check your answers."
+      document.getElementById(mapNumber + "InvalidResponse").innerHTML = "Add a value for your calculation then click on the <em>submit</em> button below to check your answers.";
     } else if (theStyle === "rgb(251, 250, 245)") {
       submitBtn.disabled = false;
     }
   });
 
-  const reset = document.getElementById(mapNumber + "Reset")
+  const reset = document.getElementById(mapNumber + "Reset");
   reset.addEventListener("click", disableSubmit);
 
   function disableSubmit() {

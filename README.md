@@ -101,6 +101,14 @@
 
 	-  [Other Bugs](#other-bugs)
 
+-  [Testing](#testing)
+
+    - [JS Hint JavaScript Validation](#js-hint-javascript-validation)
+
+    - [W3C Markup Validaton](w3c-markup-validation)
+
+    - [W3C CSS Validation](#w3c-css-validation)
+
 -  [Deployment](#deployment)
 
 	-  [Forking the Github Repository](#forking-the-github-repository)
@@ -1626,8 +1634,8 @@ Spinners from all inputs were removed to prevent negative numbers from being pre
 
 A "current" scenario button had been included in earlier versions of the [test_yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page, but due to input validation, it was impossible to re-open a modal without a) refreshing the content inside or; b) ignoring the current map number preventing input from the user. Although many possible considerations were made to include the button, it was not an overall requirement. It was then decided to prevent the user from accidentally closing the modal with a key push or clicking outside of the modal. Instead, a user must now use one of the two active "close" buttons. This was included in HTML attributes:
     
-    -  data-backdrop="static" 
-    -  data-keyboard="false" 
+    data-backdrop="static"
+    data-keyboard="false"
 (source: <https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca>)
 
 This prevented accidental closing of modals when a calculation was being performed. 
@@ -1635,26 +1643,106 @@ This prevented accidental closing of modals when a calculation was bei
 
 In early versions of the Physics Code calculator, users could accidental "scroll" when the mouse was over an input and change their value for the variables. This was prevented by adding this code:
 
-        - $('form').on('focus', 'input[type=number]', function(e) {
-        - $(this).on('wheel.disableScroll', function(e) {
-        - e.preventDefault();
-        - });
-        - });
-        - $('form').on('blur', 'input[type=number]', function(e) {
-        - $(this).off('wheel.disableScroll');
-        - })
+    $('form').on('focus', 'input[type=number]', function(e) {
+    $(this).on('wheel.disableScroll', function(e) {
+    e.preventDefault();
+    });
+    });
+    $('form').on('blur', 'input[type=number]', function(e) {
+    $(this).off('wheel.disableScroll');
+    })
 (source: <https://stackoverflow.com/questions/9712295/disable-scrolling-on-input-type-number>)
 
 Negative numbers in the dilemma zone calculation need to be given as "absolute" so the Math.abs(total) code was used.
 
 The reaction time game prototype showed that the counter was able to stop and work out the number of seconds the user took to press the "brakes" button. However, the brakes button remained active and was able to be pushed again. An initial attempt to remove the ID that allows the "click" event to be listened to failed to work. Finally, a jQuery button disabled function was able to complete the job.
 
-           `-  $("#brake_button").attr("disabled", true);`
-
+    $("#brake_button").attr("disabled", true);
 
 Screen size negatively affected the display of MathJax equations, especially the final equation on the [help (https://pauld0051.github.io/physics-code/help.html) page which subsequently is also the largest equation. The only available fix for this that worked was to give the entire card where the equation was displayed a "no-display" class for small screens but instead display the equation presented with more line breaks added. This was all done using Bootstrap display functions.
 
 Occasionally maps may not display all sectors. It is not yet understood what causes some sectors in maps not displaying, however, the rarity of the situation is not causing concern. The most likely explanation is to do with browser loading capabilities.
+
+## TESTING 
+[Top](#contents)
+
+### JS Hint JavaScript Validation
+
+JS Hint was used to validate all JavaScript pages. Although some minor warnings were shown, these were checked and no errors were caused as a result of these warnings. In some circumstances JS Hint is suggesting that variables are undefined. Again, these were checked and had either been defined or required user input. 
+
+The JS Hint output for calculator.js:
+
+![JS Hint output for calculator.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-calculator.png "JS Hint output for calculator.js")
+
+The JS Hint output for dependencies.js:
+
+![JS Hint output for dependencies.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-dependencies.png "JS Hint output for dependencies.js")
+
+The JS Hint output for form_validation.js:
+
+![JS Hint output for form_validation.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-form_validation.png "JS Hint output for form_validation.js")
+
+The JS Hint output for game.js:
+
+![JS Hint output for game.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-game.png "JS Hint output for game.js")
+
+The JS Hint output for maps.js:
+
+![JS Hint output for maps.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-maps.png "JS Hint output for maps.js")
+
+The JS Hint output for sendmail.js:
+
+![JS Hint output for sendmail.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-sendmail.png "JS Hint output for sendmail.js")
+
+The JS Hint output for test_yourself.js:
+
+![JS Hint output for test_yourself.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-test_yourself.png "JS Hint output for test_yourself.js")
+
+### W3C Markup Validaton
+
+HTML validation was all checked using the [W3C Markup Validation Service](https://validator.w3.org/) and if adjusments were required, these were done accordingly. There is one known error on the calculator page displayed below. 
+
+The W3C validation report for the 404.html page:
+
+![W3C Validation output for 404.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-404.png "W3C Validation output for 404.html")
+
+The W3C validation report for the calculator.html page. A known warning is displayed due to the zone_header being input via JavaScript dependent on calculated results. Therefore, this leaves the header in the modal empty. The is no impact to the code, usability or outcome due to this error. 
+
+![W3C Validation output for calculator.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-calculator.png "W3C Validation output for calculator.html")
+
+The W3C validation report for the contact.html page:
+
+![W3C Validation output for contact.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-contact.png "W3C Validation output for contact.html")
+
+The W3C validation report for the game.html page:
+
+![W3C Validation output for game.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-game.png "W3C Validation output for game.html")
+
+The W3C validation report for the help.html page:
+
+![W3C Validation output for help.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-help.png "W3C Validation output for help.html")
+
+The W3C validation report for the index.html page:
+
+![W3C Validation output for index.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-index.png "W3C Validation output for index.html")
+
+The W3C validation report for the privacy.html page:
+
+![W3C Validation output for privacy.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-privacy.png "W3C Validation output for privacy.html")
+
+The W3C validation report for the terms.html page:
+
+![W3C Validation output for terms.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-terms.png "W3C Validation output for terms.html")
+
+The W3C validation report for the test_yourself.html page:
+
+![W3C Validation output for test_yourself.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-test_yourself.png "W3C Validation output for test_yourself.html")
+
+### CSS 
+
+CSS was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). No errors were found in this process. 
+
+![W3C Validation output for CSS page](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/css-validation/w3c-validation-css.png "W3C Validation output for the CSS page")
 
 ## DEPLOYMENT
 [Top](#contents)

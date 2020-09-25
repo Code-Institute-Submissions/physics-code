@@ -128,7 +128,7 @@ function initMap() {
   });
   google.maps.event.addListener(map3, "click", function() {
     window.open("https://www.google.com/maps/@39.0605322,-77.4594559,79m/data=!3m1!1e3");
-});
+  });
   google.maps.event.addListener(map4, "click", function() {
     window.open("https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3");
   });

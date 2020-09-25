@@ -1,6 +1,7 @@
 // Convert velocities from km/h or mph to m/s
 document.getElementById("submitCalculation").addEventListener("click", convert);
 let finalVelocity;
+
 function convert() {
   let vi = parseFloat(document.getElementById("initialVelocity").value);
   let unit = document.getElementById("units").value;
@@ -23,6 +24,7 @@ function convert() {
 // Convert yards to metres
 document.getElementById("submitCalculation").addEventListener("click", convertDistance);
 let fullDistance;
+
 function convertDistance() {
   let id = parseFloat(document.getElementById("intersectionDistance").value);
   let lengthid = document.getElementById("length-units").value;
@@ -39,6 +41,7 @@ function convertDistance() {
   document.getElementById("conversion-dist").innerHTML = fullDistance.toFixed(2) + " m";
 }
 document.getElementById("submitCalculation").addEventListener("click", dilemmaZone);
+
 function dilemmaZone() {
   //Max distance vehicle travels without braking
   //use maxDistance (md) to calculate distance from stop line
@@ -99,6 +102,6 @@ function dilemmaZone() {
 // Clear form, reset values and hide popovers on click of reset button
 $(function() {
   $("#formReset").click(function() {
-     $("input.reset_form").popover("hide");
-  }); 
+    $("input.reset_form").popover("hide");
+  });
 });

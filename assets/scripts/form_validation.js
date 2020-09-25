@@ -1,7 +1,7 @@
 //prevent the browser from showing default error bubble / hint
- document.querySelector("form").addEventListener("invalid", function(event) {
-            event.preventDefault();
-        }, true );
+document.querySelector("form").addEventListener("invalid", function(event) {
+  event.preventDefault();
+}, true);
 
 // Prevent the calculator from opening modal without appropriate form submission
 // Source https://codepen.io/hanapiers/pen/EXNrGP
@@ -58,9 +58,9 @@ $(document).ready(function() {
         });
         $('html, body').scrollTop($(".cardBodyVelocity").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 $(document).ready(function() {
   $("#submitCalculation").click(function() {
@@ -79,11 +79,11 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
-         $('html, body').scrollTop($(".cardBodyYellowLight").offset().top);
+        $('html, body').scrollTop($(".cardBodyYellowLight").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 $(document).ready(function() {
   $("#submitCalculation").click(function() {
@@ -104,9 +104,9 @@ $(document).ready(function() {
         });
         $('html, body').scrollTop($(".cardBodyRedLight").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 $(document).ready(function() {
   $("#submitCalculation").click(function() {
@@ -127,9 +127,9 @@ $(document).ready(function() {
         });
         $('html, body').scrollTop($(".cardBodyReaction").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 $(document).ready(function() {
   $("#submitCalculation").click(function() {
@@ -150,9 +150,9 @@ $(document).ready(function() {
         });
         $('html, body').scrollTop($(".cardBodyFriction").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 $(document).ready(function() {
   $("#submitCalculation").click(function() {
@@ -171,11 +171,11 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
-         $('html, body').scrollTop($(".cardBodyIntersection").offset().top);
+        $('html, body').scrollTop($(".cardBodyIntersection").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
 
 $(document).ready(function() {
   $("#submitCalculation").click(function() {
@@ -195,8 +195,8 @@ $(document).ready(function() {
         $(this).click(function() {
           $(this).popover("hide");
         });
-         $('html, body').scrollTop($(".cardBodyLength").offset().top);
+        $('html, body').scrollTop($(".cardBodyLength").offset().top);
       }
-    })
-  })
-})
+    });
+  });
+});
