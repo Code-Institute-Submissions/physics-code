@@ -1781,11 +1781,11 @@ It is plausible that a clone of this repository will be made so that more calcul
 
 3. Select "Download Zip" to download the file and add to a directory on your local computer. 
 
-![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone1.png "Cloning the repository")
+![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone2.png "Cloning the repository")
 
 4. From there you can access the files and use local based software to adjust the code accordingly. You will need to access your own APIs for Google Maps, Facebook and an account with EmailJS if you plan on using this code on a new website. 
 
-![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone2.png "Cloning the repository")
+![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone3.png "Cloning the repository")
 
 ## CREDITS
 
