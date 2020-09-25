@@ -113,6 +113,8 @@
 
 	-  [Forking the Github Repository](#forking-the-github-repository)
 
+    -  [Cloning the Github Repository](#cloning-the-github-repository)
+
 -  [Credits](#credits)
 
 	-  [Acknowledgements](#acknowledgements)
@@ -1666,7 +1668,10 @@ Occasionally maps may not display all sectors. It is not yet understood what cau
 ## TESTING 
 [Top](#contents)
 
+All pages were run through appropriate validation services. Any adjustments that were required were made immediately. Testing was done throughout development as individual pages were nearing completion or if a particular code failed to produce the desired outcome. 
+
 ### JS Hint JavaScript Validation
+[Top](#contents)
 
 JS Hint was used to validate all JavaScript pages. Although some minor warnings were shown, these were checked and no errors were caused as a result of these warnings. In some circumstances JS Hint is suggesting that variables are undefined. Again, these were checked and had either been defined or required user input. 
 
@@ -1699,6 +1704,7 @@ The JS Hint output for test_yourself.js:
 ![JS Hint output for test_yourself.js](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/js-hint/js-hint-test_yourself.png "JS Hint output for test_yourself.js")
 
 ### W3C Markup Validaton
+[Top](#contents)
 
 HTML validation was all checked using the [W3C Markup Validation Service](https://validator.w3.org/) and if adjusments were required, these were done accordingly. There is one known error on the calculator page displayed below. 
 
@@ -1738,7 +1744,8 @@ The W3C validation report for the test_yourself.html page:
 
 ![W3C Validation output for test_yourself.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-test_yourself.png "W3C Validation output for test_yourself.html")
 
-### CSS 
+### CSS
+[Top](#contents) 
 
 CSS was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). No errors were found in this process. 
 
@@ -1762,13 +1769,31 @@ A copy of the GitHub Repository can be made by forking the GitHub account prefer
 
 This copy can be viewed and changes can be made to the copy without affecting the original repository. In order to create a fork follow these steps:
 
-- Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
+1 Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
 
-- On the top right locate the "Fork" Button;
+2 On the top right locate the "Fork" Button;
 
-- Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
+![Forking the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-fork.png "Forking the repository")
+
+3 Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
+
+### Cloning
 
 It is plausible that a clone of this repository will be made so that more calculators and games can be added along with help files. Cloning is conducted at the [GitHub Repository](https://github.com/pauld0051/physics-code) by clicking on the code button and downloading the repository. This can then be uploaded in a new repository or worked on locally using an IDE such as Atom.
+
+1.  Firstly access the repository to clone: [https://github.com/pauld0051/physics-code](https://github.com/pauld0051/physics-code)
+
+2. Click on "Code" on the right hand side:
+
+![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone.png "Cloning the repository")
+
+3. Select "Download Zip" to download the file and add to a directory on your local computer. 
+
+![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone1.png "Cloning the repository")
+
+4. From there you can access the files and use local based software to adjust the code accordingly. You will need to access your own APIs for Google Maps, Facebook and an account with EmailJS if you plan on using this code on a new website. 
+
+![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone2.png "Cloning the repository")
 
 ## CREDITS
 
@@ -1833,7 +1858,6 @@ All images were first downloaded and used from one of four locations:
 All images are subject to international copyright laws.
 
 ## VERSION CONTROL
-
 [Top](#contents)
 
 Throughout the development phase, regular commits were made and pushed to the Github repository. Early version commits were not made in the imperative as feedback had not yet been received from the MS1. This was adjusted as soon as the feedback was received. The following is the list of commits over the entire project.
