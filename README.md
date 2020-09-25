@@ -105,13 +105,13 @@
 
     - [JS Hint JavaScript Validation](#js-hint-javascript-validation)
 
-    - [W3C Markup Validaton](w3c-markup-validation)
+    - [W3C Markup Validaton](#w3c-markup-validation)
 
     - [W3C CSS Validation](#w3c-css-validation)
 
 -  [Deployment](#deployment)
 
-	-  [Forking the Github Repository](#forking-the-github-repository)
+	-  [Forking the Github Repository](#forking-the-github-repository)
 
     -  [Cloning the Github Repository](#cloning-the-github-repository)
 
@@ -324,7 +324,6 @@
 
         ![Physics Code 404](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/user-stories/user-stories-404.png "Physics Code first view 404")
 
-
 #### Returning Visitor Goals
 
 [Top](#contents)
@@ -343,7 +342,6 @@
     -   Navigate easily back to the home page
     -   Share the page on their Facebook timeline
     -   Share their results from the reaction time game
-
 
 #### Frequent Visitor Goals
 
@@ -429,7 +427,6 @@
 
 #### Fonts and Typography
 [Top](#contents)
-
 
 - All headings use the font family Rubik with a fall back of San Serif if Rubik fails to load. Rubik was first discovered at [Google Fonts](https://fonts.google.com/specimen/Rubik?query=rubik)
 
@@ -555,7 +552,6 @@ All maps were considered based on media reports, local knowledge and searching G
 
 - An extra share function was built into the [Game](https://pauld0051.github.io/physics-code/game.html) to allow sharing of scores directly to Facebook
 
-
 Other social media share functionality was also considered, however, Facebook was the only one added in the wireframes and first released version of the site.
 
 Twitter is likely to be added at a later stage before other social media share buttons.
@@ -623,6 +619,7 @@ The vast majority of the site is represented in the wireframes, right down to th
 ### Responsive displays 
 
 #### Mobile First
+[Top](#contents)
 
 - Physics Code is primarily designed for use on mobile devices or smaller screen devices.
 
@@ -706,7 +703,6 @@ Finally, users can interact with the site's author by sending a message through 
 
 #### Game
 [Top](#contents)
-
 
 - The game helps determine one of the seven variables of the calculator, reaction time
 
@@ -875,7 +871,6 @@ The third calculator is something all first year Physics students struggle with,
 	- Doppler effect calculator
 
 	- Half life and nuclear decay calculator
-
 
 All calculators will be based on a minimum requirement for the International Baccalaureate DP1 and DP2 High Level Program.
 
@@ -1452,8 +1447,6 @@ For two decimal places the variable was set from the following:
     }
     };
 
-
-
 Discussion with others at [StackOverflow](https://stackoverflow.com/) had suggested to replace this code with a regex code instead. Although plenty of regex code was available, this code had already been written and was suitable to complete the job. For future use, a regex code will be used, especially for email.
 
 The constants are then parsed into the validation filter to trigger a tooltip and a scroll "up" to the invalid input if required:
@@ -1623,7 +1616,6 @@ Although instances of the Facebook share button disappearing have been noted dur
 ### Icons and Unicode 
 [Top](#contents)
 
-
 The site relies heavily on icon hints in various cards and buttons. However, due to the nature of `<input>` verses `<button>` meant that input tags require a "value" attribute however, button tags can have text input including Fontawesome icons. Although Fontawesome does display the Unicode equivalent of their icons, the Unicode supplied did not provide the icon when used in an `<input>` tag. This meant alternatives were sought or fixes. In this case, alternative Unicode icons were sought. All Unicode HTML characters were taken from [FileFormat](https://www.fileformat.info/info/unicode/char/2713/index.htm). Although not every devices has been checked, it is apparent these Unicode characters are more likely to be displayed than icons.
 
 ### Other Bugs
@@ -1744,7 +1736,7 @@ The W3C validation report for the test_yourself.html page:
 
 ![W3C Validation output for test_yourself.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-test_yourself.png "W3C Validation output for test_yourself.html")
 
-### CSS
+### W3C CSS Validation
 [Top](#contents) 
 
 CSS was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). No errors were found in this process. 
@@ -1777,7 +1769,7 @@ This copy can be viewed and changes can be made to the copy without affecting th
 
 3 Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
 
-### Cloning
+### Cloning the Github Repository
 
 It is plausible that a clone of this repository will be made so that more calculators and games can be added along with help files. Cloning is conducted at the [GitHub Repository](https://github.com/pauld0051/physics-code) by clicking on the code button and downloading the repository. This can then be uploaded in a new repository or worked on locally using an IDE such as Atom.
 
@@ -1814,7 +1806,7 @@ The [Code Institute](https://codeinstitute.net/) tutoring team, especially Kevin
 
 The [Code Institute](https://codeinstitute.net/) lessons, especially on Google Maps, EmailJS and various JavaScript tips and tricks. 
 
-My wife Inga Velicko, daughter Paige Davis and friend Adela Tavacova for providing expertise on colours to be used for the site and for continually testing the site throughout the development stages.
+My wife Inga Veličko, daughter Paige Davis and friend Adela Tavačova for providing expertise on colours to be used for the site and for continually testing the site throughout the development stages.
 
 Rudolf Grigeľ for providing a one-on-one consultation to finalise input validation.  
 
