@@ -1306,6 +1306,24 @@ The full JavaScript is then run from the sendemail.js file:
     return false;
     });
 
+To add EmailJS functionality to a site you will require an [EmailJS account](https://www.emailjs.com/), use the "Sign Up for Free" option on the top right.
+
+![sign-up for EmailJS](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/emailjs/emailjs-signup1.png "Sign-up for EmailJS")
+
+Continue to the dashboard in your new account and add a new service. 
+
+![EmailJS Dashboard](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/emailjs/emailjs-dashboard1.png "Add a new service")
+
+There are currently 17 services available. Choose the one where you have access to that service. For Physics Code, gmail was used. 
+
+![EmailJS Dashboard](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/emailjs/emailjs-dashboard2.png "Add a new service")
+
+Once you have chosen the service, fill in the details of your mail and "connect account" then "Create Service":
+
+![EmailJS Dashboard](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/emailjs/emailjs-dashboard3.png "Add a new service")
+
+From there you can make your template for this service as suggested above or with individualised responses. 
+
 ### Script Refactoring
 [Top](#contents)
 
