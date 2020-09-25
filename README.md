@@ -8,7 +8,7 @@
 
 	-  [Goals](#site-goals)
 
--  [User Experience UX](#user-experience-(ux))
+-  [User Experience](#user-experience)
 
 	-  [User Stories](#user-stories)
 
@@ -28,14 +28,13 @@
 
 	-  [Fonts and Typography](#fonts-and-typography)
 
-	-  [Container and Box Structure](#container-and-box-structure)
+	-  [Bootstrap Grid System](#bootstrap-grid-system)
 
 	-  [Forms and Inputs](#forms-and-inputs)
 
 	-  [Design Strategy](#design-strategy)
 
 	-  [Site Speed](#site-speed)
-
 
 -  [Wireframes](#wireframes)
 
@@ -188,7 +187,7 @@
     -   additions to current the dilemma zone calculator to include an optional dilemma zone for perpendicular roads and for non-constant acceleration
     -   additional APIs based on the context of the new calculators and could include other reality based principles including climate-change
 
-## USER EXPERIENCE (UX)
+## USER EXPERIENCE
 
 [Top](#contents)
 
@@ -438,7 +437,7 @@
 
 - Navbar text uses Raleway and also falls back to Sans Serif should Raleway fail to load. The font was also discovered at [Google Fonts](https://fonts.google.com/specimen/Raleway?query=Raleway)
 
-#### Container and Box Structure
+#### Bootstrap Grid System
 [Top](#contents)
 
 - The site uses the [Bootstrap grid system](https://getbootstrap.com/docs/4.0/layout/grid/) to effectively separate each heading division and subsequent subdivision
@@ -480,7 +479,7 @@
 
 - All forms are validated in HTML using browser validation and complimented with JavaScript validation written by the author
 
-#### Design Strategy
+#### Design Strategy
 [Top](#contents)
 
 The overall strategy goals of the website design is to produce an easy flowing, uncluttered site but without being too minimal. Removing distractions from the student is advantageous for the context of their work while at the same time, large easy to navigate cards allow user input and interaction. This further drives the curiosity of the student who can associate images with hints towards the variables required in the calculator or the type of button that they're about to press. This helps scaffold the site and differentiate for all users. A beginner in Physics will see the car emblem for instance and recognize this as a kinetic object and is prompted by the word velocity. A more seasoned user will instantly see the scientific notation for metres per second and associate the site with SI Units even though they will be able to add imperial units in at least two of the calculator inputs. And professional educators will be able to use the site as a demonstration or homework assignment for their students or students will be able to model their own data from Google Maps or similar after completing their own calculations on the random scenarios. Each page is designed with the same format and layout as the previous page leaving no surprises or the feeling that the user is on the wrong page. Any external links are opened in a new browser tab and if the user is on the Calculator page they can access the help page without losing their data.
@@ -576,12 +575,12 @@ Twitter is likely to be added at a later stage before other social media share b
 
 	- Bootstrap functionality and design is shown in all wireframes
 
-#### View wireframes
+#### View Wireframes
 [Top](#contents)
 
 - [Click here to see wireframes](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/wireframes/physics_code_wireframes.pdf "Physics Code wireframes")
 
-### Final Design
+#### Final Design
 [Top](#contents)
 
 The initial wireframe designs were chosen due to their low amount of clutter, ease of reading, adaptability and consistency among each page.
@@ -612,13 +611,13 @@ An additional [404 page](https://pauld0051.github.io/physics-code/404.html) was 
 
 The vast majority of the site is represented in the wireframes, right down to the chosen maps on the [test yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page. Minor changes were made based on user comments during alpha testing and where the site did not display as anticipated on a particular sized screen.
 
-## FEATURES 
-
+## FEATURES
 [Top](#contents)
 
-### Responsive displays 
+### Responsive Displays
+[Top](#contents)
 
-#### Mobile First
+#### Mobile First
 [Top](#contents)
 
 - Physics Code is primarily designed for use on mobile devices or smaller screen devices.
@@ -639,7 +638,8 @@ The vast majority of the site is represented in the wireframes, right down to th
 
 - White space is minimised on mobile displays, however, a rule of thirds still remains so the screen is not overwhelming.
 
-#### Large Screen Displays
+#### Large Screen Displays
+[Top](#contents)
 
 - Alpha testing was conducted on 32in (71 cm width), 55in (121.7 cm) and more common 15in to 24in (38 cm to 61 cm) displays.
 
@@ -874,12 +874,12 @@ The third calculator is something all first year Physics students struggle with,
 
 All calculators will be based on a minimum requirement for the International Baccalaureate DP1 and DP2 High Level Program.
 
-#### New Help files
+#### New Help Files
 [Top](#contents)
 
 All calculators will be coupled with a help page set up using [MathJax](https://www.mathjax.org/) for equation display. Other LaTeX libraries may be considered depending on availability. Help pages, like their counterpart calculators, can be reached through dropdown navigation on the navbar (not currently active due to only one calculator, help page etc being available on first release) using [Bootstrap's drop down](https://getbootstrap.com/docs/4.4/components/navbar/) ability for all navbar links. Access to help files will also be available on each calculator through the infolink ("i" in a blue circle).
 
-#### New Games 
+#### New Games
 [Top](#contents) 
 
 
@@ -1059,7 +1059,6 @@ Helped with checking CSS file validation
 Enabled checking the site's HTML coding with ease.
 
 ### Application Programming Interfaces
-
 [Top](#contents)
 
 Primarily Physics Code relies on Google Maps API for access to map data for display as part of the user's ability to test themselves as a random calculation for a given real-world intersection. All API calls are located at the bottom of the HTML page so as to increase the speed users can access the page and thus loading of JavaScript happens secondary. This is backed up with the evidence of an "A" in [Pingdom's](https://tools.pingdom.com/) test which responded with the following:
@@ -1541,6 +1540,7 @@ Finally, the dilemma zone is when the stopping distance is smaller than the dist
 All numbers are set to a maximum of two decimal places in the final answer (reaction time and coefficient of friction allows for three decimal place inputs). This avoids extreme numbers with insignificant data.
 
 ### Custom Alert Boxes
+[Top](#contents)
 
 Custom alert boxes were first introduced as a last minute alternative to the default JavaScript alert boxes. The default boxes, although effective, did not appear visually to represent the site nor fit in with any particular theme. Although a few options were tested, only one particular style was considered. The custom dialog (sic) box tutorials at [Develop.com](https://www.developphp.com/video/JavaScript/Custom-Alert-Box-Programming-Tutorial) were decided on due to the ease of integration and simplicity of styling. However, the code itself is not without problems, especially as it is not written for mobile first. On a small display the alert box does not render correctly, is not fluid and the "close" button can not be seen. It is also noted that the overlay does not extend all the way down to the footer and some vertical scrolling, although extremely limited, is still possible. 
 
@@ -1593,7 +1593,6 @@ All the other code remains identical to the tutorial code in the link above (wit
 Some minor issues still remain, the code doesn't allow for a natural centre for the dialog box and due to the length of the messages in the dialog box body, the alert box now wraps (appropriately) on smaller displays. 
 
 ## KNOWN BUGS
-
 [Top](#contents)
 
 Currently, there are few known bugs in the code and the code operates as anticipated. However, there are multiple limitations to the code and equations used. Firstly, the equation can only determine if a dilemma zone exists (or option zone) if a vehicle has either a constant velocity or constant de-acceleration (braking). This means that only straight line dilemma zones can be determined. Vehicles that are using perpendicular roads to travel to or from are excluded from this equation. Secondly, users are limited to realistic values to avoid extreme numbers that display incorrectly in Bootstrap modals. Thirdly, the equations for dilemma and option zones assume flat roads with no hills or turns.
@@ -1621,7 +1620,6 @@ The site relies heavily on icon hints in various cards and buttons. However, due
 ### Other Bugs
 [Top](#contents)
 
-
 Previously mentioned invalid input default validators will ignore various letter inputs producing a non-number equation. This was prevented by adding a second layer of validation via JavaScript; see [Input Validation](#input-validation).
 
 Spinners from all inputs were removed to prevent negative numbers from being presented. Although this is stopped in JavaScript, this is a secondary method to prevent invalid inputs.
@@ -1633,7 +1631,6 @@ A "current" scenario button had been included in earlier versions of the [test_y
 (source: <https://stackoverflow.com/questions/16152073/prevent-bootstrap-modal-from-disappearing-when-clicking-outside-or-pressing-esca>)
 
 This prevented accidental closing of modals when a calculation was being performed. 
-
 
 In early versions of the Physics Code calculator, users could accidental "scroll" when the mouse was over an input and change their value for the variables. This was prevented by adding this code:
 
@@ -1770,6 +1767,7 @@ This copy can be viewed and changes can be made to the copy without affecting th
 3 Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
 
 ### Cloning the Github Repository
+[Top](#contents)
 
 It is plausible that a clone of this repository will be made so that more calculators and games can be added along with help files. Cloning is conducted at the [GitHub Repository](https://github.com/pauld0051/physics-code) by clicking on the code button and downloading the repository. This can then be uploaded in a new repository or worked on locally using an IDE such as Atom.
 
@@ -1788,7 +1786,6 @@ It is plausible that a clone of this repository will be made so that more calcul
 ![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone3.png "Cloning the repository")
 
 ## CREDITS
-
 [Top](#contents)
 
 All code was written by Paul Davis in consultation with the following:
