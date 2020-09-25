@@ -1760,13 +1760,13 @@ A copy of the GitHub Repository can be made by forking the GitHub account prefer
 
 This copy can be viewed and changes can be made to the copy without affecting the original repository. In order to create a fork follow these steps:
 
-1 Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
+1. Log in to GitHub and locate the Physics Code [GitHub Repository](https://github.com/pauld0051/physics-code);
 
-2 On the top right locate the "Fork" Button;
+2. On the top right locate the "Fork" Button;
 
 ![Forking the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-fork.png "Forking the repository")
 
-3 Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
+3. Clicking on this will create a fork in your directory where you can add data without affecting the original master copy.
 
 ### Cloning the Github Repository
 [Top](#contents)
@@ -1830,7 +1830,7 @@ Code has been credited internally by use of inline comments or throughout this R
 [Top](#contents)
 
 
-All images were first downloaded and used from one of four locations:
+All images were first downloaded and used from one of the following locations:
 
 - [Vehicle Silhouette - flaticon](https://www.flaticon.com/free-icon/coupe-car_55180)
 
