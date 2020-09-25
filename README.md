@@ -670,7 +670,7 @@ Finally, users can interact with the site's author by sending a message through 
 - The calculator has tooltips on each variable to give more advice on the input values
 
 - There are links to the [Help](https://pauld0051.github.io/physics-code/help.html) page which opens in a new browser tab
-- 
+
 - Calculations will not submit if data is non-numerical in any of the seven inputs
 
 	- Input fields change colour based on valid and invalid data
@@ -1592,6 +1592,8 @@ All the other code remains identical to the tutorial code in the link above (wit
 
 Some minor issues still remain, the code doesn't allow for a natural centre for the dialog box and due to the length of the messages in the dialog box body, the alert box now wraps (appropriately) on smaller displays. 
 
+Also noteworthy is the z-index value for both the overlay and dialogbox. The standard Bootstrap modal has a z-index of 1050, so a z-index greater than 1050 is required to appear over the top of the modal. The overlay equally needs to prevent the modal from being operated while an error warning is present. So the overlay has an z-index of 2000 and the dialogbox a z-index of 2001.
+
 ## KNOWN BUGS
 [Top](#contents)
 
@@ -1650,7 +1652,7 @@ The reaction time game prototype showed that the counter was able to stop and wo
 
     $("#brake_button").attr("disabled", true);
 
-Screen size negatively affected the display of MathJax equations, especially the final equation on the [help (https://pauld0051.github.io/physics-code/help.html) page which subsequently is also the largest equation. The only available fix for this that worked was to give the entire card where the equation was displayed a "no-display" class for small screens but instead display the equation presented with more line breaks added. This was all done using Bootstrap display functions.
+Screen size negatively affected the display of MathJax equations, especially the final equation on the [help](https://pauld0051.github.io/physics-code/help.html) page which subsequently is also the largest equation. The only available fix for this that worked was to give the entire card where the equation was displayed a "no-display" class for small screens but instead display the equation presented with more line breaks added. This was all done using Bootstrap display functions.
 
 Occasionally maps may not display all sectors. It is not yet understood what causes some sectors in maps not displaying, however, the rarity of the situation is not causing concern. The most likely explanation is to do with browser loading capabilities.
 
@@ -1701,7 +1703,7 @@ The W3C validation report for the 404.html page:
 
 ![W3C Validation output for 404.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-404.png "W3C Validation output for 404.html")
 
-The W3C validation report for the calculator.html page. A known warning is displayed due to the zone_header being input via JavaScript dependent on calculated results. Therefore, this leaves the header in the modal empty. The is no impact to the code, usability or outcome due to this error. 
+The W3C validation report for the calculator.html page. A known warning is displayed due to the zone_header being input via JavaScript dependent on calculated results. Therefore, this leaves the header in the modal empty. There is no impact to the code, usability or outcome due to this error. 
 
 ![W3C Validation output for calculator.html](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/validation/html-validation/w3c-html-calculator.png "W3C Validation output for calculator.html")
 
@@ -1745,7 +1747,7 @@ CSS was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-valida
 
 The initial site will be deployed using [Github Pages](https://pages.github.com/), however, it is possible further editions of the site will be released on public domains with an appropriate URL.
 
-The initial project was written entirely using [Gitpod](https://gitpod.io/) and [Atom](https://atom.io/) as IDEs and then pushed to [Github] making [Github Pages](https://pages.github.com/) the first choice for initial deployment.
+The initial project was written entirely using [Gitpod](https://gitpod.io/) and [Atom](https://atom.io/) as IDEs and then pushed to [Github](https://github.com/) making [Github Pages](https://pages.github.com/) the first choice for initial deployment.
 
 Github Pages deployment is conducted from the settings page and uses the following information:
 
@@ -1803,7 +1805,7 @@ The [Code Institute](https://codeinstitute.net/) tutoring team, especially Kevin
 
 The [Code Institute](https://codeinstitute.net/) lessons, especially on Google Maps, EmailJS and various JavaScript tips and tricks. 
 
-My wife Inga Veličko, daughter Paige Davis and friend Adela Tavačova for providing expertise on colours to be used for the site and for continually testing the site throughout the development stages.
+My wife Inga Veličko, daughter Paige Davis and friend Adela Tavačová for providing expertise on colours to be used for the site and for continually testing the site throughout the development stages.
 
 Rudolf Grigeľ for providing a one-on-one consultation to finalise input validation.  
 
