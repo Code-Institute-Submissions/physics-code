@@ -1796,7 +1796,19 @@ Although the current versions of Physics Code were never branched, there is plen
 
 Ideally, a new branch will be made from the master and the branch to be worked on will be created from this branch. 
 
+1. Firtly create a branch either in Github or on Gitpod (either way produces the same outcome);
+
+Select "master" from your Github repository and create a new branch by typing in a name. In this case I created a first branch and a second branch to come from that branch. 
+
 ![Branching the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/create_branch.png "Branching the repository")
+
+2. Alternatively you can do this in Gitpod on the bottom left of your Gitpod dashboard you'll see the "master" button with a refresh. If you decided to make a new branch in Github, you can click refresh to change to that branch or click "master" to create a new branch which you can then switch to.
+
+![Branching the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/create_branch2.png "Branching the repository")
+
+3. Finally, switch the branch or carry on making a new branch for your repository. All changes you make can be merged later after exhaustive testing. 
+
+![Branching the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/create_branch3.png "Branching the repository")
 
 ## CREDITS
 [Top](#contents)
