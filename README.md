@@ -114,6 +114,8 @@
 
     -  [Cloning the Github Repository](#cloning-the-github-repository)
 
+    -  [Branching](#branching)
+
 -  [Credits](#credits)
 
 	-  [Acknowledgements](#acknowledgements)
@@ -541,15 +543,15 @@ The data also better reflected the updated and refactored JavaScript randomised 
 
 All maps were considered based on media reports, local knowledge and searching Google Maps for appropriately sized intersections. Intersections were only added if certain criteria was met. The intersection needed to be greater than 40 metres in length, have no corners or turns, allowed for unique weather conditions (eg ice, snow, heavy rain etc), and were controlled by traffic light signals. Maps also needed to be accessible with satellite view and were clear enough at mobile phone size to see the intersection for measurement.
 
-- Social media share functionality:
+- Social media share functionality;
 
--  [Facebook for developers](https://developers.facebook.com/) used on each page and in particular the [Game](https://pauld0051.github.io/physics-code/game.html) page;
+    -  [Facebook for developers](https://developers.facebook.com/) used on each page and in particular the [Game](https://pauld0051.github.io/physics-code/game.html) page;
 
-- Each page was to have a share button to Facebook in the footer regardless of the content the page was presenting
+    - Each page was to have a share button to Facebook in the footer regardless of the content the page was presenting
 
-- The share button would default to the [landing](https://pauld0051.github.io/physics-code/index.html) page as a link on the user's timeline
+    - The share button would default to the [landing](https://pauld0051.github.io/physics-code/index.html) page as a link on the user's timeline
 
-- An extra share function was built into the [Game](https://pauld0051.github.io/physics-code/game.html) to allow sharing of scores directly to Facebook
+    - An extra share function was built into the [Game](https://pauld0051.github.io/physics-code/game.html) to allow sharing of scores directly to Facebook
 
 Other social media share functionality was also considered, however, Facebook was the only one added in the wireframes and first released version of the site.
 
@@ -1786,6 +1788,15 @@ It is plausible that a clone of this repository will be made so that more calcul
 4. From there you can access the files and use local based software to adjust the code accordingly. You will need to access your own APIs for Google Maps, Facebook and an account with EmailJS if you plan on using this code on a new website. 
 
 ![Cloning the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/github-clone3.png "Cloning the repository")
+
+### Branching
+[Top](#contents)
+
+Although the current versions of Physics Code were never branched, there is plenty of merit for future versions to have branches associated. While the project was small, branches didn't appear essential. But as the project grows and new calculators, games and help files are added, branching will be required so that live versions are not altered and new versions can be added at the completion of a branch after subsequent testing. 
+
+Ideally, a new branch will be made from the master and the branch to be worked on will be created from this branch. 
+
+![Branching the repository](https://raw.githubusercontent.com/pauld0051/physics-code//master/assets/images/readme-images/create_branch.png "Branching the repository")
 
 ## CREDITS
 [Top](#contents)
