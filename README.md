@@ -414,7 +414,7 @@
 
 - Other card images are sourced from Fontawesome and are coloured black to appear as a silhouette
 
-- The author's caricatures was created in [Bitmoji](https://www.bitmoji.com/) and saved as a png file
+- The author's caricatures were created in [Bitmoji](https://www.bitmoji.com/) and saved as a png file
 
 - Card images were sourced from [Flaticon](https://www.flaticon.com), [pngfuel](https://www.pngfuel.com/), [kindpng](https://www.kindpng.com/), [webstock review](https://webstockreview.net/), [freepik](https://www.freepik.com) and [pngguru](https://www.pngguru.com/)
 
@@ -527,19 +527,19 @@ The data also better reflected the updated and refactored JavaScript randomised 
 
 - API sources that were considered in the wireframes:
    
--  [Google Maps](https://www.google.com/maps/) used on the [Test Yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page;
+    -  [Google Maps](https://www.google.com/maps/) used on the [Test Yourself](https://pauld0051.github.io/physics-code/test_yourself.html) page;
 
-- Five intersections were considered and included for this project
+    - Five intersections were considered and included for this project
 
-- Russia - Leningradsky Ave over Tverskaya Zastava Square in [Moscow](https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3)
+    - Russia - Leningradsky Ave over Tverskaya Zastava Square in [Moscow](https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3)
 
-- Australia - Sunnyholt Road at the M7 intersection in [Sydney](https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3)
+    - Australia - Sunnyholt Road at the M7 intersection in [Sydney](https://www.google.com/maps/@-33.7385745,150.9177533,120m/data=!3m1!1e3)
 
-- United States of America - Lexington Drive over the Harry Byrd Highway in [Ashburn, Virginia](https://www.google.com/maps/@39.0605322,-77.4594559,112m/data=!3m1!1e3)
+    - United States of America - Lexington Drive over the Harry Byrd Highway in [Ashburn, Virginia](https://www.google.com/maps/@39.0605322,-77.4594559,112m/data=!3m1!1e3)
 
-- Germany - Sigmundstraße and Leyher Street in [Nürnberg](https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3)
+    - Germany - Sigmundstraße and Leyher Street in [Nürnberg](https://www.google.com/maps/@49.453667,11.0154068,187m/data=!3m1!1e3)
 
-- Ireland - Constitution Hill at the intersection on Western Way [Dublin](https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3)
+    - Ireland - Constitution Hill at the intersection on Western Way [Dublin](https://www.google.com/maps/@53.3543215,-6.2734058,122m/data=!3m1!1e3)
 
 All maps were considered based on media reports, local knowledge and searching Google Maps for appropriately sized intersections. Intersections were only added if certain criteria was met. The intersection needed to be greater than 40 metres in length, have no corners or turns, allowed for unique weather conditions (eg ice, snow, heavy rain etc), and were controlled by traffic light signals. Maps also needed to be accessible with satellite view and were clear enough at mobile phone size to see the intersection for measurement.
 
@@ -603,7 +603,7 @@ The equations used on the [Help](https://pauld0051.github.io/physics-code/help.h
 
 [Bootstrap Display Properties](https://getbootstrap.com/docs/4.0/utilities/display/) were added to the code at the card level. A user on a large screen is able to view the equation on three lines, where a mobile user will see the equation appear on five lines at appropriate break points. MathJax equations can not have a d-none attribute and this would fail to hide the equation. It was discovered the entire card that contained the equation needed to be hidden for the anticipated outcome to occur.
 
-The author picture (displayed on the home page wireframe) was not the final chosen picture. Instead, on a large screen, a full body picture with the caricatures holding books is displayed. On a smaller screen, a close up of the caricature's head is displayed. Both allow a hover enhancement which enlarges the picture by 10%. Hover enlargement is also found on the index page as users mouse-over the display cards. It was anticipated this would be included for all cards throughout the site, but the enlarging cards detracted from the purpose and was not included in the final version. Originally, cards didn't enlarge, but shrunk. This also detracted from their purpose.
+The author picture (displayed on the home page wireframe) was not the final chosen picture. Instead, on a large screen, a full body picture with the caricature holding books is displayed. On a smaller screen, a close up of the caricature's head is displayed. Both allow a hover enhancement which enlarges the picture by 10%. Hover enlargement is also found on the index page as users mouse-over the display cards. It was anticipated this would be included for all cards throughout the site, but the enlarging cards detracted from the purpose and was not included in the final version. Originally, cards didn't enlarge, but shrunk. This also detracted from their purpose.
 
 Although [Hover.css:](https://ianlunn.github.io/Hover/) had been considered for the site, in the end a previously used hover code was included in CSS without the use of any external libraries.
 
@@ -1868,6 +1868,8 @@ All images were first downloaded and used from one of the following locations:
 - [Various Vehicle Lengths Silhouette - freepik](https://www.freepik.com/premium-vector/cars-silhouette-automobiles-type-isolated-bus-motorhome-van-tow-truck-sedan-taxi-limousine-suv-car-vehicle-flat-icon-collection-urban-auto-motor-transport-silhouette-models-set_8763680.htm)
 
 - [Calculator Silhouette - webstockreview](https://webstockreview.net/images/calculator-clipart-silhouette-10.jpg)
+
+- [Hazard Road Sign - pngguru](https://www.pngguru.com/free-transparent-background-png-clipart-nasxe)
 
 All images are subject to international copyright laws.
 
