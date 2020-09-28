@@ -1616,6 +1616,8 @@ However, advert blocking applications such as [uBlock Origin](https://github.com
 
 Although instances of the Facebook share button disappearing have been noted during testing phase, it has not been shown to be caused by advert blocking applications. Instead it was most likely due to updating the code which may have impacted on the Facebook sharing code. At present, the share button appears on several tested devices with and without advert blocking applications. Because Facebook sharing is a third party add-on to Physics Code, this can be monitored over time. However, it is hoped that Facebook will notify developers of changes that occur to the code which may prevent share facilities from displaying accurately.
 
+A second, but minor issue occurs when users are using a Chromium based browser and share their best time to Facebook. On Firefox browsers, all browser default pop-ups have been removed. However, on Chrmoium based browsers, the Facebook share page which opens in a new pop-up tab is separate from the Physics Code bage. If a user chooses to send their score to the timeline or close the page before sending their score to their timline a browser default pop-up is displayed. All efforts to remove this pop-up were explored and no fix has currentöy been found. This means on Chromium based browsers the user will experience the default pop-up warning first and if the user continues with their action, will then receive the Physics Code default alert. It is most likely due to the fact the Facebook pop-up occurs on a different site and is not directly controlled by Physics Code. 
+
 ### Icons and Unicode 
 [Top](#contents)
 
@@ -1654,7 +1656,11 @@ The reaction time game prototype showed that the counter was able to stop and wo
 
     $("#brake_button").attr("disabled", true);
 
-Screen size negatively affected the display of MathJax equations, especially the final equation on the [help](https://pauld0051.github.io/physics-code/help.html) page which subsequently is also the largest equation. The only available fix for this that worked was to give the entire card where the equation was displayed a "no-display" class for small screens but instead display the equation presented with more line breaks added. This was all done using Bootstrap display functions.
+Screen size negatively affected the display of MathJax equations, especially the final equation on the [help](https://pauld0051.github.io/physics-code/help.html) page which subsequently is also the largest equation. The only available fix for this that worked was to give the entire card where the equation was displayed a "no-display" class for small screens but instead display the equation presented with more line breaks added. This was all done using Bootstrap display functions. 
+
+It should also be noted that some of the MathML lengths are to be deprecated, however, this is part of the MathJax library and not directly affecting Physics Code displays. The warning in the console is as follows:
+
+    - " “veryverythinmathspace”, “verythinmathspace”, “thinmathspace”, “mediummathspace”, “thickmathspace”, “verythickmathspace” and “veryverythickmathspace” are deprecated values for MathML lengths and will be removed at a future date."
 
 Occasionally maps may not display all sectors. It is not yet understood what causes some sectors in maps not displaying, however, the rarity of the situation is not causing concern. The most likely explanation is to do with browser loading capabilities.
 

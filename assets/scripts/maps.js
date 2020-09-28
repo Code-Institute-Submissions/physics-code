@@ -20,6 +20,7 @@ function initMap() {
     lat: 53.354385,
     lng: -6.273174
   };
+
   let image = 'assets/images/map_icon_marker.ico';
   // The map, centered at Intersection One
   let map = new google.maps.Map(
@@ -62,6 +63,7 @@ function initMap() {
       zoomControl: false,
       rotateControl: false
     });
+
   // The marker, positioned
   let marker = new google.maps.Marker({
     position: intersection_one,
@@ -119,6 +121,7 @@ function initMap() {
       map5.panTo(marker5.getPosition());
     }, 3000);
   });
+  
   // Allow users to click on the map to open in a new window
   google.maps.event.addListener(map, "click", function() {
     window.open("https://www.google.com/maps/@55.7769838,37.5835604,81m/data=!3m1!1e3");
